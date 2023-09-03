@@ -1,6 +1,8 @@
 package com.example.hyoja.common.util
 
-// 화면 컨트롤을 위한 싱글톤 클래스
+import androidx.lifecycle.ViewModel
 
-class ViewModel { // 싱글톤에 넣을 데이터는 차차 같이 생각
+// 화면 컨트롤을 위한 뷰모델
+
+class HyojaViewModel: ViewModel() { // 뷰모델에 넣을 데이터나 메소드는 차차 같이 생각
 }

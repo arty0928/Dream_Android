@@ -5,15 +5,23 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.example.hyoja.R
+import com.example.hyoja.common.util.CommonUi
+import com.example.hyoja.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    var backPressedTime: Long = 0
+    var backPressedTime: Long = 0 // 뒤로가기 2번 클릭을 위한 변수선언
+    private lateinit var binding :ActivityMainBinding
+    val common = CommonUi()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        val view = this
 
-
+        binding.cinemaButton.setOnClickListener{
+            common.goToCinema(view)
+        }
     }
 
     // 뒤로가기 버튼을 눌렀을 때 로직

@@ -7,6 +7,10 @@ android {
     namespace 'com.example.hyoja'
     compileSdk 33
 
+    viewBinding{
+        enable true
+    }
+
     defaultConfig {
         applicationId "com.example.hyoja"
         minSdk 24
