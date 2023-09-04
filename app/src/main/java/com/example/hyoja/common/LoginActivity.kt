@@ -18,10 +18,12 @@ class LoginActivity : AppCompatActivity() {
 
         binding.loginButton.setOnClickListener{
             commonUi.goToHome(view)
+            finish() // 다시 돌아오지 못하게 종료해주세요
         }
 
         binding.accountCreateButton.setOnClickListener{
             commonUi.goToAccountCreate(view)
+            finish() // 다시 돌아오지 못하게 종료해주세요
         }
 
 

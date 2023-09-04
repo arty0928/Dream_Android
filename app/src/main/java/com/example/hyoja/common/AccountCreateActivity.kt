@@ -16,6 +16,7 @@ class AccountCreateActivity : AppCompatActivity() {
 
         binding.accountStartButton.setOnClickListener{
             commonUi.goToHome(view)
+            finish() // 뒤로 다시 들어오지 못하게 종료해주세요
         }
     }
 }
