@@ -15,7 +15,7 @@ class SplashActivity : AppCompatActivity() {
 
         val view = this
         Handler().postDelayed({ // 스플래시 1초 후 홈화면으로
-            commonUi.goToHome(view)
+            commonUi.goToLogin(view)
             finish() // 스플래시는 꼭 종료시켜 주세요
         }, 1000)
 
