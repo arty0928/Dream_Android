@@ -21,6 +21,9 @@
             android:name=".cinema.CinemaHomeActivity"
             android:exported="false" />
         <activity
+            android:name=".fastfoods.FastFoodHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".common.MainActivity"
             android:exported="false" />
         <activity

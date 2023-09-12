@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
-import com.example.hyoja.R
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityMainBinding
 
@@ -21,6 +20,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.cinemaButton.setOnClickListener{
             common.goToCinema(view)
+        }
+        binding.fastfoodButton.setOnClickListener{
+            common.goToFastFood(view)
         }
     }
 

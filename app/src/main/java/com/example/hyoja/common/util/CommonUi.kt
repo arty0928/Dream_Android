@@ -7,6 +7,8 @@ import com.example.hyoja.cinema.CinemaHomeActivity
 import com.example.hyoja.common.AccountCreateActivity
 import com.example.hyoja.common.LoginActivity
 import com.example.hyoja.common.MainActivity
+import com.example.hyoja.fastfoods.FastFoodHomeActivity
+
 
 // 앱 전반적으로 사용하는 함수 모음 클래스
 class CommonUi {
@@ -21,6 +23,13 @@ class CommonUi {
         v.startActivity(intent)
         Log.d("goToCinema","영화관 홈으로 전환")
     }
+
+    fun goToFastFood(v: Context){
+        val intent = Intent(v, FastFoodHomeActivity::class.java)
+        v.startActivity(intent)
+        Log.d("goToCinema","영화관 홈으로 전환")
+    }
+
     fun goToLogin(v: Context){
         val intent = Intent(v, LoginActivity::class.java)
         v.startActivity(intent)
@@ -31,5 +40,4 @@ class CommonUi {
         v.startActivity(intent)
         Log.d("goToAccountCreate", "회원가입 화면으로 전환")
     }
-
 }
