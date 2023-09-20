@@ -7,6 +7,8 @@ import com.example.hyoja.cinema.CinemaHomeActivity
 import com.example.hyoja.common.AccountCreateActivity
 import com.example.hyoja.common.LoginActivity
 import com.example.hyoja.common.MainActivity
+import com.example.hyoja.fastfoods.FastFoodHome1Activity
+import com.example.hyoja.fastfoods.FastFoodHome2Activity
 import com.example.hyoja.fastfoods.FastFoodHomeActivity
 
 
@@ -30,6 +32,17 @@ class CommonUi {
         Log.d("goToCinema","영화관 홈으로 전환")
     }
 
+    fun goToFastFoodHome1(v: Context){
+        val intent = Intent(v, FastFoodHome1Activity::class.java)
+        v.startActivity(intent)
+        Log.d("goToCinema","영화관 홈으로 전환")
+    }
+
+    fun goToFastFoodHome1Button1(v: Context){
+        val intent = Intent(v, FastFoodHome2Activity::class.java)
+        v.startActivity(intent)
+        Log.d("goToCinema","영화관 홈으로 전환")
+    }
     fun goToLogin(v: Context){
         val intent = Intent(v, LoginActivity::class.java)
         v.startActivity(intent)
@@ -40,4 +53,7 @@ class CommonUi {
         v.startActivity(intent)
         Log.d("goToAccountCreate", "회원가입 화면으로 전환")
     }
+
+//    이전 화면으로 이동
+
 }

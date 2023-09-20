@@ -5,53 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fastfoods.FastFoodHomeActivity">
-    <LinearLayout
-        android:id="@+id/fastfoods_1_text_group"
-        android:layout_width="wrap_content"
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="12dp">
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fastfood_home1"
+        />
 
-        <TextView
-            android:id="@+id/fastfoods_home_text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/ibm_plex_sans_kr_bold"
-            android:gravity="center"
-            android:text="기다리지 않고 간편하게"
-            android:textColor="@color/fastfood_black"
-
-            android:textSize="35dp" />
-
-        <TextView
-            android:id="@+id/fastfoods_home_text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/ibm_plex_sans_kr_bold"
-            android:text="여기에서"
-            android:textColor="@color/fastfood_darkRed"
-
-            android:textSize="50dp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/fastfoods_home_text3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="50dp"
-            android:fontFamily="@font/ibm_plex_sans_kr_bold"
-            android:textColor="@color/fastfood_darkRed"
-            android:text="주문하세요" />
-
-
-    </LinearLayout>
-
-
+    <Button
+        android:id="@+id/fastfood_to_home1_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
