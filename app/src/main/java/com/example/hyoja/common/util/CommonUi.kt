@@ -40,4 +40,9 @@ class CommonUi {
         v.startActivity(intent)
         Log.d("goToAccountCreate", "회원가입 화면으로 전환")
     }
+    fun makeRandomString(length: Int):String{
+        val charset = ('0'..'9')+('a'..'z')+('A'..'Z')
+        var string:String = List(length){charset.random()}.joinToString("")
+        return string
+    }
 }
