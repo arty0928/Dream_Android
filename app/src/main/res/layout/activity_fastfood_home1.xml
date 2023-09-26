@@ -57,7 +57,7 @@
                 android:layout_columnSpan="2"
                 android:layout_gravity="fill"
                 android:layout_marginRight="10dp"
-                android:background="#EABA3D"
+                android:background="@drawable/layout_border1_yellow"
                 android:fontFamily="@font/poppins_bold"
                 android:orientation="vertical">
 
@@ -91,7 +91,7 @@
                 android:id="@+id/button2"
                 android:layout_width="180dp"
                 android:layout_height="175dp"
-                android:background="#D9D9D9"
+                android:background="@drawable/layout_border2_gray"
                 android:fontFamily="@font/poppins_bold"
                 android:orientation="vertical"
                 android:text="카드">
@@ -143,7 +143,7 @@
                 android:layout_width="180dp"
                 android:layout_height="164dp"
                 android:layout_marginTop="10dp"
-                android:background="#D9D9D9"
+                android:background="@drawable/layout_border2_gray"
                 android:fontFamily="@font/poppins_bold"
                 android:orientation="vertical"
                 android:text="카드">
@@ -191,7 +191,6 @@
     <LinearLayout
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
-
         android:layout_height="60dp"
         android:background="#D9D9D9"
         android:orientation="horizontal"
@@ -251,11 +250,13 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginLeft="160dp"
+            android:layout_marginLeft="150dp"
             android:id="@+id/sale"
             android:layout_width="160dp"
             android:layout_height="match_parent"
-            android:background="@drawable/shape"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/layout_border3_transparent"
             app:layout_constraintTop_toTopOf="parent"
             android:orientation="horizontal">
 
@@ -275,8 +276,6 @@
                 android:fontFamily="@font/poppins_extrabold"
                 android:gravity="center_vertical"
                 android:text="할인행사안내">
-
-
             </TextView>
 
         </LinearLayout>

@@ -24,10 +24,10 @@ class FastFoodHome1Activity : AppCompatActivity() {
         }
 
         binding.button2.setOnClickListener {
-            common.goToFastFoodHome1Button1(view)
+//            common.goToFastFoodHome1Button1(view)
         }
         binding.button3.setOnClickListener {
-            common.goToFastFoodHome1Button1(view)
+//            common.goToFastFoodHome1Button1(view)
         }
         binding.beforeButton.setOnClickListener {
 //            main.backPressedTime()
