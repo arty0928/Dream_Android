@@ -3,6 +3,7 @@ package com.example.hyoja.fastfoods
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.HorizontalScrollView
 import android.widget.ImageView
 import android.widget.TextView
@@ -33,6 +34,9 @@ class FastFoodHome2Activity : AppCompatActivity() {
         binding = ActivityFastfoodHome2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         val view = this
+//        binding.newbutton.setOnClickListener {
+//            common.goToTabTest(view)
+//        }
 
 
 //        HorizontalScrollView 오른쪽 버튼 눌렀을때
@@ -66,24 +70,56 @@ class FastFoodHome2Activity : AppCompatActivity() {
         val adapter = MyAdapterCustome(this, fragments)
         viewPager.adapter = adapter
 
+
+
+        //TabView Visible
+        val lunchView = findViewById<View>(R.id.lunchView)
         val titleLunch = findViewById<TextView>(R.id.TitleLunch)
+        val titleHamburger = findViewById<TextView>(R.id.TitleHamburger)
+        val hamburgerView = findViewById<View>(R.id.hamburgerView)
+        val titleDessert = findViewById<TextView>(R.id.TitleDessert)
+        val dessertView = findViewById<View>(R.id.DessertView)
+        val titleDrink = findViewById<TextView>(R.id.TitleDrink)
+        val drinkView = findViewById<View>(R.id.DrinkView)
+
+        var currentlyVisibleView = lunchView
+
+
+        fun toggleVisibility(viewToShow: View) {
+            if (currentlyVisibleView != viewToShow) {
+                currentlyVisibleView.visibility = View.INVISIBLE
+                viewToShow.visibility = View.VISIBLE
+                currentlyVisibleView = viewToShow
+            }
+        }
+
         titleLunch.setOnClickListener {
             viewPager.currentItem = 0
+            val scrollAmount = 300
+            horizontalScrollView.smoothScrollBy(-scrollAmount,0)
+            toggleVisibility(lunchView)
         }
-        val titleHamburger = findViewById<TextView>(R.id.TitleHamburger)
+
         titleHamburger.setOnClickListener {
             viewPager.currentItem = 1
+            toggleVisibility(hamburgerView)
         }
 
-        val titleDessert = findViewById<TextView>(R.id.TitleDessert)
         titleDessert.setOnClickListener {
             viewPager.currentItem = 2
+            toggleVisibility(dessertView)
         }
 
-        val titleDrink = findViewById<TextView>(R.id.TitleDrink)
         titleDrink.setOnClickListener {
             viewPager.currentItem = 3
+            val scrollAmount = 300
+            horizontalScrollView.smoothScrollBy(scrollAmount,0)
+            toggleVisibility(drinkView)
+
         }
+
+
+
 
     }
     class MyAdapterCustome(
@@ -95,5 +131,6 @@ class FastFoodHome2Activity : AppCompatActivity() {
 
         override fun createFragment(position: Int): Fragment = fragments[position]
     }
-
 }
+
+

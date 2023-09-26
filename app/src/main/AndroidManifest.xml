@@ -37,6 +37,10 @@
             android:name=".fastfoods.TabActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".fastfoods.NewTabActivity"
+            android:exported="false" />
+
 
         <activity
             android:name=".common.MainActivity"

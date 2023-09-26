@@ -10,6 +10,8 @@ import com.example.hyoja.common.MainActivity
 import com.example.hyoja.fastfoods.FastFoodHome1Activity
 import com.example.hyoja.fastfoods.FastFoodHome2Activity
 import com.example.hyoja.fastfoods.FastFoodHomeActivity
+import com.example.hyoja.fastfoods.NewTabActivity
+
 //import com.example.hyoja.fastfoods.TabActivity
 
 
@@ -55,11 +57,11 @@ class CommonUi {
         Log.d("goToAccountCreate", "회원가입 화면으로 전환")
     }
 
-//    fun goToTabTest(v: Context){
-//        val intent = Intent(v, TabActivity::class.java)
-//        v.startActivity(intent)
-//        Log.d("goToTabTest", "tab test 화면으로 전환")
-//    }
+    fun goToTabTest(v: Context){
+        val intent = Intent(v, NewTabActivity::class.java)
+        v.startActivity(intent)
+        Log.d("goToTabTest", "tab test 화면으로 전환")
+    }
 //    이전 화면으로 이동
 
 }
