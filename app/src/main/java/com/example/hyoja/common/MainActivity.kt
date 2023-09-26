@@ -18,14 +18,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         val view = this
 
-        binding.cinemaButton.setOnClickListener{
+        binding.cinemaButton.setOnClickListener {
             common.goToCinema(view)
         }
-        binding.fastfoodButton.setOnClickListener {
-            common.goToFastFood(view)
-        }
-    }
 
+        binding.cafeButton.setOnClickListener {
+            common.goToCafe(view)
+        }
+
+    }
     // 뒤로가기 버튼을 눌렀을 때 로직
     override fun onBackPressed() {
         val currentTime = System.currentTimeMillis()
