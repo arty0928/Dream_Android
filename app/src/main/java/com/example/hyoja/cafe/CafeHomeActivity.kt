@@ -19,6 +19,9 @@ class CafeHomeActivity : AppCompatActivity() {
         binding.forHere.setOnClickListener{
             common.goToCafeHome1(view)
         }
+        binding.toGo.setOnClickListener{
+            common.goToCafeHome1(view)
+        }
 
 }
 }
