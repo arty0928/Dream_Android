@@ -8,16 +8,305 @@
     <!-- TODO: Update blank fragment layout -->
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="든든점심"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="30sp"-->
+<!--        android:fontFamily="@font/poppins_extrabold"-->
+<!--        android:textColor="@color/black"-->
+
+<!--/>-->
+
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="든든점심"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:fontFamily="@font/poppins_extrabold"
-        android:textColor="@color/black"
+        android:rowCount="3"
+        android:columnCount="2"
+        android:padding="10dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        >
 
-/>
+
+<!--1 더블불고기버거-->
+        <GridLayout
+            android:id="@+id/burger1"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowSpan="2"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/burger1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="더블불고기버거"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="4400~"
+                android:textColor="#D00000"
+                android:textSize="20dp" />
+
+        </GridLayout>
+
+<!--2 피쉬버거-->
+        <GridLayout
+            android:id="@+id/burger2"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowSpan="2"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/burger2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="피쉬버거"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:fontFamily="@font/poppins_bold"
+                android:text="3500~"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="#D00000"
+                android:textSize="20dp" />
+
+        </GridLayout>
+
+<!--3, 새우버거-->
+        <GridLayout
+            android:id="@+id/burger3"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowSpan="2"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/burger3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="새우버거"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:fontFamily="@font/poppins_bold"
+                android:text="4500~"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="#D00000"
+                android:textSize="20dp" />
+
+        </GridLayout>
+
+<!--4, 치킨버거-->
+        <GridLayout
+            android:id="@+id/burger4"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowSpan="2"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/burger4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="치킨버거"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:fontFamily="@font/poppins_bold"
+                android:text="4600~"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="#D00000"
+                android:textSize="20dp" />
+
+        </GridLayout>
+
+<!--5, 더블치킨버거-->
+        <GridLayout
+            android:id="@+id/burger5"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowSpan="2"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/burger5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="더블치킨버거"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:fontFamily="@font/poppins_bold"
+                android:text="5500~"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="#D00000"
+                android:textSize="20dp" />
+
+        </GridLayout>
+
+
+        <GridLayout
+            android:id="@+id/burger6"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowSpan="2"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/burger6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="한우불고기버거"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:fontFamily="@font/poppins_bold"
+                android:text="4400~"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="#D00000"
+                android:textSize="20dp" />
+
+        </GridLayout>
+
+    </GridLayout>
 
 
 </FrameLayout>
