@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.HorizontalScrollView
 import android.widget.ImageView
+import android.widget.ScrollView
+import android.widget.Scroller
 import android.widget.TextView
+import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager.widget.ViewPager
@@ -27,6 +31,8 @@ class FastFoodHome2Activity : AppCompatActivity() {
     val common = CommonUi()
 
     private lateinit var viewPager: ViewPager2
+
+    //        selectedItems scrollView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -118,10 +124,21 @@ class FastFoodHome2Activity : AppCompatActivity() {
 
         }
 
+        //selectedItems scrollView
+        val nestedScrollView = findViewById<NestedScrollView>(R.id.nestedScrollView)
+        val upButton = findViewById<View>(R.id.upButton)
+        val downButton = findViewById<View>(R.id.downButton)
 
+        upButton.setOnClickListener {
+            nestedScrollView.smoothScrollBy(0, -200) // Adjust the scroll amount as needed
+        }
 
+        downButton.setOnClickListener {
+            nestedScrollView.smoothScrollBy(0, 200) // Adjust the scroll amount as needed
+        }
 
     }
+
     class MyAdapterCustome(
         fragmentActivity: FragmentActivity,
         private val fragments: List<Fragment>) :

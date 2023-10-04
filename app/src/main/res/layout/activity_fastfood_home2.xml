@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fastfoods.FastFoodHome2Activity">
+    tools:context=".fastfoods.FastFoodHome2Activity"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -210,6 +211,8 @@
 
 
                 />
+
+<!--            총주문내역-->
             <LinearLayout
                 android:id="@+id/totalOrderCountBar"
                 android:layout_width="match_parent"
@@ -264,22 +267,285 @@
                     >
 
                 </TextView>
-
-
-
-
-
-
             </LinearLayout>
 
+<!--            선택한 메뉴 저장 Bar-->
             <LinearLayout
                 android:id="@+id/SelectedOrderBar"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:background="@color/white"
                 android:layout_weight="2"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 >
+
+<!--            선택 메뉴 저장 칸 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="130"
+                    android:background="@color/white">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/nestedScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:id="@+id/selectedItems"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/selectedOrderItemBar1"
+                                android:layout_width="match_parent"
+                                android:layout_height="37dp"
+                                android:orientation="horizontal"
+                                >
+
+<!--                        선택 메뉴 이름    -->
+                                <TextView
+                                    android:id="@+id/selectedItemName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="데리버거"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="left"
+                                    android:fontFamily="@font/poppins_extrabold"
+                                    android:textColor="@color/black"
+                                    android:textSize="18dp"
+                                    android:padding="5dp"
+                                    android:layout_weight="5"
+                                    >
+                                </TextView>
+
+<!--                        선택 메뉴 개수    -->
+                                <TextView
+                                    android:id="@+id/selectedItemCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="1"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:textColor="@color/black"
+                                    android:textSize="18dp"
+                                    android:padding="5dp"
+                                    android:layout_weight="1"
+                                    >
+                                </TextView>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <LinearLayout
+                                        android:layout_gravity="center"
+                                        android:layout_width="20dp"
+                                        android:layout_height="10dp"
+                                        android:layout_weight="1"
+                                        android:padding="5dp"
+                                        android:background="@drawable/layout_border6"
+                                        >
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:src="@drawable/up_tri"
+                                            android:layout_gravity="center">
+                                        </ImageView>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_gravity="center"
+                                        android:layout_width="20dp"
+                                        android:layout_height="10dp"
+                                        android:layout_weight="1"
+                                        android:padding="5dp"
+                                        android:background="@drawable/layout_border6"
+                                        >
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:src="@drawable/down_tri"
+                                            android:layout_gravity="center">
+                                        </ImageView>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+<!--                        선택 메뉴 가격-->
+                                <TextView
+                                    android:id="@+id/selectedItemPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="3,300"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:textColor="@color/black"
+                                    android:textSize="20dp"
+                                    android:padding="5dp"
+                                    android:layout_weight="1"
+                                    >
+                                </TextView>
+
+<!--                        토핑추가-->
+                                <LinearLayout
+                                    android:id="@+id/selectedItemAddToping"
+                                    android:layout_width="70dp"
+                                    android:layout_margin="5dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/layout_rounded_darkred"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="토핑추가"
+                                        android:layout_gravity="center"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:fontFamily="@font/poppins_semibold"
+                                        android:textSize="12dp">
+
+                                    </TextView>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    >
+
+                                    <!--            변경    -->
+                                    <LinearLayout
+                                        android:id="@+id/selectedItemEdit"
+                                        android:layout_width="35dp"
+                                        android:layout_height="30dp"
+                                        android:background="@drawable/layout_border5_gray"
+                                        >
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="변경"
+                                            android:layout_gravity="center"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:fontFamily="@font/poppins_semibold"
+                                            android:textSize="12dp">
+
+                                        </TextView>
+
+                                    </LinearLayout>
+
+                                    <!--            삭제    -->
+                                    <LinearLayout
+                                        android:id="@+id/seletecItemDelete"
+                                        android:layout_width="35dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/layout_border5_gray"
+                                        >
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="삭제"
+                                            android:layout_gravity="center"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:fontFamily="@font/poppins_semibold"
+                                            android:textSize="12dp">
+
+                                        </TextView>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/selectedOrderItemBar2"
+                                android:layout_width="match_parent"
+                                android:layout_height="37dp"
+                                android:orientation="horizontal"
+                                android:background="#424242">
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/selectedOrderItemBar3"
+                                android:layout_width="match_parent"
+                                android:layout_height="37dp"
+                                android:orientation="horizontal"
+                                android:background="@color/black">
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/selectedOrderItemBar4"
+                                android:layout_width="match_parent"
+                                android:layout_height="37dp"
+                                android:orientation="horizontal"
+                                android:background="#424242">
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                </LinearLayout>
+
+<!--        up, down button-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:padding="2dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/upButton"
+                        android:layout_gravity="center"
+                        android:layout_width="30dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:background="@drawable/layout_border5_gray"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/formkit_up"
+                            android:layout_gravity="center">
+                        </ImageView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/downButton"
+                        android:layout_gravity="center"
+                        android:layout_width="30dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:background="@drawable/layout_border5_gray"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/formkit_down"
+                            android:layout_gravity="center">
+                        </ImageView>
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 
