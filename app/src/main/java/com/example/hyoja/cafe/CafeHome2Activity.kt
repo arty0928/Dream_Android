@@ -65,22 +65,22 @@ class CafeHome2Activity : AppCompatActivity() {
             shake_apogato()
         )
 
-        val adapter = MyAdapterCustome(this, fragments)
+        val adapter = CafeAdapterCustome(this, fragments)
         viewPager.adapter = adapter
 
 
 
         //TabView Visible
-        val lunchView = findViewById<View>(R.id.lunchView)
-        val titleLunch = findViewById<TextView>(R.id.TitleLunch)
-        val titleHamburger = findViewById<TextView>(R.id.TitleHamburger)
-        val hamburgerView = findViewById<View>(R.id.hamburgerView)
-        val titleDessert = findViewById<TextView>(R.id.TitleDessert)
-        val dessertView = findViewById<View>(R.id.DessertView)
-        val titleDrink = findViewById<TextView>(R.id.TitleDrink)
-        val drinkView = findViewById<View>(R.id.DrinkView)
+        val newmenuView = findViewById<View>(R.id.newmenuView)
+        val titleNewmenu = findViewById<TextView>(R.id.TitleNewmenu)
+        val titleCoffee = findViewById<TextView>(R.id.TitleCoffee)
+        val coffeeView = findViewById<View>(R.id.coffeeView)
+        val titleAde = findViewById<TextView>(R.id.TitleAde)
+        val adeView = findViewById<View>(R.id.AdeView)
+        val titleShaApo = findViewById<TextView>(R.id.TitleShaApo)
+        val shaApoView = findViewById<View>(R.id.ShaApoView)
 
-        var currentlyVisibleView = lunchView
+        var currentlyVisibleView = newmenuView
 
 
         fun toggleVisibility(viewToShow: View) {
@@ -91,28 +91,28 @@ class CafeHome2Activity : AppCompatActivity() {
             }
         }
 
-        titleLunch.setOnClickListener {
+        titleNewmenu.setOnClickListener {
             viewPager.currentItem = 0
             val scrollAmount = 300
             horizontalScrollView.smoothScrollBy(-scrollAmount,0)
-            toggleVisibility(lunchView)
+            toggleVisibility(newmenuView)
         }
 
-        titleHamburger.setOnClickListener {
+        titleCoffee.setOnClickListener {
             viewPager.currentItem = 1
-            toggleVisibility(hamburgerView)
+            toggleVisibility(coffeeView)
         }
 
-        titleDessert.setOnClickListener {
+        titleAde.setOnClickListener {
             viewPager.currentItem = 2
-            toggleVisibility(dessertView)
+            toggleVisibility(adeView)
         }
 
-        titleDrink.setOnClickListener {
+        titleShaApo.setOnClickListener {
             viewPager.currentItem = 3
             val scrollAmount = 300
             horizontalScrollView.smoothScrollBy(scrollAmount,0)
-            toggleVisibility(drinkView)
+            toggleVisibility(shaApoView)
 
         }
 
@@ -120,7 +120,7 @@ class CafeHome2Activity : AppCompatActivity() {
 
 
     }
-    class MyAdapterCustome(
+    class CafeAdapterCustome(
         fragmentActivity: FragmentActivity,
         private val fragments: List<Fragment>) :
         FragmentStateAdapter(fragmentActivity) {

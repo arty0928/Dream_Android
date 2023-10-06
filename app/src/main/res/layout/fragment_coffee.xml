@@ -3,24 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#f5f5f5"
 
     tools:context=".Fragments.coffee">
 
-
-    <!-- TODO: Update blank fragment layout -->
-
-    <!-- TODO: Update blank fragment layout -->
-    <!--    <TextView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        android:text="든든점심"-->
-    <!--        android:gravity="center"-->
-    <!--        android:textSize="30sp"-->
-    <!--        android:fontFamily="@font/poppins_extrabold"-->
-    <!--        android:textColor="@color/black"-->
-
-    <!--/>-->
 
     <GridLayout
         android:layout_width="match_parent"
@@ -33,7 +19,6 @@
         >
 
 
-        <!--1 더블불고기버거-->
         <GridLayout
             android:id="@+id/burger1"
             android:layout_width="wrap_content"
