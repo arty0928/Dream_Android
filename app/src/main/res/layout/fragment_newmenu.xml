@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.newmenu">
+
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rowCount="3"
+        android:columnCount="2"
+        android:padding="10dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        >
+
+
+
+        <GridLayout
+            android:id="@+id/burger1"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="리치파인에이드"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+        </GridLayout>
+
+
+        <GridLayout
+            android:id="@+id/burger2"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="피치패션콤부에이드"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+        </GridLayout>
+
+
+        <GridLayout
+            android:id="@+id/burger3"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="(R)피스타치오 쉐이크"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+        </GridLayout>
+
+
+        <GridLayout
+            android:id="@+id/burger4"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="(R)더블초코칩 쉐이크"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+        </GridLayout>
+
+
+
+        </GridLayout>
+
+
+
+
+</FrameLayout>

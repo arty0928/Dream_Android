@@ -20,7 +20,7 @@ class CafeHomeActivity : AppCompatActivity() {
             common.goToCafeHome1(view)
         }
         binding.toGo.setOnClickListener{
-            common.goToCafeHome1(view)
+            common.goToCafeHome1coffee(view)
         }
 
 }

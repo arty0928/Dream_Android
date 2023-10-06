@@ -10,7 +10,7 @@ import com.example.hyoja.cinema.CinemaHomeActivity
 import com.example.hyoja.common.AccountCreateActivity
 import com.example.hyoja.common.LoginActivity
 import com.example.hyoja.common.MainActivity
-
+import com.example.hyoja.cafe.CafeNewTabActivity
 
 // 앱 전반적으로 사용하는 함수 모음 클래스
 class CommonUi {
@@ -57,4 +57,12 @@ class CommonUi {
         v.startActivity(intent)
         Log.d("goToAccountCreate", "회원가입 화면으로 전환")
     }
+
+    fun goToTabTest(v: Context){
+        val intent = Intent(v, CafeNewTabActivity::class.java)
+        v.startActivity(intent)
+        Log.d("goToTabTest", "tab test 화면으로 전환")
+    }
+//    이전 화면으로 이동
+
 }

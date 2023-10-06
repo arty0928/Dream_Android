@@ -31,6 +31,16 @@
         <activity
             android:name=".common.MainActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".cafe.CafeTabActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".cafe.CafeNewTabActivity"
+            android:exported="false" />
+
+
         <activity
             android:name=".common.SplashActivity"
             android:exported="true">

@@ -5,21 +5,353 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".cafe.CafeHome2Activity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
-        <TextView
-            android:textSize="40dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="여기는 커피탭입니다"/>
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <!--빨간 배경-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/cafe_darkRed">
+
+                <!--흰색 배경-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@color/cafe_darkRed">
+
+                    <TextView
+                        android:id="@+id/textView"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="13.8dp"
+                        tools:ignore="RtlCompat"></TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--TitleScrollView-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/TabTitleLeftBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/left_round" />
+
+                <HorizontalScrollView
+                    android:id="@+id/TabBarTitleHorizontalScroll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/TabBarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent">
+
+                            <!-- Background View (your tab indicator) -->
+                            <View
+                                android:id="@+id/lunchView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/tab_indicator"
+                                android:visibility="visible" />
+
+                            <!-- TextView -->
+                            <TextView
+                                android:id="@+id/TitleLunch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:text="신메뉴"
+                                android:textColor="@color/black"
+                                android:textSize="18dp" />
+                        </FrameLayout>
 
 
+                        <FrameLayout
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent">
 
+                            <!-- Background View (your tab indicator) -->
+                            <View
+                                android:id="@+id/hamburgerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/tab_indicator"
+                                android:visibility="invisible"
+
+                                />
+
+                            <!-- TextView -->
+                            <TextView
+
+                                android:id="@+id/TitleHamburger"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:text="커피"
+                                android:textColor="@color/black"
+                                android:textSize="18dp" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent">
+
+                            <!-- Background View (your tab indicator) -->
+                            <View
+                                android:id="@+id/DessertView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/tab_indicator"
+                                android:visibility="invisible"
+
+                                />
+
+                            <!-- TextView -->
+                            <TextView
+                                android:id="@+id/TitleDessert"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:text="에이드"
+                                android:textColor="@color/black"
+                                android:textSize="18dp" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="75dp"
+                            android:layout_height="match_parent">
+
+                            <!-- Background View (your tab indicator) -->
+                            <View
+                                android:id="@+id/DrinkView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/tab_indicator"
+                                android:visibility="invisible"
+
+                                />
+
+                            <!-- TextView -->
+                            <TextView
+                                android:id="@+id/TitleDrink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:text="쉐이크&amp;아포가토"
+                                android:textColor="@color/black"
+                                android:textSize="18dp" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/TabTitleRightBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/right_round" />
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/cafe_tab1"
+                layout="@layout/activity_cafe_tab1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+
+
+                />
+
+            <LinearLayout
+                android:id="@+id/totalOrderCountBar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/totalOrderedList"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:paddingLeft="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="20dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/SelectedOrderCount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:text="0개"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/SelectedOrderPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:gravity="end"
+                    android:paddingRight="16dp"
+                    android:text="0"
+                    android:textColor="#ffffff"
+                    android:textSize="23dp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/SelectedOrderBar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                >
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--<Here>-->
+
+        <!--bottom bar-->
+        <LinearLayout
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="11"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+
+            >
+
+            <!--직원 호출-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical"
+                android:textAlignment="center"/>
+            <!--이전-->
+            <LinearLayout
+                android:id="@+id/beforeButton"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical"
+                android:textAlignment="center"/>
+            <!--취소하기-->
+            <LinearLayout
+                android:id="@+id/cancel_button"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:text="취소하기"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    tools:ignore="RtlCompat"></TextView>
+
+            </LinearLayout>
+            <!--결제하기-->
+            <LinearLayout
+                android:id="@+id/payment_button"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:text="결제하기"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    tools:ignore="RtlCompat"></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
