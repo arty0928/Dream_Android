@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding.cinemaButton.setOnClickListener{
             common.goToCinema(view)
         }
-        binding.fastfoodButton.setOnClickListener{
+        binding.fastfoodButton.setOnClickListener {
             common.goToFastFood(view)
         }
     }

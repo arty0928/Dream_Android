@@ -20,9 +20,28 @@
         <activity
             android:name=".cinema.CinemaHomeActivity"
             android:exported="false" />
+        <!-- from MainHome to FastFood Main Home -->
         <activity
             android:name=".fastfoods.FastFoodHomeActivity"
             android:exported="false" />
+        <!-- from Home to payment way -->
+        <activity
+            android:name=".fastfoods.FastFoodHome1Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".fastfoods.FastFoodHome2Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".fastfoods.TabActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".fastfoods.NewTabActivity"
+            android:exported="false" />
+
+
         <activity
             android:name=".common.MainActivity"
             android:exported="false" />
