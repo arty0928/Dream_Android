@@ -56,6 +56,11 @@ class CommonUi {
         v.startActivity(intent)
         Log.d("goToAccountCreate", "회원가입 화면으로 전환")
     }
+    fun makeRandomString(length: Int):String{
+        val charset = ('0'..'9')+('a'..'z')+('A'..'Z')
+        var string:String = List(length){charset.random()}.joinToString("")
+        return string
+    }
 
     fun goToTabTest(v: Context){
         val intent = Intent(v, NewTabActivity::class.java)
@@ -63,5 +68,4 @@ class CommonUi {
         Log.d("goToTabTest", "tab test 화면으로 전환")
     }
 //    이전 화면으로 이동
-
 }
