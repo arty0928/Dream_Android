@@ -1,18 +1,14 @@
  package com.example.hyoja.Fragments
 
 import android.app.AlertDialog
-import android.app.Dialog
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.Window
 import android.widget.GridLayout
-import android.widget.ImageButton
 import android.widget.ImageView
-import android.widget.TextView
 import com.example.hyoja.R
 
 class hamburger : Fragment() {
@@ -55,7 +51,7 @@ class hamburger : Fragment() {
 
     private fun showBurgerDetailsDialog(imageResId: Int) {
 
-        val dialogView = layoutInflater.inflate(R.layout.fragment_show_set_or_one, null)
+        val dialogView = layoutInflater.inflate(R.layout.dialog_show_set_or_one, null)
         dialogView.setBackgroundColor(Color.TRANSPARENT);
 
         // 다이얼로그 뷰에 내용 설정
@@ -79,8 +75,20 @@ class hamburger : Fragment() {
             alertDialog.dismiss()
         }
 
+        val onlyBurger = dialogView.findViewById<GridLayout>(R.id.only_burger_grid)
+        onlyBurger.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        val setBurger = dialogView.findViewById<GridLayout>(R.id.set_grid)
+        setBurger.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
         alertDialog.show()
     }
 
+    private fun showSetMenuChoiceDialog(imageResId: Int){
 
+    }
 }
