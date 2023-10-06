@@ -25,7 +25,9 @@ class MainActivity : AppCompatActivity() {
         binding.cafeButton.setOnClickListener {
             common.goToCafe(view)
         }
-
+        binding.fastfoodButton.setOnClickListener {
+            common.goToFastFood(view)
+        }
     }
     // 뒤로가기 버튼을 눌렀을 때 로직
     override fun onBackPressed() {

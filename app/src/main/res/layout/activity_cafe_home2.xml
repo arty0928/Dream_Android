@@ -64,7 +64,7 @@
                                 android:id="@+id/newmenuView"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/tab_indicator"
+                                android:background="@drawable/cafetab_indicator"
                                 android:visibility="visible" />
 
                             <!-- TextView -->
@@ -89,7 +89,7 @@
                                 android:id="@+id/coffeeView"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/tab_indicator"
+                                android:background="@drawable/cafetab_indicator"
                                 android:visibility="invisible"
 
                                 />
@@ -112,12 +112,11 @@
                             android:layout_width="160dp"
                             android:layout_height="match_parent">
 
-                            <!-- Background View (your tab indicator) -->
                             <View
                                 android:id="@+id/AdeView"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/tab_indicator"
+                                android:background="@drawable/cafetab_indicator"
                                 android:visibility="invisible"
 
                                 />
@@ -138,12 +137,11 @@
                             android:layout_width="160dp"
                             android:layout_height="match_parent">
 
-                            <!-- Background View (your tab indicator) -->
                             <View
                                 android:id="@+id/ShaApoView"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/tab_indicator"
+                                android:background="@drawable/cafetab_indicator"
                                 android:visibility="invisible"
 
                                 />

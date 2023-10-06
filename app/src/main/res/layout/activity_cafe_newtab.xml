@@ -8,7 +8,6 @@
     >
 
     <com.google.android.material.tabs.TabLayout
-        android:background="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabMode="fixed"
@@ -18,7 +17,7 @@
         app:tabSelectedTextColor="@color/black"
 
         app:tabIndicatorColor="@color/cafe_darkRed"
-        app:tabIndicator="@drawable/tab_indicator"
+        app:tabIndicator="@drawable/cafetab_indicator"
         android:id="@+id/newTabLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
