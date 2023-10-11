@@ -39,9 +39,9 @@
                 android:layout_rowWeight="1"
                 android:fontFamily="@font/poppins_extrabold"
                 android:gravity="center"
-                android:text="더블 초코칩 쉐이크"
-                android:textSize="15dp"
-                android:textColor="@color/black" />
+                android:text="피치에이드"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
 
         </GridLayout>
 
@@ -64,9 +64,9 @@
                 android:layout_rowWeight="1"
                 android:fontFamily="@font/poppins_extrabold"
                 android:gravity="center"
-                android:text="피스타치오 쉐이크"
-                android:textSize="15dp"
-                android:textColor="@color/black" />
+                android:text="레몬에이드"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
 
         </GridLayout>
 
@@ -89,9 +89,9 @@
                 android:layout_rowWeight="1"
                 android:fontFamily="@font/poppins_extrabold"
                 android:gravity="center"
-                android:text="오리진 쉐이크"
-                android:textSize="15dp"
-                android:textColor="@color/black" />
+                android:text="애플에이드"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
 
         </GridLayout>
 
@@ -114,9 +114,9 @@
                 android:layout_rowWeight="1"
                 android:fontFamily="@font/poppins_extrabold"
                 android:gravity="center"
-                android:text="초코쿠키 쉐이크"
-                android:textSize="15dp"
-                android:textColor="@color/black" />
+                android:text="오렌지에이드"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
 
         </GridLayout>
 

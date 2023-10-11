@@ -9,16 +9,20 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.example.hyoja.Adapter.NewCafeAdapter
 import com.example.hyoja.Fragments.shake_apogato
 import com.example.hyoja.Fragments.coffee
+import com.example.hyoja.Fragments.coffee1
 import com.example.hyoja.Fragments.ade
 import com.example.hyoja.Fragments.new_menu
 import com.example.hyoja.R
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityCafeHome2Binding
+import com.example.hyoja.cafe.CafeNewTabActivity
+import com.google.android.material.tabs.TabLayoutMediator
+
 class CafeHome2Activity : AppCompatActivity() {
     var backPressedTime: Long = 0 // 뒤로가기 2번 클릭을 위한 변수선언
     private lateinit var binding: ActivityCafeHome2Binding
@@ -62,25 +66,27 @@ class CafeHome2Activity : AppCompatActivity() {
             new_menu(),
             coffee(),
             ade(),
-            shake_apogato()
+            shake_apogato(),
+            coffee1(),
         )
 
         val adapter = CafeAdapterCustome(this, fragments)
         viewPager.adapter = adapter
 
-
-
-        //TabView Visible
         val newmenuView = findViewById<View>(R.id.newmenuView)
         val titleNewmenu = findViewById<TextView>(R.id.TitleNewmenu)
         val titleCoffee = findViewById<TextView>(R.id.TitleCoffee)
         val coffeeView = findViewById<View>(R.id.coffeeView)
+        val MenuRightBnt = findViewById<ImageView>(R.id.MenuRightBnt)
+        val MenuLeftBnt = findViewById<View>(R.id.MenuLeftBnt)
         val titleAde = findViewById<TextView>(R.id.TitleAde)
         val adeView = findViewById<View>(R.id.AdeView)
         val titleShaApo = findViewById<TextView>(R.id.TitleShaApo)
         val shaApoView = findViewById<View>(R.id.ShaApoView)
-
         var currentlyVisibleView = newmenuView
+
+        //TabView Visible
+
 
 
         fun toggleVisibility(viewToShow: View) {
@@ -93,7 +99,7 @@ class CafeHome2Activity : AppCompatActivity() {
 
         titleNewmenu.setOnClickListener {
             viewPager.currentItem = 0
-            val scrollAmount = 300
+            val scrollAmount = 420
             horizontalScrollView.smoothScrollBy(-scrollAmount,0)
             toggleVisibility(newmenuView)
         }
@@ -101,6 +107,7 @@ class CafeHome2Activity : AppCompatActivity() {
         titleCoffee.setOnClickListener {
             viewPager.currentItem = 1
             toggleVisibility(coffeeView)
+
         }
 
         titleAde.setOnClickListener {
@@ -110,12 +117,19 @@ class CafeHome2Activity : AppCompatActivity() {
 
         titleShaApo.setOnClickListener {
             viewPager.currentItem = 3
-            val scrollAmount = 300
+            val scrollAmount = 420
             horizontalScrollView.smoothScrollBy(scrollAmount,0)
             toggleVisibility(shaApoView)
 
         }
 
+        binding.MenuRightBnt.setOnClickListener {
+            viewPager.currentItem = 4 // 혹은 원하는 페이지 인덱스로 변경
+        }
+
+        MenuRightBnt.setOnClickListener {
+            viewPager.currentItem = 4  // 커피1 페이지의 인덱스
+        }
 
 
 

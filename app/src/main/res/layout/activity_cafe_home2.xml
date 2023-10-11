@@ -5,10 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".cafe.CafeHome2Activity">
-    <LinearLayout
+
+
+
+    <FrameLayout
+        android:id="@+id/BackToStart"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/cafe_darkRed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <FrameLayout
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+
 
         <LinearLayout
             android:layout_weight="1"
@@ -17,14 +36,6 @@
             android:background="@color/white"
             android:orientation="vertical">
 
-            <!--빨간 배경-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginBottom="5dp"
-                android:background="@color/cafe_darkRed"/>
-            <!--TitleScrollView-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -166,20 +177,44 @@
                     android:layout_width="40dp"
                     android:layout_height="match_parent"
                     android:layout_marginRight="5dp"
-                    android:src="@drawable/right_round" />
+                    android:rotation="180"
+                    android:src="@drawable/left_round" />
 
             </LinearLayout>
 
-            <include
-                android:id="@+id/cafe_tab1"
-                layout="@layout/activity_cafe_tab1"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_weight="8"
+                android:layout_height="360dp"
+                android:layout_marginTop="05dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/MenuLeftBnt"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:rotation="180"
+                    android:src="@drawable/menu_arrow" />
+
+                <include
+                    android:id="@+id/cafe_tab1"
+                    layout="@layout/activity_cafe_tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_weight="8"
 
 
-                />
+                    />
 
+                <ImageView
+                    android:id="@+id/MenuRightBnt"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="371dp"
+                    android:src="@drawable/menu_arrow" />
+
+            </FrameLayout>
             <include
                 android:id="@+id/cafe_tab2"
                 layout="@layout/activity_cafe_tab2"
@@ -196,5 +231,5 @@
         <!--<Here>-->
 
         <!--bottom bar-->
-    </LinearLayout>
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
