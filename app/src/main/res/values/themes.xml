@@ -17,6 +17,7 @@
     <style name="CustomTabLayout" parent="Widget.Design.TabLayout">
         <item name="android:textSize">20dp</item> <!-- Change the font size here -->
         <item name="android:fontFamily">@font/poppins_extrabold</item> <!-- Change the fontFamily here -->
+>>>>>>> 4075c1005156694bc613359792b3939e5e591e76
         <!-- You can add more styling attributes here if needed -->
     </style>
 </resources>

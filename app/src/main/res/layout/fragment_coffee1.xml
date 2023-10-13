@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+
+    tools:context=".Fragments.coffee1">
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rowCount="3"
+        android:columnCount="2"
+        android:padding="10dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        >
+
+
+        <GridLayout
+            android:id="@+id/burger1"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="흑당콜드브루"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+        </GridLayout>
+
+        <!--2 피쉬버거-->
+        <GridLayout
+            android:id="@+id/burger2"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="콜드브루 크림넛"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+        </GridLayout>
+
+        <!--3, 새우버거-->
+        <GridLayout
+            android:id="@+id/burger3"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="연유 콜드브루"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+        </GridLayout>
+
+        <!--4, 치킨버거-->
+        <GridLayout
+            android:id="@+id/burger4"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="horizontal"
+            tools:ignore="DuplicateIds">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_rowWeight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:text="아인슈페너"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+        </GridLayout>
+
+
+
+    </GridLayout>
+
+</FrameLayout>

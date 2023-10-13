@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Red view at the top -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/cafe_darkRed" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_marginTop="80dp">
+
+        <!-- Button 1 -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="신메뉴"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp" />
+
+        <!-- Button 2 -->
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button1"
+            android:text="에이드"
+            android:layout_marginTop="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp" />
+
+        <!-- Button 3 -->
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="커피"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/button1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp" />
+
+        <!-- Button 4 -->
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="쉐이크&amp;아포가토"
+            android:layout_below="@+id/button3"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp" />
+    </RelativeLayout>
+</FrameLayout>

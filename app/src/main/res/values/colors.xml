@@ -9,7 +9,10 @@
     <color name="white">#FFFFFFFF</color>
 
 
-<!--    fastfood  -->
-    <color name="fastfood_black">#FF000000</color>
-    <color name="fastfood_darkRed">#C80000</color>
+    <!--    cafe  -->
+    <color name="cafe_white">#ffffff</color>
+    <color name="cafe_gray">#9C9898</color>
+    <color name="cafe_black">#FF000000</color>
+    <color name="cafe_darkRed">#C80000</color>
+    <color name="cafe_skyblue">#03A9F4</color>
 </resources>

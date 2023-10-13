@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cafe.CafeHome2Activity">
+
+
+
+    <FrameLayout
+        android:id="@+id/BackToStart"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/cafe_darkRed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <FrameLayout
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/TabTitleLeftBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/left_round" />
+
+                <HorizontalScrollView
+                    android:id="@+id/TabBarTitleHorizontalScroll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/TabBarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent">
+
+                            <!-- Background View (your tab indicator) -->
+                            <View
+                                android:id="@+id/newmenuView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/cafetab_indicator"
+                                android:visibility="visible" />
+
+                            <!-- TextView -->
+                            <TextView
+                                android:id="@+id/TitleNewmenu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:text="신메뉴"
+                                android:textColor="@color/black"
+                                android:textSize="18dp" />
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent">
+
+                            <!-- Background View (your tab indicator) -->
+                            <View
+                                android:id="@+id/coffeeView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/cafetab_indicator"
+                                android:visibility="invisible"
+
+                                />
+
+                            <!-- TextView -->
+                            <TextView
+
+                                android:id="@+id/TitleCoffee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:text="커피"
+                                android:textColor="@color/black"
+                                android:textSize="18dp" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent">
+
+                            <View
+                                android:id="@+id/AdeView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/cafetab_indicator"
+                                android:visibility="invisible"
+
+                                />
+
+                            <!-- TextView -->
+                            <TextView
+                                android:id="@+id/TitleAde"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:text="에이드"
+                                android:textColor="@color/black"
+                                android:textSize="18dp" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent">
+
+                            <View
+                                android:id="@+id/ShaApoView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/cafetab_indicator"
+                                android:visibility="invisible"
+
+                                />
+
+                            <!-- TextView -->
+                            <TextView
+                                android:id="@+id/TitleShaApo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:text="쉐이크&amp;아포가토"
+                                android:textColor="@color/black"
+                                android:textSize="18dp" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/TabTitleRightBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:rotation="180"
+                    android:src="@drawable/left_round" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_marginTop="05dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/MenuLeftBnt"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:rotation="180"
+                    android:src="@drawable/menu_arrow" />
+
+                <include
+                    android:id="@+id/cafe_tab1"
+                    layout="@layout/activity_cafe_tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_weight="8"
+
+
+                    />
+
+                <ImageView
+                    android:id="@+id/MenuRightBnt"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="371dp"
+                    android:src="@drawable/menu_arrow" />
+
+            </FrameLayout>
+            <include
+                android:id="@+id/cafe_tab2"
+                layout="@layout/activity_cafe_tab2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="8"
+
+
+                />
+
+
+        </LinearLayout>
+
+        <!--<Here>-->
+
+        <!--bottom bar-->
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
