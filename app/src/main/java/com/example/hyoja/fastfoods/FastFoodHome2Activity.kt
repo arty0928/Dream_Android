@@ -1,29 +1,27 @@
 package com.example.hyoja.fastfoods
 
-import androidx.appcompat.app.AppCompatActivity
+//import com.example.hyoja.Adapter.MyAdapter
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
 import android.widget.HorizontalScrollView
 import android.widget.ImageView
-import android.widget.ScrollView
-import android.widget.Scroller
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-//import com.example.hyoja.Adapter.MyAdapter
 import com.example.hyoja.Fragments.dessert
 import com.example.hyoja.Fragments.drink
 import com.example.hyoja.Fragments.hamburger
 import com.example.hyoja.Fragments.lunch
 import com.example.hyoja.R
 import com.example.hyoja.common.util.CommonUi
+import com.example.hyoja.databinding.ActivityBodySetmenuBinding
 import com.example.hyoja.databinding.ActivityFastfoodHome2Binding
+
 
 class FastFoodHome2Activity : AppCompatActivity() {
     var backPressedTime: Long = 0 // 뒤로가기 2번 클릭을 위한 변수선언
@@ -35,15 +33,11 @@ class FastFoodHome2Activity : AppCompatActivity() {
     //        selectedItems scrollView
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
         binding = ActivityFastfoodHome2Binding.inflate(layoutInflater)
+        super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        val view = this
-//        binding.newbutton.setOnClickListener {
-//            common.goToTabTest(view)
-//        }
 
+        val view = this
 
 //        HorizontalScrollView 오른쪽 버튼 눌렀을때
         setContentView(R.layout.activity_fastfood_home2)
@@ -66,6 +60,9 @@ class FastFoodHome2Activity : AppCompatActivity() {
 
         viewPager = findViewById(R.id.viewPager)
 
+        // 스와이프를 비활성화합니다.
+        viewPager.isUserInputEnabled = false
+
         val fragments = listOf(
             lunch(),
             hamburger(),
@@ -75,8 +72,6 @@ class FastFoodHome2Activity : AppCompatActivity() {
 
         val adapter = MyAdapterCustome(this, fragments)
         viewPager.adapter = adapter
-
-
 
         //TabView Visible
         val lunchView = findViewById<View>(R.id.lunchView)

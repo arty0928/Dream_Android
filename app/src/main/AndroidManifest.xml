@@ -34,7 +34,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".fastfoods.TabActivity"
+            android:name=".fastfoods.SetMenuTabActivity"
             android:exported="false" />
 
         <activity
