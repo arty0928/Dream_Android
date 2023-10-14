@@ -15,24 +15,11 @@ import com.example.hyoja.cafe.viewmodel.MenuListViewModel
 import com.example.hyoja.databinding.FragmentMenuCategoryOneBinding
 import com.example.hyoja.databinding.FragmentMenuCategoryTwoBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [MenuCategoryTwoFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MenuCategoryTwoFragment : Fragment() {
     private lateinit var viewModel: MenuListViewModel
     private val Tag:String ="MenuCategoryTwoFragment"
-
     lateinit var binding: FragmentMenuCategoryTwoBinding
-    interface OnButtonClickListener {
-        fun onButtonClicked(count: Int)
-    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -46,7 +33,8 @@ class MenuCategoryTwoFragment : Fragment() {
             when(it){
                 "tea" -> {
                     binding.teaButton.setBackgroundResource(R.drawable.button_round)
-                    binding.teaButton.setTextColor(ContextCompat.getColor(requireContext(),R.color.cafe_white))}
+                    binding.teaButton.setTextColor(ContextCompat.getColor(requireContext(),R.color.cafe_white))
+                }
                 "flatccino" -> {
                     binding.flatccinoButton.setBackgroundResource(R.drawable.button_round)
                     binding.flatccinoButton.setTextColor(ContextCompat.getColor(requireContext(),R.color.cafe_white))
@@ -77,22 +65,22 @@ class MenuCategoryTwoFragment : Fragment() {
         binding.baverageButton.setOnClickListener{
             CafeModel.menuCategory = "baverage"
             Log.d(Tag,"menuCategory = "+ CafeModel.menuCategory)
-            viewModel.dataChanged()
+            viewModel.categorySelectChanged()
         }
         binding.flatccinoButton.setOnClickListener {
             CafeModel.menuCategory = "flatccino"
             Log.d(Tag,"menuCategory = "+ CafeModel.menuCategory)
-            viewModel.dataChanged()
+            viewModel.categorySelectChanged()
         }
         binding.teaButton.setOnClickListener {
             CafeModel.menuCategory = "tea"
             Log.d(Tag,"menuCategory = "+ CafeModel.menuCategory)
-            viewModel.dataChanged()
+            viewModel.categorySelectChanged()
         }
         binding.bubbleMilkButton.setOnClickListener {
             CafeModel.menuCategory = "bubbleMilk"
             Log.d(Tag,"menuCategory = "+ CafeModel.menuCategory)
-            viewModel.dataChanged()
+            viewModel.categorySelectChanged()
         }
         return binding.root
     }

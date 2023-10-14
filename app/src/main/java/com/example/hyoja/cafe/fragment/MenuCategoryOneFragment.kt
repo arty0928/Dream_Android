@@ -24,9 +24,7 @@ class MenuCategoryOneFragment : Fragment() {
     private val Tag:String ="MenuCategoryOneFragment"
 
     lateinit var binding: FragmentMenuCategoryOneBinding
-    interface OnButtonClickListener {
-        fun onButtonClicked(count: Int)
-    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -40,7 +38,8 @@ class MenuCategoryOneFragment : Fragment() {
             when(it){
                 "newMenu" -> {
                     binding.newMenuButton.setBackgroundResource(R.drawable.button_round)
-                    binding.newMenuButton.setTextColor(ContextCompat.getColor(requireContext(),R.color.cafe_white))}
+                    binding.newMenuButton.setTextColor(ContextCompat.getColor(requireContext(),R.color.cafe_white))
+                }
                 "ade" -> {
                     binding.adeButton.setBackgroundResource(R.drawable.button_round)
                     binding.adeButton.setTextColor(ContextCompat.getColor(requireContext(),R.color.cafe_white))
@@ -71,22 +70,22 @@ class MenuCategoryOneFragment : Fragment() {
         binding.newMenuButton.setOnClickListener{
             CafeModel.menuCategory = "newMenu"
             Log.d(Tag,"menuCategory = "+CafeModel.menuCategory)
-            viewModel.dataChanged()
+            viewModel.categorySelectChanged()
         }
         binding.adeButton.setOnClickListener {
             CafeModel.menuCategory = "ade"
             Log.d(Tag,"menuCategory = "+CafeModel.menuCategory)
-            viewModel.dataChanged()
+            viewModel.categorySelectChanged()
         }
         binding.coffeeButton.setOnClickListener {
             CafeModel.menuCategory = "coffee"
             Log.d(Tag,"menuCategory = "+CafeModel.menuCategory)
-            viewModel.dataChanged()
+            viewModel.categorySelectChanged()
         }
         binding.shakeButton.setOnClickListener {
             CafeModel.menuCategory = "shake"
             Log.d(Tag,"menuCategory = "+CafeModel.menuCategory)
-            viewModel.dataChanged()
+            viewModel.categorySelectChanged()
         }
         return binding.root
     }

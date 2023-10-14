@@ -7,13 +7,18 @@ import com.example.hyoja.cafe.model.CafeModel
 
 class MenuListViewModel: ViewModel() {
     private val category = MutableLiveData<String>()
+    private val drink = MutableLiveData<String>()
+
     val categoryLiveData: LiveData<String> get() = category
+    val drinkLiveData: LiveData<String> get() = drink
 
     init {
-        category.value = ""
+        category.value = "newMenu"
+        drink.value = ""
     }
 
-    fun dataChanged(){
+    fun categorySelectChanged(){
         category.value = CafeModel.menuCategory
     }
+
 }

@@ -1,52 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".cafe.CafeHome1Activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".cafe.CafeHome1Activity">
+    android:layout_height="match_parent">
 
-    <!-- Red view at the top -->
-    <View
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/cafe_darkRed" />
+        android:layout_height="60dp"
+        android:background="@color/cafe_darkRed">
+        <ImageView
+            android:id="@+id/cafeHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/hyoja_home" />
+        <TextView
+            android:id="@+id/cafeHomeText"
+            android:text="처음으로"
+            android:padding="20dp"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <FrameLayout
-            android:layout_weight="9"
+            android:layout_weight="13"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/menuList"
-                android:layout_margin="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="0dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <ImageButton
                 android:id="@+id/leftButton"
+                android:background="@null"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:scaleType="centerCrop"
                 android:padding="0dp"
                 android:src="@drawable/left_arrow_white"
                 android:layout_margin="5dp"
                 android:layout_gravity="left|center"
-                android:layout_width="20dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
 
             <ImageButton
                 android:id="@+id/rightButton"
+                android:background="@null"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:scaleType="centerCrop"
                 android:padding="0dp"
                 android:src="@drawable/right_arrow_red"
                 android:layout_margin="5dp"
                 android:layout_gravity="right|center"
-                android:layout_width="20dp"
-                android:layout_height="30dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
 
         </FrameLayout>
         <LinearLayout
@@ -55,6 +84,134 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.viewpager2.widget.ViewPager2
+                    android:background="@drawable/border_line"
+                    android:id="@+id/drinkList"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <ImageButton
+                    android:id="@+id/drinkListLeftButton"
+                    android:background="@null"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:scaleType="centerCrop"
+                    android:padding="0dp"
+                    android:src="@drawable/icon_left_un"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="left|center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <ImageButton
+                    android:id="@+id/drinkListRightButton"
+                    android:background="@null"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:scaleType="centerCrop"
+                    android:padding="0dp"
+                    android:src="@drawable/icon_right"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="right|center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+            </FrameLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:layout_weight="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/selectedDrinkList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <ImageButton
+                        android:id="@+id/selectDrinkLeftButton"
+                        android:background="@null"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:scaleType="centerCrop"
+                        android:padding="0dp"
+                        android:src="@drawable/left_arrow_white"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="left|center"
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"/>
+
+                    <ImageButton
+                        android:id="@+id/selectDrinkRightButton"
+                        android:background="@null"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:scaleType="centerCrop"
+                        android:padding="0dp"
+                        android:src="@drawable/right_arrow_red"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="right|center"
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:textSize="15dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="총 결제금액"
+                            android:textColor="@color/cafe_gray"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                        <LinearLayout
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:layout_gravity = "right"
+                                android:src = "@drawable/mdi_won"
+                                android:layout_width="17dp"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:textColor="@color/cafe_darkRed"
+                                android:textSize="20dp"
+                                android:layout_gravity="right"
+                                android:gravity="center"
+                                android:textAlignment="center"
+                                android:text="0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:text="전체취소"
+                            android:textColor="@color/white"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <ImageButton
+                    android:layout_weight="6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
@@ -62,3 +219,5 @@
 
 
 </LinearLayout>
+
+</FrameLayout>
