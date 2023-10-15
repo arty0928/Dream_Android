@@ -282,6 +282,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/cancel_button"
                     android:background="@drawable/hot_button_unclicked"
                     android:textColor="@color/cafe_darkRed"
                     android:text="취소"

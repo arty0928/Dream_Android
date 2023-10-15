@@ -26,10 +26,13 @@ import com.example.hyoja.databinding.FragmentDrinkOrderAddBinding
 class DrinkOrderAddDialogFragment: DialogFragment() {
     lateinit var binding: FragmentDrinkOrderAddBinding
     private lateinit var viewModel: MenuListViewModel
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(requireActivity())[MenuListViewModel::class.java]
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        binding.cancelButton.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+        }
     }
 
     override fun onCreateView(
@@ -41,7 +44,6 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
         // 레이아웃 배경을 투명하게 해줌, 필수 아님
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         setUi()
-
         return view
     }
     override fun onResume() {
