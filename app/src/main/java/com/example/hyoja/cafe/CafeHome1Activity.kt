@@ -25,6 +25,7 @@ import com.example.hyoja.cafe.adapter.DrinkListNewMenuAdapter
 import com.example.hyoja.cafe.adapter.DrinkListShakeAdapter
 import com.example.hyoja.cafe.adapter.DrinkListTeaAdapter
 import com.example.hyoja.cafe.adapter.MenuCategoryAdapter
+import com.example.hyoja.cafe.fragment.DrinkOrderAddDialogFragment
 import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.viewmodel.MenuListViewModel
 import com.example.hyoja.common.util.CommonUi
@@ -139,6 +140,19 @@ class CafeHome1Activity : AppCompatActivity() {
             }
         })
 
+        //음료리스트에서 음료 선택 시 옵션 선택 프래그먼트 생성
+        //처음 init 막는 로직 필요
+        var i=0
+        viewModel.drinkSelectedLiveData.observe(this, Observer {
+            if(i>0){
+                Log.d(Tag,"drinkSelectedLiveData observed")
+                drinkOptionFragmentMange()
+            }
+            i++
+
+        })
+
+
 
         //처음으로 버튼
         binding.cafeHome.setOnClickListener{
@@ -181,5 +195,13 @@ class CafeHome1Activity : AppCompatActivity() {
             binding.drinkListRightButton.setImageResource(R.drawable.icon_right)
             binding.drinkListLeftButton.setImageResource(R.drawable.icon_left_un)
         }
+    }
+
+    fun drinkOptionFragmentMange(){
+        Log.d(Tag,"drinkOptionFragmentMange called")
+        DrinkOrderAddDialogFragment().show(
+            supportFragmentManager, "DrinkOrderAddDialogFragment"
+        )
+        Log.d(Tag,"DrinkOrderAddDialogFragment().show")
     }
 }

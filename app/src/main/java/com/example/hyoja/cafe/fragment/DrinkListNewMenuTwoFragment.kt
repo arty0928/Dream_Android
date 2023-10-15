@@ -22,7 +22,6 @@ class DrinkListNewMenuTwoFragment : Fragment() {
     ): View? {
         binding = FragmentDrinkListNewMenuTwoBinding.inflate(inflater, container, false)
 
-
         return binding.root
     }
 
