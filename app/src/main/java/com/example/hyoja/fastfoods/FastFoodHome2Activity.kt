@@ -3,6 +3,7 @@ package com.example.hyoja.fastfoods
 //import com.example.hyoja.Adapter.MyAdapter
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.HorizontalScrollView
 import android.widget.ImageView
@@ -22,13 +23,37 @@ import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityBodySetmenuBinding
 import com.example.hyoja.databinding.ActivityFastfoodHome2Binding
 
+// TRUE 면 세트
+data class MenuItem(
+    val name: String,
+    val imageResId: Int,
+    val price: Int,
+    val isSet: Boolean = false,
+    val setMenu: List<MenuItem>? = null
+)
 
-class FastFoodHome2Activity : AppCompatActivity() {
+
+object MenuRepository {
+    private val menuList = mutableListOf<MenuItem>()
+
+    // 메뉴 항목을 추가하는 함수
+    fun addMenuItem(menuItem: MenuItem) {
+        menuList.add(menuItem)
+    }
+
+    // 전체 메뉴 목록을 반환하는 함수
+    fun getAllMenuItems(): List<MenuItem> {
+        return menuList
+    }
+}
+
+
+class FastFoodHome2Activity : AppCompatActivity(){
     var backPressedTime: Long = 0 // 뒤로가기 2번 클릭을 위한 변수선언
-    private lateinit var binding: ActivityFastfoodHome2Binding
+    lateinit var binding: ActivityFastfoodHome2Binding
     val common = CommonUi()
 
-    private lateinit var viewPager: ViewPager2
+    lateinit var viewPager: ViewPager2
 
     //        selectedItems scrollView
 
@@ -36,6 +61,33 @@ class FastFoodHome2Activity : AppCompatActivity() {
         binding = ActivityFastfoodHome2Binding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+
+        // 메뉴 선택 시 화면에 메뉴 추가
+        fun menuSelected(menuItem: MenuItem) {
+            val addedMenu = MenuRepository.getAllMenuItems()
+            val selectedItemsLayout = binding.selectedItems
+            val inflater = LayoutInflater.from(this)
+
+            for (addedMenuItem in addedMenu) {
+                val selectedMenuLayout = inflater.inflate(R.layout.selected_menu, null)
+
+                // 메뉴 이름 설정
+                val itemNameTextView = selectedMenuLayout.findViewById<TextView>(R.id.selectedItemName)
+                itemNameTextView.text = addedMenuItem.name
+
+                // 메뉴 가격 설정
+                val itemPriceTextView = selectedMenuLayout.findViewById<TextView>(R.id.selectedItemPrice)
+                itemPriceTextView.text = addedMenuItem.price.toString()
+
+                // 나머지 요소 업데이트 및 이벤트 처리
+
+                selectedItemsLayout.addView(selectedMenuLayout)
+            }
+        }
+
+
+
 
         val view = this
 
@@ -132,6 +184,8 @@ class FastFoodHome2Activity : AppCompatActivity() {
             nestedScrollView.smoothScrollBy(0, 200) // Adjust the scroll amount as needed
         }
 
+
+
     }
 
     class MyAdapterCustome(
@@ -143,6 +197,7 @@ class FastFoodHome2Activity : AppCompatActivity() {
 
         override fun createFragment(position: Int): Fragment = fragments[position]
     }
+
 }
 
 
