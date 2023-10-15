@@ -46,7 +46,7 @@ data class NewMenu6(
 )
 data class NewMenu7(
     val name : String = "토피넛 쇼콜라",
-    val price : Int = 4500,
+    val price : Int = 5000,
     val drinkImage: Int = R.drawable.new_menu_7,
     var extra: Boolean = false,
     var degree: String = "Hot"

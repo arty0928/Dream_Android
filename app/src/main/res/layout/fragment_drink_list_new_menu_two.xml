@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
+            android:id="@+id/newMenu5"
             android:layout_marginRight="2dp"
             android:background="@drawable/border_line"
             android:orientation="vertical"
@@ -47,6 +48,7 @@
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
+                    android:id="@+id/newMenu5Price"
                     android:gravity="center"
                     android:textSize="17dp"
                     android:textColor="@color/purple_500"
@@ -57,6 +59,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/newMenu6"
             android:layout_marginLeft="2dp"
             android:background="@drawable/border_line"
             android:orientation="vertical"
@@ -88,6 +91,7 @@
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
+                    android:id="@+id/newMenu6Price"
                     android:gravity="center"
                     android:textSize="17dp"
                     android:textColor="@color/purple_500"
@@ -106,6 +110,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
+            android:id="@+id/newMenu7"
             android:layout_marginRight="2dp"
             android:background="@drawable/border_line"
             android:orientation="vertical"
@@ -137,6 +142,7 @@
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
+                    android:id="@+id/newMenu7Price"
                     android:gravity="center"
                     android:textSize="17dp"
                     android:textColor="@color/purple_500"
@@ -147,6 +153,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/newMenu8"
             android:layout_marginLeft="2dp"
             android:background="@drawable/border_line"
             android:orientation="vertical"
@@ -178,6 +185,7 @@
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
+                    android:id="@+id/newMenu8Price"
                     android:gravity="center"
                     android:textSize="17dp"
                     android:textColor="@color/purple_500"
