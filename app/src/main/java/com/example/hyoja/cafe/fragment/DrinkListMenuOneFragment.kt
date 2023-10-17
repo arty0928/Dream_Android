@@ -60,6 +60,23 @@ class DrinkListNewMenuOneFragment : Fragment() {
 
         return binding.root
     }
+    fun setUI(){
+        binding.menu1ImageView.setImageResource(drinkData5.drinkImage)
+        binding.newMenu5Name.text = drinkData5.name
+        binding.newMenu5Price.text = drinkData5.price.toString()
+
+        binding.newMenu6Image.setImageResource(drinkData6.drinkImage)
+        binding.newMenu6Name.text = drinkData6.name
+        binding.newMenu6Price.text = drinkData6.price.toString()
+
+        binding.newMenu7Image.setImageResource(drinkData7.drinkImage)
+        binding.newMenu7Name.text = drinkData7.name
+        binding.newMenu7Price.text = drinkData7.price.toString()
+
+        binding.newMenu8Image.setImageResource(drinkData8.drinkImage)
+        binding.newMenu8Name.text = drinkData8.name
+        binding.newMenu8Price.text = drinkData8.price.toString()
+    }
 
 
 

@@ -46,8 +46,10 @@ class DrinkListNewMenuTwoFragment : Fragment() {
 
         //뷰모델을 이용한 옵저버 패턴
         viewModel = ViewModelProvider(requireActivity())[MenuListViewModel::class.java]
-        viewModel.categoryLiveData.observe(requireActivity(), Observer {
+        viewModel.categoryLiveData.observe(viewLifecycleOwner, Observer {
+            Log.d(Tag,"categoryLiveData observe")
             checkDrinkCategory(it)
+            setUI()
         })
 
         // 믿기지 않겠지만 newMenu가 버튼 이름입니다.
@@ -118,19 +120,19 @@ class DrinkListNewMenuTwoFragment : Fragment() {
         }
     }
     fun setUI(){
-        binding.newMenu5Image.setBackgroundResource(drinkData5.drinkImage)
+        binding.newMenu5Image.setImageResource(drinkData5.drinkImage)
         binding.newMenu5Name.text = drinkData5.name
         binding.newMenu5Price.text = drinkData5.price.toString()
 
-        binding.newMenu6Image.setBackgroundResource(drinkData6.drinkImage)
+        binding.newMenu6Image.setImageResource(drinkData6.drinkImage)
         binding.newMenu6Name.text = drinkData6.name
         binding.newMenu6Price.text = drinkData6.price.toString()
 
-        binding.newMenu7Image.setBackgroundResource(drinkData7.drinkImage)
+        binding.newMenu7Image.setImageResource(drinkData7.drinkImage)
         binding.newMenu7Name.text = drinkData7.name
         binding.newMenu7Price.text = drinkData7.price.toString()
 
-        binding.newMenu8Image.setBackgroundResource(drinkData8.drinkImage)
+        binding.newMenu8Image.setImageResource(drinkData8.drinkImage)
         binding.newMenu8Name.text = drinkData8.name
         binding.newMenu8Price.text = drinkData8.price.toString()
     }
