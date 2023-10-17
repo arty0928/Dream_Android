@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.model.DrinkDataInterface
@@ -51,6 +50,7 @@ class DrinkListMenuTwoFragment : Fragment() {
             Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
         }
 
+
     }
 
     override fun onCreateView(
@@ -64,6 +64,7 @@ class DrinkListMenuTwoFragment : Fragment() {
         //받아온 정보를 통해 UI세팅
         val drinkData: DrinkDataFactory = DrinkDataFactory()
         drinkArrayList = drinkData.getNewMenuArrayList()
+
         setUI()
 
         return binding.root
@@ -133,6 +134,7 @@ class DrinkListMenuTwoFragment : Fragment() {
         else{
             binding.menu4Price.text = drinkData.price.toString()
         }
+
     }
 
 }

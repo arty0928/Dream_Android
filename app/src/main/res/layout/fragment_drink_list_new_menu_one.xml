@@ -8,7 +8,6 @@
     android:padding="15dp"
     tools:context=".cafe.fragment.DrinkListMenuOneFragment">
     <LinearLayout
-        android:background="#f5f5f5"
         android:padding="2dp"
         android:orientation="horizontal"
         android:layout_weight="1"
@@ -17,12 +16,13 @@
         <LinearLayout
             android:id="@+id/newMenu1"
             android:layout_marginRight="2dp"
-            android:background="@drawable/border_line"
+            android:background="@drawable/border_f5f5f5"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
+                android:background="#f5f5f5"
                 android:id="@+id/menu1Image"
                 android:layout_gravity="center"
                 android:src="@drawable/ready_sorry"
@@ -30,6 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
+                android:background="#f5f5f5"
                 android:id="@+id/menu1Name"
                 android:gravity="center"
                 android:textSize="16dp"
@@ -39,18 +40,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <LinearLayout
+                android:background="#f5f5f5"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:background="#f5f5f5"
                     android:id="@+id/wonImage1"
                     android:src="@drawable/won_purple"
                     android:layout_gravity="center"
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
+                    android:background="#f5f5f5"
                     android:id="@+id/menu1Price"
                     android:gravity="center"
                     android:textSize="17dp"
@@ -64,18 +68,20 @@
         <LinearLayout
             android:id="@+id/newMenu2"
             android:layout_marginLeft="2dp"
-            android:background="@drawable/border_line"
+            android:background="@drawable/border_f5f5f5"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
+                android:background="#f5f5f5"
                 android:id="@+id/menu2Image"
                 android:src="@drawable/ready_sorry"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
+                android:background="#f5f5f5"
                 android:id="@+id/menu2Name"
                 android:gravity="center"
                 android:textSize="16dp"
@@ -85,18 +91,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <LinearLayout
+                android:background="#f5f5f5"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:background="#f5f5f5"
                     android:id="@+id/wonImage2"
                     android:src="@drawable/won_purple"
                     android:layout_gravity="center"
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
+                    android:background="#f5f5f5"
                     android:id="@+id/menu2Price"
                     android:gravity="center"
                     android:textSize="17dp"
@@ -118,18 +127,20 @@
         <LinearLayout
             android:id="@+id/newMenu3"
             android:layout_marginRight="2dp"
-            android:background="@drawable/border_line"
+            android:background="@drawable/border_f5f5f5"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
+                android:background="#f5f5f5"
                 android:id="@+id/menu3Image"
                 android:src="@drawable/ready_sorry"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
+                android:background="#f5f5f5"
                 android:id="@+id/menu3Name"
                 android:gravity="center"
                 android:textSize="16dp"
@@ -139,18 +150,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <LinearLayout
+                android:background="#f5f5f5"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:background="#f5f5f5"
                     android:id="@+id/wonImage3"
                     android:src="@drawable/won_purple"
                     android:layout_gravity="center"
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
+                    android:background="#f5f5f5"
                     android:id="@+id/menu3Price"
                     android:gravity="center"
                     android:textSize="17dp"
@@ -164,18 +178,20 @@
         <LinearLayout
             android:id="@+id/newMenu4"
             android:layout_marginLeft="2dp"
-            android:background="@drawable/border_line"
+            android:background="@drawable/border_f5f5f5"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
+                android:background="#f5f5f5"
                 android:id="@+id/menu4Image"
                 android:src="@drawable/ready_sorry"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
+                android:background="#f5f5f5"
                 android:id="@+id/menu4Name"
                 android:gravity="center"
                 android:textSize="16dp"
@@ -185,18 +201,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <LinearLayout
+                android:background="#f5f5f5"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:background="#f5f5f5"
                     android:id="@+id/wonImage4"
                     android:src="@drawable/won_purple"
                     android:layout_gravity="center"
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
+                    android:background="#f5f5f5"
                     android:id="@+id/menu4Price"
                     android:gravity="center"
                     android:textSize="17dp"

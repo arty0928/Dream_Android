@@ -8,15 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.hyoja.R
-import com.example.hyoja.cafe.adapter.DrinkListNewMenuAdapter
 import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.model.DrinkDataInterface
-import com.example.hyoja.cafe.model.NewMenu1
-import com.example.hyoja.cafe.model.NewMenu2
-import com.example.hyoja.cafe.model.NewMenu3
-import com.example.hyoja.cafe.model.NewMenu4
-import com.example.hyoja.cafe.model.Ready
 import com.example.hyoja.cafe.util.DrinkDataFactory
 import com.example.hyoja.cafe.viewmodel.MenuListViewModel
 import com.example.hyoja.databinding.FragmentDrinkListNewMenuOneBinding
@@ -88,7 +81,6 @@ class DrinkListMenuOneFragment : Fragment() {
             viewModel.drinkSelectChanged()
             Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
         }
-
     }
 
     override fun onCreateView(

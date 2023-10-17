@@ -1,4 +1,4 @@
-package com.example.hyoja.Fragments
+package com.example.hyoja.fastfoods
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,10 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.hyoja.R
-import com.example.hyoja.fastfoods.FastFoodHome2Activity
-import com.example.hyoja.fastfoods.MenuItem
-import com.example.hyoja.fastfoods.MenuRepository
-
 class dessert : Fragment() {
     interface MenuUpdateListener {
         fun onMenuItemAdded(menuItem: MenuItem)

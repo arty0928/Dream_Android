@@ -14,13 +14,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.example.hyoja.Fragments.dessert
 import com.example.hyoja.Fragments.drink
 import com.example.hyoja.Fragments.hamburger
 import com.example.hyoja.Fragments.lunch
 import com.example.hyoja.R
 import com.example.hyoja.common.util.CommonUi
-import com.example.hyoja.databinding.ActivityBodySetmenuBinding
 import com.example.hyoja.databinding.ActivityFastfoodHome2Binding
 
 // TRUE 면 세트

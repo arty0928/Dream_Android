@@ -12,7 +12,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.hyoja.R
 import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.viewmodel.MenuListViewModel
-import com.example.hyoja.databinding.FragmentMenuCategoryOneBinding
 import com.example.hyoja.databinding.FragmentMenuCategoryTwoBinding
 
 class MenuCategoryTwoFragment : Fragment() {
