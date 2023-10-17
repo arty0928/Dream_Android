@@ -3,14 +3,14 @@ package com.example.hyoja.cafe.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.hyoja.cafe.fragment.DrinkListNewMenuOneFragment
-import com.example.hyoja.cafe.fragment.DrinkListNewMenuTwoFragment
+import com.example.hyoja.cafe.fragment.DrinkListMenuOneFragment
+import com.example.hyoja.cafe.fragment.DrinkListMenuTwoFragment
 
 class DrinkListNewMenuAdapter(fragmentActivity: FragmentActivity): FragmentStateAdapter(fragmentActivity) {
 
     // 1. ViewPager2에 연결할 Fragment 들을 생성
     private val fragmentList = listOf<Fragment>(
-        DrinkListNewMenuOneFragment(),DrinkListNewMenuTwoFragment()
+        DrinkListMenuOneFragment(),DrinkListMenuTwoFragment()
     )
 
     // 2. ViesPager2에서 노출시킬 Fragment 의 갯수 설정

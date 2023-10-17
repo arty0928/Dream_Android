@@ -39,7 +39,7 @@ class MenuCategoryTwoFragment : Fragment() {
                     binding.flatccinoButton.setBackgroundResource(R.drawable.button_round)
                     binding.flatccinoButton.setTextColor(ContextCompat.getColor(requireContext(),R.color.cafe_white))
                 }
-                "baverage" -> {
+                "beverage" -> {
                     binding.baverageButton.setBackgroundResource(R.drawable.button_round)
                     binding.baverageButton.setTextColor(ContextCompat.getColor(requireContext(),R.color.cafe_white))
                 }
@@ -63,7 +63,7 @@ class MenuCategoryTwoFragment : Fragment() {
         binding = FragmentMenuCategoryTwoBinding.inflate(inflater,container,false)
 
         binding.baverageButton.setOnClickListener{
-            CafeModel.menuCategory = "baverage"
+            CafeModel.menuCategory = "beverage"
             Log.d(Tag,"menuCategory = "+ CafeModel.menuCategory)
             viewModel.categorySelectChanged()
         }

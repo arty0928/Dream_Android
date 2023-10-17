@@ -21,7 +21,7 @@
                 <ImageView
                     android:layout_gravity="bottom"
                     android:id="@+id/addDrinkImage"
-                    android:src="@drawable/new_menu_1"
+                    android:src="@drawable/ready_sorry"
                     android:layout_width="100dp"
                     android:layout_height="100dp"/>
                 <LinearLayout
@@ -35,7 +35,7 @@
                         android:textColor="@color/black"
                         android:gravity="center|bottom|left"
                         android:textSize="15dp"
-                        android:text="피치히비스커스 콤부차"
+                        android:text="준비중입니다"
                         android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"/>
@@ -93,7 +93,7 @@
                         android:layout_height="18dp"/>
                     <TextView
                         android:id="@+id/drinkPrice"
-                        android:text="4500"
+                        android:text="0"
                         android:textColor="@color/purple_500"
                         android:textStyle="bold"
                         android:textSize="20dp"

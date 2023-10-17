@@ -6,16 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
-    tools:context=".cafe.fragment.DrinkListNewMenuTwoFragment">
-
+    tools:context=".cafe.fragment.DrinkListMenuTwoFragment">
     <LinearLayout
+        android:background="#f5f5f5"
         android:padding="2dp"
         android:orientation="horizontal"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            android:id="@+id/newMenu5"
+            android:id="@+id/newMenu1"
             android:layout_marginRight="2dp"
             android:background="@drawable/border_line"
             android:orientation="vertical"
@@ -23,18 +23,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:id="@+id/newMenu5Image"
+                android:id="@+id/menu1Image"
                 android:layout_gravity="center"
-                android:src="@drawable/new_menu_5"
+                android:src="@drawable/ready_sorry"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
-                android:id="@+id/newMenu5Name"
+                android:id="@+id/menu1Name"
                 android:gravity="center"
                 android:textSize="16dp"
                 android:textColor="@color/black"
-                android:text="ICED 토피넛 라떼"
+                android:text="1번"
                 android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
@@ -45,23 +45,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:id="@+id/wonImage1"
                     android:src="@drawable/won_purple"
                     android:layout_gravity="center"
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
-                    android:id="@+id/newMenu5Price"
+                    android:id="@+id/menu1Price"
                     android:gravity="center"
                     android:textSize="17dp"
                     android:textColor="@color/purple_500"
-                    android:text="4500"
+                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
             </LinearLayout>
 
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/newMenu6"
+            android:id="@+id/newMenu2"
             android:layout_marginLeft="2dp"
             android:background="@drawable/border_line"
             android:orientation="vertical"
@@ -69,17 +70,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:id="@+id/newMenu6Image"
-                android:src="@drawable/new_menu_6"
+                android:id="@+id/menu2Image"
+                android:src="@drawable/ready_sorry"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
-                android:id="@+id/newMenu6Name"
+                android:id="@+id/menu2Name"
                 android:gravity="center"
                 android:textSize="16dp"
                 android:textColor="@color/black"
-                android:text="블랙 버블 토피넛 라떼"
+                android:text="2번"
                 android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
@@ -90,16 +91,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:id="@+id/wonImage2"
                     android:src="@drawable/won_purple"
                     android:layout_gravity="center"
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
-                    android:id="@+id/newMenu6Price"
+                    android:id="@+id/menu2Price"
                     android:gravity="center"
                     android:textSize="17dp"
                     android:textColor="@color/purple_500"
-                    android:text="4500"
+                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
             </LinearLayout>
@@ -114,7 +116,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            android:id="@+id/newMenu7"
+            android:id="@+id/newMenu3"
             android:layout_marginRight="2dp"
             android:background="@drawable/border_line"
             android:orientation="vertical"
@@ -122,17 +124,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:id="@+id/newMenu7Image"
-                android:src="@drawable/new_menu_7"
+                android:id="@+id/menu3Image"
+                android:src="@drawable/ready_sorry"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
-                android:id="@+id/newMenu7Name"
+                android:id="@+id/menu3Name"
                 android:gravity="center"
                 android:textSize="16dp"
                 android:textColor="@color/black"
-                android:text="토피넛 쇼콜라"
+                android:text="3번"
                 android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
@@ -143,23 +145,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:id="@+id/wonImage3"
                     android:src="@drawable/won_purple"
                     android:layout_gravity="center"
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
-                    android:id="@+id/newMenu7Price"
+                    android:id="@+id/menu3Price"
                     android:gravity="center"
                     android:textSize="17dp"
                     android:textColor="@color/purple_500"
-                    android:text="4500"
+                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
             </LinearLayout>
 
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/newMenu8"
+            android:id="@+id/newMenu4"
             android:layout_marginLeft="2dp"
             android:background="@drawable/border_line"
             android:orientation="vertical"
@@ -167,17 +170,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:id="@+id/newMenu8Image"
-                android:src="@drawable/new_menu_8"
+                android:id="@+id/menu4Image"
+                android:src="@drawable/ready_sorry"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
-                android:id="@+id/newMenu8Name"
+                android:id="@+id/menu4Name"
                 android:gravity="center"
                 android:textSize="16dp"
                 android:textColor="@color/black"
-                android:text="딸기 듬뿍 라떼"
+                android:text="4번"
                 android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
@@ -188,16 +191,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:id="@+id/wonImage4"
                     android:src="@drawable/won_purple"
                     android:layout_gravity="center"
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
-                    android:id="@+id/newMenu8Price"
+                    android:id="@+id/menu4Price"
                     android:gravity="center"
                     android:textSize="17dp"
                     android:textColor="@color/purple_500"
-                    android:text="4500"
+                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
             </LinearLayout>
@@ -205,5 +209,8 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
+
 
 </LinearLayout>

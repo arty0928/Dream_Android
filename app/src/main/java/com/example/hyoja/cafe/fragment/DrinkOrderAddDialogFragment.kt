@@ -14,15 +14,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.hyoja.cafe.model.Ade1
 import com.example.hyoja.cafe.model.Ade2
 import com.example.hyoja.cafe.model.Ade3
-import com.example.hyoja.cafe.model.Ade4
 import com.example.hyoja.cafe.model.Beverage1
 import com.example.hyoja.cafe.model.Beverage2
 import com.example.hyoja.cafe.model.Beverage3
-import com.example.hyoja.cafe.model.Beverage4
 import com.example.hyoja.cafe.model.BubbleMilk1
-import com.example.hyoja.cafe.model.BubbleMilk2
-import com.example.hyoja.cafe.model.BubbleMilk3
-import com.example.hyoja.cafe.model.BubbleMilk4
 import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.model.Coffee1
 import com.example.hyoja.cafe.model.Coffee2
@@ -118,7 +113,6 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
             "ade1" -> Ade1()
             "ade2" -> Ade2()
             "ade3" -> Ade3()
-            "ade4" -> Ade4()
             "shake1" -> Shake1()
             "shake2" -> Shake2()
             "shake3" -> Shake3()
@@ -126,15 +120,11 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
             "beverage1" -> Beverage1()
             "beverage2" -> Beverage2()
             "beverage3" -> Beverage3()
-            "beverage4" -> Beverage4()
             "tea1" -> Tea1()
             "tea2" -> Tea2()
             "tea3" -> Tea3()
             "tea4" -> Tea4()
             "bubbleMilk1" -> BubbleMilk1()
-            "bubbleMilk2" -> BubbleMilk2()
-            "bubbleMilk3" -> BubbleMilk3()
-            "bubbleMilk4" -> BubbleMilk4()
             "flatccino1" -> Flatccino1()
             "flatccino2" -> Flatccino2()
             "flatccino3" -> Flatccino3()

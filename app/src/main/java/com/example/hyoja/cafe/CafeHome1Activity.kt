@@ -1,32 +1,18 @@
 package com.example.hyoja.cafe
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
-import android.view.Gravity
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MotionEvent
-import android.view.View
-import android.view.WindowManager
 import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.hyoja.R
-import com.example.hyoja.cafe.adapter.DrinkListAdeAdapter
-import com.example.hyoja.cafe.adapter.DrinkListBaverageAdapter
-import com.example.hyoja.cafe.adapter.DrinkListBubbleMilkAdapter
-import com.example.hyoja.cafe.adapter.DrinkListCoffeeAdapter
-import com.example.hyoja.cafe.adapter.DrinkListFlatccinoAdapter
 import com.example.hyoja.cafe.adapter.DrinkListNewMenuAdapter
-import com.example.hyoja.cafe.adapter.DrinkListShakeAdapter
-import com.example.hyoja.cafe.adapter.DrinkListTeaAdapter
 import com.example.hyoja.cafe.adapter.MenuCategoryAdapter
 import com.example.hyoja.cafe.fragment.DrinkOrderAddDialogFragment
 import com.example.hyoja.cafe.model.CafeModel
+import com.example.hyoja.cafe.util.UtilValue
 import com.example.hyoja.cafe.viewmodel.MenuListViewModel
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityCafeHome1Binding
@@ -56,6 +42,10 @@ class CafeHome1Activity : AppCompatActivity() {
         binding.menuList.adapter = MenuCategoryAdapter(this)
         var currentItem = binding.menuList.currentItem
         binding.menuList.isUserInputEnabled = false;
+
+        //음료리스트 뷰페이저 띄우기
+        binding.drinkList.adapter = DrinkListNewMenuAdapter(this)
+        binding.drinkList.isUserInputEnabled = false;
 
 
         //기본적으로 왼쪽 오른쪽 버튼은 해당 Item이 2개라고 가정하고 그냥 작성해놓음... 호오오옥시 나중에 발전시키려면 이거 수정해야함
@@ -98,44 +88,31 @@ class CafeHome1Activity : AppCompatActivity() {
         viewModel.categoryLiveData.observe(this, Observer {
             when(it){
                 "newMenu" -> {
-                    binding.drinkList.adapter = DrinkListNewMenuAdapter(this)
-                    binding.drinkList.isUserInputEnabled = false;
                     drinkListButtonSrcSelect(checkDrinkListViewPagerSize(it))
                 }
                 "ade" -> {
-                    binding.drinkList.adapter = DrinkListAdeAdapter(this)
-                    binding.drinkList.isUserInputEnabled = false;
                     drinkListButtonSrcSelect(checkDrinkListViewPagerSize(it))
                 }
                 "shake" -> {
-                    binding.drinkList.adapter = DrinkListShakeAdapter(this)
-                    binding.drinkList.isUserInputEnabled = false;
                     drinkListButtonSrcSelect(checkDrinkListViewPagerSize(it))
                 }
                 "coffee" -> {
-                    binding.drinkList.adapter = DrinkListCoffeeAdapter(this)
-                    binding.drinkList.isUserInputEnabled = false;
                     drinkListButtonSrcSelect(checkDrinkListViewPagerSize(it))
                 }
                 "tea" -> {
-                    binding.drinkList.adapter = DrinkListTeaAdapter(this)
-                    binding.drinkList.isUserInputEnabled = false;
                     drinkListButtonSrcSelect(checkDrinkListViewPagerSize(it))
                 }
                 "flatccino" -> {
-                    binding.drinkList.adapter = DrinkListFlatccinoAdapter(this)
-                    binding.drinkList.isUserInputEnabled = false;
                     drinkListButtonSrcSelect(checkDrinkListViewPagerSize(it))
                 }
-                "baverage" -> {
-                    binding.drinkList.adapter = DrinkListBaverageAdapter(this)
-                    binding.drinkList.isUserInputEnabled = false;
+                "beverage" -> {
                     drinkListButtonSrcSelect(checkDrinkListViewPagerSize(it))
                 }
                 "bubbleMilk" -> {
-                    binding.drinkList.adapter = DrinkListBubbleMilkAdapter(this)
-                    binding.drinkList.isUserInputEnabled = false;
                     drinkListButtonSrcSelect(checkDrinkListViewPagerSize(it))
+                }
+                else -> {
+
                 }
             }
         })
@@ -177,9 +154,40 @@ class CafeHome1Activity : AppCompatActivity() {
     }
     fun checkDrinkListViewPagerSize(categroyName: String):Int{
         //null허용은 해놨는데 절대 null되면 안됨
-        var itemCount: Int? = 0
-        itemCount = binding.drinkList.adapter?.itemCount
+        var value = UtilValue()
+        var itemCount: Int? = when(categroyName){
+            "newMenu" -> {
+                value.newMenuListSize
+            }
+            "ade" -> {
+                value.adeListSize
+            }
+            "shake" -> {
+                value.shakeListSize
+            }
+            "coffee" -> {
+                value.coffeeListSize
+            }
+            "tea" -> {
+                value.teaListSize
+            }
+            "flatccino" -> {
+                value.flatccinoListSize
+            }
+            "beverage" -> {
+                value.beverageListSize
+            }
+            "bubbleMilk" -> {
+                value.bubbleMilkSize
+            }
+            else ->{
+                return 0
+            }
+        }
         Log.d(Tag,"drinkListCount = "+ itemCount.toString())
+        // 뷰페이저 첫번째 프래그먼트로 전환
+        binding.drinkList.setCurrentItem(0,true)
+        itemCount = itemCount?.div(4)
         return itemCount!!
     }
     fun drinkListButtonSrcSelect(itemCount:Int){

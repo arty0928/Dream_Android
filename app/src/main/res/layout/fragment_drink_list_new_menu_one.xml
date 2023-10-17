@@ -6,8 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
-    tools:context=".cafe.fragment.DrinkListNewMenuOneFragment">
+    tools:context=".cafe.fragment.DrinkListMenuOneFragment">
     <LinearLayout
+        android:background="#f5f5f5"
         android:padding="2dp"
         android:orientation="horizontal"
         android:layout_weight="1"
@@ -22,17 +23,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:id="@+id/newMenu1ImageView"
+                android:id="@+id/menu1Image"
                 android:layout_gravity="center"
-                android:src="@drawable/new_menu_1"
+                android:src="@drawable/ready_sorry"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
+                android:id="@+id/menu1Name"
                 android:gravity="center"
                 android:textSize="16dp"
                 android:textColor="@color/black"
-                android:text="피치히비스커스 콤부차"
+                android:text="1번"
                 android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
@@ -43,16 +45,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:id="@+id/wonImage1"
                     android:src="@drawable/won_purple"
                     android:layout_gravity="center"
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
-                    android:id="@+id/newMenu1Price"
+                    android:id="@+id/menu1Price"
                     android:gravity="center"
                     android:textSize="17dp"
                     android:textColor="@color/purple_500"
-                    android:text="4500"
+                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
             </LinearLayout>
@@ -67,15 +70,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:src="@drawable/new_menu_2"
+                android:id="@+id/menu2Image"
+                android:src="@drawable/ready_sorry"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
+                android:id="@+id/menu2Name"
                 android:gravity="center"
                 android:textSize="16dp"
                 android:textColor="@color/black"
-                android:text="리치 파인에이드"
+                android:text="2번"
                 android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
@@ -86,16 +91,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:id="@+id/wonImage2"
                     android:src="@drawable/won_purple"
                     android:layout_gravity="center"
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
-                    android:id="@+id/newMenu2Price"
+                    android:id="@+id/menu2Price"
                     android:gravity="center"
                     android:textSize="17dp"
                     android:textColor="@color/purple_500"
-                    android:text="4500"
+                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
             </LinearLayout>
@@ -118,15 +124,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:src="@drawable/new_menu_3"
+                android:id="@+id/menu3Image"
+                android:src="@drawable/ready_sorry"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
+                android:id="@+id/menu3Name"
                 android:gravity="center"
                 android:textSize="16dp"
                 android:textColor="@color/black"
-                android:text="피치 패션 콤부에이드"
+                android:text="3번"
                 android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
@@ -137,16 +145,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:id="@+id/wonImage3"
                     android:src="@drawable/won_purple"
                     android:layout_gravity="center"
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
-                    android:id="@+id/newMenu3Price"
+                    android:id="@+id/menu3Price"
                     android:gravity="center"
                     android:textSize="17dp"
                     android:textColor="@color/purple_500"
-                    android:text="4500"
+                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
             </LinearLayout>
@@ -161,15 +170,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:src="@drawable/new_menu_4"
+                android:id="@+id/menu4Image"
+                android:src="@drawable/ready_sorry"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
+                android:id="@+id/menu4Name"
                 android:gravity="center"
                 android:textSize="16dp"
                 android:textColor="@color/black"
-                android:text="토피넛 라떼"
+                android:text="4번"
                 android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
@@ -180,16 +191,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:id="@+id/wonImage4"
                     android:src="@drawable/won_purple"
                     android:layout_gravity="center"
                     android:layout_width="13dp"
                     android:layout_height="match_parent"/>
                 <TextView
-                    android:id="@+id/newMenu4Price"
+                    android:id="@+id/menu4Price"
                     android:gravity="center"
                     android:textSize="17dp"
                     android:textColor="@color/purple_500"
-                    android:text="4500"
+                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
             </LinearLayout>

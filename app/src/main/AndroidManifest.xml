@@ -37,34 +37,15 @@
             android:exported="false" />
 
         <activity
-            android:name=".fastfoods.SetMenuTabActivity"
-            android:exported="false" />
-        <activity
             android:name=".cafe.CafeHomeActivity"
             android:exported="false" /> <!-- from MainHome to Cafe Main Home -->
         <activity
             android:name=".cafe.CafeHome1Activity"
             android:exported="false" />
-        <activity
-            android:name=".cafe.CafeHome2Activity"
-            android:exported="false" />
-
-        <activity
-            android:name=".fastfoods.NewTabActivity"
-            android:exported="false" />
 
         <activity
             android:name=".common.MainActivity"
             android:exported="false" />
-
-        <activity
-            android:name=".cafe.CafeTabActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".cafe.CafeNewTabActivity"
-            android:exported="false" />
-
 
         <activity
             android:name=".common.SplashActivity"
