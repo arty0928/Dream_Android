@@ -23,12 +23,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
+                android:id="@+id/newMenu5Image"
                 android:layout_gravity="center"
                 android:src="@drawable/new_menu_5"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
+                android:id="@+id/newMenu5Name"
                 android:gravity="center"
                 android:textSize="16dp"
                 android:textColor="@color/black"
@@ -67,11 +69,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
+                android:id="@+id/newMenu6Image"
                 android:src="@drawable/new_menu_6"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
+                android:id="@+id/newMenu6Name"
                 android:gravity="center"
                 android:textSize="16dp"
                 android:textColor="@color/black"
@@ -118,11 +122,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
+                android:id="@+id/newMenu7Image"
                 android:src="@drawable/new_menu_7"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
+                android:id="@+id/newMenu7Name"
                 android:gravity="center"
                 android:textSize="16dp"
                 android:textColor="@color/black"
@@ -161,11 +167,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
+                android:id="@+id/newMenu8Image"
                 android:src="@drawable/new_menu_8"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <TextView
+                android:id="@+id/newMenu8Name"
                 android:gravity="center"
                 android:textSize="16dp"
                 android:textColor="@color/black"

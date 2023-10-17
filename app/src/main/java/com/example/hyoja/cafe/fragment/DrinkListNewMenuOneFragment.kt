@@ -27,22 +27,22 @@ class DrinkListNewMenuOneFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity())[MenuListViewModel::class.java]
 
         binding.newMenu1.setOnClickListener{
-            CafeModel.drinkSelected = "newMenu1"
+            CafeModel.drinkSelected = "drink1"
             viewModel.drinkSelectChanged()
             Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
         }
         binding.newMenu2.setOnClickListener{
-            CafeModel.drinkSelected = "newMenu2"
+            CafeModel.drinkSelected = "drink2"
             viewModel.drinkSelectChanged()
             Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
         }
         binding.newMenu3.setOnClickListener{
-            CafeModel.drinkSelected = "newMenu3"
+            CafeModel.drinkSelected = "drink3"
             viewModel.drinkSelectChanged()
             Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
         }
         binding.newMenu4.setOnClickListener{
-            CafeModel.drinkSelected = "newMenu4"
+            CafeModel.drinkSelected = "drink4"
             viewModel.drinkSelectChanged()
             Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
         }
