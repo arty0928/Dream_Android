@@ -14,7 +14,6 @@ import com.example.hyoja.cafe.CafeNewTabActivity
 import com.example.hyoja.fastfoods.FastFoodHome1Activity
 import com.example.hyoja.fastfoods.FastFoodHome2Activity
 import com.example.hyoja.fastfoods.FastFoodHomeActivity
-import com.example.hyoja.fastfoods.NewTabActivity
 
 //import com.example.hyoja.fastfoods.TabActivity
 
@@ -88,6 +87,7 @@ class CommonUi {
         return string
     }
 
+<<<<<<< HEAD
     fun goToCafeTabTest(v: Context) {
         val intent = Intent(v, CafeNewTabActivity::class.java)
         v.startActivity(intent)
@@ -102,5 +102,7 @@ class CommonUi {
 
 }
 
+=======
+>>>>>>> fastfood
 //    이전 화면으로 이동
 

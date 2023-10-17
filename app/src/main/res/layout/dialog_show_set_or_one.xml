@@ -112,7 +112,7 @@
 
                             <ImageView
                                 android:paddingTop="5dp"
-                                android:id="@+id/burger1_image"
+                                android:id="@+id/only_burger_image"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
