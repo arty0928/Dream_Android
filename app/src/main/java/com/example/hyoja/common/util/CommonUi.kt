@@ -87,22 +87,11 @@ class CommonUi {
         return string
     }
 
-<<<<<<< HEAD
     fun goToCafeTabTest(v: Context) {
         val intent = Intent(v, CafeNewTabActivity::class.java)
         v.startActivity(intent)
         Log.d("goToCafeTabTest", "tab test 화면으로 전환")}
 
-    fun goToFastfoodTabTest(v: Context) {
-
-        val intent = Intent(v, NewTabActivity::class.java)
-        v.startActivity(intent)
-        Log.d("goToFastfoodTabTest", "tab test 화면으로 전환")
-    }
-
 }
-
-=======
->>>>>>> fastfood
 //    이전 화면으로 이동
 

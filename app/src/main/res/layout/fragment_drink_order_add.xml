@@ -212,70 +212,64 @@
 
             </LinearLayout>
             <LinearLayout
+                android:gravity="right"
+                android:background="@drawable/border_line"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="7dp"
+                        android:textColor="@color/cafe_black"
+                        android:textSize="20dp"
+                        android:gravity="left|center"
+                        android:text="유료옵션"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="15dp"
+                        android:layout_gravity="right|center"
+                        android:background="@drawable/hot_button_unclicked"
+                        android:textColor="@color/cafe_darkRed"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:textAlignment="center"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:text="추가"/>
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="right"
                 android:background="@drawable/border_line"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="70dp">
                 <TextView
+                    android:layout_weight="1"
+                    android:layout_gravity="left"
                     android:layout_marginLeft="7dp"
-                    android:layout_marginRight="150dp"
                     android:textColor="@color/cafe_black"
                     android:textSize="20dp"
-                    android:gravity="center"
+                    android:gravity="left|center"
                     android:text="유료옵션"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
-                <LinearLayout
-                    android:background="@drawable/hot_button_unclicked"
-                    android:orientation="vertical"
-                    android:layout_margin="15dp"
-                    android:layout_width="90dp"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:textColor="@color/cafe_darkRed"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="20dp"
-                        android:textAlignment="center"
-                        android:layout_weight="3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="추가"/>
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:background="@drawable/border_line"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="70dp">
                 <TextView
-                    android:layout_marginLeft="7dp"
-                    android:layout_marginRight="150dp"
-                    android:textColor="@color/cafe_black"
-                    android:textSize="20dp"
-                    android:gravity="center"
-                    android:text="무료옵션"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
-                <LinearLayout
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="15dp"
+                    android:layout_gravity="right|center"
                     android:background="@drawable/hot_button_unclicked"
-                    android:orientation="vertical"
-                    android:layout_margin="15dp"
+                    android:textColor="@color/cafe_darkRed"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
                     android:layout_width="90dp"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:textColor="@color/cafe_darkRed"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="20dp"
-                        android:textAlignment="center"
-                        android:layout_weight="3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="추가"/>
-                </LinearLayout>
-
+                    android:layout_height="match_parent"
+                    android:text="추가"/>
             </LinearLayout>
             <LinearLayout
                 android:orientation="horizontal"
