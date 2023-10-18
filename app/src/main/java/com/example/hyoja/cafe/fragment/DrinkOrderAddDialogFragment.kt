@@ -136,5 +136,6 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
         binding.itemNum.text = orderingDrink.drinkCount.toString()
     }
     private fun checkPay(){
+        
     }
 }
