@@ -27,6 +27,14 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // 음료 추가 및 빼기
+        binding.itemPlus.setOnClickListener{
+            addDrinkCount()
+        }
+        binding.itemMinus.setOnClickListener{
+            minusDrinkCount()
+        }
+
         // 음료 사이즈
         binding.regularButton.setOnClickListener {
             regularButtonClicked()
@@ -77,7 +85,6 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
     }
 
     private fun setUi(){
-
         // 음료 이미지
         binding.addDrinkImage.setImageResource(selectedDrinkItem.drinkImage)
         // 음료 이름
@@ -119,5 +126,15 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
     private fun extraButtonClicked(){
         binding.extraButton.setBackgroundResource(R.drawable.hot_button_unclicked)
         binding.regularButton.setBackgroundResource(R.drawable.border_line)
+    }
+    private fun addDrinkCount(){
+        orderingDrink.drinkCount++
+        binding.itemNum.text = orderingDrink.drinkCount.toString()
+    }
+    private fun minusDrinkCount(){
+        orderingDrink.drinkCount--
+        binding.itemNum.text = orderingDrink.drinkCount.toString()
+    }
+    private fun checkPay(){
     }
 }
