@@ -17,10 +17,9 @@ import com.example.hyoja.cafe.viewmodel.MenuListViewModel
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityCafeHome1Binding
 
-
 class CafeHome1Activity : AppCompatActivity() {
     private val Tag:String = "CafeHome1Activity"
-    var backPressedTime: Long = 0 // 뒤로가기 2번 클릭을 위한 변수선언
+    private var backPressedTime: Long = 0 // 뒤로가기 2번 클릭을 위한 변수선언
 
     private lateinit var binding: ActivityCafeHome1Binding
     private var coffeePopup: PopupWindow? = null
@@ -33,7 +32,7 @@ class CafeHome1Activity : AppCompatActivity() {
 
         //goTo쓰려고 Common 객체 생성
         val view = this
-        val commonUi:CommonUi = CommonUi()
+        val commonUi = CommonUi()
 
         //뷰모델 프로바이더 생성
         viewModel = ViewModelProvider(this)[MenuListViewModel::class.java]
@@ -88,6 +87,7 @@ class CafeHome1Activity : AppCompatActivity() {
         viewModel.categoryLiveData.observe(this, Observer {
             when(it){
                 "newMenu" -> {
+                    // 버튼 활성화 비활성화 선택
                     drinkListButtonSrcSelect(checkDrinkListViewPagerSize(it))
                 }
                 "ade" -> {
@@ -126,10 +126,7 @@ class CafeHome1Activity : AppCompatActivity() {
                 drinkOptionFragmentMange()
             }
             i++
-
         })
-
-
 
         //처음으로 버튼
         binding.cafeHome.setOnClickListener{
@@ -152,7 +149,7 @@ class CafeHome1Activity : AppCompatActivity() {
             backPressedTime = currentTime
         }
     }
-    fun checkDrinkListViewPagerSize(categroyName: String):Int{
+    private fun checkDrinkListViewPagerSize(categroyName: String):Int{
         //null허용은 해놨는데 절대 null되면 안됨
         var value = UtilValue()
         var itemCount: Int? = when(categroyName){
@@ -190,7 +187,7 @@ class CafeHome1Activity : AppCompatActivity() {
         itemCount = itemCount?.div(4)
         return itemCount!!
     }
-    fun drinkListButtonSrcSelect(itemCount:Int){
+    private fun drinkListButtonSrcSelect(itemCount:Int){
         if (itemCount == 1){
             binding.drinkListRightButton.setImageResource(R.drawable.icon_right_un)
             binding.drinkListLeftButton.setImageResource(R.drawable.icon_left_un)
@@ -205,7 +202,7 @@ class CafeHome1Activity : AppCompatActivity() {
         }
     }
 
-    fun drinkOptionFragmentMange(){
+    private fun drinkOptionFragmentMange(){
         Log.d(Tag,"drinkOptionFragmentMange called")
         DrinkOrderAddDialogFragment().show(
             supportFragmentManager, "DrinkOrderAddDialogFragment"

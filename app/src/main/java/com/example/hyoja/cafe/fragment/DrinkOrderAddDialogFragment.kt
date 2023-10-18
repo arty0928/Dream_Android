@@ -10,54 +10,39 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import androidx.fragment.app.DialogFragment
-import androidx.lifecycle.ViewModelProvider
-import com.example.hyoja.cafe.model.Ade1
-import com.example.hyoja.cafe.model.Ade2
-import com.example.hyoja.cafe.model.Ade3
-import com.example.hyoja.cafe.model.Beverage1
-import com.example.hyoja.cafe.model.Beverage2
-import com.example.hyoja.cafe.model.Beverage3
-import com.example.hyoja.cafe.model.BubbleMilk1
+import com.example.hyoja.R
 import com.example.hyoja.cafe.model.CafeModel
-import com.example.hyoja.cafe.model.Coffee1
-import com.example.hyoja.cafe.model.Coffee2
-import com.example.hyoja.cafe.model.Coffee3
-import com.example.hyoja.cafe.model.Coffee4
-import com.example.hyoja.cafe.model.Coffee5
-import com.example.hyoja.cafe.model.Coffee6
-import com.example.hyoja.cafe.model.Coffee7
-import com.example.hyoja.cafe.model.Coffee8
-import com.example.hyoja.cafe.model.DrinkDataInterface
-import com.example.hyoja.cafe.model.Flatccino1
-import com.example.hyoja.cafe.model.Flatccino2
-import com.example.hyoja.cafe.model.Flatccino3
-import com.example.hyoja.cafe.model.Flatccino4
-import com.example.hyoja.cafe.model.NewMenu1
-import com.example.hyoja.cafe.model.NewMenu2
-import com.example.hyoja.cafe.model.NewMenu3
-import com.example.hyoja.cafe.model.NewMenu4
-import com.example.hyoja.cafe.model.NewMenu5
-import com.example.hyoja.cafe.model.NewMenu6
-import com.example.hyoja.cafe.model.NewMenu7
-import com.example.hyoja.cafe.model.NewMenu8
-import com.example.hyoja.cafe.model.Ready
-import com.example.hyoja.cafe.model.Shake1
-import com.example.hyoja.cafe.model.Shake2
-import com.example.hyoja.cafe.model.Shake3
-import com.example.hyoja.cafe.model.Shake4
-import com.example.hyoja.cafe.model.Tea1
-import com.example.hyoja.cafe.model.Tea2
-import com.example.hyoja.cafe.model.Tea3
-import com.example.hyoja.cafe.model.Tea4
+import com.example.hyoja.cafe.model.OrderingDrink
 import com.example.hyoja.cafe.viewmodel.MenuListViewModel
 import com.example.hyoja.databinding.FragmentDrinkOrderAddBinding
 
 class DrinkOrderAddDialogFragment: DialogFragment() {
     lateinit var binding: FragmentDrinkOrderAddBinding
     private lateinit var viewModel: MenuListViewModel
+    private val selectedDrinkItem = CafeModel.drinkSelected
+    val freeOption:ArrayList<String> = ArrayList()
+    val option:ArrayList<String> = ArrayList()
+    val orderingDrink:OrderingDrink = OrderingDrink("hot",freeOption,option,CafeModel.drinkSelected)
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // 음료 사이즈
+        binding.regularButton.setOnClickListener {
+            regularButtonClicked()
+        }
+        binding.extraButton.setOnClickListener {
+            extraButtonClicked()
+        }
+
+        // 음료 온도 선택
+        binding.icedButton.setOnClickListener {
+            icedButtonClicked()
+        }
+        binding.hotButton.setOnClickListener {
+            hotButtonClicked()
+        }
+        //취소 버튼
         binding.cancelButton.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
             requireActivity().supportFragmentManager.popBackStack()
@@ -70,8 +55,9 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
     ): View? {
         binding = FragmentDrinkOrderAddBinding.inflate(inflater, container, false)
         val view = binding.root
-        // 레이아웃 배경을 투명하게 해줌, 필수 아님
+        // 레이아웃 배경을 투명하게 해줌
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
         setUi()
         return view
     }
@@ -90,52 +76,48 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
         super.onDestroyView()
     }
 
-    fun setUi(){
-        val drink = CafeModel.drinkSelected
+    private fun setUi(){
 
-        val selectedDrinkItem: DrinkDataInterface = when(drink){
-            "newMenu1" -> NewMenu1()
-            "newMenu2" -> NewMenu2()
-            "newMenu3" -> NewMenu3()
-            "newMenu4" -> NewMenu4()
-            "newMenu5" -> NewMenu5()
-            "newMenu6" -> NewMenu6()
-            "newMenu7" -> NewMenu7()
-            "newMenu8" -> NewMenu8()
-            "coffee1" -> Coffee1()
-            "coffee2" -> Coffee2()
-            "coffee3" -> Coffee3()
-            "coffee4" -> Coffee4()
-            "coffee5" -> Coffee5()
-            "coffee6" -> Coffee6()
-            "coffee7" -> Coffee7()
-            "coffee8" -> Coffee8()
-            "ade1" -> Ade1()
-            "ade2" -> Ade2()
-            "ade3" -> Ade3()
-            "shake1" -> Shake1()
-            "shake2" -> Shake2()
-            "shake3" -> Shake3()
-            "shake4" -> Shake4()
-            "beverage1" -> Beverage1()
-            "beverage2" -> Beverage2()
-            "beverage3" -> Beverage3()
-            "tea1" -> Tea1()
-            "tea2" -> Tea2()
-            "tea3" -> Tea3()
-            "tea4" -> Tea4()
-            "bubbleMilk1" -> BubbleMilk1()
-            "flatccino1" -> Flatccino1()
-            "flatccino2" -> Flatccino2()
-            "flatccino3" -> Flatccino3()
-            "flatccino4" -> Flatccino4()
-            else -> Ready()
-        }
         // 음료 이미지
         binding.addDrinkImage.setImageResource(selectedDrinkItem.drinkImage)
         // 음료 이름
         binding.drinkName.text = selectedDrinkItem.name
         // 음료 가격
         binding.drinkPrice.text = selectedDrinkItem.price.toString()
+        setDegreeUI()
+    }
+    private fun setDegreeUI(){
+        val degree = selectedDrinkItem.degree
+        if (!degree){//false일 때
+            binding.hotButton.setBackgroundResource(R.drawable.button_can_not_click)
+            binding.hotButton.setTextColor(resources.getColor(R.color.cafe_gray))
+            binding.icedButton.setBackgroundResource(R.drawable.button_can_not_click)
+            binding.icedButton.setTextColor(resources.getColor(R.color.cafe_gray))
+        }
+    }
+    private fun hotButtonClicked(){
+        if(selectedDrinkItem.degree){
+            binding.hotButton.setBackgroundResource(R.drawable.hot_button_clicked)
+            binding.hotButton.setTextColor(resources.getColor(R.color.cafe_white))
+            binding.icedButton.setBackgroundResource(R.drawable.iced_button_unclicked)
+            binding.icedButton.setTextColor(resources.getColor(R.color.cafe_skyblue))
+        }
+    }
+
+    private fun icedButtonClicked(){
+        if(selectedDrinkItem.degree) {
+            binding.hotButton.setBackgroundResource(R.drawable.hot_button_unclicked)
+            binding.hotButton.setTextColor(resources.getColor(R.color.cafe_darkRed))
+            binding.icedButton.setBackgroundResource(R.drawable.iced_button_clicked)
+            binding.icedButton.setTextColor(resources.getColor(R.color.cafe_white))
+        }
+    }
+    private fun regularButtonClicked(){
+        binding.regularButton.setBackgroundResource(R.drawable.hot_button_unclicked)
+        binding.extraButton.setBackgroundResource(R.drawable.border_line)
+    }
+    private fun extraButtonClicked(){
+        binding.extraButton.setBackgroundResource(R.drawable.hot_button_unclicked)
+        binding.regularButton.setBackgroundResource(R.drawable.border_line)
     }
 }

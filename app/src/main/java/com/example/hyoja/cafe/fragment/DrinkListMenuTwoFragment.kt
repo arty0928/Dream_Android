@@ -30,24 +30,16 @@ class DrinkListMenuTwoFragment : Fragment() {
 
         //버튼 리스너
         binding.newMenu1.setOnClickListener{
-            CafeModel.drinkSelected = "drink1"
-            viewModel.drinkSelectChanged()
-            Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
+            callOrderDrink(drinkArrayList[4])
         }
         binding.newMenu2.setOnClickListener{
-            CafeModel.drinkSelected = "drink2"
-            viewModel.drinkSelectChanged()
-            Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
+            callOrderDrink(drinkArrayList[5])
         }
         binding.newMenu3.setOnClickListener{
-            CafeModel.drinkSelected = "drink3"
-            viewModel.drinkSelectChanged()
-            Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
+            callOrderDrink(drinkArrayList[6])
         }
         binding.newMenu4.setOnClickListener{
-            CafeModel.drinkSelected = "drink4"
-            viewModel.drinkSelectChanged()
-            Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
+            callOrderDrink(drinkArrayList[7])
         }
 
 
@@ -135,6 +127,13 @@ class DrinkListMenuTwoFragment : Fragment() {
             binding.menu4Price.text = drinkData.price.toString()
         }
 
+    }
+    private fun callOrderDrink(drinkData: DrinkDataInterface){
+        if (drinkData.category != "ready"){
+            CafeModel.drinkSelected = drinkData
+            viewModel.drinkSelectChanged()
+            Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
+        }
     }
 
 }

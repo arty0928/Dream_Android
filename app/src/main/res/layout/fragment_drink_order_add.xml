@@ -112,6 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/hotButton"
                     android:background="@drawable/hot_button_clicked"
                     android:textColor="@color/cafe_white"
 
@@ -126,9 +127,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/icedButton"
                     android:background="@drawable/iced_button_unclicked"
                     android:textColor="@color/cafe_skyblue"
-
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginVertical="10dp"
                     android:text="ICED"
@@ -163,6 +164,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
                 <LinearLayout
+                    android:id="@+id/regularButton"
                     android:background="@drawable/hot_button_unclicked"
                     android:orientation="vertical"
                     android:layout_margin="10dp"
@@ -186,6 +188,7 @@
                         android:text="Regular"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/extraButton"
                     android:background="@drawable/border_line"
                     android:orientation="vertical"
                     android:layout_margin="10dp"

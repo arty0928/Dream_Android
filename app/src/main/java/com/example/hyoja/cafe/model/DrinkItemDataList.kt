@@ -1,5 +1,4 @@
 package com.example.hyoja.cafe.model
-
 import com.example.hyoja.R
 
 interface DrinkDataInterface{

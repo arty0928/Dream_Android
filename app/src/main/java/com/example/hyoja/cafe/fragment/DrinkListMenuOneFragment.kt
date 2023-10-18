@@ -28,58 +28,22 @@ class DrinkListMenuOneFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity())[MenuListViewModel::class.java]
 
         viewModel.categoryLiveData.observe(requireActivity(), Observer {
-            val drinkData = DrinkDataFactory()
-
-            when(it){
-                "newMenu" -> {
-                    drinkArrayList = drinkData.getNewMenuArrayList()
-                }
-                "ade" -> {
-                    drinkArrayList = drinkData.getAdeArrayList()
-                }
-                "shake" -> {
-                    drinkArrayList = drinkData.getShakeArrayList()
-                }
-                "coffee" -> {
-                    drinkArrayList = drinkData.getCoffeeArrayList()
-                }
-                "tea" -> {
-                    drinkArrayList = drinkData.getTeaArrayList()
-                }
-                "flatccino" -> {
-                    drinkArrayList = drinkData.getFlatccinoArrayList()
-                }
-                "beverage" -> {
-                    drinkArrayList = drinkData.getBeverageArrayList()
-                }
-                "bubbleMilk" -> {
-                    drinkArrayList = drinkData.getBubbleMilkArrayList()
-                }
-            }
+            getDrinkArrayList(it)
             setUI()
         })
 
-
         //버튼 리스너
         binding.newMenu1.setOnClickListener{
-            CafeModel.drinkSelected = "drink1"
-            viewModel.drinkSelectChanged()
-            Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
+            callOrderDrink(drinkArrayList[0])
         }
         binding.newMenu2.setOnClickListener{
-            CafeModel.drinkSelected = "drink2"
-            viewModel.drinkSelectChanged()
-            Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
+            callOrderDrink(drinkArrayList[1])
         }
         binding.newMenu3.setOnClickListener{
-            CafeModel.drinkSelected = "drink3"
-            viewModel.drinkSelectChanged()
-            Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
+            callOrderDrink(drinkArrayList[2])
         }
         binding.newMenu4.setOnClickListener{
-            CafeModel.drinkSelected = "drink4"
-            viewModel.drinkSelectChanged()
-            Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
+            callOrderDrink(drinkArrayList[3])
         }
     }
 
@@ -97,6 +61,37 @@ class DrinkListMenuOneFragment : Fragment() {
         setUI()
 
         return binding.root
+    }
+
+    private fun getDrinkArrayList(categroy:String){
+        val drinkData = DrinkDataFactory()
+
+        when(categroy){
+            "newMenu" -> {
+                drinkArrayList = drinkData.getNewMenuArrayList()
+            }
+            "ade" -> {
+                drinkArrayList = drinkData.getAdeArrayList()
+            }
+            "shake" -> {
+                drinkArrayList = drinkData.getShakeArrayList()
+            }
+            "coffee" -> {
+                drinkArrayList = drinkData.getCoffeeArrayList()
+            }
+            "tea" -> {
+                drinkArrayList = drinkData.getTeaArrayList()
+            }
+            "flatccino" -> {
+                drinkArrayList = drinkData.getFlatccinoArrayList()
+            }
+            "beverage" -> {
+                drinkArrayList = drinkData.getBeverageArrayList()
+            }
+            "bubbleMilk" -> {
+                drinkArrayList = drinkData.getBubbleMilkArrayList()
+            }
+        }
     }
 
     //전체 UI 세팅
@@ -162,6 +157,13 @@ class DrinkListMenuOneFragment : Fragment() {
         }
         else{
             binding.menu4Price.text = drinkData.price.toString()
+        }
+    }
+    private fun callOrderDrink(drinkData: DrinkDataInterface){
+        if (drinkData.category != "ready"){
+            CafeModel.drinkSelected = drinkData
+            viewModel.drinkSelectChanged()
+            Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
         }
     }
 
