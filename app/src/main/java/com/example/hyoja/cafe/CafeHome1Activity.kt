@@ -34,6 +34,9 @@ class CafeHome1Activity : AppCompatActivity() {
         val view = this
         val commonUi = CommonUi()
 
+        //이곳으로 오면 선택했던 리스트는 모두 초기화됨
+        clearSelectedDrinkList()
+
         //뷰모델 프로바이더 생성
         viewModel = ViewModelProvider(this)[MenuListViewModel::class.java]
 
@@ -45,6 +48,12 @@ class CafeHome1Activity : AppCompatActivity() {
         //음료리스트 뷰페이저 띄우기
         binding.drinkList.adapter = DrinkListNewMenuAdapter(this)
         binding.drinkList.isUserInputEnabled = false;
+
+        //총 금액 보여주기
+        viewModel.orderListLiveData.observe(this, Observer {
+            Log.d(Tag,"orderList Changed Observed"+getTotalPrice().toString())
+            binding.account.text = getTotalPrice().toString()
+        })
 
 
         //기본적으로 왼쪽 오른쪽 버튼은 해당 Item이 2개라고 가정하고 그냥 작성해놓음... 호오오옥시 나중에 발전시키려면 이거 수정해야함
@@ -208,5 +217,16 @@ class CafeHome1Activity : AppCompatActivity() {
             supportFragmentManager, "DrinkOrderAddDialogFragment"
         )
         Log.d(Tag,"DrinkOrderAddDialogFragment().show")
+    }
+    private fun clearSelectedDrinkList(){
+        CafeModel.drinkSelectedList.clear()
+    }
+    private fun getTotalPrice(): Int{
+        var account: Int = 0
+        for (i in 0 until CafeModel.drinkSelectedList.size){
+            account += CafeModel.drinkSelectedList[i].price
+        }
+        Log.d(Tag,account.toString())
+        return account
     }
 }

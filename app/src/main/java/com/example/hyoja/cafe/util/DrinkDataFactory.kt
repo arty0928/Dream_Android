@@ -106,34 +106,34 @@ class DrinkDataFactory{
 
     //데이터가 없는 공간은 그만큼 ready로 채워준다.
     private fun fillCategory(){
-        val value: UtilValue = UtilValue()
+        val value = UtilValue()
 
-        if(newMenuArrayList.size<value.newMenuListSize){
+        if(newMenuArrayList.size < value.newMenuListSize){
             while (drinkArrayList.size<=value.newMenuListSize){
                 drinkArrayList.add(Ready())
             }
         }
-        if(coffeeArrayList.size<value.coffeeListSize){
+        if(coffeeArrayList.size < value.coffeeListSize){
             while (coffeeArrayList.size<=value.newMenuListSize){
                 coffeeArrayList.add(Ready())
             }
         }
-        if(shakeArrayList.size<value.shakeListSize){
+        if(shakeArrayList.size < value.shakeListSize){
             while (shakeArrayList.size<=value.newMenuListSize){
                 shakeArrayList.add(Ready())
             }
         }
-        if(beverageArrayList.size<value.beverageListSize){
+        if(beverageArrayList.size < value.beverageListSize){
             while (beverageArrayList.size<=value.newMenuListSize){
                 beverageArrayList.add(Ready())
             }
         }
-        if(bubbleMilkArrayList.size<value.bubbleMilkSize){
+        if(bubbleMilkArrayList.size < value.bubbleMilkSize){
             while (bubbleMilkArrayList.size<=value.newMenuListSize){
                 bubbleMilkArrayList.add(Ready())
             }
         }
-        if(adeArrayList.size<value.adeListSize){
+        if(adeArrayList.size < value.adeListSize){
             while (adeArrayList.size<=value.newMenuListSize){
                 adeArrayList.add(Ready())
             }

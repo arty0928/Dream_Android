@@ -292,6 +292,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/selectCompleteButton"
                     android:textColor="@color/cafe_white"
                     android:text="선택완료"
                     android:textSize="20dp"

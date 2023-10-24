@@ -6,9 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.model.DrinkDataInterface
+import com.example.hyoja.cafe.model.Ready
 import com.example.hyoja.cafe.viewmodel.MenuListViewModel
 
 import com.example.hyoja.cafe.util.DrinkDataFactory
@@ -27,6 +29,10 @@ class DrinkListMenuTwoFragment : Fragment() {
         //뷰모델 프로바이더 생성
         viewModel = ViewModelProvider(requireActivity())[MenuListViewModel::class.java]
 
+        viewModel.categoryLiveData.observe(requireActivity(), Observer {
+            getDrinkArrayList(it)
+            setUI()
+        })
 
         //버튼 리스너
         binding.newMenu1.setOnClickListener{
@@ -61,9 +67,45 @@ class DrinkListMenuTwoFragment : Fragment() {
 
         return binding.root
     }
+    private fun getDrinkArrayList(categroy:String){
+        val drinkData = DrinkDataFactory()
+
+        when(categroy){
+            "newMenu" -> {
+                drinkArrayList = drinkData.getNewMenuArrayList()
+            }
+            "ade" -> {
+                drinkArrayList = drinkData.getAdeArrayList()
+            }
+            "shake" -> {
+                drinkArrayList = drinkData.getShakeArrayList()
+            }
+            "coffee" -> {
+                drinkArrayList = drinkData.getCoffeeArrayList()
+            }
+            "tea" -> {
+                drinkArrayList = drinkData.getTeaArrayList()
+            }
+            "flatccino" -> {
+                drinkArrayList = drinkData.getFlatccinoArrayList()
+            }
+            "beverage" -> {
+                drinkArrayList = drinkData.getBeverageArrayList()
+            }
+            "bubbleMilk" -> {
+                drinkArrayList = drinkData.getBubbleMilkArrayList()
+            }
+        }
+    }
 
     //전체 UI 세팅
     private fun setUI(){
+        // 밑의 조건문을 통해 fragment2에 대한 IndexOutOfBoundsException 방어
+        if (drinkArrayList.size<=4){
+            for (i in 4..7){
+                drinkArrayList.add(Ready())
+            }
+        }
         setButtonUI1(drinkArrayList[4])
         setButtonUI2(drinkArrayList[5])
         setButtonUI3(drinkArrayList[6])
