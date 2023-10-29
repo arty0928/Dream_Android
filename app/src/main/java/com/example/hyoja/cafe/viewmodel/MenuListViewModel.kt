@@ -31,12 +31,9 @@ class MenuListViewModel: ViewModel() {
         drinkSelected.value = CafeModel.drinkSelected
         Log.d(Tag,"drinkSelectChanged = "+drinkSelected.value)
     }
-<<<<<<< HEAD
 
-=======
     fun orderListChanged(){
         orderList.value = CafeModel.drinkSelectedList.size.toString()
         Log.d(Tag,"orderListChanged = "+ orderList.value)
     }
->>>>>>> b5d1dedc93a14bd1e1adec638dd24db6aaebfbe8
 }
