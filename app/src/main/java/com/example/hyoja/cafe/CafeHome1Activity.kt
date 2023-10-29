@@ -187,6 +187,7 @@ class CafeHome1Activity : AppCompatActivity() {
         itemCount = itemCount?.div(4)
         return itemCount!!
     }
+
     private fun drinkListButtonSrcSelect(itemCount:Int){
         if (itemCount == 1){
             binding.drinkListRightButton.setImageResource(R.drawable.icon_right_un)

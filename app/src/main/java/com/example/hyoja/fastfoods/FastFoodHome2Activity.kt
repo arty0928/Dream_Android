@@ -12,85 +12,45 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.hyoja.Fragments.drink
-import com.example.hyoja.Fragments.hamburger
+import com.example.hyoja.Fragments.FoodListMenuOneFrament
+import com.example.hyoja.Fragments.FoodListMenuTwoFragment
 import com.example.hyoja.Fragments.lunch
 import com.example.hyoja.R
+import com.example.hyoja.cafe.model.CafeModel
+import com.example.hyoja.cafe.util.UtilValue
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityFastfoodHome2Binding
-
-// TRUE 면 세트
-data class MenuItem(
-    val name: String,
-    val imageResId: Int,
-    val price: Int,
-    val isSet: Boolean = false,
-    val setMenu: List<MenuItem>? = null
-)
-
-
-object MenuRepository {
-    private val menuList = mutableListOf<MenuItem>()
-
-    // 메뉴 항목을 추가하는 함수
-    fun addMenuItem(menuItem: MenuItem) {
-        menuList.add(menuItem)
-    }
-
-    // 전체 메뉴 목록을 반환하는 함수
-    fun getAllMenuItems(): List<MenuItem> {
-        return menuList
-    }
-}
-
+import com.example.hyoja.fastfoods.adapter.FoodMenuCategoryAdapter
+import com.example.hyoja.fastfoods.model.FastFoodModel
+import com.example.hyoja.fastfoods.util.FoodUtilValue
+import com.example.hyoja.fastfoods.viewmodel.FoodListViewModel
 
 class FastFoodHome2Activity : AppCompatActivity(){
+
+    private val Tag:String = "FastFoodHome2Activity"
+
     var backPressedTime: Long = 0 // 뒤로가기 2번 클릭을 위한 변수선언
     lateinit var binding: ActivityFastfoodHome2Binding
+
     val common = CommonUi()
+    private lateinit var viewModel: FoodListViewModel
 
     lateinit var viewPager: ViewPager2
 
     //        selectedItems scrollView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityFastfoodHome2Binding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-
-        // 메뉴 선택 시 화면에 메뉴 추가
-        fun menuSelected(menuItem: MenuItem) {
-            val addedMenu = MenuRepository.getAllMenuItems()
-            val selectedItemsLayout = binding.selectedItems
-            val inflater = LayoutInflater.from(this)
-
-            for (addedMenuItem in addedMenu) {
-                val selectedMenuLayout = inflater.inflate(R.layout.selected_menu, null)
-
-                // 메뉴 이름 설정
-                val itemNameTextView = selectedMenuLayout.findViewById<TextView>(R.id.selectedItemName)
-                itemNameTextView.text = addedMenuItem.name
-
-                // 메뉴 가격 설정
-                val itemPriceTextView = selectedMenuLayout.findViewById<TextView>(R.id.selectedItemPrice)
-                itemPriceTextView.text = addedMenuItem.price.toString()
-
-                // 나머지 요소 업데이트 및 이벤트 처리
-
-                selectedItemsLayout.addView(selectedMenuLayout)
-            }
-        }
-
-
-
-
         val view = this
 
 //        HorizontalScrollView 오른쪽 버튼 눌렀을때
-        setContentView(R.layout.activity_fastfood_home2)
         val tabTitleRightBtn = findViewById<ImageView>(R.id.TabTitleRightBtn)
         val horizontalScrollView = findViewById<HorizontalScrollView>(R.id.TabBarTitleHorizontalScroll)
 
@@ -107,67 +67,91 @@ class FastFoodHome2Activity : AppCompatActivity(){
             horizontalScrollView.smoothScrollBy(-scrollAmount,0)
             Log.d("tabTitleRightBtn","TabTitleRightBtn")
         }
+        
+        //뷰모델 프로바이더 생성
+        viewModel = ViewModelProvider(this)[FoodListViewModel::class.java]
+        
+        //카테고리 뷰페이저
+        binding.FastFoodCategoryList.adapter = FoodMenuCategoryAdapter(this)
+        var currentItem = binding.FastFoodCategoryList.currentItem
+        binding.FastFoodCategoryList.isUserInputEnabled = false;
 
-        viewPager = findViewById(R.id.viewPager)
-
-        // 스와이프를 비활성화합니다.
-        viewPager.isUserInputEnabled = false
-
-        val fragments = listOf(
-            lunch(),
-            hamburger(),
-            dessert(),
-            drink()
-        )
-
-        val adapter = MyAdapterCustome(this, fragments)
-        viewPager.adapter = adapter
-
-        //TabView Visible
-        val lunchView = findViewById<View>(R.id.lunchView)
-        val titleLunch = findViewById<TextView>(R.id.TitleLunch)
-        val titleHamburger = findViewById<TextView>(R.id.TitleHamburger)
-        val hamburgerView = findViewById<View>(R.id.hamburgerView)
-        val titleDessert = findViewById<TextView>(R.id.TitleDessert)
-        val dessertView = findViewById<View>(R.id.DessertView)
-        val titleDrink = findViewById<TextView>(R.id.TitleDrink)
-        val drinkView = findViewById<View>(R.id.DrinkView)
-
-        var currentlyVisibleView = lunchView
-
-
-        fun toggleVisibility(viewToShow: View) {
-            if (currentlyVisibleView != viewToShow) {
-                currentlyVisibleView.visibility = View.INVISIBLE
-                viewToShow.visibility = View.VISIBLE
-                currentlyVisibleView = viewToShow
+        //메뉴 리스트 왼쪽 버튼
+        binding.FoodMenuListListLeftButton.setOnClickListener {
+            if(checkFoodListViewPagerSize(FastFoodModel.menuCategory)>1){
+                binding.FastFoodCategoryList.setCurrentItem(0,true)
+                binding.FoodMenuListListLeftButton.setImageResource(R.drawable.icon_left_un)
+                binding.FoodMenuListListRightButton.setImageResource(R.drawable.icon_right)
             }
         }
 
-        titleLunch.setOnClickListener {
-            viewPager.currentItem = 0
-            val scrollAmount = 300
-            horizontalScrollView.smoothScrollBy(-scrollAmount,0)
-            toggleVisibility(lunchView)
+        binding.FoodMenuListListRightButton.setOnClickListener {
+            if(checkFoodListViewPagerSize(FastFoodModel.menuCategory)>1){
+                binding.FastFoodCategoryList.setCurrentItem(0,true)
+                binding.FoodMenuListListLeftButton.setImageResource(R.drawable.icon_left)
+                binding.FoodMenuListListRightButton.setImageResource(R.drawable.icon_right_un)
+            }
         }
 
-        titleHamburger.setOnClickListener {
-            viewPager.currentItem = 1
-            toggleVisibility(hamburgerView)
-        }
+        //선택한 카테고리에 따라서 바뀌는 음료리스트
+        viewModel.categoryLiveData.observe(this, Observer {
+            when(it){
+                "newMenu" -> {
+                    // 버튼 활성화 비활성화 선택
+                    foodListButtonSrcSelect(checkFoodListViewPagerSize(it))
+                }
+                "hamburger" -> {
+                    foodListButtonSrcSelect(checkFoodListViewPagerSize(it))
+                }
+                "dessert" -> {
+                    foodListButtonSrcSelect(checkFoodListViewPagerSize(it))
+                }
+                "drink" -> {
+                    foodListButtonSrcSelect(checkFoodListViewPagerSize(it))
+                }
+                else -> {
 
-        titleDessert.setOnClickListener {
-            viewPager.currentItem = 2
-            toggleVisibility(dessertView)
-        }
+                }
+            }
+        })
 
-        titleDrink.setOnClickListener {
-            viewPager.currentItem = 3
-            val scrollAmount = 300
-            horizontalScrollView.smoothScrollBy(scrollAmount,0)
-            toggleVisibility(drinkView)
+        //음료리스트에서 음료 선택 시 옵션 선택 프래그먼트 생성
+        //처음 init 막는 로직 필요
+        var i=0
+        viewModel.foodSelectedListLiveData.observe(this, Observer {
+            if(i>0){
+                Log.d(Tag,"drinkSelectedLiveData observed")
+//                foodOptionFragmentMange()
+            }
+            i++
+        })
 
-        }
+
+        //TabView Visible
+//        titleLunch.setOnClickListener {
+//            viewPager.currentItem = 0
+//            val scrollAmount = 300
+//            horizontalScrollView.smoothScrollBy(-scrollAmount,0)
+//            toggleVisibility(lunchView)
+//        }
+//
+//        titleHamburger.setOnClickListener {
+//            viewPager.currentItem = 1
+//            toggleVisibility(hamburgerView)
+//        }
+//
+//        titleDessert.setOnClickListener {
+//            viewPager.currentItem = 2
+//            toggleVisibility(dessertView)
+//        }
+//
+//        titleDrink.setOnClickListener {
+//            viewPager.currentItem = 3
+//            val scrollAmount = 300
+//            horizontalScrollView.smoothScrollBy(scrollAmount,0)
+//            toggleVisibility(drinkView)
+//
+//        }
 
         //selectedItems scrollView
         val nestedScrollView = findViewById<NestedScrollView>(R.id.nestedScrollView)
@@ -181,21 +165,49 @@ class FastFoodHome2Activity : AppCompatActivity(){
         downButton.setOnClickListener {
             nestedScrollView.smoothScrollBy(0, 200) // Adjust the scroll amount as needed
         }
-
-
-
     }
 
-    class MyAdapterCustome(
-        fragmentActivity: FragmentActivity,
-        private val fragments: List<Fragment>) :
-        FragmentStateAdapter(fragmentActivity) {
-
-        override fun getItemCount(): Int = fragments.size
-
-        override fun createFragment(position: Int): Fragment = fragments[position]
+    private fun checkFoodListViewPagerSize(categroyName: String):Int{
+        //null허용은 해놨는데 절대 null되면 안됨
+        var value = FoodUtilValue()
+        var itemCount: Int? = when(categroyName){
+            "newMenu" -> {
+                value.newMenuListSize
+            }
+            "hamburger" -> {
+                value.hamburgerListSize
+            }
+            "dessert" -> {
+                value.dessertListSize
+            }
+            "drink" -> {
+                value.drinkListSize
+            }
+            else ->{
+                return 0
+            }
+        }
+        Log.d(Tag,"FoodListCount = "+ itemCount.toString())
+        // 뷰페이저 첫번째 프래그먼트로 전환
+        binding.FoodMenuList.setCurrentItem(0,true)
+        itemCount = itemCount?.div(6)
+        return itemCount!!
     }
 
+    private fun foodListButtonSrcSelect(itemCount:Int){
+        if (itemCount == 1){
+            binding.FoodMenuListListLeftButton.setImageResource(R.drawable.icon_right_un)
+            binding.FoodMenuListListRightButton.setImageResource(R.drawable.icon_left_un)
+        }
+        else if(itemCount <= 0){
+            binding.FoodMenuListListRightButton.setImageResource(R.drawable.icon_right_un)
+            binding.FoodMenuListListLeftButton.setImageResource(R.drawable.icon_left_un)
+        }
+        else{
+            binding.FoodMenuListListRightButton.setImageResource(R.drawable.icon_right)
+            binding.FoodMenuListListLeftButton.setImageResource(R.drawable.icon_left_un)
+        }
+    }
 }
 
 

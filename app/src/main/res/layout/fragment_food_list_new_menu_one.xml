@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Fragments.hamburger"
+    tools:context=".Fragments.FoodListMenuOneFrament"
     >
 
     <GridLayout
@@ -29,7 +29,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="horizontal"
-            tools:ignore="DuplicateIds">
+            >
 
             <ImageView
                 android:id="@+id/burger1_image"
@@ -60,7 +60,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/poppins_bold"
                 android:gravity="center"
-                android:text="4400~"
+                android:text="4400"
                 android:textColor="#D00000"
                 android:textSize="20dp" />
 
@@ -78,18 +78,21 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="horizontal"
-            tools:ignore="DuplicateIds">
+            >
 
             <ImageView
+                android:id="@+id/burger2_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowSpan="2"
                 android:layout_columnSpan="2"
                 android:layout_gravity="fill"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/burger2" />
+                android:src="@drawable/burger2"
+                />
 
             <TextView
+                android:id="@+id/burger2_name"
                 android:layout_width="wrap_content"
                 android:layout_rowWeight="1"
                 android:fontFamily="@font/poppins_extrabold"
@@ -99,12 +102,13 @@
                 android:textColor="@color/black" />
 
             <TextView
+                android:id="@+id/burger2_price"
                 android:layout_width="wrap_content"
                 android:layout_row="1"
                 android:layout_rowWeight="1"
                 android:layout_column="2"
                 android:fontFamily="@font/poppins_bold"
-                android:text="3500~"
+                android:text="3500"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:textColor="#D00000"
@@ -127,6 +131,7 @@
             tools:ignore="DuplicateIds">
 
             <ImageView
+                android:id="@+id/burger3_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowSpan="2"
@@ -136,6 +141,7 @@
                 android:src="@drawable/burger3" />
 
             <TextView
+                android:id="@+id/burger3_name"
                 android:layout_width="wrap_content"
                 android:layout_rowWeight="1"
                 android:fontFamily="@font/poppins_extrabold"
@@ -145,12 +151,13 @@
                 android:textColor="@color/black" />
 
             <TextView
+                android:id="@+id/burger3_price"
                 android:layout_width="wrap_content"
                 android:layout_row="1"
                 android:layout_rowWeight="1"
                 android:layout_column="2"
                 android:fontFamily="@font/poppins_bold"
-                android:text="4500~"
+                android:text="4500"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:textColor="#D00000"
@@ -173,6 +180,7 @@
             tools:ignore="DuplicateIds">
 
             <ImageView
+                android:id="@+id/burger4_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowSpan="2"
@@ -182,6 +190,7 @@
                 android:src="@drawable/burger4" />
 
             <TextView
+                android:id="@+id/burger4_name"
                 android:layout_width="wrap_content"
                 android:layout_rowWeight="1"
                 android:fontFamily="@font/poppins_extrabold"
@@ -191,12 +200,13 @@
                 android:textColor="@color/black" />
 
             <TextView
+                android:id="@+id/burger4_price"
                 android:layout_width="wrap_content"
                 android:layout_row="1"
                 android:layout_rowWeight="1"
                 android:layout_column="2"
                 android:fontFamily="@font/poppins_bold"
-                android:text="4600~"
+                android:text="4600"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:textColor="#D00000"
@@ -219,6 +229,7 @@
             tools:ignore="DuplicateIds">
 
             <ImageView
+                android:id="@+id/burger5_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowSpan="2"
@@ -228,6 +239,7 @@
                 android:src="@drawable/burger5" />
 
             <TextView
+                android:id="@+id/burger5_name"
                 android:layout_width="wrap_content"
                 android:layout_rowWeight="1"
                 android:fontFamily="@font/poppins_extrabold"
@@ -237,6 +249,7 @@
                 android:textColor="@color/black" />
 
             <TextView
+                android:id="@+id/burger5_price"
                 android:layout_width="wrap_content"
                 android:layout_row="1"
                 android:layout_rowWeight="1"
@@ -265,6 +278,7 @@
             tools:ignore="DuplicateIds">
 
             <ImageView
+                android:id="@+id/burger6_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowSpan="2"
@@ -274,6 +288,7 @@
                 android:src="@drawable/burger6" />
 
             <TextView
+                android:id="@+id/burger6_name"
                 android:layout_width="wrap_content"
                 android:layout_rowWeight="1"
                 android:fontFamily="@font/poppins_extrabold"
@@ -283,12 +298,13 @@
                 android:textColor="@color/black" />
 
             <TextView
+                android:id="@+id/burger6_price"
                 android:layout_width="wrap_content"
                 android:layout_row="1"
                 android:layout_rowWeight="1"
                 android:layout_column="2"
                 android:fontFamily="@font/poppins_bold"
-                android:text="4400~"
+                android:text="4400"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:textColor="#D00000"
@@ -297,70 +313,5 @@
         </GridLayout>
 
     </GridLayout>
-
-<!--    이전, 다음 버튼-->
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:orientation="horizontal"-->
-<!--        >-->
-
-<!--&lt;!&ndash;        이전 버튼&ndash;&gt;-->
-<!--        <LinearLayout-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_weight="1"-->
-<!--            >-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="35dp"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:background="@drawable/layout_before_btn"-->
-<!--                >-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="이\n전"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:textAlignment="center"-->
-<!--                    android:fontFamily="@font/poppins_extrabold"-->
-<!--                    android:textColor="@color/white">-->
-
-<!--                </TextView>-->
-<!--            </LinearLayout>-->
-
-<!--        </LinearLayout>-->
-
-<!--&lt;!&ndash;        다음 버튼&ndash;&gt;-->
-<!--        <LinearLayout-->
-<!--            android:layout_weight="1"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:gravity="end"-->
-<!--            >-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="35dp"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:background="@drawable/layout_next_btn"-->
-<!--                >-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="다\n음"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:textAlignment="center"-->
-<!--                    android:fontFamily="@font/poppins_extrabold"-->
-<!--                    android:textColor="@color/white">-->
-
-<!--                </TextView>-->
-<!--            </LinearLayout>-->
-<!--        </LinearLayout>-->
-
-<!--    </LinearLayout>-->
 
 </FrameLayout>

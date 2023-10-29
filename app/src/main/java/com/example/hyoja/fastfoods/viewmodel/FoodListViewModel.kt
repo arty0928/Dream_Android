@@ -29,7 +29,7 @@ class FoodListViewModel : ViewModel() {
         category.value = FastFoodModel.menuCategory
         Log.d(Tag,"categorySelectChanged = "+category.value)
     }
-    fun drinkSelectChanged(){
+    fun foodSelectChanged(){
         foodSelected.value = FastFoodModel.foodSelected
         Log.d(Tag,"drinkSelectChanged = "+foodSelected.value)
     }
