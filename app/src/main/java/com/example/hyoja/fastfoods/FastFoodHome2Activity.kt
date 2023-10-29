@@ -19,8 +19,10 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.hyoja.Fragments.drink
 import com.example.hyoja.Fragments.FoodListMenuOneFrament
 import com.example.hyoja.Fragments.FoodListMenuTwoFragment
+import com.example.hyoja.Fragments.SetOrOnlyFragment
 import com.example.hyoja.Fragments.lunch
 import com.example.hyoja.R
+import com.example.hyoja.cafe.fragment.DrinkOrderAddDialogFragment
 import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.util.UtilValue
 import com.example.hyoja.common.util.CommonUi
@@ -126,7 +128,7 @@ class FastFoodHome2Activity : AppCompatActivity(){
         viewModel.foodSelectedListLiveData.observe(this, Observer {
             if(i>0){
                 Log.d(Tag,"drinkSelectedLiveData observed")
-//                foodOptionFragmentMange()
+                foodOptionFragmentMange()
             }
             i++
         })
@@ -213,6 +215,15 @@ class FastFoodHome2Activity : AppCompatActivity(){
             binding.FoodMenuListListLeftButton.setImageResource(R.drawable.icon_left_un)
         }
     }
+    private fun foodOptionFragmentMange(){
+        Log.d(Tag,"food_choose_set_or_only_dialog_FragmentMange called")
+//            SetOrOnlyFragment().show(
+//            supportFragmentManager, "DrinkOrderAddDialogFragment"
+//        )
+        Log.d(Tag,"DrinkOrderAddDialogFragment().show")
+    }
+
+
 }
 
 
