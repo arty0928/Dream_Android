@@ -25,6 +25,7 @@ import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.util.UtilValue
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityFastfoodHome2Binding
+import com.example.hyoja.fastfoods.adapter.FoodListNewMenuAdapter
 import com.example.hyoja.fastfoods.adapter.FoodMenuCategoryAdapter
 import com.example.hyoja.fastfoods.model.FastFoodModel
 import com.example.hyoja.fastfoods.util.FoodUtilValue
@@ -75,6 +76,10 @@ class FastFoodHome2Activity : AppCompatActivity(){
         binding.FastFoodCategoryList.adapter = FoodMenuCategoryAdapter(this)
         var currentItem = binding.FastFoodCategoryList.currentItem
         binding.FastFoodCategoryList.isUserInputEnabled = false;
+
+        //푸드리스트 뷰페이저
+        binding.FoodMenuList.adapter = FoodListNewMenuAdapter(this)
+        binding.FoodMenuList.isUserInputEnabled = false;
 
         //메뉴 리스트 왼쪽 버튼
         binding.FoodMenuListListLeftButton.setOnClickListener {
