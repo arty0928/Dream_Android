@@ -32,5 +32,4 @@ class MenuListViewModel: ViewModel() {
         Log.d(Tag,"drinkSelectChanged = "+drinkSelected.value)
     }
 
-
 }
