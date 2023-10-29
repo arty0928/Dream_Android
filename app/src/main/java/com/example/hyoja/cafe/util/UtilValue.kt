@@ -2,6 +2,7 @@ package com.example.hyoja.cafe.util
 
 //util 값 모음
 data class UtilValue(
+
     val newMenuListSize: Int = 8,
     val coffeeListSize: Int = 8,
     val shakeListSize: Int = 4,
