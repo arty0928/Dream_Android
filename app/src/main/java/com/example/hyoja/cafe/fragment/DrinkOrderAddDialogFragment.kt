@@ -33,6 +33,10 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
         option = option,
         drink = CafeModel.drinkSelected
     )
+    lateinit var callBack: CallBack
+    interface CallBack{
+        fun addDrink()
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -105,6 +109,7 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
     }
     override fun onDestroyView() {
         super.onDestroyView()
+
     }
 
     private fun setUi(){

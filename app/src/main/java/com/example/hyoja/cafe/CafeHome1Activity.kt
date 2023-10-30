@@ -5,6 +5,7 @@ import android.util.Log
 import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.hyoja.R
@@ -54,7 +55,6 @@ class CafeHome1Activity : AppCompatActivity() {
             Log.d(Tag,"orderList Changed Observed"+getTotalPrice().toString())
             binding.account.text = getTotalPrice().toString()
         })
-
 
         //기본적으로 왼쪽 오른쪽 버튼은 해당 Item이 2개라고 가정하고 그냥 작성해놓음... 호오오옥시 나중에 발전시키려면 이거 수정해야함
         //카테고리 리스트 왼쪽 버튼
