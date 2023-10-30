@@ -105,6 +105,12 @@ import com.example.hyoja.setMenu2Fragment
         }
     }
 
+     override fun onResume() {
+         super.onResume()
+         Log.d("resume","called")
+         binding.root.requestLayout()
+     }
+
      private fun setUI(){
          setButtonUI1(foodArayList[0])
          setButtonUI2(foodArayList[1])

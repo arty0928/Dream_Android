@@ -45,6 +45,11 @@ class FastFoodHome2Activity : AppCompatActivity(){
 
     lateinit var viewPager: ViewPager2
 
+    override fun onResume() {
+        super.onResume()
+        binding.root.requestLayout()
+    }
+
     //        selectedItems scrollView
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityFastfoodHome2Binding.inflate(layoutInflater)
@@ -203,8 +208,8 @@ class FastFoodHome2Activity : AppCompatActivity(){
 
     private fun foodListButtonSrcSelect(itemCount:Int){
         if (itemCount == 1){
-            binding.FoodMenuListListLeftButton.setImageResource(R.drawable.icon_right_un)
-            binding.FoodMenuListListRightButton.setImageResource(R.drawable.icon_left_un)
+            binding.FoodMenuListListLeftButton.setImageResource(R.drawable.icon_left_un)
+            binding.FoodMenuListListRightButton.setImageResource(R.drawable.icon_right_un)
         }
         else if(itemCount <= 0){
             binding.FoodMenuListListRightButton.setImageResource(R.drawable.icon_right_un)

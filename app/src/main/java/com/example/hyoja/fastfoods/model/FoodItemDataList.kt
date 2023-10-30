@@ -100,7 +100,7 @@ data class Hamburger4(
 data class Hamburger5(
     override val category: String = "Hamburger",
     override val name : String = "더블치킨버거",
-    override val price : Int = 4500,
+    override val price : Int = 5500,
     override val foodImage: Int = R.drawable.burger5,
     override val set: Boolean = true
 ): FoodDataInterface

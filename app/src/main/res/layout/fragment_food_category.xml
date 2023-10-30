@@ -18,7 +18,6 @@
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
-
             android:text="든든점심"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -28,7 +27,6 @@
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
-
             android:text="햄버거"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -38,7 +36,6 @@
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
-
             android:text="디저트/치킨"/>
 
         <androidx.appcompat.widget.AppCompatButton
