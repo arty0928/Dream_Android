@@ -28,11 +28,19 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
     private val freeOption:ArrayList<String> = ArrayList()
     private val option:ArrayList<String> = ArrayList()
     private val orderingDrink:OrderingDrink = OrderingDrink(
-        degree = "hot",
+        // 처음 온도를 정할 수 있는 경우 Hot
+        // 온도가 정해져 있는 경우 defaultDgree
+        degree =
+        if (CafeModel.drinkSelected.defaultDegree == "selectable") {
+            "Hot"
+        } else {
+            CafeModel.drinkSelected.defaultDegree
+        }.toString(),
         freeOption = freeOption,
         option = option,
         drink = CafeModel.drinkSelected
     )
+
     lateinit var callBack: CallBack
     interface CallBack{
         fun addDrink()
@@ -46,7 +54,9 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
 
         //선택 완료 버튼
         binding.selectCompleteButton.setOnClickListener {
+            // 장바구니에 현재 고르고 있는 음료 추가
             CafeModel.drinkSelectedList.add(orderingDrink)
+            //
             viewModel.orderListChanged()
             for(i in 0 until CafeModel.drinkSelectedList.size){
                 Log.d(Tag,CafeModel.drinkSelectedList[i].toString())
@@ -54,6 +64,7 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
             requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
             requireActivity().supportFragmentManager.popBackStack()
         }
+
         // 음료 추가 및 빼기
         binding.itemPlus.setOnClickListener{
             addDrinkCount()
@@ -77,6 +88,7 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
         binding.hotButton.setOnClickListener {
             hotButtonClicked()
         }
+
         //취소 버튼
         binding.cancelButton.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
@@ -136,6 +148,8 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
             binding.hotButton.setTextColor(resources.getColor(R.color.cafe_white))
             binding.icedButton.setBackgroundResource(R.drawable.iced_button_unclicked)
             binding.icedButton.setTextColor(resources.getColor(R.color.cafe_skyblue))
+
+            orderingDrink.degree = "Hot"
         }
     }
 
@@ -145,6 +159,8 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
             binding.hotButton.setTextColor(resources.getColor(R.color.cafe_darkRed))
             binding.icedButton.setBackgroundResource(R.drawable.iced_button_clicked)
             binding.icedButton.setTextColor(resources.getColor(R.color.cafe_white))
+
+            orderingDrink.degree = "Iced"
         }
     }
     private fun regularButtonClicked(){
