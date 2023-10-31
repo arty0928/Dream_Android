@@ -45,15 +45,15 @@ class FastFoodHome2Activity : AppCompatActivity(){
 
     lateinit var viewPager: ViewPager2
 
-    override fun onResume() {
-        super.onResume()
-        binding.root.requestLayout()
-    }
+//    override fun onResume() {
+//        super.onResume()
+//        binding.root.requestLayout()
+//    }
 
     //        selectedItems scrollView
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityFastfoodHome2Binding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
+        binding = ActivityFastfoodHome2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val view = this
@@ -85,8 +85,11 @@ class FastFoodHome2Activity : AppCompatActivity(){
         binding.FastFoodCategoryList.isUserInputEnabled = false;
 
         //푸드리스트 뷰페이저
+        Log.d("FoodMenuListViewPager link","start called")
         binding.FoodMenuList.adapter = FoodListNewMenuAdapter(this)
         binding.FoodMenuList.isUserInputEnabled = false;
+        Log.d("FoodMenuListViewPager link","after called")
+
 
         //메뉴 리스트 왼쪽 버튼
         binding.FoodMenuListListLeftButton.setOnClickListener {
@@ -135,7 +138,7 @@ class FastFoodHome2Activity : AppCompatActivity(){
         var i=0
         viewModel.foodSelectedListLiveData.observe(this, Observer {
             if(i>0){
-                Log.d(Tag,"drinkSelectedLiveData observed")
+                Log.d(Tag,"foodSelectedLiveData observed")
                 foodOptionFragmentMange()
             }
             i++
