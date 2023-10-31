@@ -7,9 +7,10 @@ import com.example.hyoja.FoodCategoryFragment
 import com.example.hyoja.cafe.fragment.MenuCategoryOneFragment
 import com.example.hyoja.cafe.fragment.MenuCategoryTwoFragment
 
-class FoodMenuCategoryAdapter(fragmentActivity: FragmentActivity): FragmentStateAdapter(fragmentActivity) {
+class FoodMenuCategoryAdapter(fragmentActivity: FragmentActivity ): FragmentStateAdapter(fragmentActivity) {
 
     // 1. ViewPager2에 연결할 Fragment 들을 생성
+
     private val fragmentList = listOf<Fragment>(
         FoodCategoryFragment()
     )

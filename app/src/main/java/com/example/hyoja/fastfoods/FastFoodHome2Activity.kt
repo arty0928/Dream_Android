@@ -91,7 +91,7 @@ class FastFoodHome2Activity : AppCompatActivity(){
         //메뉴 리스트 왼쪽 버튼
         binding.FoodMenuListListLeftButton.setOnClickListener {
             if(checkFoodListViewPagerSize(FastFoodModel.menuCategory)>1){
-                binding.FastFoodCategoryList.setCurrentItem(0,true)
+                binding.FoodMenuList.setCurrentItem(0,true)
                 binding.FoodMenuListListLeftButton.setImageResource(R.drawable.icon_left_un)
                 binding.FoodMenuListListRightButton.setImageResource(R.drawable.icon_right)
             }
@@ -99,7 +99,7 @@ class FastFoodHome2Activity : AppCompatActivity(){
 
         binding.FoodMenuListListRightButton.setOnClickListener {
             if(checkFoodListViewPagerSize(FastFoodModel.menuCategory)>1){
-                binding.FastFoodCategoryList.setCurrentItem(0,true)
+                binding.FoodMenuList.setCurrentItem(1,true)
                 binding.FoodMenuListListLeftButton.setImageResource(R.drawable.icon_left)
                 binding.FoodMenuListListRightButton.setImageResource(R.drawable.icon_right_un)
             }
@@ -125,6 +125,9 @@ class FastFoodHome2Activity : AppCompatActivity(){
 
                 }
             }
+//            binding.FoodMenuList.adapter = FoodListNewMenuAdapter(this,it)
+//            binding.FoodMenuList.isUserInputEnabled = false;
+
         })
 
         //음료리스트에서 음료 선택 시 옵션 선택 프래그먼트 생성
@@ -137,33 +140,6 @@ class FastFoodHome2Activity : AppCompatActivity(){
             }
             i++
         })
-
-
-        //TabView Visible
-//        titleLunch.setOnClickListener {
-//            viewPager.currentItem = 0
-//            val scrollAmount = 300
-//            horizontalScrollView.smoothScrollBy(-scrollAmount,0)
-//            toggleVisibility(lunchView)
-//        }
-//
-//        titleHamburger.setOnClickListener {
-//            viewPager.currentItem = 1
-//            toggleVisibility(hamburgerView)
-//        }
-//
-//        titleDessert.setOnClickListener {
-//            viewPager.currentItem = 2
-//            toggleVisibility(dessertView)
-//        }
-//
-//        titleDrink.setOnClickListener {
-//            viewPager.currentItem = 3
-//            val scrollAmount = 300
-//            horizontalScrollView.smoothScrollBy(scrollAmount,0)
-//            toggleVisibility(drinkView)
-//
-//        }
 
         //selectedItems scrollView
         val nestedScrollView = findViewById<NestedScrollView>(R.id.nestedScrollView)
