@@ -81,7 +81,7 @@ class FastFoodHome2Activity : AppCompatActivity(){
 
         //푸드리스트 뷰페이저
         binding.FoodMenuList.adapter = FoodListNewMenuAdapter(this)
-        binding.FoodMenuList.isUserInputEnabled = false;
+//        binding.FoodMenuList.isUserInputEnabled = false;
 
         //메뉴 리스트 왼쪽 버튼
         binding.FoodMenuListListLeftButton.setOnClickListener {

@@ -109,42 +109,42 @@ class DrinkDataFactory{
         val value = UtilValue()
 
         if(newMenuArrayList.size < value.newMenuListSize){
-            while (drinkArrayList.size<=value.newMenuListSize){
+            while (drinkArrayList.size<value.newMenuListSize){
                 drinkArrayList.add(Ready())
             }
         }
         if(coffeeArrayList.size < value.coffeeListSize){
-            while (coffeeArrayList.size<=value.newMenuListSize){
+            while (coffeeArrayList.size<value.newMenuListSize){
                 coffeeArrayList.add(Ready())
             }
         }
         if(shakeArrayList.size < value.shakeListSize){
-            while (shakeArrayList.size<=value.newMenuListSize){
+            while (shakeArrayList.size<value.newMenuListSize){
                 shakeArrayList.add(Ready())
             }
         }
         if(beverageArrayList.size < value.beverageListSize){
-            while (beverageArrayList.size<=value.newMenuListSize){
+            while (beverageArrayList.size<value.newMenuListSize){
                 beverageArrayList.add(Ready())
             }
         }
         if(bubbleMilkArrayList.size < value.bubbleMilkSize){
-            while (bubbleMilkArrayList.size<=value.newMenuListSize){
+            while (bubbleMilkArrayList.size<value.newMenuListSize){
                 bubbleMilkArrayList.add(Ready())
             }
         }
         if(adeArrayList.size < value.adeListSize){
-            while (adeArrayList.size<=value.newMenuListSize){
+            while (adeArrayList.size<value.newMenuListSize){
                 adeArrayList.add(Ready())
             }
         }
         if(flatccinoArrayList.size<value.flatccinoListSize){
-            while (flatccinoArrayList.size<=value.newMenuListSize){
+            while (flatccinoArrayList.size<value.newMenuListSize){
                 flatccinoArrayList.add(Ready())
             }
         }
         if(teaArrayList.size<value.teaListSize){
-            while (teaArrayList.size<=value.newMenuListSize){
+            while (teaArrayList.size<value.newMenuListSize){
                 teaArrayList.add(Ready())
             }
         }

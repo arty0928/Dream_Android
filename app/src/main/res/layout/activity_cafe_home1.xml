@@ -10,8 +10,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <LinearLayout
+        <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -34,9 +33,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-    </LinearLayout>
+        <ImageView
+            android:layout_marginLeft="180dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/brand" />
 
-    <LinearLayout
+    </LinearLayout>
+        <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -208,19 +212,37 @@
                     </LinearLayout>
 
                 </LinearLayout>
-                <ImageButton
+                <LinearLayout
+                    android:background="@drawable/red_back"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp"
+                    android:id="@+id/pay_button"
                     android:layout_weight="6"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:layout_gravity="top"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pay_card"/>
+                    <TextView
+                        android:textSize="18dp"
+                        android:textColor="@color/cafe_white"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="결제하기"
+                        android:layout_weight="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
-
-
-
-</LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>

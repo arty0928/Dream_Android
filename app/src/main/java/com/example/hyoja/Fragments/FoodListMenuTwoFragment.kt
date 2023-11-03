@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.hyoja.R
 import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.model.DrinkDataInterface
+import com.example.hyoja.cafe.model.Ready
 import com.example.hyoja.cafe.util.DrinkDataFactory
 import com.example.hyoja.cafe.viewmodel.MenuListViewModel
 import com.example.hyoja.databinding.FragmentDrinkListNewMenuTwoBinding
@@ -76,12 +77,17 @@ class FoodListMenuTwoFragment : Fragment() {
 
     //전체 UI 세팅
     private fun setUI(){
-        setButtonUI1(foodArrayList[6])
-        setButtonUI2(foodArrayList[7])
-        setButtonUI3(foodArrayList[8])
-        setButtonUI4(foodArrayList[9])
-        setButtonUI5(foodArrayList[10])
-        setButtonUI6(foodArrayList[11])
+        if (foodArrayList.size<=6){
+            for (i in 6..11){
+//                .add(Ready())
+            }
+        }
+        setButtonUI1(foodArrayList[0])
+        setButtonUI2(foodArrayList[1])
+        setButtonUI3(foodArrayList[2])
+        setButtonUI4(foodArrayList[3])
+        setButtonUI5(foodArrayList[4])
+        setButtonUI6(foodArrayList[5])
 
     }
 

@@ -15,8 +15,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.hyoja.Fragments.drink
 import com.example.hyoja.R
+import com.example.hyoja.cafe.CafeHome1Activity
 import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.model.OrderingDrink
+import com.example.hyoja.cafe.util.ApplyOrderList
 import com.example.hyoja.cafe.viewmodel.MenuListViewModel
 import com.example.hyoja.databinding.FragmentDrinkOrderAddBinding
 
@@ -29,7 +31,7 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
     private val option:ArrayList<String> = ArrayList()
     private val orderingDrink:OrderingDrink = OrderingDrink(
         // 처음 온도를 정할 수 있는 경우 Hot
-        // 온도가 정해져 있는 경우 defaultDgree
+        // 온도가 정해져 있는 경우 defaultDegree
         degree =
         if (CafeModel.drinkSelected.defaultDegree == "selectable") {
             "Hot"
@@ -40,11 +42,6 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
         option = option,
         drink = CafeModel.drinkSelected
     )
-
-    lateinit var callBack: CallBack
-    interface CallBack{
-        fun addDrink()
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -63,6 +60,9 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
             }
             requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
             requireActivity().supportFragmentManager.popBackStack()
+
+            // 액티비티로 콜백 전달
+            ApplyOrderList(CafeModel.currentActivity)
         }
 
         // 음료 추가 및 빼기
@@ -132,6 +132,7 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
         // 음료 가격
         binding.drinkPrice.text = orderingDrink.drink.price.toString()
         setDegreeUI()
+        applyPay()
     }
     private fun setDegreeUI(){
         val degree = orderingDrink.drink.degree
