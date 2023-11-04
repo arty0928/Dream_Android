@@ -14,6 +14,9 @@ import com.example.hyoja.fastfoods.model.Dessert3
 import com.example.hyoja.fastfoods.model.Dessert4
 import com.example.hyoja.fastfoods.model.Dessert5
 import com.example.hyoja.fastfoods.model.Dessert6
+import com.example.hyoja.fastfoods.model.Dessert7
+import com.example.hyoja.fastfoods.model.Dessert8
+import com.example.hyoja.fastfoods.model.Dessert9
 import com.example.hyoja.fastfoods.model.Drink1
 import com.example.hyoja.fastfoods.model.Drink2
 import com.example.hyoja.fastfoods.model.Drink3
@@ -86,21 +89,21 @@ class FoodDataFactory {
         Log.d("fill_____","${newMenuArrayList.size}//${dessertArrayList.size}")
 
         if(newMenuArrayList.size < value.newMenuListSize){
-            while (newMenuArrayList.size<value.newMenuListSize){
+            while (newMenuArrayList.size< value.newMenuListSize){
                 newMenuArrayList.add(Ready())
             }
         }
         Log.d("fill1111111111","${newMenuArrayList.size}//${dessertArrayList.size}")
 
         if(hamburgerArrayList.size < value.hamburgerListSize){
-            while (hamburgerArrayList.size < value.newMenuListSize){
+            while (hamburgerArrayList.size <= value.newMenuListSize){
                 hamburgerArrayList.add(Ready())
             }
         }
         Log.d("fill2222222222","${hamburgerArrayList.size}//${dessertArrayList.size}")
 
         if(dessertArrayList.size < value.dessertListSize){
-            while (dessertArrayList.size < value.newMenuListSize){
+            while (dessertArrayList.size <= value.newMenuListSize){
                 dessertArrayList.add(Ready())
             }
         }
@@ -111,7 +114,7 @@ class FoodDataFactory {
                 drinkArrayList.add(Ready())
             }
         }
-        Log.d("fill!!!!!!","${foodArrayList.size}//${dessertArrayList.size}")
+        Log.d("fill!!!!!!","${foodArrayList.size}//${drinkArrayList.size}")
 
     }
 
@@ -142,6 +145,10 @@ class FoodDataFactory {
         foodArrayList.add(Dessert4())
         foodArrayList.add(Dessert5())
         foodArrayList.add(Dessert6())
+        foodArrayList.add(Dessert7())
+        foodArrayList.add(Dessert8())
+        foodArrayList.add(Dessert9())
+
 
         foodArrayList.add(Drink1())
         foodArrayList.add(Drink2())

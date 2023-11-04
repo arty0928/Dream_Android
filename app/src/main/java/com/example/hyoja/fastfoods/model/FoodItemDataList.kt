@@ -13,7 +13,7 @@ data class Ready(
     override val category: String = "ready",
     override val name: String = "",
     override val price: Int = 0,
-    override val foodImage: Int = R.drawable.ready_sorry,
+    override val foodImage: Int = R.drawable.ready_white,
     override val set: Boolean = false
 ) : FoodDataInterface
 
@@ -198,6 +198,30 @@ data class Dessert6(
     override val name : String = "모짜크림치즈볼",
     override val price : Int = 2300,
     override val foodImage: Int = R.drawable.dessert6,
+    override val set: Boolean = true
+): FoodDataInterface
+
+data class Dessert7(
+    override val category: String = "Dessert",
+    override val name : String = "치킨너겟",
+    override val price : Int = 2700,
+    override val foodImage: Int = R.drawable.dessert7,
+    override val set: Boolean = true
+): FoodDataInterface
+
+data class Dessert8(
+    override val category: String = "Dessert",
+    override val name : String = "롱치즈스틱",
+    override val price : Int = 2000,
+    override val foodImage: Int = R.drawable.dessert8,
+    override val set: Boolean = true
+): FoodDataInterface
+
+data class Dessert9(
+    override val category: String = "Dessert",
+    override val name : String = "페스츄리꽈배기시나몬",
+    override val price : Int = 2000,
+    override val foodImage: Int = R.drawable.dessert9,
     override val set: Boolean = true
 ): FoodDataInterface
 

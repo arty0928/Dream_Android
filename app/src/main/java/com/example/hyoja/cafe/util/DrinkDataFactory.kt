@@ -1,5 +1,6 @@
 package com.example.hyoja.cafe.util
 
+import android.util.Log
 import com.example.hyoja.cafe.model.Ade1
 import com.example.hyoja.cafe.model.Ade2
 import com.example.hyoja.cafe.model.Ade3
@@ -108,26 +109,36 @@ class DrinkDataFactory{
     private fun fillCategory(){
         val value = UtilValue()
 
+        Log.d("fill drink_________","${newMenuArrayList.size}//${teaArrayList.size}")
+
         if(newMenuArrayList.size < value.newMenuListSize){
             while (drinkArrayList.size<=value.newMenuListSize){
                 drinkArrayList.add(Ready())
             }
         }
+        Log.d("fill drink1111111","${newMenuArrayList.size}//${drinkArrayList.size}")
+
         if(coffeeArrayList.size < value.coffeeListSize){
             while (coffeeArrayList.size<=value.newMenuListSize){
                 coffeeArrayList.add(Ready())
             }
         }
+        Log.d("fill drink2222222","${coffeeArrayList.size}//${coffeeArrayList.size}")
+
         if(shakeArrayList.size < value.shakeListSize){
             while (shakeArrayList.size<=value.newMenuListSize){
                 shakeArrayList.add(Ready())
             }
         }
+
+        Log.d("fill drink3333333","${shakeArrayList.size}//${coffeeArrayList.size}")
+
         if(beverageArrayList.size < value.beverageListSize){
             while (beverageArrayList.size<=value.newMenuListSize){
                 beverageArrayList.add(Ready())
             }
         }
+        Log.d("fill drink4444444","${drinkArrayList.size}//${adeArrayList.size}")
         if(bubbleMilkArrayList.size < value.bubbleMilkSize){
             while (bubbleMilkArrayList.size<=value.newMenuListSize){
                 bubbleMilkArrayList.add(Ready())
@@ -138,6 +149,8 @@ class DrinkDataFactory{
                 adeArrayList.add(Ready())
             }
         }
+        Log.d("fill drink55555","${drinkArrayList.size}//${adeArrayList.size}")
+
         if(flatccinoArrayList.size<value.flatccinoListSize){
             while (flatccinoArrayList.size<=value.newMenuListSize){
                 flatccinoArrayList.add(Ready())

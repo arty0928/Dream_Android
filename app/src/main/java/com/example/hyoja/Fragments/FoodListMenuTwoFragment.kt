@@ -1,204 +1,11 @@
-//package com.example.hyoja.Fragments
-//
-//import android.os.Bundle
-//import android.util.Log
-//import androidx.fragment.app.Fragment
-//import android.view.LayoutInflater
-//import android.view.View
-//import android.view.ViewGroup
-//import androidx.lifecycle.ViewModelProvider
-//import com.example.hyoja.R
-//import com.example.hyoja.cafe.model.CafeModel
-//import com.example.hyoja.cafe.model.DrinkDataInterface
-//import com.example.hyoja.cafe.util.DrinkDataFactory
-//import com.example.hyoja.cafe.viewmodel.MenuListViewModel
-//import com.example.hyoja.databinding.FragmentDrinkListNewMenuTwoBinding
-//import com.example.hyoja.databinding.FragmentFoodListNewMenuOneBinding
-//import com.example.hyoja.databinding.FragmentFoodListNewMenuTwoBinding
-//import com.example.hyoja.fastfoods.model.FastFoodModel
-//import com.example.hyoja.fastfoods.model.FoodDataInterface
-//import com.example.hyoja.fastfoods.util.FoodDataFactory
-//import com.example.hyoja.fastfoods.viewmodel.FoodListViewModel
-//
-//class FoodListMenuTwoFragment : Fragment() {
-//    private val Tag: String = "FoodListNewMenuTwoFragment"
-//    lateinit var binding: FragmentFoodListNewMenuTwoBinding
-//    // 현재 선택한 카테고리의 음료리스트
-//    private lateinit var foodArrayList: ArrayList<FoodDataInterface>
-//    // 뷰모델
-//    private lateinit var viewModel: FoodListViewModel
-//
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//        //뷰모델 프로바이더 생성
-//        viewModel = ViewModelProvider(requireActivity())[FoodListViewModel::class.java]
-//
-//        //버튼 리스너
-//        binding.newMenu1.setOnClickListener{
-//            callOrderFood(foodArrayList[6])
-//        }
-//        binding.newMenu2.setOnClickListener{
-//            callOrderFood(foodArrayList[7])
-//        }
-//        binding.NewMenu3.setOnClickListener{
-//            callOrderFood(foodArrayList[8])
-//        }
-//        binding.newMenu4.setOnClickListener{
-//            callOrderFood(foodArrayList[9])
-//        }
-//
-//        binding.newMenu5.setOnClickListener{
-//            callOrderFood(foodArrayList[10])
-//        }
-//
-//        binding.newMenu6.setOnClickListener{
-//            callOrderFood(foodArrayList[11])
-//        }
-//
-//
-//    }
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        binding = FragmentFoodListNewMenuTwoBinding.inflate(inflater, container, false)
-//
-//        //맨 처음 oncreate상황에서는 newMenu 받아와야함
-//        //현재 보여질 음료 카테고리 리스트를 newMenu로 설정
-//        //받아온 정보를 통해 UI세팅
-//        val foodData = FoodDataFactory()
-//        foodArrayList = foodData.getNewMenuArrayList()
-//        setUI()
-//
-//        return binding.root
-//    }
-//
-//    //전체 UI 세팅
-//    private fun setUI(){
-//        setButtonUI1(foodArrayList[6])
-//        setButtonUI2(foodArrayList[7])
-//        setButtonUI3(foodArrayList[8])
-//        setButtonUI4(foodArrayList[9])
-//        setButtonUI5(foodArrayList[10])
-//        setButtonUI6(foodArrayList[11])
-//
-//    }
-//
-//    //버튼 UI 세팅
-//    private fun setButtonUI1(foodData: FoodDataInterface){
-//        //이미지와 이름 세팅
-//        binding.newMenu1Image.setImageResource(foodData.foodImage)
-//        binding.newMenu1Name.text = foodData.name
-//        //밑의 가격표
-//        if(foodData.category == "ready"){
-//            // 준비 중 데이터면 아예 안 보이게 설정
-//            binding.newmenu1Price.text = ""
-//            binding.newMenu1Image.setImageResource(foodData.foodImage)
-//        }
-//        else{
-//            binding.newmenu1Price.text = foodData.price.toString()
-//        }
-//    }
-//
-//    private fun setButtonUI2(foodData: FoodDataInterface){
-//        //이미지와 이름 세팅
-//        binding.newMenu2Image.setImageResource(foodData.foodImage)
-//        binding.newmenu2Name.text = foodData.name
-//        //밑의 가격표
-//        if(foodData.category == "ready"){
-//            // 준비 중 데이터면 아예 안 보이게 설정
-//            binding.newmenu2Price.text = ""
-//            binding.newMenu2Image.setImageResource(foodData.foodImage)
-//        }
-//        else{
-//            binding.newmenu2Price.text = foodData.price.toString()
-//        }
-//    }
-//
-//    private fun setButtonUI3(foodData: FoodDataInterface){
-//        //이미지와 이름 세팅
-//        binding.newMenu3Image.setImageResource(foodData.foodImage)
-//        binding.newMenu3Name.text = foodData.name
-//        //밑의 가격표
-//        if(foodData.category == "ready"){
-//            // 준비 중 데이터면 아예 안 보이게 설정
-//            binding.newmenu3Price.text = ""
-//            binding.newMenu3Image.setImageResource(foodData.foodImage)
-//        }
-//        else{
-//            binding.newmenu3Price.text = foodData.price.toString()
-//        }
-//    }
-//
-//    private fun setButtonUI4(foodData: FoodDataInterface){
-//        //이미지와 이름 세팅
-//        binding.newMenu4Image.setImageResource(foodData.foodImage)
-//        binding.newmenu4Name.text = foodData.name
-//        //밑의 가격표
-//        if(foodData.category == "ready"){
-//            // 준비 중 데이터면 아예 안 보이게 설정
-//            binding.newmenu4Price.text = ""
-//            binding.newMenu4Image.setImageResource(foodData.foodImage)
-//        }
-//        else{
-//            binding.newmenu4Price.text = foodData.price.toString()
-//        }
-//    }
-//
-//    private fun setButtonUI5(foodData: FoodDataInterface){
-//        //이미지와 이름 세팅
-//        binding.newMenu5Image.setImageResource(foodData.foodImage)
-//        binding.newMenu5Name.text = foodData.name
-//        //밑의 가격표
-//        if(foodData.category == "ready"){
-//            // 준비 중 데이터면 아예 안 보이게 설정
-//            binding.newmenu5Price.text = ""
-//            binding.newMenu5Image.setImageResource(foodData.foodImage)
-//        }
-//        else{
-//            binding.newmenu5Price.text = foodData.price.toString()
-//        }
-//    }
-//
-//    private fun setButtonUI6(foodData: FoodDataInterface){
-//        //이미지와 이름 세팅
-//        binding.newMenu6Image.setImageResource(foodData.foodImage)
-//        binding.newMenu6Name.text = foodData.name
-//        //밑의 가격표
-//        if(foodData.category == "ready"){
-//            // 준비 중 데이터면 아예 안 보이게 설정
-//            binding.newmenu6Price.text = ""
-//            binding.newMenu6Image.setImageResource(foodData.foodImage)
-//        }
-//        else{
-//            binding.newmenu6Price.text = foodData.price.toString()
-//        }
-//    }
-//
-//
-//    private fun callOrderFood(foodData: FoodDataInterface){
-//        if (foodData.category != "ready"){
-//            FastFoodModel.foodSelected = foodData
-//            viewModel.foodSelectChanged()
-//            Log.d(Tag,"foodSelected= "+ FastFoodModel.foodSelected)
-//        }
-//    }
-//
-//}
-package com.example.hyoja.Fragments
-
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.hyoja.R
-import com.example.hyoja.cafe.model.Ready
-import com.example.hyoja.databinding.FragmentFoodListNewMenuOneBinding
 import com.example.hyoja.databinding.FragmentFoodListNewMenuTwoBinding
 import com.example.hyoja.fastfoods.model.FastFoodModel
 import com.example.hyoja.fastfoods.model.FoodDataInterface
@@ -206,7 +13,7 @@ import com.example.hyoja.fastfoods.util.FoodDataFactory
 import com.example.hyoja.fastfoods.viewmodel.FoodListViewModel
 
 class FoodListMenuTwoFragment : Fragment() {
-    private val Tag: String = "FoodListMenuTwoFragment"
+    private val Tag: String = "FoodListMenuOneFragment"
 
     lateinit var binding: FragmentFoodListNewMenuTwoBinding
 
@@ -217,6 +24,8 @@ class FoodListMenuTwoFragment : Fragment() {
     private lateinit var viewModel : FoodListViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        Log.d(Tag,"onViewCreated called")
+
         super.onViewCreated(view, savedInstanceState)
         //뷰모델 프로바이더 생성
         viewModel = ViewModelProvider(requireActivity())[FoodListViewModel::class.java]
@@ -234,7 +43,7 @@ class FoodListMenuTwoFragment : Fragment() {
             callOrderFood(foodArrayList[7])
         }
 
-        binding.NewMenu3.setOnClickListener {
+        binding.newMenu3.setOnClickListener {
             callOrderFood(foodArrayList[8])
         }
 
@@ -258,6 +67,7 @@ class FoodListMenuTwoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        Log.d(Tag,"onCreateView called")
         binding = FragmentFoodListNewMenuTwoBinding.inflate(inflater, container, false)
 
         //맨 처음 oncreate상황에서는 newMenu 받아와야함
@@ -291,22 +101,37 @@ class FoodListMenuTwoFragment : Fragment() {
 
     //전체 UI 세팅
     private fun setUI(){
+
         // 밑의 조건문을 통해 fragment2에 대한 IndexOutOfBoundsException 방어
-        if (foodArrayList.size<=6){
-            for (i in 6..11){
-                foodArrayList.add(com.example.hyoja.fastfoods.model.Ready())
+//        if (foodArrayList.size<=6){
+//            for (i in 6..11){
+//                foodArrayList.add(com.example.hyoja.fastfoods.model.Ready())
+//            }
+//        }
+
+        if (foodArrayList.size >= 7) {
+            Log.d("FoodSetUI", "${foodArrayList.size}")
+            Log.d("FoodSetUI", "${foodArrayList}")
+            for (i in 1..7) {
+                val functionName = "setButtonUI$i"
+                val foodIndex = i - 1
+                Log.d("FoodSetUI", "${foodArrayList[foodIndex]}")
+                // 아래에서 setButtonUI 함수를 호출할 수 있습니다.
+                when (i) {
+                    1 -> setButtonUI6(foodArrayList[foodIndex])
+                    2 -> setButtonUI7(foodArrayList[foodIndex])
+                    3 -> setButtonUI8(foodArrayList[foodIndex])
+                    4 -> setButtonUI9(foodArrayList[foodIndex])
+                    5 -> setButtonUI10(foodArrayList[foodIndex])
+                    6 -> setButtonUI11(foodArrayList[foodIndex])
+                    // 추가적인 케이스도 필요한 경우 4, 5, 6, 7에 대한 처리를 추가하세요.
+                }
             }
         }
-        setButtonUI1(foodArrayList[6])
-        setButtonUI2(foodArrayList[7])
-        setButtonUI3(foodArrayList[8])
-        setButtonUI4(foodArrayList[9])
-        setButtonUI5(foodArrayList[10])
-        setButtonUI6(foodArrayList[11])
 
     }
 
-    private fun setButtonUI1(FoodData: FoodDataInterface){
+    private fun setButtonUI6(FoodData: FoodDataInterface){
         //이미지와 이름 세팅
         binding.newMenu1Image.setImageResource(FoodData.foodImage)
         binding.newMenu1Name.text = FoodData.name
@@ -320,73 +145,73 @@ class FoodListMenuTwoFragment : Fragment() {
         }
     }
 
-    private fun setButtonUI2(FoodData: FoodDataInterface){
+    private fun setButtonUI7(FoodData: FoodDataInterface){
         //이미지와 이름 세팅
         binding.newMenu2Image.setImageResource(FoodData.foodImage)
-        binding.newmenu2Name.text = FoodData.name
+        binding.newMenu2Name.text = FoodData.name
         //밑의 가격표
         if(FoodData.category == "ready"){
             // 준비 중 데이터면 아예 안 보이게 설정
-            binding.newmenu2Price.text = ""
+            binding.newMenu2Price.text = ""
         }
         else{
-            binding.newmenu2Price.text = FoodData.price.toString()
+            binding.newMenu2Price.text = FoodData.price.toString()
         }
     }
 
-    private fun setButtonUI3(FoodData: FoodDataInterface){
+    private fun setButtonUI8(FoodData: FoodDataInterface){
         //이미지와 이름 세팅
         binding.newMenu3Image.setImageResource(FoodData.foodImage)
         binding.newMenu3Name.text = FoodData.name
         //밑의 가격표
         if(FoodData.category == "ready"){
             // 준비 중 데이터면 아예 안 보이게 설정
-            binding.newmenu3Price.text = ""
+            binding.newMenu3Price.text = ""
         }
         else{
-            binding.newmenu3Price.text = FoodData.price.toString()
+            binding.newMenu3Price.text = FoodData.price.toString()
         }
     }
 
-    private fun setButtonUI4(FoodData: FoodDataInterface){
+    private fun setButtonUI9(FoodData: FoodDataInterface){
         //이미지와 이름 세팅
-        binding.newMenu3Image.setImageResource(FoodData.foodImage)
-        binding.newmenu3Price.text = FoodData.name
+        binding.newMenu4Image.setImageResource(FoodData.foodImage)
+        binding.newMenu4Name.text = FoodData.name
         //밑의 가격표
         if(FoodData.category == "ready"){
             // 준비 중 데이터면 아예 안 보이게 설정
-            binding.newmenu3Price.text = ""
+            binding.newMenu4Price.text = ""
         }
         else{
-            binding.newmenu3Price.text = FoodData.price.toString()
+            binding.newMenu4Price.text = FoodData.price.toString()
         }
     }
 
-    private fun setButtonUI5(FoodData: FoodDataInterface){
+    private fun setButtonUI10(FoodData: FoodDataInterface){
         //이미지와 이름 세팅
         binding.newMenu5Image.setImageResource(FoodData.foodImage)
         binding.newMenu5Name.text = FoodData.name
         //밑의 가격표
         if(FoodData.category == "ready"){
             // 준비 중 데이터면 아예 안 보이게 설정
-            binding.newmenu5Price.text = ""
+            binding.newMenu5Price.text = ""
         }
         else{
-            binding.newmenu5Price.text = FoodData.price.toString()
+            binding.newMenu5Price.text = FoodData.price.toString()
         }
     }
 
-    private fun setButtonUI6(FoodData: FoodDataInterface){
+    private fun setButtonUI11(FoodData: FoodDataInterface){
         //이미지와 이름 세팅
         binding.newMenu6Image.setImageResource(FoodData.foodImage)
-        binding.newMenu6Name.text = FoodData.name
+        binding.newMenu6Price.text = FoodData.name
         //밑의 가격표
         if(FoodData.category == "ready"){
             // 준비 중 데이터면 아예 안 보이게 설정
-            binding.newmenu6Price.text = ""
+            binding.newMenu6Price.text = ""
         }
         else{
-            binding.newmenu6Price.text = FoodData.price.toString()
+            binding.newMenu6Price.text = FoodData.price.toString()
         }
     }
 
@@ -397,6 +222,4 @@ class FoodListMenuTwoFragment : Fragment() {
             Log.d(Tag,"FoodSelected ="+ FastFoodModel.foodSelected)
         }
     }
-
-
 }

@@ -67,6 +67,7 @@ class DrinkListMenuTwoFragment : Fragment() {
 
         return binding.root
     }
+
     private fun getDrinkArrayList(categroy:String){
         val drinkData = DrinkDataFactory()
 
