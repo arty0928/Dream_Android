@@ -11,7 +11,9 @@ import androidx.core.widget.NestedScrollView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
+import com.example.hyoja.Fragments.SetOrOnlyFragment
 import com.example.hyoja.R
+import com.example.hyoja.cafe.fragment.DrinkOrderAddDialogFragment
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityFastfoodHome2Binding
 import com.example.hyoja.fastfoods.adapter.FoodListNewMenuAdapter
@@ -94,6 +96,15 @@ class FastFoodHome2Activity : AppCompatActivity(){
             }
         }
 
+       var i=0
+        viewModel.foodSelectedLiveData.observe(this, Observer {
+            if(i>0){
+                Log.d(Tag,"drinkSelectedLiveData observed")
+                foodOptionFragmentManage()
+            }
+            i++
+        })
+
         //선택한 카테고리에 따라서 바뀌는 음료리스트
         viewModel.categoryLiveData.observe(this, Observer {
             when(it){
@@ -114,33 +125,20 @@ class FastFoodHome2Activity : AppCompatActivity(){
 
                 }
             }
-//            binding.FoodMenuList.adapter = FoodListNewMenuAdapter(this,it)
-//            binding.FoodMenuList.isUserInputEnabled = false;
-
         })
 
-        //음료리스트에서 음료 선택 시 옵션 선택 프래그먼트 생성
-        //처음 init 막는 로직 필요
-        var i=0
-        viewModel.foodSelectedListLiveData.observe(this, Observer {
-            if(i>0){
-                Log.d(Tag,"foodSelectedLiveData observed")
-                foodOptionFragmentMange()
-            }
-            i++
-        })
 
         //selectedItems scrollView
-        val nestedScrollView = findViewById<NestedScrollView>(R.id.nestedScrollView)
+//        val nestedScrollView = findViewById<NestedScrollView>(R.id.nestedScrollView)
         val upButton = findViewById<View>(R.id.upButton)
         val downButton = findViewById<View>(R.id.downButton)
 
         upButton.setOnClickListener {
-            nestedScrollView.smoothScrollBy(0, -200) // Adjust the scroll amount as needed
+//            nestedScrollView.smoothScrollBy(0, -200) // Adjust the scroll amount as needed
         }
 
         downButton.setOnClickListener {
-            nestedScrollView.smoothScrollBy(0, 200) // Adjust the scroll amount as needed
+//            nestedScrollView.smoothScrollBy(0, 200) // Adjust the scroll amount as needed
         }
     }
 
@@ -185,14 +183,27 @@ class FastFoodHome2Activity : AppCompatActivity(){
             binding.FoodMenuListListLeftButton.setImageResource(R.drawable.icon_left_un)
         }
     }
-    private fun foodOptionFragmentMange(){
-        Log.d(Tag,"food_choose_set_or_only_dialog_FragmentMange called")
+    //음식 주문 시 음료 상세 주문
+//    private fun foodOptionFragmentMange(){
+//        Log.d(Tag,"food_choose_set_or_only_dialog_FragmentMange called")
 //            SetOrOnlyFragment().show(
-//            supportFragmentManager, "DrinkOrderAddDialogFragment"
+//            supportFragmentManager, "FoodOrderAddDialogFragment"
 //        )
-        Log.d(Tag,"DrinkOrderAddDialogFragment().show")
-    }
+//
+//
+//
+//        Log.d(Tag,"DrinkOrderAddDialogFragment().show")
+//    }
+    private fun foodOptionFragmentManage(){
+        Log.d(Tag, "foodOptionFragmentMange 호출됨")
 
+//        val setOrOnlyFragment = SetOrOnlyFragment()
+//        setOrOnlyFragment.show(supportFragmentManager, "SetOrOnlyFragmentTag")
+        SetOrOnlyFragment().show(
+            supportFragmentManager, "DrinkOrderAddDialogFragment"
+        )
+
+    }
 
 }
 

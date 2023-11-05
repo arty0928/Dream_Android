@@ -8,12 +8,10 @@
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@drawable/layout_rounded_white"
         android:backgroundTint="@color/white"
-
-
         >
 
         <!--전체-->
@@ -68,151 +66,91 @@
                 android:orientation="horizontal"
                 android:layout_gravity="center">
 
-                <GridLayout
+                <LinearLayout
+                    android:id="@+id/optionOnlyBurger"
+                    android:paddingTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:rowCount="1"
-                    android:columnCount="2"
-                    android:padding="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    >
-
-                    <!--1 더블불고기버거-->
-                    <GridLayout
-                        android:id="@+id/only_burger_grid"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_column="0"
-                        android:rowCount="2"
-                        android:columnCount="1"
-                        android:layout_columnWeight="1"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:orientation="vertical"
+                        android:background="@drawable/layout_transparent_back_yellow_border"
+                        android:padding="5dp"
                         >
-
-                        <GridLayout
-                            android:paddingLeft="7dp"
-                            android:paddingRight="7dp"
-                            android:paddingTop="5dp"
-                            android:paddingBottom="5dp"
-                            android:id="@+id/only_burger_image_set"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_row="0"
-                            android:layout_column="0"
-                            android:layout_gravity="center"
-                            android:rowCount="2"
-                            android:columnCount="1"
-                            android:orientation="vertical"
-                            android:background="@drawable/layout_transparent_back_yellow_border"
-                            >
-
-                            <ImageView
-                                android:paddingTop="5dp"
-                                android:id="@+id/only_burger_image"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:src="@drawable/burger1" />
-
-                            <TextView
-                                android:id="@+id/only_burger_text"
-                                android:layout_width="wrap_content"
-                                android:fontFamily="@font/poppins_extrabold"
-                                android:layout_gravity="center"
-                                android:text="버거만"
-                                android:textSize="15dp"
-                                android:textColor="@color/black" />
-
-
-                        </GridLayout>
-
-
-
+                        <ImageView
+                            android:id="@+id/optionOnlyBurger_image"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/burger1"/>
                         <TextView
-                            android:layout_marginTop="2dp"
-                            android:id="@+id/only_burger_price"
-                            android:layout_width="wrap_content"
+                            android:layout_weight="2.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="버거만"
                             android:fontFamily="@font/poppins_extrabold"
-                            android:layout_gravity="center"
-                            android:text="3,300"
-                            android:textSize="15dp"
-                            android:textColor="#D00000" />
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/optionOnlyBurger_price"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="3300"
+                        android:gravity="center"
+                        android:textColor="@color/cafe_darkRed"
+                        android:fontFamily="@font/poppins_extrabold"/>
 
+                </LinearLayout>
+                <LinearLayout
 
-                    </GridLayout>
-
-                    <!--2 피쉬버거-->
-                    <GridLayout
-                        android:id="@+id/set_grid"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_column="1"
-                        android:rowCount="2"
-                        android:columnCount="1"
+                    android:id="@+id/optionSetBurger"
+                    android:paddingTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:layout_columnWeight="1"
-
+                        android:background="@drawable/layout_transparent_back_yellow_border"
+                        android:padding="5dp"
                         >
-
-                        <GridLayout
-                            android:paddingLeft="7dp"
-                            android:paddingRight="7dp"
-                            android:paddingTop="5dp"
-                            android:paddingBottom="5dp"
-                            android:id="@+id/set_image_set"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_row="0"
-                            android:layout_column="0"
-                            android:layout_gravity="center"
-                            android:rowCount="2"
-                            android:columnCount="1"
-                            android:orientation="vertical"
-                            android:background="@drawable/layout_transparent_back_yellow_border"
-                            >
-
-                            <ImageView
-                                android:paddingTop="5dp"
-                                android:id="@+id/set_image"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:src="@drawable/burger1" />
-
-                            <TextView
-                                android:id="@+id/set_text"
-                                android:layout_width="wrap_content"
-                                android:fontFamily="@font/poppins_extrabold"
-                                android:layout_gravity="center"
-                                android:text="세트"
-                                android:textSize="15dp"
-                                android:textColor="@color/black" />
-
-
-                        </GridLayout>
-
-
-
+                        <ImageView
+                            android:id="@+id/optionSetBurger_image"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/burger1"/>
                         <TextView
-                            android:layout_marginTop="2dp"
-
-                            android:id="@+id/set_price"
-                            android:layout_width="wrap_content"
+                            android:layout_weight="2.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="세트"
                             android:fontFamily="@font/poppins_extrabold"
-                            android:layout_gravity="center"
-                            android:text="6,300"
-                            android:textSize="15dp"
-                            android:textColor="#D00000" />
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/optionSetBurger_price"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="3300"
+                        android:gravity="center"
+                        android:textColor="@color/cafe_darkRed"
+                        android:fontFamily="@font/poppins_extrabold"/>
 
-
-                    </GridLayout>
-
-                    <!--3, 새우버거-->
-
-                </GridLayout>
+                </LinearLayout>
             </LinearLayout>
 
 

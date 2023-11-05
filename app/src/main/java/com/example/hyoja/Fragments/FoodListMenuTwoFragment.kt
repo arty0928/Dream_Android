@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.hyoja.Fragments.SetOrOnlyFragment
+import com.example.hyoja.cafe.fragment.DrinkOrderAddDialogFragment
 import com.example.hyoja.databinding.FragmentFoodListNewMenuTwoBinding
 import com.example.hyoja.fastfoods.model.FastFoodModel
 import com.example.hyoja.fastfoods.model.FoodDataInterface
@@ -230,6 +232,14 @@ class FoodListMenuTwoFragment : Fragment() {
         if(foodData.category != "ready"){
             FastFoodModel.foodSelected = foodData
             viewModel.foodSelectChanged()
+
+//            DrinkOrderAddDialogFragment().show(
+//                supportFragmentManager, "DrinkOrderAddDialogFragment"
+//            )
+
+            SetOrOnlyFragment().show(requireActivity().supportFragmentManager, "FoodOrderAddDialogFragment")
+
+
             Log.d(Tag,"FoodSelected ="+ FastFoodModel.foodSelected)
         }
     }
