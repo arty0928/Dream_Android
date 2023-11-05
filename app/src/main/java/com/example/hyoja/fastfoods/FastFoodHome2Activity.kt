@@ -183,17 +183,7 @@ class FastFoodHome2Activity : AppCompatActivity(){
             binding.FoodMenuListListLeftButton.setImageResource(R.drawable.icon_left_un)
         }
     }
-    //음식 주문 시 음료 상세 주문
-//    private fun foodOptionFragmentMange(){
-//        Log.d(Tag,"food_choose_set_or_only_dialog_FragmentMange called")
-//            SetOrOnlyFragment().show(
-//            supportFragmentManager, "FoodOrderAddDialogFragment"
-//        )
-//
-//
-//
-//        Log.d(Tag,"DrinkOrderAddDialogFragment().show")
-//    }
+
     private fun foodOptionFragmentManage(){
         Log.d(Tag, "foodOptionFragmentMange 호출됨")
 
