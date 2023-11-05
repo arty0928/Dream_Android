@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.hyoja.databinding.FragmentFoodListNewMenuTwoBinding
 import com.example.hyoja.fastfoods.model.FastFoodModel
 import com.example.hyoja.fastfoods.model.FoodDataInterface
+import com.example.hyoja.fastfoods.model.Ready
 import com.example.hyoja.fastfoods.util.FoodDataFactory
 import com.example.hyoja.fastfoods.viewmodel.FoodListViewModel
 
@@ -108,22 +109,32 @@ class FoodListMenuTwoFragment : Fragment() {
 //                foodArrayList.add(com.example.hyoja.fastfoods.model.Ready())
 //            }
 //        }
+        if(foodArrayList.size<=12){
+//            for(i in 6..12){
+//                foodArrayList.add(Ready())
+//            }
+            while(foodArrayList.size< 12){
+                foodArrayList.add(Ready())
+                Log.d("READY", "${foodArrayList}")
+
+            }
+        }
 
         if (foodArrayList.size >= 7) {
             Log.d("FoodSetUI", "${foodArrayList.size}")
             Log.d("FoodSetUI", "${foodArrayList}")
-            for (i in 1..7) {
+            for (i in 7..foodArrayList.size) {
                 val functionName = "setButtonUI$i"
                 val foodIndex = i - 1
                 Log.d("FoodSetUI", "${foodArrayList[foodIndex]}")
                 // 아래에서 setButtonUI 함수를 호출할 수 있습니다.
                 when (i) {
-                    1 -> setButtonUI6(foodArrayList[foodIndex])
-                    2 -> setButtonUI7(foodArrayList[foodIndex])
-                    3 -> setButtonUI8(foodArrayList[foodIndex])
-                    4 -> setButtonUI9(foodArrayList[foodIndex])
-                    5 -> setButtonUI10(foodArrayList[foodIndex])
-                    6 -> setButtonUI11(foodArrayList[foodIndex])
+                    7 -> setButtonUI6(foodArrayList[foodIndex])
+                    8 -> setButtonUI7(foodArrayList[foodIndex])
+                    9 -> setButtonUI8(foodArrayList[foodIndex])
+                    10 -> setButtonUI9(foodArrayList[foodIndex])
+                    11 -> setButtonUI10(foodArrayList[foodIndex])
+                    12 -> setButtonUI11(foodArrayList[foodIndex])
                     // 추가적인 케이스도 필요한 경우 4, 5, 6, 7에 대한 처리를 추가하세요.
                 }
             }
@@ -139,6 +150,7 @@ class FoodListMenuTwoFragment : Fragment() {
         if(FoodData.category == "ready"){
             // 준비 중 데이터면 아예 안 보이게 설정
             binding.newmenu1Price.text = ""
+            binding.newMenu1Name.text = ""
         }
         else{
             binding.newmenu1Price.text = FoodData.price.toString()
@@ -152,6 +164,7 @@ class FoodListMenuTwoFragment : Fragment() {
         //밑의 가격표
         if(FoodData.category == "ready"){
             // 준비 중 데이터면 아예 안 보이게 설정
+            binding.newMenu2Name.text = ""
             binding.newMenu2Price.text = ""
         }
         else{
@@ -167,6 +180,8 @@ class FoodListMenuTwoFragment : Fragment() {
         if(FoodData.category == "ready"){
             // 준비 중 데이터면 아예 안 보이게 설정
             binding.newMenu3Price.text = ""
+            binding.newMenu3Name.text = ""
+
         }
         else{
             binding.newMenu3Price.text = FoodData.price.toString()
@@ -181,6 +196,8 @@ class FoodListMenuTwoFragment : Fragment() {
         if(FoodData.category == "ready"){
             // 준비 중 데이터면 아예 안 보이게 설정
             binding.newMenu4Price.text = ""
+            binding.newMenu3Name.text = ""
+
         }
         else{
             binding.newMenu4Price.text = FoodData.price.toString()
@@ -195,6 +212,8 @@ class FoodListMenuTwoFragment : Fragment() {
         if(FoodData.category == "ready"){
             // 준비 중 데이터면 아예 안 보이게 설정
             binding.newMenu5Price.text = ""
+            binding.newMenu3Name.text = ""
+
         }
         else{
             binding.newMenu5Price.text = FoodData.price.toString()
@@ -209,6 +228,8 @@ class FoodListMenuTwoFragment : Fragment() {
         if(FoodData.category == "ready"){
             // 준비 중 데이터면 아예 안 보이게 설정
             binding.newMenu6Price.text = ""
+            binding.newMenu6Name.text = ""
+
         }
         else{
             binding.newMenu6Price.text = FoodData.price.toString()
