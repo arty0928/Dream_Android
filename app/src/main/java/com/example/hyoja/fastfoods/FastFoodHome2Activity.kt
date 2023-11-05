@@ -77,7 +77,6 @@ class FastFoodHome2Activity : AppCompatActivity(){
         binding.FoodMenuList.isUserInputEnabled = false;
         Log.d("FoodMenuListViewPager link","after called")
 
-
         //메뉴 리스트 왼쪽 버튼
         binding.FoodMenuListListLeftButton.setOnClickListener {
             if(checkFoodListViewPagerSize(FastFoodModel.menuCategory)>1){

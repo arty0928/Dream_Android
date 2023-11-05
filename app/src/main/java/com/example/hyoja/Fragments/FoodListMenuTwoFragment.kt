@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.hyoja.databinding.FragmentFoodListNewMenuTwoBinding
 import com.example.hyoja.fastfoods.model.FastFoodModel
 import com.example.hyoja.fastfoods.model.FoodDataInterface
-import com.example.hyoja.fastfoods.model.Ready
 import com.example.hyoja.fastfoods.util.FoodDataFactory
 import com.example.hyoja.fastfoods.viewmodel.FoodListViewModel
 
@@ -102,19 +101,10 @@ class FoodListMenuTwoFragment : Fragment() {
 
     //전체 UI 세팅
     private fun setUI(){
-
         // 밑의 조건문을 통해 fragment2에 대한 IndexOutOfBoundsException 방어
-//        if (foodArrayList.size<=6){
-//            for (i in 6..11){
-//                foodArrayList.add(com.example.hyoja.fastfoods.model.Ready())
-//            }
-//        }
         if(foodArrayList.size<=12){
-//            for(i in 6..12){
-//                foodArrayList.add(Ready())
-//            }
             while(foodArrayList.size< 12){
-                foodArrayList.add(Ready())
+                foodArrayList.add(com.example.hyoja.fastfoods.model.Ready())
                 Log.d("READY", "${foodArrayList}")
 
             }

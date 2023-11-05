@@ -2,22 +2,29 @@ package com.example.hyoja.cafe
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hyoja.R
 import com.example.hyoja.cafe.adapter.DrinkListNewMenuAdapter
 import com.example.hyoja.cafe.adapter.MenuCategoryAdapter
+import com.example.hyoja.cafe.adapter.OrderedListAdapter
 import com.example.hyoja.cafe.fragment.DrinkOrderAddDialogFragment
+import com.example.hyoja.cafe.fragment.PayFragment
 import com.example.hyoja.cafe.model.CafeModel
+import com.example.hyoja.cafe.util.DrinkAddListner
 import com.example.hyoja.cafe.util.UtilValue
 import com.example.hyoja.cafe.viewmodel.MenuListViewModel
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityCafeHome1Binding
+import java.util.logging.Logger
 
-class CafeHome1Activity : AppCompatActivity() {
+class CafeHome1Activity : AppCompatActivity(),DrinkAddListner {
     private val Tag:String = "CafeHome1Activity"
     private var backPressedTime: Long = 0 // 뒤로가기 2번 클릭을 위한 변수선언
 
@@ -29,6 +36,8 @@ class CafeHome1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCafeHome1Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        CafeModel.currentActivity = this
 
         //goTo쓰려고 Common 객체 생성
         val view = this
@@ -49,12 +58,16 @@ class CafeHome1Activity : AppCompatActivity() {
         binding.drinkList.adapter = DrinkListNewMenuAdapter(this)
         binding.drinkList.isUserInputEnabled = false;
 
-        //총 금액 보여주기
-        viewModel.orderListLiveData.observe(this, Observer {
-            Log.d(Tag,"orderList Changed Observed"+getTotalPrice().toString())
-            binding.account.text = getTotalPrice().toString()
-        })
+        //결제하기 버튼
+        binding.payButton.setOnClickListener {
+            if (CafeModel.drinkSelectedList.size == 0){
 
+            }
+            else{
+                Log.d("결제시작",CafeModel.drinkSelectedList.toString())
+                showPayDetail()
+            }
+        }
 
         //기본적으로 왼쪽 오른쪽 버튼은 해당 Item이 2개라고 가정하고 그냥 작성해놓음... 호오오옥시 나중에 발전시키려면 이거 수정해야함
         //카테고리 리스트 왼쪽 버튼
@@ -211,6 +224,13 @@ class CafeHome1Activity : AppCompatActivity() {
         }
     }
 
+    private fun showPayDetail(){
+        PayFragment().show(
+            supportFragmentManager, "PayFragment"
+        )
+    }
+
+    //음료 선택 시 음료상세주문 띄우기
     private fun drinkOptionFragmentMange(){
         Log.d(Tag,"drinkOptionFragmentMange called")
         DrinkOrderAddDialogFragment().show(
@@ -228,5 +248,15 @@ class CafeHome1Activity : AppCompatActivity() {
         }
         Log.d(Tag,account.toString())
         return account
+    }
+
+    // 음료주문 선택 완료하면 콜백되는 콜백 함수
+    override fun drinkAdded() {
+        // 장바구니 리사이클러뷰
+        binding.drinkSelectedList.layoutManager = LinearLayoutManager(this).also { it.orientation = LinearLayoutManager.HORIZONTAL }
+        binding.drinkSelectedList.adapter = OrderedListAdapter()
+
+        // 총 결제 금액 세팅
+        binding.account.text = getTotalPrice().toString()
     }
 }
