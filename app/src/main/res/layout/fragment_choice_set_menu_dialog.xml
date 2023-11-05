@@ -29,12 +29,11 @@
                 >
 
                 <TextView
-                    android:textAlignment="center"
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="세트디저트 2개를 선택해주세요"
                     android:fontFamily="@font/poppins_extrabold"
-                    android:textSize="20dp"
                     android:textColor="@color/black"
                     >
                 </TextView>
@@ -59,79 +58,85 @@
                     android:layout_height="match_parent"
                     android:src="@drawable/left_round"/>
 
-                <HorizontalScrollView
-                    android:id="@+id/TabBarTitleHorizontalScroll_setmenu"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1">
+<!--                <HorizontalScrollView-->
+<!--                    android:id="@+id/TabBarTitleHorizontalScroll_setmenu"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_weight="1">-->
 
-                    <LinearLayout
-                        android:id="@+id/TabBarTitle_setmenu"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center_vertical">
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/TabBarTitle_setmenu"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:layout_gravity="center_vertical">-->
 
-                        <FrameLayout
-                            android:layout_width="120dp"
-                            android:layout_height="match_parent">
+<!--                        <FrameLayout-->
+<!--                            android:layout_width="120dp"-->
+<!--                            android:layout_height="match_parent">-->
 
-                            <!-- Background View (your tab indicator) -->
-                            <View
-                                android:id="@+id/set_dessert"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@drawable/tab_indicator"
-                                android:visibility="visible"
-                                />
+<!--                            &lt;!&ndash; Background View (your tab indicator) &ndash;&gt;-->
+<!--                            <View-->
+<!--                                android:id="@+id/set_dessert"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:background="@drawable/tab_indicator"-->
+<!--                                android:visibility="visible"-->
+<!--                                />-->
 
-                            <!-- TextView -->
-                            <TextView
-                                android:id="@+id/set_dessert_title"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:text="세트_디저트"
-                                android:fontFamily="@font/poppins_extrabold"
-                                android:textColor="@color/black"
-                                android:textSize="20dp" />
-                        </FrameLayout>
+<!--                            &lt;!&ndash; TextView &ndash;&gt;-->
+<!--                            <TextView-->
+<!--                                android:id="@+id/set_dessert_title"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:text="세트_디저트"-->
+<!--                                android:fontFamily="@font/poppins_extrabold"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textSize="20dp" />-->
+<!--                        </FrameLayout>-->
 
-                        <FrameLayout
-                            android:layout_width="120dp"
-                            android:layout_height="match_parent">
+<!--                        <FrameLayout-->
+<!--                            android:layout_width="120dp"-->
+<!--                            android:layout_height="match_parent">-->
 
-                            <!-- Background View (your tab indicator) -->
-                            <View
-                                android:id="@+id/set_drink"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@drawable/tab_indicator"
-                                android:visibility="invisible"
+<!--                            &lt;!&ndash; Background View (your tab indicator) &ndash;&gt;-->
+<!--                            <View-->
+<!--                                android:id="@+id/set_drink"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:background="@drawable/tab_indicator"-->
+<!--                                android:visibility="invisible"-->
 
-                                />
+<!--                                />-->
 
-                            <!-- TextView -->
-                            <TextView
+<!--                            &lt;!&ndash; TextView &ndash;&gt;-->
+<!--                            <TextView-->
 
-                                android:id="@+id/set_drink_title"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
+<!--                                android:id="@+id/set_drink_title"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center"-->
 
-                                android:text="세트_드링크"
-                                android:fontFamily="@font/poppins_extrabold"
-                                android:textColor="@color/black"
-                                android:textSize="20dp" />
-                        </FrameLayout>
+<!--                                android:text="세트_드링크"-->
+<!--                                android:fontFamily="@font/poppins_extrabold"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textSize="20dp" />-->
+<!--                        </FrameLayout>-->
 
 
 
-                    </LinearLayout>
+<!--                    </LinearLayout>-->
 
-                </HorizontalScrollView>
+<!--                </HorizontalScrollView>-->
 
+                <androidx.viewpager2.widget.ViewPager2
+                    android:background="@null"
+                    android:id="@+id/SetMenuChoiceCategory"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
                 <ImageView
                     android:id="@+id/TabTitleRightBtn_setmenu"
                     android:layout_marginRight="5dp"
@@ -151,42 +156,42 @@
 
                 <androidx.viewpager2.widget.ViewPager2
                     android:background="@color/white"
-                    android:id="@+id/viewPager"
+                    android:id="@+id/SetMenuChoiceMainViewPager"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     />
             </androidx.constraintlayout.widget.ConstraintLayout>
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_width="match_parent"-->
-<!--                tools:context=".fastfoods.NewTabActivity"-->
-<!--                >-->
+            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                tools:context=".fastfoods.NewTabActivity"-->
+            <!--                >-->
 
-<!--                <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--                    android:id="@+id/bottomNavigationView"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    app:menu="@menu/bottom_nav"-->
-<!--                    >-->
-<!--                </com.google.android.material.bottomnavigation.BottomNavigationView>-->
+            <!--                <com.google.android.material.bottomnavigation.BottomNavigationView-->
+            <!--                    android:id="@+id/bottomNavigationView"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:menu="@menu/bottom_nav"-->
+            <!--                    >-->
+            <!--                </com.google.android.material.bottomnavigation.BottomNavigationView>-->
 
-<!--                <FrameLayout-->
-<!--                    android:id="@+id/frame_layout"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="0dp"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/bottomNavigationView"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    >-->
+            <!--                <FrameLayout-->
+            <!--                    android:id="@+id/frame_layout"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="0dp"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toBottomOf="@id/bottomNavigationView"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    >-->
 
-<!--                </FrameLayout>-->
+            <!--                </FrameLayout>-->
 
 
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+            <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
 
             <!--     bottom bar -->
         </LinearLayout>

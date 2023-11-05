@@ -8,13 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import androidx.fragment.app.DialogFragment
-import com.example.hyoja.databinding.FragmentSetOrOnlyBinding
+import com.example.hyoja.databinding.FragmentChoiceSetMenuDialogBinding
+import com.example.hyoja.fastfoods.adapter.SetMenuChoiceCategoryAdapter
+import com.example.hyoja.fastfoods.adapter.SetMenuChoiceMainViewPagerAdapter
 
-class SetOrOnlyFragment : DialogFragment() {
+class ChoiceSetMenuDialogFragment : DialogFragment() {
     private val Tag: String = "SetOrOnlyDialogFragment"
 
     // ViewBinding을 초기화합니다.
-    private lateinit var binding: FragmentSetOrOnlyBinding
+    private lateinit var binding: FragmentChoiceSetMenuDialogBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,23 +24,21 @@ class SetOrOnlyFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // ViewBinding을 초기화하고 레이아웃을 반환합니다.
-        binding = FragmentSetOrOnlyBinding.inflate(inflater, container, false)
+        binding = FragmentChoiceSetMenuDialogBinding.inflate(inflater, container, false)
 
-        binding.dialogXButton.setOnClickListener {
-            dismiss() // Dialog를 닫는 메서드
-        }
+        val parentFragment = parentFragmentManager?.findFragmentByTag("SetOrOnlyFragment") as DialogFragment?
+        parentFragment?.dismiss()
+    
+        //카테고리 뷰페이저
+        binding.SetMenuChoiceCategory.adapter = SetMenuChoiceCategoryAdapter(this)
+        binding.SetMenuChoiceCategory.isUserInputEnabled = false;
 
-        binding.optionOnlyBurger.setOnClickListener {
+        binding.SetMenuChoiceMainViewPager.adapter = SetMenuChoiceMainViewPagerAdapter(this)
+        binding.SetMenuChoiceMainViewPager.isUserInputEnabled = false;
+
+        binding.cancelButton.setOnClickListener {
             dismiss()
         }
-
-        binding.optionSetBurger.setOnClickListener {
-            ChoiceSetMenuDialogFragment().show(childFragmentManager, "ChoiceSetMenuDialogFragmentTag")
-
-//            dismiss()
-        }
-
-
 
         return binding.root
     }
@@ -58,7 +58,7 @@ class SetOrOnlyFragment : DialogFragment() {
         display?.getSize(size)
         val width = size.x
         val height = size.y
-        window?.setLayout((width * 0.85).toInt(), (height * 0.25).toInt())
+        window?.setLayout((width * 0.9).toInt(), (height * 0.85).toInt())
         window?.setGravity(Gravity.CENTER)
     }
     override fun onDestroyView() {
