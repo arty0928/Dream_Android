@@ -35,249 +35,13 @@
                     android:fontFamily="@font/poppins_extrabold">
 
                 </TextView>
-<!--                <GridLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:columnCount="3"-->
-<!--                    android:rowCount="1"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    >-->
-
-<!--                    &lt;!&ndash; 첫 번째 열 &ndash;&gt;-->
-<!--                    <GridLayout-->
-<!--                        android:id="@+id/recommend_dessert1"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_row="0"-->
-<!--                        android:layout_column="0"-->
-<!--                        android:rowCount="2"-->
-<!--                        android:columnCount="1"-->
-<!--                        android:orientation="vertical"-->
-<!--                        android:layout_columnWeight="1"-->
-
-<!--                        >-->
-
-<!--                        <LinearLayout-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:orientation="vertical"-->
-<!--                            android:gravity="center"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            >-->
-
-<!--                            <GridLayout-->
-<!--                                android:layout_marginTop="5dp"-->
-<!--                                android:id="@+id/recommend_dessert1_grid"-->
-<!--                                android:layout_width="wrap_content"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:layout_row="0"-->
-<!--                                android:layout_column="0"-->
-<!--                                android:layout_gravity="center"-->
-<!--                                android:rowCount="2"-->
-<!--                                android:columnCount="1"-->
-<!--                                android:orientation="vertical"-->
-<!--                                >-->
-
-<!--                                <ImageView-->
-<!--                                    android:id="@+id/recommend_dessert1_image"-->
-<!--                                    android:layout_width="70dp"-->
-<!--                                    android:layout_height="70dp"-->
-<!--                                    android:layout_gravity="center"-->
-<!--                                    android:paddingTop="5dp"-->
-<!--                                    android:src="@drawable/dessert1" />-->
-
-<!--                                <TextView-->
-<!--                                    android:id="@+id/recommend_dessert1_text"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:fontFamily="@font/poppins_extrabold"-->
-<!--                                    android:layout_gravity="center"-->
-<!--                                    android:text="포테이토"-->
-<!--                                    android:textSize="15dp"-->
-<!--                                    android:textColor="@color/black" />-->
-
-
-<!--                            </GridLayout>-->
-
-<!--                            <TextView-->
-<!--                                android:layout_marginBottom="5dp"-->
-<!--                                android:id="@+id/recommend_dessert1_price"-->
-<!--                                android:layout_width="wrap_content"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:fontFamily="@font/poppins_extrabold"-->
-<!--                                android:layout_gravity="center"-->
-<!--                                android:text="0"-->
-<!--                                android:textSize="17dp"-->
-<!--                                android:textColor="#D00000" />-->
-<!--                        </LinearLayout>-->
-
-
-
-
-
-
-
-<!--                    </GridLayout>-->
-
-
-<!--                    &lt;!&ndash; 두 번째 열 &ndash;&gt;-->
-<!--                    <GridLayout-->
-<!--                        android:id="@+id/recommend_dessert2"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_row="0"-->
-<!--                        android:layout_column="1"-->
-<!--                        android:rowCount="2"-->
-<!--                        android:columnCount="1"-->
-<!--                        android:orientation="vertical"-->
-<!--                        android:layout_columnWeight="1"-->
-
-<!--                        >-->
-
-<!--                        <LinearLayout-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:orientation="vertical"-->
-<!--                            android:gravity="center"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            >-->
-
-<!--                            <GridLayout-->
-<!--                                android:layout_marginTop="5dp"-->
-<!--                                android:id="@+id/recommend_dessert2_grid"-->
-<!--                                android:layout_width="wrap_content"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:layout_row="0"-->
-<!--                                android:layout_column="0"-->
-<!--                                android:layout_gravity="center"-->
-<!--                                android:rowCount="2"-->
-<!--                                android:columnCount="1"-->
-<!--                                android:orientation="vertical"-->
-<!--                                >-->
-
-<!--                                <ImageView-->
-<!--                                    android:id="@+id/recommend_dessert2_image"-->
-<!--                                    android:layout_width="70dp"-->
-<!--                                    android:layout_height="70dp"-->
-<!--                                    android:layout_gravity="center"-->
-<!--                                    android:paddingTop="5dp"-->
-<!--                                    android:src="@drawable/dessert2" />-->
-
-<!--                                <TextView-->
-<!--                                    android:id="@+id/recommend_dessert2_text"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:fontFamily="@font/poppins_extrabold"-->
-<!--                                    android:layout_gravity="center"-->
-<!--                                    android:text="양념감자"-->
-<!--                                    android:textSize="15dp"-->
-<!--                                    android:textColor="@color/black" />-->
-
-
-<!--                            </GridLayout>-->
-
-<!--                            <TextView-->
-<!--                                android:layout_marginBottom="5dp"-->
-<!--                                android:id="@+id/recommend_dessert2_price"-->
-<!--                                android:layout_width="wrap_content"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:fontFamily="@font/poppins_extrabold"-->
-<!--                                android:layout_gravity="center"-->
-<!--                                android:text="2,300"-->
-<!--                                android:textSize="17dp"-->
-<!--                                android:textColor="#D00000" />-->
-<!--                        </LinearLayout>-->
-
-
-
-
-
-
-
-<!--                    </GridLayout>-->
-
-<!--                    &lt;!&ndash; 세 번째 열 &ndash;&gt;-->
-<!--                    <GridLayout-->
-<!--                        android:id="@+id/recommend_dessert3"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_row="0"-->
-<!--                        android:layout_column="2"-->
-<!--                        android:rowCount="2"-->
-<!--                        android:columnCount="1"-->
-<!--                        android:orientation="vertical"-->
-<!--                        android:layout_columnWeight="1"-->
-
-<!--                        >-->
-
-<!--                        <LinearLayout-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:orientation="vertical"-->
-<!--                            android:gravity="center"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            >-->
-
-<!--                            <GridLayout-->
-<!--                                android:layout_marginTop="5dp"-->
-<!--                                android:id="@+id/recommend_dessert3_grid"-->
-<!--                                android:layout_width="wrap_content"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:layout_row="0"-->
-<!--                                android:layout_column="0"-->
-<!--                                android:layout_gravity="center"-->
-<!--                                android:rowCount="2"-->
-<!--                                android:columnCount="1"-->
-<!--                                android:orientation="vertical"-->
-<!--                                >-->
-
-<!--                                <ImageView-->
-<!--                                    android:id="@+id/recommend_dessert3_image"-->
-<!--                                    android:layout_width="70dp"-->
-<!--                                    android:layout_height="70dp"-->
-<!--                                    android:layout_gravity="center"-->
-<!--                                    android:paddingTop="5dp"-->
-<!--                                    android:src="@drawable/dessert3" />-->
-
-<!--                                <TextView-->
-<!--                                    android:id="@+id/recommend_dessert3_text"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:fontFamily="@font/poppins_extrabold"-->
-<!--                                    android:layout_gravity="center"-->
-<!--                                    android:text="웨지포테이토"-->
-<!--                                    android:textSize="15dp"-->
-<!--                                    android:textColor="@color/black" />-->
-
-
-<!--                            </GridLayout>-->
-
-<!--                            <TextView-->
-<!--                                android:layout_marginBottom="5dp"-->
-<!--                                android:id="@+id/recommend_dessert3_price"-->
-<!--                                android:layout_width="wrap_content"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:fontFamily="@font/poppins_extrabold"-->
-<!--                                android:layout_gravity="center"-->
-<!--                                android:text="2,100"-->
-<!--                                android:textSize="17dp"-->
-<!--                                android:textColor="#D00000" />-->
-<!--                        </LinearLayout>-->
-
-
-
-
-
-
-
-<!--                    </GridLayout>-->
-
-<!--                </GridLayout>-->
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:id="@+id/setMenuDeseert1"
+                        android:id="@+id/setMenuDessert1"
                         android:layout_weight="1"
                         android:padding="10dp"
                         android:layout_width="match_parent"
@@ -289,7 +53,7 @@
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/dessert1"/>
+                            android:background="@drawable/ready_white"/>
                         <TextView
                             android:id="@+id/setMenuDeseert1_name"
                             android:layout_weight="3"
@@ -323,7 +87,7 @@
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/dessert2"/>
+                            android:background="@drawable/ready_white"/>
                         <TextView
                             android:id="@+id/setMenuDeseert2_name"
                             android:layout_weight="3"
@@ -357,7 +121,7 @@
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/dessert3"/>
+                            android:background="@drawable/ready_white"/>
                         <TextView
                             android:id="@+id/setMenuDeseert3_name"
                             android:layout_weight="3"
@@ -391,442 +155,6 @@
             android:background="@color/white"
             >
 
-<!--            <GridLayout-->
-<!--                xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:columnCount="3"-->
-<!--                android:rowCount="2"-->
-<!--                android:layout_gravity="center">-->
-
-<!--                -->
-<!--                &lt;!&ndash; 첫 번째 행, 첫 번째 열 &ndash;&gt;-->
-<!--&lt;!&ndash;                <GridLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:id="@+id/set_dessert4"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_row="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_column="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:rowCount="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:columnCount="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_columnWeight="1"&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    <LinearLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                        >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <GridLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_marginTop="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:id="@+id/set_dessert4_grid"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_row="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_column="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:rowCount="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:columnCount="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                            >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                            <ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:id="@+id/set_dessert4_image"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_width="80dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_height="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:paddingTop="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:src="@drawable/dessert4" />&ndash;&gt;-->
-
-<!--&lt;!&ndash;                            <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:id="@+id/set_dessert4_text"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:fontFamily="@font/poppins_extrabold"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:text="치즈스틱"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:textSize="15dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:textColor="@color/black" />&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;                        </GridLayout>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_marginBottom="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:id="@+id/set_dessert4_price"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:fontFamily="@font/poppins_extrabold"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:text="2,400"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:textSize="17dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:textColor="#D00000" />&ndash;&gt;-->
-<!--&lt;!&ndash;                    </LinearLayout>&ndash;&gt;-->
-
-
-
-
-
-
-
-<!--&lt;!&ndash;                </GridLayout>&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;                &lt;!&ndash; 첫 번째 행, 두 번째 열 &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                <GridLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:id="@+id/set_dessert5"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_row="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_column="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:rowCount="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:columnCount="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_columnWeight="1"&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    <LinearLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                        >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <GridLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_marginTop="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:id="@+id/set_dessert5_grid"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_row="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_column="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:rowCount="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:columnCount="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                            >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                            <ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:id="@+id/set_dessert5_image"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_width="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_height="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:paddingTop="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:src="@drawable/dessert5" />&ndash;&gt;-->
-
-<!--&lt;!&ndash;                            <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:id="@+id/set_dessert5_text"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:fontFamily="@font/poppins_extrabold"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:text="통오징어링"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:textSize="15dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:textColor="@color/black" />&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;                        </GridLayout>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_marginBottom="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:id="@+id/set_dessert5_price"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:fontFamily="@font/poppins_extrabold"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:text="2,600"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:textSize="17dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:textColor="#D00000" />&ndash;&gt;-->
-<!--&lt;!&ndash;                    </LinearLayout>&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;                </GridLayout>&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;                &lt;!&ndash; 첫 번째 행, 세 번째 열 &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                <GridLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:id="@+id/set_dessert6"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_row="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_column="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:rowCount="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:columnCount="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_columnWeight="1"&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    <LinearLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                        >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <GridLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_marginTop="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:id="@+id/set_dessert6_grid"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_row="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_column="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:rowCount="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:columnCount="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                            >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                            <ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:id="@+id/set_dessert6_image"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_width="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_height="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:paddingTop="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:src="@drawable/dessert6" />&ndash;&gt;-->
-
-<!--&lt;!&ndash;                            <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:id="@+id/set_dessert6_text"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:fontFamily="@font/poppins_extrabold"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:text="모짜크림치즈볼"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:textSize="15dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:textColor="@color/black" />&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;                        </GridLayout>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_marginBottom="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:id="@+id/set_dessert6_price"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:fontFamily="@font/poppins_extrabold"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:text="2,300"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:textSize="17dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:textColor="#D00000" />&ndash;&gt;-->
-<!--&lt;!&ndash;                    </LinearLayout>&ndash;&gt;-->
-<!--&lt;!&ndash;                </GridLayout>&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;                &lt;!&ndash; 첫 번째 행, 첫 번째 열 &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                <GridLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:id="@+id/set_dessert7"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_row="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_column="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:rowCount="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:columnCount="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_columnWeight="1"&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    <LinearLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                        >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <GridLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_marginTop="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:id="@+id/set_dessert7_grid"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_row="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_column="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:rowCount="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:columnCount="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                            >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                            <ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:id="@+id/set_dessert7_image"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_width="80dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_height="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:paddingTop="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:src="@drawable/dessert7" />&ndash;&gt;-->
-
-<!--&lt;!&ndash;                            <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:id="@+id/set_dessert7_text"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:fontFamily="@font/poppins_extrabold"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:text="치킨너겟"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:textSize="15dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:textColor="@color/black" />&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;                        </GridLayout>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_marginBottom="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:id="@+id/set_dessert7_price"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:fontFamily="@font/poppins_extrabold"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:text="2,700"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:textSize="17dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:textColor="#D00000" />&ndash;&gt;-->
-<!--&lt;!&ndash;                    </LinearLayout>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                </GridLayout>&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;                &lt;!&ndash; 첫 번째 행, 두 번째 열 &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                <GridLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:id="@+id/set_dessert8"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_row="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_column="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:rowCount="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:columnCount="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_columnWeight="1"&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    <LinearLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                        >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <GridLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_marginTop="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:id="@+id/set_dessert8_grid"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_row="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_column="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:rowCount="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:columnCount="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                            >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                            <ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:id="@+id/set_dessert8_image"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_width="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_height="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:paddingTop="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:src="@drawable/dessert8" />&ndash;&gt;-->
-
-<!--&lt;!&ndash;                            <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:id="@+id/set_dessert8_text"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:fontFamily="@font/poppins_extrabold"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:text="롱치즈스틱"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:textSize="15dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:textColor="@color/black" />&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;                        </GridLayout>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_marginBottom="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:id="@+id/set_dessert8_price"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:fontFamily="@font/poppins_extrabold"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:text="2,000"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:textSize="17dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:textColor="#D00000" />&ndash;&gt;-->
-<!--&lt;!&ndash;                    </LinearLayout>&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;                </GridLayout>&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;                &lt;!&ndash; 첫 번째 행, 세 번째 열 &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                <GridLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:id="@+id/set_dessert9"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_row="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_column="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:rowCount="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:columnCount="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_columnWeight="1"&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    <LinearLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                        >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <GridLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_marginTop="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:id="@+id/set_dessert9_grid"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_row="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_column="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:rowCount="2"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:columnCount="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:orientation="vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                            >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                            <ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:id="@+id/set_dessert9_image"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_width="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_height="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:paddingTop="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:src="@drawable/desser9" />&ndash;&gt;-->
-
-<!--&lt;!&ndash;                            <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:id="@+id/set_dessert9_text"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:fontFamily="@font/poppins_extrabold"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:text="쉑쉑치킨"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:textSize="15dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                                android:textColor="@color/black" />&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;                        </GridLayout>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_marginBottom="5dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:id="@+id/set_dessert9_price"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:fontFamily="@font/poppins_extrabold"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:text="2,900"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:textSize="17dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                            android:textColor="#D00000" />&ndash;&gt;-->
-<!--&lt;!&ndash;                    </LinearLayout>&ndash;&gt;-->
-<!--&lt;!&ndash;                </GridLayout>&ndash;&gt;-->
-
-<!--            </GridLayout>-->
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -834,19 +162,220 @@
                 >
 
                 <LinearLayout
+                    android:padding="10dp"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
+                    <LinearLayout
+                        android:padding="3dp"
+                        android:id="@+id/setMenuDessert4"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:id="@+id/setMenuDessert4_image"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ready_white"/>
+                        <TextView
+                            android:id="@+id/setMenuDessert4_name"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="치즈스틱"
+                            android:fontFamily="@font/poppins_extrabold"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                        <TextView
+                            android:id="@+id/setMenuDessert4_price"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="2400"
+                            android:fontFamily="@font/poppins_extrabold"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:padding="3dp"
+
+                        android:id="@+id/setMenuDessert5"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:id="@+id/setMenuDessert5_image"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ready_white"/>
+                        <TextView
+                            android:id="@+id/setMenuDessert5_name"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="통오징어링"
+                            android:fontFamily="@font/poppins_extrabold"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                        <TextView
+                            android:id="@+id/setMenuDessert5_price"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="2600"
+                            android:fontFamily="@font/poppins_extrabold"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:padding="3dp"
+                        android:id="@+id/setMenuDessert6"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:id="@+id/setMenuDessert6_image"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ready_white"/>
+                        <TextView
+                            android:id="@+id/setMenuDessert6_name"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="모짜크림치즈볼"
+                            android:fontFamily="@font/poppins_extrabold"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                        <TextView
+                            android:id="@+id/setMenuDessert6_price"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="2300"
+                            android:fontFamily="@font/poppins_extrabold"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:padding="10dp"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
+                    <LinearLayout
+                        android:padding="3dp"
+                        android:id="@+id/setMenuDessert7"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:id="@+id/setMenuDessert7_image"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ready_white"/>
+                        <TextView
+                            android:id="@+id/setMenuDessert7_name"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="치킨너겟"
+                            android:fontFamily="@font/poppins_extrabold"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                        <TextView
+                            android:id="@+id/setMenuDessert7_price"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="2700"
+                            android:fontFamily="@font/poppins_extrabold"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:padding="3dp"
+                        android:id="@+id/setMenuDessert8"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:id="@+id/setMenuDessert8_image"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ready_white"/>
+                        <TextView
+                            android:id="@+id/setMenuDessert8_name"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="롱치즈스틱"
+                            android:fontFamily="@font/poppins_extrabold"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                        <TextView
+                            android:id="@+id/setMenuDessert8_price"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="2000"
+                            android:fontFamily="@font/poppins_extrabold"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:padding="3dp"
+                        android:id="@+id/setMenuDessert9"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:id="@+id/setMenuDessert9_image"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ready_white"/>
+                        <TextView
+                            android:id="@+id/setMenuDessert9_name"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="페스츄리꽈베기"
+                            android:fontFamily="@font/poppins_extrabold"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                        <TextView
+                            android:id="@+id/setMenuDessert9_price"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="2000"
+                            android:fontFamily="@font/poppins_extrabold"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                    </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>

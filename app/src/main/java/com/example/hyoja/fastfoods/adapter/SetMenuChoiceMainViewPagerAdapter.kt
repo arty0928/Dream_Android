@@ -6,13 +6,15 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.hyoja.Fragments.ChoiceSetMenuDialogFragment
 import com.example.hyoja.Fragments.FoodListMenuOneFrament
 import com.example.hyoja.Fragments.lunch
+import com.example.hyoja.setMenu1Fragment
+import com.example.hyoja.setMenu2Fragment
 
 class SetMenuChoiceMainViewPagerAdapter(fragmentActivity: ChoiceSetMenuDialogFragment): FragmentStateAdapter(fragmentActivity) {
 
     // 1. ViewPager2에 연결할 Fragment 들을 생성
     private val fragmentList = listOf<Fragment>(
 //        FoodListMenuOneFrament(),FoodListMenuTwoFragment()
-        lunch(), lunch()
+        setMenu1Fragment(), setMenu2Fragment()
     )
 
 

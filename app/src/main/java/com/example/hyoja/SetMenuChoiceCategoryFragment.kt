@@ -32,13 +32,14 @@ class SetMenuChoiceCategoryFragment : Fragment() {
         //메뉴리스트 뷰모델
         viewModel = ViewModelProvider(requireActivity())[FoodListViewModel::class.java]
 
-        viewModel.categoryLiveData.observe(viewLifecycleOwner, Observer {
+//        viewModel.categoryLiveData.observe(viewLifecycleOwner, Observer {
+        viewModel.setMenuCategoryLiveData.observe(viewLifecycleOwner, Observer{
             resetButtons()
             when(it){
-                "dessert" -> {
+                "setDessert" -> {
                     binding.SetMenuChoiceCategoryDessert.setBackgroundResource(R.drawable.tab_indicator)
                 }
-                "drink" -> {
+                "setDrink" -> {
                     binding.SetMenuChoiceCategoryDrink.setBackgroundResource(R.drawable.tab_indicator)
                 }
             }
@@ -57,14 +58,14 @@ class SetMenuChoiceCategoryFragment : Fragment() {
         binding = FragmentSetMenuChoiceCategoryBinding.inflate(inflater,container,false)
 
         binding.SetMenuChoiceCategoryDessert.setOnClickListener{
-            FastFoodModel.menuCategory = "dessert"
-            Log.d(Tag,"menuCategory = "+ FastFoodModel.menuCategory)
-            viewModel.categorySelectChanged()
+            FastFoodModel.setMenuCategory = "setDessert"
+            Log.d(Tag,"setMenuCategory = "+ FastFoodModel.setMenuCategory)
+            viewModel.setMenuCategorySelectChanged()
         }
         binding.SetMenuChoiceCategoryDrink.setOnClickListener {
-            FastFoodModel.menuCategory = "drink"
-            Log.d(Tag,"menuCategory = "+ FastFoodModel.menuCategory)
-            viewModel.categorySelectChanged()
+            FastFoodModel.setMenuCategory = "setDrink"
+            Log.d(Tag,"setMenuCategory = "+ FastFoodModel.setMenuCategory)
+            viewModel.setMenuCategorySelectChanged()
         }
         return binding.root
     }
