@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
@@ -60,9 +61,6 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
         Log.d(Tag, orderingFood.toString())
         viewModel = ViewModelProvider(this)[FoodListViewModel::class.java]
 
-
-
-
         //카테고리 뷰페이저
         binding.SetMenuChoiceCategory.adapter = SetMenuChoiceCategoryAdapter(this)
         var currentCategory = binding.SetMenuChoiceCategory.currentItem
@@ -86,6 +84,17 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
         binding.cancelButton.setOnClickListener {
             dismiss()
         }
+
+        binding.paymentButton.setOnClickListener {
+            if (orderingFood.setDessert == null || orderingFood.setDrink == null) {
+                // "세트 메뉴를 2개 선택해주세요" 토스트 메시지를 표시
+                Toast.makeText(requireContext(), "세트 메뉴를 2개 선택해주세요", Toast.LENGTH_SHORT).show()
+            } else {
+                dismiss()
+
+            }
+        }
+
 
         var i=0
         viewModel.setMenuSelectedLiveData.observe(this, Observer {
