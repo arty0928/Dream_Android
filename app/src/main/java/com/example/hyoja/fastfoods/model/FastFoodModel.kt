@@ -10,5 +10,5 @@ object FastFoodModel {
 
     var setMenuCategory : String = "setDessert"
     lateinit var setMenuFoodSelected : setMenuDataInterface
-    var setMenuSelectedList = ArrayList<OrderingFood>()
+    var setMenuSelectedList = ArrayList<setMenuDataInterface>()
 }

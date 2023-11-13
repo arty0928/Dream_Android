@@ -9,27 +9,42 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import androidx.fragment.app.DialogFragment
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.hyoja.R
 import com.example.hyoja.databinding.FragmentChoiceSetMenuDialogBinding
 import com.example.hyoja.fastfoods.adapter.SetMenuChoiceCategoryAdapter
 import com.example.hyoja.fastfoods.adapter.SetMenuChoiceMainViewPagerAdapter
 import com.example.hyoja.fastfoods.model.FastFoodModel
 import com.example.hyoja.fastfoods.model.OrderingFood
-import com.example.hyoja.fastfoods.util.FoodUtilValue
+import com.example.hyoja.fastfoods.model.setMenuDataInterface
 import com.example.hyoja.fastfoods.util.setMenuFoodUtilValue
 import com.example.hyoja.fastfoods.viewmodel.FoodListViewModel
 
 class ChoiceSetMenuDialogFragment : DialogFragment() {
     private val Tag: String = "SetOrOnlyDialogFragment"
     private lateinit var binding: FragmentChoiceSetMenuDialogBinding
-    private lateinit var viewModel: FoodListViewModel
-    private val selectedFoodItem = FastFoodModel.foodSelected
-    private val setOption:ArrayList<String> = ArrayList()
-//    private val orderingFood : OrderingFood = OrderingFood(
-//
-//    )
+    lateinit var viewModel: FoodListViewModel
+
+    private val option :ArrayList<String> =ArrayList()
+    private val setOption :ArrayList<String> =ArrayList()
+
+    val orderingFood : OrderingFood = OrderingFood(
+        food = FastFoodModel.foodSelected,
+        option = option,
+        setOption = setOption,
+        setDessert = null,
+        setDrink = null
+    )
+
+    fun setSetDessert(dessert: setMenuDataInterface) {
+        orderingFood.setDessert = dessert
+    }
+
+    fun setSetDrink(drink : setMenuDataInterface){
+        orderingFood.setDrink = drink
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,7 +57,11 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
         val parentFragment = parentFragmentManager?.findFragmentByTag("SetOrOnlyFragment") as DialogFragment?
         parentFragment?.dismiss()
 
+        Log.d(Tag, orderingFood.toString())
         viewModel = ViewModelProvider(this)[FoodListViewModel::class.java]
+
+
+
 
         //카테고리 뷰페이저
         binding.SetMenuChoiceCategory.adapter = SetMenuChoiceCategoryAdapter(this)
@@ -51,6 +70,18 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
 
         binding.SetMenuChoiceMainViewPager.adapter = SetMenuChoiceMainViewPagerAdapter(this)
         binding.SetMenuChoiceMainViewPager.isUserInputEnabled = false;
+
+        var setDessertCount = 0
+        var setDrinkCount = 0
+        if(orderingFood.setDessert !=null){
+            setDessertCount = 1
+        }
+        if (orderingFood.setDrink !=null){
+            setDrinkCount = 1
+        }
+        binding.selectCountText.text = ((setDessertCount.toInt()+setDrinkCount.toInt()).toString())
+        binding.remainedCountText.text = (2 - (setDessertCount+setDrinkCount)).toString()
+
 
         binding.cancelButton.setOnClickListener {
             dismiss()
@@ -65,20 +96,34 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
             i++
         })
 
+        viewModel.foodSelectedLiveData
+
         viewModel.setMenuCategoryLiveData.observe(this, Observer{
             when(it){
                 "setDessert" -> {
                     foodListButtonSrcSelect(checkFoodListViewPagerSize(it))
                 }
                 "setDrink" -> {
-
+                    foodListButtonSrcSelect(checkFoodListViewPagerSize(it))
                 }else ->{
 
                 }
             }
         })
-
         return binding.root
+    }
+
+    fun updateCountText(){
+        var setDessertCount = 0
+        var setDrinkCount = 0
+        if(orderingFood.setDessert !=null){
+            setDessertCount = 1
+        }
+        if (orderingFood.setDrink !=null){
+            setDrinkCount = 1
+        }
+        binding.selectCountText.text = ((setDessertCount.toInt()+setDrinkCount.toInt()).toString())
+        binding.remainedCountText.text = (2 - (setDessertCount+setDrinkCount)).toString()
     }
 
     private fun checkFoodListViewPagerSize(categroyName: String):Int{

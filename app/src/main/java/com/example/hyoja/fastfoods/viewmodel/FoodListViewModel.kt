@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.hyoja.fastfoods.model.FastFoodModel
 import com.example.hyoja.fastfoods.model.FoodDataInterface
+import com.example.hyoja.fastfoods.model.OrderingFood
 import com.example.hyoja.fastfoods.model.setMenuDataInterface
 
 class FoodListViewModel : ViewModel() {
@@ -18,12 +19,13 @@ class FoodListViewModel : ViewModel() {
     private val setMenuCategory = MutableLiveData<String>()
     private val setMenuSelected = MutableLiveData<setMenuDataInterface>()
     private val setMenuSelectedList = MutableLiveData<ArrayList<String>>()
-
+    private val orderingFood = MutableLiveData<OrderingFood>()
 
     val categoryLiveData: LiveData<String> get() = category
 
     val setMenuCategoryLiveData : LiveData<String> get() = setMenuCategory
 
+    val orderingFoodLiveData : LiveData<OrderingFood> get() = orderingFood
     val foodSelectedLiveData: LiveData<FoodDataInterface>
         get() = foodSelected
     val foodSelectedListLiveData: LiveData<ArrayList<String>>
@@ -57,4 +59,5 @@ class FoodListViewModel : ViewModel() {
         setMenuSelected.value = FastFoodModel.setMenuFoodSelected
         Log.d(Tag,"setMenuSelectChanged = "+setMenuSelected.value)
     }
+
 }

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.hyoja.Fragments.ChoiceSetMenuDialogFragment
 import com.example.hyoja.databinding.FragmentSetMenu1Binding
 import com.example.hyoja.fastfoods.model.FastFoodModel
 import com.example.hyoja.fastfoods.model.FoodDataInterface
@@ -19,7 +20,6 @@ import com.example.hyoja.fastfoods.viewmodel.FoodListViewModel
 
 class setMenu1Fragment : Fragment() {
     private val Tag: String = "setMenu1Fragment"
-
     lateinit var binding : FragmentSetMenu1Binding
 
     private lateinit var setMenuArrayList : ArrayList<setMenuDataInterface>
@@ -35,31 +35,58 @@ class setMenu1Fragment : Fragment() {
 
         viewModel.setMenuCategoryLiveData.observe(requireActivity(), Observer{
             getSetMenuArrayList(it)
+            addSetMenuArrayList(it)
             setUI()
         })
 
         binding.setMenuDessert1.setOnClickListener {
             callOrderFood(setMenuArrayList[0])
+            (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[0])
         }
 
         binding.setMenuDeseert2.setOnClickListener {
             callOrderFood(setMenuArrayList[1])
+            (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[1])
+
         }
 
         binding.setMenuDeseert3.setOnClickListener {
             callOrderFood(setMenuArrayList[2])
+            (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[2])
+
         }
 
         binding.setMenuDessert4.setOnClickListener {
             callOrderFood(setMenuArrayList[3])
+            (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[3])
+
         }
 
         binding.setMenuDessert5.setOnClickListener {
             callOrderFood(setMenuArrayList[4])
+            (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[4])
+
         }
 
         binding.setMenuDessert6.setOnClickListener {
             callOrderFood(setMenuArrayList[5])
+            (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[5])
+
+        }
+        binding.setMenuDessert7.setOnClickListener {
+            callOrderFood(setMenuArrayList[6])
+            (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[6])
+
+        }
+        binding.setMenuDessert8.setOnClickListener {
+            callOrderFood(setMenuArrayList[7])
+            (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[7])
+
+        }
+        binding.setMenuDessert9.setOnClickListener {
+            callOrderFood(setMenuArrayList[8])
+            (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[8])
+
         }
     }
 
@@ -70,11 +97,19 @@ class setMenu1Fragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         Log.d(Tag,"onCreateView called")
+
+        val parentFragment = parentFragment
+        if (parentFragment is ChoiceSetMenuDialogFragment) {
+            // OrderingFood 객체를 가져오고, 형변환 후에 사용
+            val orderingFood = parentFragment.orderingFood
+            Log.d(Tag, orderingFood.toString())
+        }
 
         binding = FragmentSetMenu1Binding.inflate(inflater,container,false)
 
@@ -83,6 +118,19 @@ class setMenu1Fragment : Fragment() {
         setUI()
 
         return binding.root
+
+    }
+
+    private fun addSetMenuArrayList(category: String) {
+        val setMenu = FoodDataFactory()
+
+        when(category) {
+            "setDessert" -> {
+                setMenuArrayList = setMenu.getsetDessertArrayList()
+            }"setDrink" -> {
+            setMenuArrayList = setMenu.getsetDrinkArrayList()
+        }
+        }
 
     }
 
@@ -174,9 +222,37 @@ class setMenu1Fragment : Fragment() {
         binding.setMenuDessert9Price.text = setData.price.toString()
     }
 
-    private fun callOrderFood(foodData: setMenuDataInterface){
-        FastFoodModel.setMenuFoodSelected = foodData
-        viewModel.setMenuSelectChanged()
-        Log.d(Tag,"setMenuSelected ="+ FastFoodModel.setMenuFoodSelected)
+    private fun callOrderFood(foodData: setMenuDataInterface) {
+        FastFoodModel.setMenuFoodSelected = foodData // 사용자가 선택한 메뉴를 FastFoodModel에 저장
+
+        val parentFragment = parentFragment
+        if (parentFragment is ChoiceSetMenuDialogFragment) {
+            // OrderingFood 객체를 가져오고, 형변환 후에 사용
+            val orderingFood = parentFragment.orderingFood
+
+            Log.d(Tag, "들어옴")
+
+            // setDessert에 선택한 메뉴를 할당
+            if(foodData.category == "setDessert"){
+                orderingFood.setDessert = FastFoodModel.setMenuFoodSelected
+            }
+            else{
+                orderingFood.setDrink = FastFoodModel.setMenuFoodSelected
+            }
+
+//            if(orderingFood.setMenuCount > 0){
+//                orderingFood.setMenuCount--;
+//            }
+
+            // ViewModel의 setMenuSelectChanged() 메서드 호출
+            parentFragment.viewModel.setMenuSelectChanged()
+            parentFragment.updateCountText()
+            Log.d(Tag, orderingFood.toString())
+
+            Log.d(Tag, "setMenuSelected = ${FastFoodModel.setMenuFoodSelected}")
+        } else {
+            Log.e(Tag, "부모 프래그먼트가 ChoiceSetMenuDialogFragment가 아닙니다.")
+        }
     }
+
 }
