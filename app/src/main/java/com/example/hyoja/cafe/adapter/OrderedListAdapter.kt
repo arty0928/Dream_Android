@@ -31,9 +31,11 @@ class OrderedListAdapter: RecyclerView.Adapter<OrderedListAdapter.ViewHolder>() 
             holder.setPrice()
         }
         holder.itemMinus.setOnClickListener{
-            CafeModel.drinkSelectedList[position].drinkCount --
-            holder.setDrinkCount(position)
-            holder.setPrice()
+            if (CafeModel.drinkSelectedList[position].drinkCount > 0){
+                CafeModel.drinkSelectedList[position].drinkCount --
+                holder.setDrinkCount(position)
+                holder.setPrice()
+            }
         }
 
         holder.cancelButton.setOnClickListener {
@@ -51,7 +53,7 @@ class OrderedListAdapter: RecyclerView.Adapter<OrderedListAdapter.ViewHolder>() 
 
         fun setDrinkCount(position: Int){
             var orderingDrink = CafeModel.drinkSelectedList[position]
-            orderingDrink.price = (orderingDrink.drink.price + 500 * orderingDrink.size) * orderingDrink.drinkCount
+            orderingDrink.price = (orderingDrink.shot*500 + orderingDrink.drink.price + 500 * orderingDrink.size) * orderingDrink.drinkCount
             count.text = CafeModel.drinkSelectedList[position].drinkCount.toString()
         }
 

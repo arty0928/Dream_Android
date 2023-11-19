@@ -53,6 +53,7 @@ class OptionAddFragment: DialogFragment(), OptionAddInterface {
         // 완료
         binding.complete.setOnClickListener {
             complete(orderingDrink, shotStatus)
+            parentFragment.applyPay()
             dismiss()
         }
 
@@ -76,7 +77,7 @@ class OptionAddFragment: DialogFragment(), OptionAddInterface {
     }
 
     fun setParentFragment(fragment: DrinkOrderAddDialogFragment){
-        
+        this.parentFragment = fragment
     }
 
 }

@@ -211,7 +211,7 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
         }
 
     }
-    private fun applyPay(){
+    fun applyPay(){
         var payment: Int = (orderingDrink.shot*500 + orderingDrink.drink.price + 500 * orderingDrink.size) * orderingDrink.drinkCount
         orderingDrink.price = payment
         binding.drinkPrice.text = orderingDrink.price.toString()
