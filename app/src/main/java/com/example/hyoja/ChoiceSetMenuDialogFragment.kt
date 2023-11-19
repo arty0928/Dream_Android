@@ -174,8 +174,8 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
             }
         })
 
-        // 이제 binding을 사용하여 UI 요소에 접근할 수 있습니다.
-        // 예를 들어, binding.textView.text = "안녕하세요"와 같은 방식으로 UI 요소를 조작할 수 있습니다.
+        //음식 추가 및 빼기
+
     }
 
     override fun onResume() {

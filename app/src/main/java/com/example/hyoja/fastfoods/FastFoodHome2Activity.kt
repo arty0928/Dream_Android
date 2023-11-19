@@ -20,11 +20,13 @@ import com.example.hyoja.databinding.ActivityFastfoodHome2Binding
 import com.example.hyoja.fastfoods.adapter.FoodListNewMenuAdapter
 import com.example.hyoja.fastfoods.adapter.FoodMenuCategoryAdapter
 import com.example.hyoja.fastfoods.model.FastFoodModel
+import com.example.hyoja.fastfoods.model.OrderingFood
+import com.example.hyoja.fastfoods.util.ApplyFoodOrderList
 import com.example.hyoja.fastfoods.util.FoodAddListner
 import com.example.hyoja.fastfoods.util.FoodUtilValue
 import com.example.hyoja.fastfoods.viewmodel.FoodListViewModel
 
-class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
+class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner, FoodOrderedListAdapter.ItemClickListener{
 
     private val Tag:String = "FastFoodHome2Activity"
 
@@ -33,11 +35,14 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
 
     val common = CommonUi()
     private lateinit var viewModel: FoodListViewModel
-
     lateinit var viewPager: ViewPager2
 
+    private val option :ArrayList<String> =ArrayList()
 
-    //        selectedItems scrollView
+    private val setOption :ArrayList<String> =ArrayList()
+
+    lateinit var orderingFood : OrderingFood
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFastfoodHome2Binding.inflate(layoutInflater)
@@ -71,8 +76,6 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
                 Toast.makeText(this, "메뉴를 선택해주세요.", Toast.LENGTH_SHORT).show()
             } else {
                 Log.d("패스트 푸드 결제시작", FastFoodModel.foodSelectedList.toString())
-                Log.d("패스트 푸드 결제시작", FastFoodModel.foodSelectedList.size.toString())
-
             }
         }
 
@@ -90,6 +93,11 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
         binding.FoodMenuList.adapter = FoodListNewMenuAdapter(this)
         binding.FoodMenuList.isUserInputEnabled = false;
         Log.d("FoodMenuListViewPager link","after called")
+
+        //메뉴 삭제
+        binding.FoodSelectedList.layoutManager = LinearLayoutManager(this)
+
+
 
         //메뉴 리스트 왼쪽 버튼
         binding.FoodMenuListListLeftButton.setOnClickListener {
@@ -111,11 +119,30 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
        var i=0
         viewModel.foodSelectedLiveData.observe(this, Observer {
             if(i>0){
-                Log.d(Tag,"drinkSelectedLiveData observed")
-                foodOptionFragmentManage()
+                if(FastFoodModel.foodSelected.category == "NewMenu" || FastFoodModel.foodSelected.category == "Hamburger"){
+                    Log.d(Tag,"drinkSelectedLiveData observed")
+
+                    Log.d("viewModel.category",viewModel.category.toString())
+
+                    foodOptionFragmentManage()
+                }else{
+                    orderingFood = OrderingFood(
+                        food = FastFoodModel.foodSelected,
+                        option = option,
+                        setOption = setOption,
+                        setDessert = null,
+                        setDrink = null
+                    )
+                    Log.d(Tag,orderingFood.toString())
+                    addOnlyFood()
+                    ApplyFoodOrderList(FastFoodModel.currentActivity)
+
+                }
+
             }
             i++
         })
+
 
         //선택한 카테고리에 따라서 바뀌는 음료리스트
         viewModel.categoryLiveData.observe(this, Observer {
@@ -152,6 +179,21 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
         downButton.setOnClickListener {
 //            nestedScrollView.smoothScrollBy(0, 200) // Adjust the scroll amount as needed
         }
+    }
+
+    fun deleteFood(food: OrderingFood){
+        FastFoodModel.foodSelectedList.remove(food)
+        binding.FoodSelectedList.adapter?.notifyDataSetChanged()
+    }
+
+    private fun addOnlyFood(){
+        FastFoodModel.foodSelectedList.add(orderingFood)
+        Log.d(Tag,FastFoodModel.foodSelectedList.toString())
+        applyPay()
+    }
+    private fun applyPay(){
+        var payment : Int = (FastFoodModel.foodSelected.price)
+        orderingFood.price = payment
     }
 
     private fun checkFoodListViewPagerSize(categroyName: String):Int{
@@ -223,12 +265,36 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
         }
 
         Log.d(Tag,"foodAdded 함수 called")
-        binding.FoodSelectedList.adapter = FoodOrderedListAdapter()
+        binding.FoodSelectedList.adapter = FoodOrderedListAdapter(this)
+
+        // 선택된 음식 목록 업데이트
+//        viewModel.orderListUpdateCount(position,FastFoodModel.foodSelectedList)
+
 
         //총 결제 금액 세팅
         binding.TotalOrderPrice.text = getToTalPrice().toString()
         binding.TotalOrderCount.text = "${FastFoodModel.foodSelectedList.size.toString()}개"
 
+    }
+
+    // ItemClickListener에서 정의한 메서드 구현
+    override fun onItemPlusClick(position: Int) {
+        FastFoodModel.foodSelectedList[position].foodCount +=1
+        viewModel.orderListUpdateCount(position,FastFoodModel.foodSelectedList)
+
+        Log.d("onItemPlusClick", FastFoodModel.foodSelectedList[position].foodCount.toString())
+        Log.d("onItemPlusClick 전체", FastFoodModel.foodSelectedList[position].toString())
+    }
+
+    override fun onItemMinusClick(position: Int) {
+        if(FastFoodModel.foodSelectedList[position].foodCount>1){
+            FastFoodModel.foodSelectedList[position].foodCount -=1
+            viewModel.orderListUpdateCount(position,FastFoodModel.foodSelectedList)
+
+        }
+        Log.d("onItemMinusClick", FastFoodModel.foodSelectedList[position].foodCount.toString())
+        Log.d("onItemPlusClick 전체", FastFoodModel.foodSelectedList[position].toString())
+//        binding.FoodSelectedList
     }
 
 }

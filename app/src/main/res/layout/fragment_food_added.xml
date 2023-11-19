@@ -2,15 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="50dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <FrameLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/layout_shadow"
+        >
 
         <LinearLayout
+            android:gravity="center"
             android:id="@+id/selectedItems"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -49,6 +52,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+
                         android:layout_weight="1"
                         android:id="@+id/selectedItemCount"
                         android:layout_width="match_parent"
@@ -69,6 +73,7 @@
                         >
 
                         <LinearLayout
+                            android:id="@+id/plusItem"
                             android:layout_gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -85,6 +90,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/miusItem"
                             android:layout_gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -147,7 +153,6 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1.4"
-                    android:layout_gravity="center"
                     >
 
                     <!--            변경    -->
@@ -177,10 +182,11 @@
 
                     <!--            삭제    -->
                     <LinearLayout
+
                         android:layout_weight="1"
                         android:layout_marginTop="2dp"
                         android:layout_marginBottom="2dp"
-                        android:id="@+id/seletecItemDelete"
+                        android:id="@+id/selectItemDelete"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/layout_border5_gray"

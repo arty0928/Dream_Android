@@ -12,7 +12,7 @@ import com.example.hyoja.fastfoods.model.setMenuDataInterface
 class FoodListViewModel : ViewModel() {
     val Tag: String = "FoodListViewModel"
 
-    private val category = MutableLiveData<String>()
+    val category = MutableLiveData<String>()
     private val foodSelected = MutableLiveData<FoodDataInterface>()
     private val foodSelectedList = MutableLiveData<ArrayList<String>>()
 
@@ -63,6 +63,12 @@ class FoodListViewModel : ViewModel() {
     }
 
     fun orderListChanged(){
+        orderFoodList.value = FastFoodModel.foodSelectedList.size.toString()
+        Log.d(Tag,"foodSelectedChanged ="+orderFoodList.value)
+    }
+
+    fun orderListUpdateCount(position: Int, newList: ArrayList<OrderingFood>){
+        FastFoodModel.foodSelectedList[position] = newList[position]
         orderFoodList.value = FastFoodModel.foodSelectedList.size.toString()
         Log.d(Tag,"foodSelectedChanged ="+orderFoodList.value)
     }
