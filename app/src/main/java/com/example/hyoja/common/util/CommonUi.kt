@@ -12,6 +12,7 @@ import com.example.hyoja.common.MainActivity
 import com.example.hyoja.fastfoods.FastFoodHome1Activity
 import com.example.hyoja.fastfoods.FastFoodHome2Activity
 import com.example.hyoja.fastfoods.FastFoodHomeActivity
+import com.example.hyoja.fastfoods.model.FastFoodModel
 
 
 // 앱 전반적으로 사용하는 함수 모음 클래스
@@ -32,13 +33,14 @@ class CommonUi {
     fun goToFastFood(v: Context){
         val intent = Intent(v, FastFoodHomeActivity::class.java)
         v.startActivity(intent)
-        Log.d("goToCinema","영화관 홈으로 전환")
+        Log.d("goToFastFood","패스트푸드 홈으로 전환")
     }
 
     fun goToFastFoodHome1(v: Context){
+        FastFoodModel.foodSelectedList.clear()
         val intent = Intent(v, FastFoodHome1Activity::class.java)
         v.startActivity(intent)
-        Log.d("goToCinema","영화관 홈으로 전환")
+        Log.d("goToFastFood","패스트푸드 홈으로 전환")
     }
 
     fun goToFastFoodHome1Button1(v: Context){

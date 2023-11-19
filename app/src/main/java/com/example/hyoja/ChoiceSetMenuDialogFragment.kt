@@ -29,10 +29,11 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
     lateinit var viewModel: FoodListViewModel
 
     private val option :ArrayList<String> =ArrayList()
-
     private val setOption :ArrayList<String> =ArrayList()
+    private val price : Int = 0
 
     val orderingFood : OrderingFood = OrderingFood(
+        totalPrice = price,
         food = FastFoodModel.foodSelected,
         option = option,
         setOption = setOption,
@@ -136,7 +137,11 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
             } else {
                 FastFoodModel.foodSelectedList.add(orderingFood)
                 Log.d("FastfoodModel.foodSelectedList","FastfoodModel.foodSelectedList=${FastFoodModel.foodSelectedList}")
-                applyPay()
+
+                Log.d("세트 메뉴 선택완료 CALLED","세트 메뉴 선택완료 CALLED")
+                applySetPay()
+
+
 
                 viewModel.orderListChanged()
                 Log.d(Tag,FastFoodModel.foodSelectedList.toString())
@@ -174,8 +179,8 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
             }
         })
 
-        // 이제 binding을 사용하여 UI 요소에 접근할 수 있습니다.
-        // 예를 들어, binding.textView.text = "안녕하세요"와 같은 방식으로 UI 요소를 조작할 수 있습니다.
+        //음식 추가 및 빼기
+
     }
 
     override fun onResume() {
@@ -194,9 +199,16 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
 
     }
 
-    private fun applyPay(){
-        var payment : Int = (orderingFood.setDessert!!.price + orderingFood.setDrink!!.price + orderingFood.food.price) * orderingFood.foodCount
-        orderingFood.price = payment
+    private fun applySetPay(){
+        Log.d("orderingFood.food.price",orderingFood.food.price.toString())
+        Log.d("orderingFood.setDessert.price",orderingFood.setDessert!!.price.toString())
+        Log.d("orderingFood.setDrink.price",orderingFood.setDrink!!.price.toString())
+
+        var payment : Int = (orderingFood.food.price + orderingFood.setDessert!!.price + orderingFood.setDrink!!.price ) * orderingFood.foodCount
+        orderingFood.totalPrice = payment
+        Log.d("setMenu applyPay 여기 제대로 됨",orderingFood.totalPrice.toString())
+        Log.d("setMenu applyPay 여기 제대로 됨",orderingFood.toString())
+
     }
 
 }

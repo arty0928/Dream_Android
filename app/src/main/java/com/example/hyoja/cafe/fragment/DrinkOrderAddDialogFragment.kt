@@ -233,8 +233,5 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
                 childFragmentManager,"FreeOptionAddFragment"
             )
         }
-
-
-
     }
 }

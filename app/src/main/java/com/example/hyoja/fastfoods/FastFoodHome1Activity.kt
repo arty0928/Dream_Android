@@ -6,6 +6,7 @@ import com.example.hyoja.common.MainActivity
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityFastfoodHome1Binding
 import com.example.hyoja.databinding.ActivityFastfoodHomeBinding
+import com.example.hyoja.fastfoods.model.FastFoodModel
 
 class FastFoodHome1Activity : AppCompatActivity() {
     var backPressedTime: Long = 0 // 뒤로가기 2번 클릭을 위한 변수선언
@@ -18,6 +19,8 @@ class FastFoodHome1Activity : AppCompatActivity() {
         binding = ActivityFastfoodHome1Binding.inflate(layoutInflater)
         setContentView(binding.root)
         val view = this
+
+        FastFoodModel.foodSelectedList.clear()
 
         binding.button1.setOnClickListener {
             common.goToFastFoodHome1Button1(view)
