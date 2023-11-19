@@ -15,6 +15,7 @@ import com.example.hyoja.cafe.adapter.DrinkListNewMenuAdapter
 import com.example.hyoja.cafe.adapter.MenuCategoryAdapter
 import com.example.hyoja.cafe.adapter.OrderedListAdapter
 import com.example.hyoja.cafe.fragment.DrinkOrderAddDialogFragment
+import com.example.hyoja.cafe.fragment.OptionAddInterface
 import com.example.hyoja.cafe.fragment.PayFragment
 import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.util.DrinkAddListner
@@ -24,7 +25,7 @@ import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityCafeHome1Binding
 import java.util.logging.Logger
 
-class CafeHome1Activity : AppCompatActivity(),DrinkAddListner {
+class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
     private val Tag:String = "CafeHome1Activity"
     private var backPressedTime: Long = 0 // 뒤로가기 2번 클릭을 위한 변수선언
 
@@ -60,7 +61,7 @@ class CafeHome1Activity : AppCompatActivity(),DrinkAddListner {
 
         //결제하기 버튼
         binding.payButton.setOnClickListener {
-            if (CafeModel.drinkSelectedList.size == 0){
+            if(CafeModel.drinkSelectedList.size == 0){
 
             }
             else{

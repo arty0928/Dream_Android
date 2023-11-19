@@ -18,6 +18,7 @@ class PayFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,7 +26,6 @@ class PayFragment : DialogFragment() {
         binding = FragmentPayBinding.inflate(inflater, container, false)
         binding!!.list.layoutManager = LinearLayoutManager(context)
         binding!!.list.adapter = PayRecyclerViewAdapter()
-
 
         return binding!!.root
     }

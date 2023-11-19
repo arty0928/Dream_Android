@@ -231,6 +231,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"/>
                     <TextView
+                        android:id="@+id/option"
                         android:layout_marginHorizontal="10dp"
                         android:layout_marginVertical="15dp"
                         android:layout_gravity="right|center"
@@ -261,6 +262,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
                 <TextView
+                    android:id="@+id/freeOption"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginVertical="15dp"
                     android:layout_gravity="right|center"

@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.hyoja.Fragments.drink
@@ -42,6 +43,10 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
         option = option,
         drink = CafeModel.drinkSelected
     )
+
+    fun getOrderingDrink():OrderingDrink{
+        return orderingDrink
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -94,6 +99,21 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
             requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
             requireActivity().supportFragmentManager.popBackStack()
         }
+
+        // 유료옵션
+        binding.option.setOnClickListener {
+            // 프래그먼트 옵션 추가 띄우기
+            // 유료옵션은 true
+            showOptionFragment(true)
+        }
+
+        // 무료옵션
+        binding.freeOption.setOnClickListener {
+            // 프래그먼트 옵션 추가 띄우기
+            // 무료옵션은 true
+            showOptionFragment(false)
+        }
+
     }
 
     override fun onCreateView(
@@ -193,5 +213,24 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
         var payment: Int = (orderingDrink.drink.price + 500 * orderingDrink.size) * orderingDrink.drinkCount
         orderingDrink.price = payment
         binding.drinkPrice.text = orderingDrink.price.toString()
+    }
+
+    private fun showOptionFragment(optionInfo: Boolean){
+        val optionAddFragment = OptionAddFragment()
+        val freeOptionAddFragment = FreeOptionAddFragment()
+        optionAddFragment.setOrderingDrink(orderingDrink)
+
+        if(optionInfo){
+            optionAddFragment.show(
+                childFragmentManager,"OptionAddFragment"
+            )
+        } else{
+            freeOptionAddFragment.show(
+                childFragmentManager,"FreeOptionAddFragment"
+            )
+        }
+
+
+
     }
 }
