@@ -1,5 +1,7 @@
 package com.example.hyoja.cafe
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.PopupWindow
@@ -13,7 +15,6 @@ import com.example.hyoja.cafe.adapter.DrinkListNewMenuAdapter
 import com.example.hyoja.cafe.adapter.MenuCategoryAdapter
 import com.example.hyoja.cafe.adapter.OrderedListAdapter
 import com.example.hyoja.cafe.fragment.DrinkOrderAddDialogFragment
-import com.example.hyoja.cafe.fragment.PayFragment
 import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.util.DrinkAddListner
 import com.example.hyoja.cafe.util.UtilValue
@@ -61,8 +62,8 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
 
             }
             else{
+                goToPay(this)
                 Log.d("결제시작",CafeModel.drinkSelectedList.toString())
-                showPayDetail()
             }
         }
 
@@ -157,6 +158,8 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
 
     }
     override fun onBackPressed() {
+        super.onBackPressed()
+
         val currentTime = System.currentTimeMillis()
         val commonUi:CommonUi = CommonUi()
         val view = this
@@ -220,13 +223,6 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
             binding.drinkListLeftButton.setImageResource(R.drawable.icon_left_un)
         }
     }
-
-    private fun showPayDetail(){
-        PayFragment().show(
-            supportFragmentManager, "PayFragment"
-        )
-    }
-
     //음료 선택 시 음료상세주문 띄우기
     private fun drinkOptionFragmentMange(){
         Log.d(Tag,"drinkOptionFragmentMange called")
@@ -264,5 +260,10 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
         }
         binding.account.text = account.toString()
         Log.d("drinkPriceSet",account.toString())
+    }
+
+    private fun goToPay(context: Context){
+        val intent = Intent(context, PayActivity::class.java)
+        context.startActivity(intent)
     }
 }

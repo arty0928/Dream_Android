@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,41 +13,38 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HyoJa"
         tools:targetApi="31">
-
+        <activity
+            android:name=".cafe.PayActivity"
+            android:exported="false"
+            android:label="@string/title_activity_pay"
+            android:theme="@style/Theme.HyoJa" />
         <activity
             android:name=".common.AccountCreateActivity"
             android:exported="false" />
         <activity
             android:name=".common.LoginActivity"
             android:exported="false" />
-
         <activity
             android:name=".cinema.CinemaHomeActivity"
-            android:exported="false" />
-        <!-- from MainHome to FastFood Main Home -->
+            android:exported="false" /> <!-- from MainHome to FastFood Main Home -->
         <activity
             android:name=".fastfoods.FastFoodHomeActivity"
-            android:exported="false" />
-        <!-- from Home to payment way -->
+            android:exported="false" /> <!-- from Home to payment way -->
         <activity
             android:name=".fastfoods.FastFoodHome1Activity"
             android:exported="false" />
-
         <activity
             android:name=".fastfoods.FastFoodHome2Activity"
             android:exported="false" />
-
         <activity
             android:name=".cafe.CafeHomeActivity"
             android:exported="false" /> <!-- from MainHome to Cafe Main Home -->
         <activity
             android:name=".cafe.CafeHome1Activity"
             android:exported="false" />
-
         <activity
             android:name=".common.MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".common.SplashActivity"
             android:exported="true">

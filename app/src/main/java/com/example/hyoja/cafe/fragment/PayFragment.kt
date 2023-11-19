@@ -13,7 +13,7 @@ import com.example.hyoja.cafe.util.DrinkDataFactory
 import com.example.hyoja.databinding.FragmentDrinkListNewMenuOneBinding
 import com.example.hyoja.databinding.FragmentPayBinding
 
-class PayFragment : DialogFragment() {
+class PayFragment : Fragment() {
     var binding: FragmentPayBinding? = null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
