@@ -3,11 +3,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hyoja.cafe.model.CafeModel
+import com.example.hyoja.databinding.ActivityFastfoodHome2Binding
 import com.example.hyoja.databinding.FragmentFoodAddedBinding
 import com.example.hyoja.fastfoods.model.FastFoodModel
 import com.example.hyoja.fastfoods.model.OrderingFood
 
-class FoodOrderedListAdapter :
+class FoodOrderedListAdapter(private val binding: ActivityFastfoodHome2Binding) :
     RecyclerView.Adapter<FoodOrderedListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -38,23 +39,17 @@ class FoodOrderedListAdapter :
             var account: Int = 0
 
             if(FastFoodModel.foodSelectedList[position].setDessert!=null){
-                Log.d("plusItem FastFoodModel.foodSelectedList[position].setDessert!!.price",FastFoodModel.foodSelectedList[position].setDessert!!.price.toString())
                 account += FastFoodModel.foodSelectedList[position].setDessert!!.price
             }
 
             if(FastFoodModel.foodSelectedList[position].setDrink!=null){
-                Log.d("plusItem FastFoodModel.foodSelectedList[position].setDrink!!.price",FastFoodModel.foodSelectedList[position].setDrink!!.price.toString())
                 account += FastFoodModel.foodSelectedList[position].setDrink!!.price
             }
             account += (FastFoodModel.foodSelectedList[position].totalPrice) * FastFoodModel.foodSelectedList[position].foodCount
 
-
-
-            Log.d("plusItem FastFoodModel.foodSelectedList[position].totalPrice ",FastFoodModel.foodSelectedList[position].totalPrice.toString())
-            Log.d("plusItem FastFoodModel.foodSelectedList[position].foodCount",FastFoodModel.foodSelectedList[position].foodCount.toString())
-
             Log.d("plusItem",account.toString())
             holder.setFoodPrice(position,account)
+            updateTotalOrderCount()
 
         }
         holder.binding.miusItem.setOnClickListener {
@@ -80,6 +75,20 @@ class FoodOrderedListAdapter :
         }
     }
 
+    private fun updateTotalOrderCount() {
+
+        var sumCount = 0
+        var sumPrice = 0
+
+        for (i in 0..FastFoodModel.foodSelectedList.size-1){
+            sumCount += FastFoodModel.foodSelectedList[i].foodCount
+            sumPrice += FastFoodModel.foodSelectedList[i].foodCount * FastFoodModel.foodSelectedList[i].totalPrice
+        }
+        binding.TotalOrderCount.text = sumCount.toString()
+        binding.TotalOrderPrice.text = sumPrice.toString()
+
+    }
+
     class ViewHolder(itemView: FragmentFoodAddedBinding) : RecyclerView.ViewHolder(itemView.root)
         {
         val binding = itemView
@@ -94,4 +103,5 @@ class FoodOrderedListAdapter :
             selectedItemPrice.text = account.toString()
         }
     }
+
 }

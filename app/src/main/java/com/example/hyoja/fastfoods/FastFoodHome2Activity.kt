@@ -268,7 +268,9 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
 
         Log.d(Tag,"foodAdded 함수 called")
 
-        binding.FoodSelectedList.adapter = FoodOrderedListAdapter()
+//        binding.FoodSelectedList.adapter = FoodOrderedListAdapter(ActivityFastfoodHome2Binding)
+//        binding.FoodSelectedList.adapter = FoodOrderedListAdapter(binding)
+        binding.FoodSelectedList.adapter = FoodOrderedListAdapter(binding)
 
         //총 결제 금액 세팅
         updateTotalFoodInfo()
