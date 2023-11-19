@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
 import com.example.hyoja.R
 import com.example.hyoja.cafe.model.OrderingDrink
 import com.example.hyoja.databinding.FragmentOptionAddBinding
@@ -18,6 +19,7 @@ class OptionAddFragment: DialogFragment(), OptionAddInterface {
     lateinit var binding: FragmentOptionAddBinding
     private lateinit var orderingDrink: OrderingDrink
     private var info: Boolean = true
+    private lateinit var parentFragment: DrinkOrderAddDialogFragment
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -51,6 +53,7 @@ class OptionAddFragment: DialogFragment(), OptionAddInterface {
         // 완료
         binding.complete.setOnClickListener {
             complete(orderingDrink, shotStatus)
+            parentFragment.applyPay()
             dismiss()
         }
 
@@ -71,6 +74,10 @@ class OptionAddFragment: DialogFragment(), OptionAddInterface {
 
     fun setOrderingDrink(orderingDrink: OrderingDrink){
         this.orderingDrink = orderingDrink
+    }
+
+    fun setParentFragment(fragment: DrinkOrderAddDialogFragment){
+        this.parentFragment = fragment
     }
 
 }
@@ -115,7 +122,10 @@ interface OptionAddInterface {
         // 없으면 추가, 있으면 추가안해도 됨.
         if (!exist) {
             when (option) {
-                "shot" -> orderingDrink.option.add("shot")
+                "shot" -> {
+                    orderingDrink.option.add("shot")
+                    orderingDrink.shot = 1
+                }
                 "ice" -> orderingDrink.option.add("ice")
                 "syrup" -> orderingDrink.option.add("syrup")
             }
@@ -127,6 +137,7 @@ interface OptionAddInterface {
             when(orderingDrink.option[i]){
                 option -> {
                     orderingDrink.option.removeAt(i)
+                    orderingDrink.shot = 0
                     return orderingDrink
                 }
             }

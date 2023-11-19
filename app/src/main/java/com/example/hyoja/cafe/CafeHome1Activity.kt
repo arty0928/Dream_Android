@@ -256,4 +256,13 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
         // 총 결제 금액 세팅
         binding.account.text = getTotalPrice().toString()
     }
+
+    override fun drinkPriceSet() {
+        var account = 0
+        for (i in 0 until CafeModel.drinkSelectedList.size){
+            account += CafeModel.drinkSelectedList[i].price
+        }
+        binding.account.text = account.toString()
+        Log.d("drinkPriceSet",account.toString())
+    }
 }

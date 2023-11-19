@@ -69,7 +69,7 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
             requireActivity().supportFragmentManager.popBackStack()
 
             // 액티비티로 콜백 전달
-            ApplyOrderList(CafeModel.currentActivity)
+            ApplyOrderList(CafeModel.currentActivity).drinkAdd()
         }
 
         // 음료 추가 및 빼기
@@ -211,8 +211,8 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
         }
 
     }
-    private fun applyPay(){
-        var payment: Int = (orderingDrink.drink.price + 500 * orderingDrink.size) * orderingDrink.drinkCount
+    fun applyPay(){
+        var payment: Int = (orderingDrink.shot*500 + orderingDrink.drink.price + 500 * orderingDrink.size) * orderingDrink.drinkCount
         orderingDrink.price = payment
         binding.drinkPrice.text = orderingDrink.price.toString()
     }
@@ -223,6 +223,7 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
 
         if(optionInfo){
             optionAddFragment.setOrderingDrink(orderingDrink)
+            optionAddFragment.setParentFragment(this)
             optionAddFragment.show(
                 childFragmentManager,"OptionAddFragment"
             )
