@@ -9,16 +9,12 @@ import android.widget.HorizontalScrollView
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.core.widget.NestedScrollView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.hyoja.Fragments.SetOrOnlyFragment
 import com.example.hyoja.R
-import com.example.hyoja.cafe.fragment.DrinkOrderAddDialogFragment
-import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityFastfoodHome2Binding
 import com.example.hyoja.fastfoods.adapter.FoodListNewMenuAdapter
