@@ -19,15 +19,17 @@ import com.example.hyoja.fastfoods.adapter.SetMenuChoiceMainViewPagerAdapter
 import com.example.hyoja.fastfoods.model.FastFoodModel
 import com.example.hyoja.fastfoods.model.OrderingFood
 import com.example.hyoja.fastfoods.model.setMenuDataInterface
+import com.example.hyoja.fastfoods.util.ApplyFoodOrderList
 import com.example.hyoja.fastfoods.util.setMenuFoodUtilValue
 import com.example.hyoja.fastfoods.viewmodel.FoodListViewModel
 
 class ChoiceSetMenuDialogFragment : DialogFragment() {
     private val Tag: String = "SetOrOnlyDialogFragment"
-    private lateinit var binding: FragmentChoiceSetMenuDialogBinding
+    lateinit var binding: FragmentChoiceSetMenuDialogBinding
     lateinit var viewModel: FoodListViewModel
 
     private val option :ArrayList<String> =ArrayList()
+
     private val setOption :ArrayList<String> =ArrayList()
 
     val orderingFood : OrderingFood = OrderingFood(
@@ -55,70 +57,7 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
         // ViewBinding을 초기화하고 레이아웃을 반환합니다.
         binding = FragmentChoiceSetMenuDialogBinding.inflate(inflater, container, false)
 
-        val parentFragment = parentFragmentManager?.findFragmentByTag("SetOrOnlyFragment") as DialogFragment?
-        parentFragment?.dismiss()
 
-        Log.d(Tag, orderingFood.toString())
-        viewModel = ViewModelProvider(this)[FoodListViewModel::class.java]
-
-        //카테고리 뷰페이저
-        binding.SetMenuChoiceCategory.adapter = SetMenuChoiceCategoryAdapter(this)
-        var currentCategory = binding.SetMenuChoiceCategory.currentItem
-        binding.SetMenuChoiceCategory.isUserInputEnabled = false;
-
-        binding.SetMenuChoiceMainViewPager.adapter = SetMenuChoiceMainViewPagerAdapter(this)
-        binding.SetMenuChoiceMainViewPager.isUserInputEnabled = false;
-
-        var setDessertCount = 0
-        var setDrinkCount = 0
-        if(orderingFood.setDessert !=null){
-            setDessertCount = 1
-        }
-        if (orderingFood.setDrink !=null){
-            setDrinkCount = 1
-        }
-        binding.selectCountText.text = ((setDessertCount.toInt()+setDrinkCount.toInt()).toString())
-        binding.remainedCountText.text = (2 - (setDessertCount+setDrinkCount)).toString()
-
-
-        binding.cancelButton.setOnClickListener {
-            dismiss()
-        }
-
-        binding.paymentButton.setOnClickListener {
-            if (orderingFood.setDessert == null || orderingFood.setDrink == null) {
-                // "세트 메뉴를 2개 선택해주세요" 토스트 메시지를 표시
-                Toast.makeText(requireContext(), "세트 메뉴를 2개 선택해주세요", Toast.LENGTH_SHORT).show()
-            } else {
-                dismiss()
-
-            }
-        }
-
-
-        var i=0
-        viewModel.setMenuSelectedLiveData.observe(this, Observer {
-            if(i>0){
-                Log.d(Tag,"setMenuSelectedLiveData observed")
-//                foodOptionFragmentManage()
-            }
-            i++
-        })
-
-        viewModel.foodSelectedLiveData
-
-        viewModel.setMenuCategoryLiveData.observe(this, Observer{
-            when(it){
-                "setDessert" -> {
-                    foodListButtonSrcSelect(checkFoodListViewPagerSize(it))
-                }
-                "setDrink" -> {
-                    foodListButtonSrcSelect(checkFoodListViewPagerSize(it))
-                }else ->{
-
-                }
-            }
-        })
         return binding.root
     }
 
@@ -163,6 +102,78 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel = ViewModelProvider(this)[FoodListViewModel::class.java]
+
+        //카테고리 뷰페이저
+        binding.SetMenuChoiceCategory.adapter = SetMenuChoiceCategoryAdapter(this)
+        var currentCategory = binding.SetMenuChoiceCategory.currentItem
+        binding.SetMenuChoiceCategory.isUserInputEnabled = false;
+
+        binding.SetMenuChoiceMainViewPager.adapter = SetMenuChoiceMainViewPagerAdapter(this)
+        binding.SetMenuChoiceMainViewPager.isUserInputEnabled = false;
+
+        var setDessertCount = 0
+        var setDrinkCount = 0
+        if(orderingFood.setDessert !=null){
+            setDessertCount = 1
+        }
+        if (orderingFood.setDrink !=null){
+            setDrinkCount = 1
+        }
+        binding.selectCountText.text = ((setDessertCount.toInt()+setDrinkCount.toInt()).toString())
+        binding.remainedCountText.text = (2 - (setDessertCount+setDrinkCount)).toString()
+
+
+        binding.cancelButton.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+        }
+
+        binding.paymentButton.setOnClickListener {
+            if (orderingFood.setDessert == null || orderingFood.setDrink == null) {
+                // "세트 메뉴를 2개 선택해주세요" 토스트 메시지를 표시
+                Toast.makeText(requireContext(), "세트 메뉴를 2개 선택해주세요", Toast.LENGTH_SHORT).show()
+            } else {
+                FastFoodModel.foodSelectedList.add(orderingFood)
+                Log.d("FastfoodModel.foodSelectedList","FastfoodModel.foodSelectedList=${FastFoodModel.foodSelectedList}")
+                applyPay()
+
+                viewModel.orderListChanged()
+                Log.d(Tag,FastFoodModel.foodSelectedList.toString())
+
+                requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+                requireActivity().supportFragmentManager.popBackStack()
+
+                ApplyFoodOrderList(FastFoodModel.currentActivity)
+
+            }
+        }
+
+
+        var i=0
+        viewModel.setMenuSelectedLiveData.observe(this, Observer {
+            if(i>0){
+                Log.d(Tag,"setMenuSelectedLiveData observed")
+//                foodOptionFragmentManage()
+            }
+            i++
+        })
+
+        viewModel.foodSelectedLiveData
+
+        viewModel.setMenuCategoryLiveData.observe(this, Observer{
+            when(it){
+                "setDessert" -> {
+                    foodListButtonSrcSelect(checkFoodListViewPagerSize(it))
+                }
+                "setDrink" -> {
+                    foodListButtonSrcSelect(checkFoodListViewPagerSize(it))
+                }else ->{
+
+            }
+            }
+        })
+
         // 이제 binding을 사용하여 UI 요소에 접근할 수 있습니다.
         // 예를 들어, binding.textView.text = "안녕하세요"와 같은 방식으로 UI 요소를 조작할 수 있습니다.
     }
@@ -182,4 +193,10 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
         super.onDestroyView()
 
     }
+
+    private fun applyPay(){
+        var payment : Int = (orderingFood.setDessert!!.price + orderingFood.setDrink!!.price + orderingFood.food.price) * orderingFood.foodCount
+        orderingFood.price = payment
+    }
+
 }

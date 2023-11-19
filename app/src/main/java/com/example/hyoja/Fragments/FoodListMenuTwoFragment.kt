@@ -232,15 +232,7 @@ class FoodListMenuTwoFragment : Fragment() {
         if(foodData.category != "ready"){
             FastFoodModel.foodSelected = foodData
             viewModel.foodSelectChanged()
-
-//            DrinkOrderAddDialogFragment().show(
-//                supportFragmentManager, "DrinkOrderAddDialogFragment"
-//            )
-
-            SetOrOnlyFragment().show(requireActivity().supportFragmentManager, "FoodOrderAddDialogFragment")
-
-
-            Log.d(Tag,"FoodSelected ="+ FastFoodModel.foodSelected)
+            Log.d(Tag,"FoodSelected ="+FastFoodModel.foodSelected)
         }
     }
 }

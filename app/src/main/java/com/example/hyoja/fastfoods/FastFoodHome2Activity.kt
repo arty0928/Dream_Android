@@ -1,28 +1,34 @@
 package com.example.hyoja.fastfoods
 
 //import com.example.hyoja.Adapter.MyAdapter
+import FoodOrderedListAdapter
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.HorizontalScrollView
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.widget.NestedScrollView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.hyoja.Fragments.SetOrOnlyFragment
 import com.example.hyoja.R
 import com.example.hyoja.cafe.fragment.DrinkOrderAddDialogFragment
+import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityFastfoodHome2Binding
 import com.example.hyoja.fastfoods.adapter.FoodListNewMenuAdapter
 import com.example.hyoja.fastfoods.adapter.FoodMenuCategoryAdapter
 import com.example.hyoja.fastfoods.model.FastFoodModel
+import com.example.hyoja.fastfoods.util.FoodAddListner
 import com.example.hyoja.fastfoods.util.FoodUtilValue
 import com.example.hyoja.fastfoods.viewmodel.FoodListViewModel
 
-class FastFoodHome2Activity : AppCompatActivity(){
+class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
 
     private val Tag:String = "FastFoodHome2Activity"
 
@@ -34,16 +40,14 @@ class FastFoodHome2Activity : AppCompatActivity(){
 
     lateinit var viewPager: ViewPager2
 
-//    override fun onResume() {
-//        super.onResume()
-//        binding.root.requestLayout()
-//    }
 
     //        selectedItems scrollView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFastfoodHome2Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        FastFoodModel.currentActivity = this
 
         val view = this
 
@@ -64,10 +68,22 @@ class FastFoodHome2Activity : AppCompatActivity(){
             horizontalScrollView.smoothScrollBy(-scrollAmount,0)
             Log.d("tabTitleRightBtn","TabTitleRightBtn")
         }
-        
+
+        //선택완료
+        binding.PayBtn.setOnClickListener {
+            if (FastFoodModel.foodSelectedList.size == 0) {
+                Toast.makeText(this, "메뉴를 선택해주세요.", Toast.LENGTH_SHORT).show()
+            } else {
+                Log.d("패스트 푸드 결제시작", FastFoodModel.foodSelectedList.toString())
+                Log.d("패스트 푸드 결제시작", FastFoodModel.foodSelectedList.size.toString())
+
+            }
+        }
+
+
         //뷰모델 프로바이더 생성
         viewModel = ViewModelProvider(this)[FoodListViewModel::class.java]
-        
+
         //카테고리 뷰페이저
         binding.FastFoodCategoryList.adapter = FoodMenuCategoryAdapter(this)
         var currentItem = binding.FastFoodCategoryList.currentItem
@@ -187,11 +203,35 @@ class FastFoodHome2Activity : AppCompatActivity(){
     private fun foodOptionFragmentManage(){
         Log.d(Tag, "foodOptionFragmentMange 호출됨")
 
-//        val setOrOnlyFragment = SetOrOnlyFragment()
-//        setOrOnlyFragment.show(supportFragmentManager, "SetOrOnlyFragmentTag")
         SetOrOnlyFragment().show(
             supportFragmentManager, "DrinkOrderAddDialogFragment"
         )
+
+    }
+
+    private fun getToTalPrice(): Int{
+        var account:Int = 0
+
+        for (i in 0..FastFoodModel.foodSelectedList.size - 1){
+            account += FastFoodModel.foodSelectedList[i].price
+            Log.d(Tag,FastFoodModel.foodSelectedList[i].toString())
+        }
+        Log.d("totalAccount",account.toString())
+        return account
+    }
+
+    override fun foodAdded() {
+        //장바구니 리사이클리뷰
+        binding.FoodSelectedList.layoutManager = LinearLayoutManager(this).also{
+            it.orientation = LinearLayoutManager.VERTICAL
+        }
+
+        Log.d(Tag,"foodAdded 함수 called")
+        binding.FoodSelectedList.adapter = FoodOrderedListAdapter()
+
+        //총 결제 금액 세팅
+        binding.TotalOrderPrice.text = getToTalPrice().toString()
+        binding.TotalOrderCount.text = "${FastFoodModel.foodSelectedList.size.toString()}개"
 
     }
 

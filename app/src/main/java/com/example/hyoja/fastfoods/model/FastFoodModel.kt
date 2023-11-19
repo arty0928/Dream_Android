@@ -1,6 +1,9 @@
 package com.example.hyoja.fastfoods.model
 
 import com.example.hyoja.cafe.model.OrderingDrink
+import com.example.hyoja.cafe.util.DrinkAddListner
+import com.example.hyoja.fastfoods.util.FoodAddListner
+import com.example.hyoja.fastfoods.viewmodel.FoodListViewModel
 
 object FastFoodModel {
     var menuCategory: String = "newMenu" //카테고리 데이터
@@ -11,4 +14,6 @@ object FastFoodModel {
     var setMenuCategory : String = "setDessert"
     lateinit var setMenuFoodSelected : setMenuDataInterface
     var setMenuSelectedList = ArrayList<setMenuDataInterface>()
+
+    lateinit var currentActivity: FoodAddListner
 }

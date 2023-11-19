@@ -74,6 +74,4 @@ class SetMenuChoiceCategoryFragment : Fragment() {
         binding.SetMenuChoiceCategoryDrink.setBackgroundResource(R.drawable.tab_indicator_setmenu_default)
         Log.d(Tag,"resetButtonsCall")
     }
-
-
 }

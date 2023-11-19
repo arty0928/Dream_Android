@@ -16,6 +16,8 @@ class FoodListViewModel : ViewModel() {
     private val foodSelected = MutableLiveData<FoodDataInterface>()
     private val foodSelectedList = MutableLiveData<ArrayList<String>>()
 
+    private val orderFoodList = MutableLiveData<String>()
+
     private val setMenuCategory = MutableLiveData<String>()
     private val setMenuSelected = MutableLiveData<setMenuDataInterface>()
     private val setMenuSelectedList = MutableLiveData<ArrayList<String>>()
@@ -60,4 +62,8 @@ class FoodListViewModel : ViewModel() {
         Log.d(Tag,"setMenuSelectChanged = "+setMenuSelected.value)
     }
 
+    fun orderListChanged(){
+        orderFoodList.value = FastFoodModel.foodSelectedList.size.toString()
+        Log.d(Tag,"foodSelectedChanged ="+orderFoodList.value)
+    }
 }
