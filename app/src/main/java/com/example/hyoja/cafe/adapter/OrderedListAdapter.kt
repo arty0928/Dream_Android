@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hyoja.cafe.model.CafeModel
+import com.example.hyoja.cafe.model.OrderingDrink
 import com.example.hyoja.databinding.OrderedListItemBinding
 
 class OrderedListAdapter: RecyclerView.Adapter<OrderedListAdapter.ViewHolder>() {
@@ -22,6 +23,15 @@ class OrderedListAdapter: RecyclerView.Adapter<OrderedListAdapter.ViewHolder>() 
         holder.drinkImage.setImageResource(CafeModel.drinkSelectedList[position].drink.drinkImage)
         // 음료 개수
         holder.count.text = CafeModel.drinkSelectedList[position].drinkCount.toString()
+
+        holder.itemPlus.setOnClickListener{
+            CafeModel.drinkSelectedList[position].drinkCount++
+            holder.setDrinkCount(position)
+        }
+        holder.itemMinus.setOnClickListener{
+            CafeModel.drinkSelectedList[position].drinkCount --
+            holder.setDrinkCount(position)
+        }
     }
     class ViewHolder(itemView: OrderedListItemBinding):RecyclerView.ViewHolder(itemView.root){
         val binding = itemView
@@ -29,6 +39,13 @@ class OrderedListAdapter: RecyclerView.Adapter<OrderedListAdapter.ViewHolder>() 
         val itemPlus = binding.itemPlus
         val itemMinus = binding.itemMinus
         val count = binding.itemNum
+
+        fun setDrinkCount(position: Int){
+            count.text = CafeModel.drinkSelectedList[position].drinkCount.toString()
+        }
+
+        fun setPrice(position: Int){
+        }
 
     }
 }

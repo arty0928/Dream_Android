@@ -220,13 +220,14 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
     private fun showOptionFragment(optionInfo: Boolean){
         val optionAddFragment = OptionAddFragment()
         val freeOptionAddFragment = FreeOptionAddFragment()
-        optionAddFragment.setOrderingDrink(orderingDrink)
 
         if(optionInfo){
+            optionAddFragment.setOrderingDrink(orderingDrink)
             optionAddFragment.show(
                 childFragmentManager,"OptionAddFragment"
             )
         } else{
+            freeOptionAddFragment.setOrderingDrink(orderingDrink)
             freeOptionAddFragment.show(
                 childFragmentManager,"FreeOptionAddFragment"
             )

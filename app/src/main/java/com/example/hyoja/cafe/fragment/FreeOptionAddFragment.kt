@@ -6,7 +6,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
@@ -14,44 +13,63 @@ import androidx.fragment.app.DialogFragment
 import com.example.hyoja.R
 import com.example.hyoja.cafe.model.OrderingDrink
 import com.example.hyoja.databinding.FragmentFreeOptionAddBinding
-import com.example.hyoja.databinding.FragmentOptionAddBinding
 
 class FreeOptionAddFragment: DialogFragment(), FreeOptionAddInterface {
     lateinit var binding: FragmentFreeOptionAddBinding
     private lateinit var orderingDrink: OrderingDrink
-    private var info: Boolean = true
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        var iceStatus: Boolean
+        var syrupStatus: Boolean
+
+        if(iceStatus(orderingDrink)){
+            clickedUI(requireContext(), binding.iceAdd)
+            iceStatus = true
+        } else{
+            unClickedUI(requireContext(), binding.iceAdd)
+            iceStatus = false
+        }
+
+        if(syrupStatus(orderingDrink)){
+            clickedUI(requireContext(), binding.syrupAdd)
+            syrupStatus = true
+        } else{
+            unClickedUI(requireContext(), binding.syrupAdd)
+            syrupStatus = false
+        }
+
+
         // 얼음 추가
         binding.iceAdd.setOnClickListener {
-            if (iceStatus(orderingDrink)){
+            if (iceStatus){
                 unClickedUI(requireContext(), binding.iceAdd)
-                orderingDrink = deleteOption(orderingDrink,"ice")
+                iceStatus = false
             }
             else{
                 clickedUI(requireContext(), binding.iceAdd)
-                orderingDrink = addOption(orderingDrink,"ice")
+                iceStatus = true
             }
             Log.d("orderingDrink Check",orderingDrink.option.toString())
         }
 
         // 시럽 추가
         binding.syrupAdd.setOnClickListener {
-            if (syrupStatus(orderingDrink)){
+            if (syrupStatus){
                 unClickedUI(requireContext(), binding.syrupAdd)
-                orderingDrink = deleteOption(orderingDrink,"syrup")
+                syrupStatus = false
             }
             else{
                 clickedUI(requireContext(), binding.syrupAdd)
-                orderingDrink = addOption(orderingDrink,"syrup")
+                syrupStatus = true
             }
             Log.d("orderingDrink Check",orderingDrink.option.toString())
         }
 
         // 완료
         binding.complete.setOnClickListener {
+            complete(orderingDrink,iceStatus,syrupStatus)
             onDestroyView()
         }
 
@@ -96,13 +114,35 @@ interface FreeOptionAddInterface {
         button.setTextColor(ContextCompat.getColor(context, unClickedButtonTextColor))
     }
 
-    fun addOption(orderingDrink: OrderingDrink, option: String): OrderingDrink{
-        when(option){
-            "shot" -> orderingDrink.option.add("shot")
-            "ice" -> orderingDrink.option.add("ice")
-            "syrup" -> orderingDrink.option.add("syrup")
+    fun complete(orderingDrink: OrderingDrink, iceStatus: Boolean, syrupStatus: Boolean){
+        if (iceStatus)
+            addOption(orderingDrink, "ice")
+        else
+            deleteOption(orderingDrink, "ice")
+        if (syrupStatus)
+            addOption(orderingDrink,"syrup")
+        else
+            deleteOption(orderingDrink,"syrup")
+    }
+
+    fun addOption(orderingDrink: OrderingDrink, option: String){
+        // 미리 이미 옵션이 추가되어있는지 확인
+        var exist: Boolean = false
+        for(i in 0 until orderingDrink.option.size){
+            when(orderingDrink.option[i]){
+                option -> {
+                    exist = true
+                }
+            }
         }
-        return orderingDrink
+        // 없으면 추가, 있으면 추가안해도 됨.
+        if (!exist){
+            when(option){
+                "shot" -> orderingDrink.option.add("shot")
+                "ice" -> orderingDrink.option.add("ice")
+                "syrup" -> orderingDrink.option.add("syrup")
+            }
+        }
     }
 
     fun deleteOption(orderingDrink: OrderingDrink, option: String): OrderingDrink{
@@ -117,17 +157,6 @@ interface FreeOptionAddInterface {
         return orderingDrink
     }
 
-    fun shotStatus(orderingDrink: OrderingDrink): Boolean{
-        val size = orderingDrink.option.size
-        var shot: Boolean = false
-
-        for(i in 0 until size){
-            when(orderingDrink.option[i]){
-                "shot" -> return true
-            }
-        }
-        return false
-    }
     fun iceStatus(orderingDrink: OrderingDrink): Boolean{
         val size = orderingDrink.option.size
         var ice: Boolean = false

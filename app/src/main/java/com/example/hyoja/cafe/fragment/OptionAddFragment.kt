@@ -6,7 +6,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
@@ -23,36 +22,41 @@ class OptionAddFragment: DialogFragment(), OptionAddInterface {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        var shotStatus: Boolean
+
+        // 현재 추가된 상태인지 체크
         if (shotStatus(orderingDrink)){
-            clickedButton
-            clickedButtonTextColor
+            clickedUI(requireContext(), binding.shotAdd)
+            shotStatus = true
         }
         else{
-            unClickedButton
-            unClickedButtonTextColor
+            unClickedUI(requireContext(), binding.shotAdd)
+            shotStatus = false
         }
 
         // 샷 추가
         binding.shotAdd.setOnClickListener {
-            if (shotStatus(orderingDrink)){
+            // 현재 상태가 추가된 상태인지 체크
+            if (shotStatus){
                 unClickedUI(requireContext(), binding.shotAdd)
-                orderingDrink = deleteOption(orderingDrink,"shot")
+                shotStatus = false
             }
             else{
                 clickedUI(requireContext(), binding.shotAdd)
-                orderingDrink = addOption(orderingDrink,"shot")
+                shotStatus = true
             }
             Log.d("orderingDrink Check",orderingDrink.option.toString())
         }
 
         // 완료
         binding.complete.setOnClickListener {
-            onDestroyView()
+            complete(orderingDrink, shotStatus)
+            dismiss()
         }
 
         // 취소
         binding.cancel.setOnClickListener {
-            onDestroyView()
+            dismiss()
         }
 
     }
@@ -91,13 +95,31 @@ interface OptionAddInterface {
         button.setTextColor(ContextCompat.getColor(context, unClickedButtonTextColor))
     }
 
-    fun addOption(orderingDrink: OrderingDrink, option: String): OrderingDrink{
-        when(option){
-            "shot" -> orderingDrink.option.add("shot")
-            "ice" -> orderingDrink.option.add("ice")
-            "syrup" -> orderingDrink.option.add("syrup")
+    fun complete(orderingDrink: OrderingDrink, shotStatus: Boolean){
+        if (shotStatus)
+            addOption(orderingDrink, "shot")
+        else
+            deleteOption(orderingDrink, "shot")
+    }
+
+    fun addOption(orderingDrink: OrderingDrink, option: String) {
+        // 미리 이미 옵션이 추가되어있는지 확인
+        var exist: Boolean = false
+        for (i in 0 until orderingDrink.option.size) {
+            when (orderingDrink.option[i]) {
+                option -> {
+                    exist = true
+                }
+            }
         }
-        return orderingDrink
+        // 없으면 추가, 있으면 추가안해도 됨.
+        if (!exist) {
+            when (option) {
+                "shot" -> orderingDrink.option.add("shot")
+                "ice" -> orderingDrink.option.add("ice")
+                "syrup" -> orderingDrink.option.add("syrup")
+            }
+        }
     }
 
     fun deleteOption(orderingDrink: OrderingDrink, option: String): OrderingDrink{

@@ -9,4 +9,5 @@ data class OrderingDrink(
     var drinkCount:Int =1,
     var size:Int = 0, // 0이 regular
     var price:Int = 0
+
 )
