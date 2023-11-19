@@ -97,7 +97,10 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
         //메뉴 삭제
         binding.FoodSelectedList.layoutManager = LinearLayoutManager(this)
 
-
+        //취소하기 하면 담은 거 전체 삭제
+        binding.cancelButton.setOnClickListener {
+            common.goToFastFoodHome1(view)
+        }
 
         //메뉴 리스트 왼쪽 버튼
         binding.FoodMenuListListLeftButton.setOnClickListener {

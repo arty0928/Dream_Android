@@ -36,19 +36,9 @@ class FoodOrderedListAdapter(private val binding: ActivityFastfoodHome2Binding) 
             FastFoodModel.foodSelectedList[position].foodCount++
             holder.setFoodCount(position)
 
-            var account: Int = 0
+            val setPrice = (FastFoodModel.foodSelectedList[position].totalPrice) * FastFoodModel.foodSelectedList[position].foodCount
 
-            if(FastFoodModel.foodSelectedList[position].setDessert!=null){
-                account += FastFoodModel.foodSelectedList[position].setDessert!!.price
-            }
-
-            if(FastFoodModel.foodSelectedList[position].setDrink!=null){
-                account += FastFoodModel.foodSelectedList[position].setDrink!!.price
-            }
-            account += (FastFoodModel.foodSelectedList[position].totalPrice) * FastFoodModel.foodSelectedList[position].foodCount
-
-            Log.d("plusItem",account.toString())
-            holder.setFoodPrice(position,account)
+            holder.setFoodPrice(position,setPrice)
             updateTotalOrderCount()
 
         }
@@ -57,18 +47,10 @@ class FoodOrderedListAdapter(private val binding: ActivityFastfoodHome2Binding) 
                 FastFoodModel.foodSelectedList[position].foodCount--
                 holder.setFoodCount(position)
 
-                var account: Int = 0
+                val setPrice = (FastFoodModel.foodSelectedList[position].totalPrice) * FastFoodModel.foodSelectedList[position].foodCount
 
-                account += FastFoodModel.foodSelectedList[position].setDessert?.price ?: 0
-                account += FastFoodModel.foodSelectedList[position].setDrink?.price?:0
-
-                account += (FastFoodModel.foodSelectedList[position].totalPrice+account) * FastFoodModel.foodSelectedList[position].foodCount
-
-                Log.d("setFoodPrice",account.toString())
-                Log.d("setFoodPrice",account.toString())
-
-                Log.d("setFoodPrice",account.toString())
-                holder.setFoodPrice(position,account)
+                holder.setFoodPrice(position,setPrice)
+                updateTotalOrderCount()
 
             }
 
