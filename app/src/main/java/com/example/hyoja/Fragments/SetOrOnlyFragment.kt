@@ -87,7 +87,11 @@ class SetOrOnlyFragment : DialogFragment() {
 
     private fun applyPay(){
         var payment : Int = (FastFoodModel.foodSelected.price)
-        orderingFood.price = payment
+
+        if (orderingFood.setDessert!=null){
+            payment += orderingFood.setDessert!!.price + orderingFood.setDrink!!.price
+        }
+        orderingFood.totalPrice = payment
     }
 
     override fun onResume() {

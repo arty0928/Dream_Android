@@ -29,10 +29,11 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
     lateinit var viewModel: FoodListViewModel
 
     private val option :ArrayList<String> =ArrayList()
-
     private val setOption :ArrayList<String> =ArrayList()
+    private val price : Int = 0
 
     val orderingFood : OrderingFood = OrderingFood(
+        totalPrice = price,
         food = FastFoodModel.foodSelected,
         option = option,
         setOption = setOption,
@@ -136,7 +137,11 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
             } else {
                 FastFoodModel.foodSelectedList.add(orderingFood)
                 Log.d("FastfoodModel.foodSelectedList","FastfoodModel.foodSelectedList=${FastFoodModel.foodSelectedList}")
-                applyPay()
+
+                Log.d("세트 메뉴 선택완료 CALLED","세트 메뉴 선택완료 CALLED")
+                applySetPay()
+
+
 
                 viewModel.orderListChanged()
                 Log.d(Tag,FastFoodModel.foodSelectedList.toString())
@@ -194,9 +199,16 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
 
     }
 
-    private fun applyPay(){
-        var payment : Int = (orderingFood.setDessert!!.price + orderingFood.setDrink!!.price + orderingFood.food.price) * orderingFood.foodCount
-        orderingFood.price = payment
+    private fun applySetPay(){
+        Log.d("orderingFood.food.price",orderingFood.food.price.toString())
+        Log.d("orderingFood.setDessert.price",orderingFood.setDessert!!.price.toString())
+        Log.d("orderingFood.setDrink.price",orderingFood.setDrink!!.price.toString())
+
+        var payment : Int = (orderingFood.food.price + orderingFood.setDessert!!.price + orderingFood.setDrink!!.price ) * orderingFood.foodCount
+        orderingFood.totalPrice = payment
+        Log.d("setMenu applyPay 여기 제대로 됨",orderingFood.totalPrice.toString())
+        Log.d("setMenu applyPay 여기 제대로 됨",orderingFood.toString())
+
     }
 
 }

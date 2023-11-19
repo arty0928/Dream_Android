@@ -1,17 +1,14 @@
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.databinding.FragmentFoodAddedBinding
 import com.example.hyoja.fastfoods.model.FastFoodModel
 import com.example.hyoja.fastfoods.model.OrderingFood
 
-class FoodOrderedListAdapter(private val itemClickListener: ItemClickListener) :
+class FoodOrderedListAdapter :
     RecyclerView.Adapter<FoodOrderedListAdapter.ViewHolder>() {
-
-    interface ItemClickListener {
-        fun onItemPlusClick(position: Int)
-        fun onItemMinusClick(position: Int)
-    }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -28,26 +25,73 @@ class FoodOrderedListAdapter(private val itemClickListener: ItemClickListener) :
     override fun getItemCount(): Int = FastFoodModel.foodSelectedList.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(FastFoodModel.foodSelectedList[position])
+
+        holder.binding.selectedItemName.text = FastFoodModel.foodSelectedList[position].food.name.toString()
+        holder.binding.selectedItemPrice.text = FastFoodModel.foodSelectedList[position].totalPrice.toString()
+        holder.binding.selectedItemCount.text = FastFoodModel.foodSelectedList[position].foodCount.toString()
 
         // itemPlus 버튼 클릭 시
         holder.binding.plusItem.setOnClickListener {
-            // 해당 아이템의 인덱스를 클릭 리스너를 통해 전달
-            itemClickListener.onItemPlusClick(holder.adapterPosition)
+            FastFoodModel.foodSelectedList[position].foodCount++
+            holder.setFoodCount(position)
+
+            var account: Int = 0
+
+            if(FastFoodModel.foodSelectedList[position].setDessert!=null){
+                Log.d("plusItem FastFoodModel.foodSelectedList[position].setDessert!!.price",FastFoodModel.foodSelectedList[position].setDessert!!.price.toString())
+                account += FastFoodModel.foodSelectedList[position].setDessert!!.price
+            }
+
+            if(FastFoodModel.foodSelectedList[position].setDrink!=null){
+                Log.d("plusItem FastFoodModel.foodSelectedList[position].setDrink!!.price",FastFoodModel.foodSelectedList[position].setDrink!!.price.toString())
+                account += FastFoodModel.foodSelectedList[position].setDrink!!.price
+            }
+            account += (FastFoodModel.foodSelectedList[position].totalPrice) * FastFoodModel.foodSelectedList[position].foodCount
+
+
+
+            Log.d("plusItem FastFoodModel.foodSelectedList[position].totalPrice ",FastFoodModel.foodSelectedList[position].totalPrice.toString())
+            Log.d("plusItem FastFoodModel.foodSelectedList[position].foodCount",FastFoodModel.foodSelectedList[position].foodCount.toString())
+
+            Log.d("plusItem",account.toString())
+            holder.setFoodPrice(position,account)
+
         }
         holder.binding.miusItem.setOnClickListener {
-            // 해당 아이템의 인덱스를 클릭 리스너를 통해 전달
-            itemClickListener.onItemMinusClick(holder.adapterPosition)
+            if(FastFoodModel.foodSelectedList[position].foodCount>1){
+                FastFoodModel.foodSelectedList[position].foodCount--
+                holder.setFoodCount(position)
+
+                var account: Int = 0
+
+                account += FastFoodModel.foodSelectedList[position].setDessert?.price ?: 0
+                account += FastFoodModel.foodSelectedList[position].setDrink?.price?:0
+
+                account += (FastFoodModel.foodSelectedList[position].totalPrice+account) * FastFoodModel.foodSelectedList[position].foodCount
+
+                Log.d("setFoodPrice",account.toString())
+                Log.d("setFoodPrice",account.toString())
+
+                Log.d("setFoodPrice",account.toString())
+                holder.setFoodPrice(position,account)
+
+            }
+
         }
     }
 
-    class ViewHolder(val binding: FragmentFoodAddedBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(itemView: FragmentFoodAddedBinding) : RecyclerView.ViewHolder(itemView.root)
+        {
+        val binding = itemView
+            val selectedItemName = binding.selectedItemName
+            val selectedItemPrice = binding.selectedItemPrice
+            val selectedItemCount = binding.selectedItemCount
 
-        fun bind(orderingFood: OrderingFood) {
-            binding.selectedItemName.text = orderingFood.food.name.toString()
-            binding.selectedItemPrice.text = orderingFood.price.toString()
-            binding.selectedItemCount.text = orderingFood.foodCount.toString()
+        fun setFoodCount(position: Int) {
+            selectedItemCount.text = FastFoodModel.foodSelectedList[position].foodCount.toString()
+        }
+        fun setFoodPrice(position: Int , account : Int){
+            selectedItemPrice.text = account.toString()
         }
     }
 }

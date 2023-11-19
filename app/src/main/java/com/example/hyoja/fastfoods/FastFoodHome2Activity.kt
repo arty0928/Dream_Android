@@ -26,7 +26,7 @@ import com.example.hyoja.fastfoods.util.FoodAddListner
 import com.example.hyoja.fastfoods.util.FoodUtilValue
 import com.example.hyoja.fastfoods.viewmodel.FoodListViewModel
 
-class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner, FoodOrderedListAdapter.ItemClickListener{
+class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
 
     private val Tag:String = "FastFoodHome2Activity"
 
@@ -189,11 +189,11 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner, FoodOrderedLi
     private fun addOnlyFood(){
         FastFoodModel.foodSelectedList.add(orderingFood)
         Log.d(Tag,FastFoodModel.foodSelectedList.toString())
-        applyPay()
+        onlyFoodApplyPay()
     }
-    private fun applyPay(){
+    private fun onlyFoodApplyPay(){
         var payment : Int = (FastFoodModel.foodSelected.price)
-        orderingFood.price = payment
+        orderingFood.totalPrice =  payment
     }
 
     private fun checkFoodListViewPagerSize(categroyName: String):Int{
@@ -251,8 +251,10 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner, FoodOrderedLi
         var account:Int = 0
 
         for (i in 0..FastFoodModel.foodSelectedList.size - 1){
-            account += FastFoodModel.foodSelectedList[i].price
+            account += FastFoodModel.foodSelectedList[i].totalPrice * FastFoodModel.foodSelectedList[i].foodCount
             Log.d(Tag,FastFoodModel.foodSelectedList[i].toString())
+            Log.d("FastFoodModel.foodSelectedList[i].price",FastFoodModel.foodSelectedList[i].totalPrice.toString())
+
         }
         Log.d("totalAccount",account.toString())
         return account
@@ -265,37 +267,19 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner, FoodOrderedLi
         }
 
         Log.d(Tag,"foodAdded 함수 called")
-        binding.FoodSelectedList.adapter = FoodOrderedListAdapter(this)
 
-        // 선택된 음식 목록 업데이트
-//        viewModel.orderListUpdateCount(position,FastFoodModel.foodSelectedList)
-
+        binding.FoodSelectedList.adapter = FoodOrderedListAdapter()
 
         //총 결제 금액 세팅
+        updateTotalFoodInfo()
+    }
+
+    fun updateTotalFoodInfo(){
         binding.TotalOrderPrice.text = getToTalPrice().toString()
         binding.TotalOrderCount.text = "${FastFoodModel.foodSelectedList.size.toString()}개"
-
     }
 
     // ItemClickListener에서 정의한 메서드 구현
-    override fun onItemPlusClick(position: Int) {
-        FastFoodModel.foodSelectedList[position].foodCount +=1
-        viewModel.orderListUpdateCount(position,FastFoodModel.foodSelectedList)
-
-        Log.d("onItemPlusClick", FastFoodModel.foodSelectedList[position].foodCount.toString())
-        Log.d("onItemPlusClick 전체", FastFoodModel.foodSelectedList[position].toString())
-    }
-
-    override fun onItemMinusClick(position: Int) {
-        if(FastFoodModel.foodSelectedList[position].foodCount>1){
-            FastFoodModel.foodSelectedList[position].foodCount -=1
-            viewModel.orderListUpdateCount(position,FastFoodModel.foodSelectedList)
-
-        }
-        Log.d("onItemMinusClick", FastFoodModel.foodSelectedList[position].foodCount.toString())
-        Log.d("onItemPlusClick 전체", FastFoodModel.foodSelectedList[position].toString())
-//        binding.FoodSelectedList
-    }
 
 }
 

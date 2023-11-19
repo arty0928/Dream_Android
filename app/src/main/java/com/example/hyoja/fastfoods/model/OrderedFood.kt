@@ -6,7 +6,7 @@ data class OrderingFood(
 
     var food: FoodDataInterface,
     var foodCount:Int = 1,
-    var price: Int = 0,
+    var totalPrice: Int = 0,
     var setMenuCount:Int = 2,
 
 
