@@ -8,10 +8,15 @@ import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.databinding.OrderedListItemBinding
 
 class OrderedListAdapter: RecyclerView.Adapter<OrderedListAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
+
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ViewHolder =
         ViewHolder(OrderedListItemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
 
     override fun getItemCount(): Int = CafeModel.drinkSelectedList.size
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // 이미지
         holder.drinkImage.setImageResource(CafeModel.drinkSelectedList[position].drink.drinkImage)

@@ -27,7 +27,9 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
     private val Tag:String = "DrinkOrderAddDialogFragment"
     lateinit var binding: FragmentDrinkOrderAddBinding
     private lateinit var viewModel: MenuListViewModel
+
     private val selectedDrinkItem = CafeModel.drinkSelected
+
     private val freeOption:ArrayList<String> = ArrayList()
     private val option:ArrayList<String> = ArrayList()
     private val orderingDrink:OrderingDrink = OrderingDrink(

@@ -6,3 +6,9 @@ data class FoodUtilValue (
     val dessertListSize: Int = 12,
     val drinkListSize: Int =6
 )
+
+data class setMenuFoodUtilValue (
+    val setDessertListSize: Int = 9,
+    val setDrinkListSize: Int = 9
+)
+
