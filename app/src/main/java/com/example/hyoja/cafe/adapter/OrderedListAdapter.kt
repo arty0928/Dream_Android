@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.model.OrderingDrink
+import com.example.hyoja.cafe.util.ApplyOrderList
 import com.example.hyoja.databinding.OrderedListItemBinding
 
 class OrderedListAdapter: RecyclerView.Adapter<OrderedListAdapter.ViewHolder>() {
@@ -27,10 +28,17 @@ class OrderedListAdapter: RecyclerView.Adapter<OrderedListAdapter.ViewHolder>() 
         holder.itemPlus.setOnClickListener{
             CafeModel.drinkSelectedList[position].drinkCount++
             holder.setDrinkCount(position)
+            holder.setPrice()
         }
         holder.itemMinus.setOnClickListener{
             CafeModel.drinkSelectedList[position].drinkCount --
             holder.setDrinkCount(position)
+            holder.setPrice()
+        }
+
+        holder.cancelButton.setOnClickListener {
+            CafeModel.drinkSelectedList.removeAt(position)
+            holder.setPrice()
         }
     }
     class ViewHolder(itemView: OrderedListItemBinding):RecyclerView.ViewHolder(itemView.root){
@@ -39,13 +47,16 @@ class OrderedListAdapter: RecyclerView.Adapter<OrderedListAdapter.ViewHolder>() 
         val itemPlus = binding.itemPlus
         val itemMinus = binding.itemMinus
         val count = binding.itemNum
+        val cancelButton = binding.cancelButton
 
         fun setDrinkCount(position: Int){
+            var orderingDrink = CafeModel.drinkSelectedList[position]
+            orderingDrink.price = (orderingDrink.drink.price + 500 * orderingDrink.size) * orderingDrink.drinkCount
             count.text = CafeModel.drinkSelectedList[position].drinkCount.toString()
         }
 
-        fun setPrice(position: Int){
+        fun setPrice(){
+            ApplyOrderList(CafeModel.currentActivity).drinkPriceSet()
         }
-
     }
 }
