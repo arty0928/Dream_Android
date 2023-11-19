@@ -2,11 +2,9 @@ package com.example.hyoja.cafe
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,7 +13,6 @@ import com.example.hyoja.cafe.adapter.DrinkListNewMenuAdapter
 import com.example.hyoja.cafe.adapter.MenuCategoryAdapter
 import com.example.hyoja.cafe.adapter.OrderedListAdapter
 import com.example.hyoja.cafe.fragment.DrinkOrderAddDialogFragment
-import com.example.hyoja.cafe.fragment.OptionAddInterface
 import com.example.hyoja.cafe.fragment.PayFragment
 import com.example.hyoja.cafe.model.CafeModel
 import com.example.hyoja.cafe.util.DrinkAddListner
@@ -23,7 +20,6 @@ import com.example.hyoja.cafe.util.UtilValue
 import com.example.hyoja.cafe.viewmodel.MenuListViewModel
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityCafeHome1Binding
-import java.util.logging.Logger
 
 class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
     private val Tag:String = "CafeHome1Activity"
