@@ -75,6 +75,7 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
             if (FastFoodModel.foodSelectedList.size == 0) {
                 Toast.makeText(this, "메뉴를 선택해주세요.", Toast.LENGTH_SHORT).show()
             } else {
+                common.goToFastFoodPayHome(view)
                 Log.d("패스트 푸드 결제시작", FastFoodModel.foodSelectedList.toString())
             }
         }

@@ -12,6 +12,7 @@ import com.example.hyoja.common.MainActivity
 import com.example.hyoja.fastfoods.FastFoodHome1Activity
 import com.example.hyoja.fastfoods.FastFoodHome2Activity
 import com.example.hyoja.fastfoods.FastFoodHomeActivity
+import com.example.hyoja.fastfoods.FastFoodPayActivity
 import com.example.hyoja.fastfoods.model.FastFoodModel
 
 
@@ -39,6 +40,12 @@ class CommonUi {
     fun goToFastFoodHome1(v: Context){
         FastFoodModel.foodSelectedList.clear()
         val intent = Intent(v, FastFoodHome1Activity::class.java)
+        v.startActivity(intent)
+        Log.d("goToFastFood","패스트푸드 홈으로 전환")
+    }
+
+    fun goToFastFoodPayHome(v: Context){
+        val intent = Intent(v, FastFoodPayActivity::class.java)
         v.startActivity(intent)
         Log.d("goToFastFood","패스트푸드 홈으로 전환")
     }
