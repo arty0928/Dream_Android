@@ -255,7 +255,7 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
 
     }
 
-    private fun getToTalPrice(): Int{
+    fun getToTalPrice(): Int{
         var account:Int = 0
 
         for (i in 0..FastFoodModel.foodSelectedList.size - 1){
@@ -264,6 +264,7 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
             Log.d("FastFoodModel.foodSelectedList[i].price",FastFoodModel.foodSelectedList[i].totalPrice.toString())
 
         }
+        FastFoodModel.priceToPay = account
         Log.d("totalAccount",account.toString())
         return account
     }
