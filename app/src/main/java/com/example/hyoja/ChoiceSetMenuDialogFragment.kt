@@ -137,11 +137,38 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
                 // "세트 메뉴를 2개 선택해주세요" 토스트 메시지를 표시
                 Toast.makeText(requireContext(), "세트 메뉴를 2개 선택해주세요", Toast.LENGTH_SHORT).show()
             } else {
-                FastFoodModel.foodSelectedList.add(orderingFood)
+                var isSame = false
+
+                Log.d("addOnlyBurger",FastFoodModel.foodSelectedList.toString())
+                applySetPay()
+
+                for (i in 0..FastFoodModel.foodSelectedList.size-1){
+                    Log.d("addOnlyBurger food name",FastFoodModel.foodSelectedList[i].food.name.toString())
+                    Log.d("addOnlyBurger ordering food name",orderingFood.food.name.toString())
+
+                    Log.d("addOnlyBurger food totalPrice",FastFoodModel.foodSelectedList[i].totalPrice.toString())
+                    Log.d("addOnlyBurger ordering food totalPrice",orderingFood.totalPrice.toString())
+
+                    Log.d("addOnlyBurger ordering food totalPrice",orderingFood.toString())
+
+
+                    if(FastFoodModel.foodSelectedList[i].food.name == orderingFood.food.name && FastFoodModel.foodSelectedList[i].totalPrice == orderingFood.totalPrice){
+                        isSame = true
+                        FastFoodModel.foodSelectedList[i].foodCount++
+                    }
+                }
+
+                if (!isSame){
+                    FastFoodModel.foodSelectedList.add(orderingFood)
+                }
+
+                Log.d(Tag,FastFoodModel.foodSelectedList.toString())
+
+
+
                 Log.d("FastfoodModel.foodSelectedList","FastfoodModel.foodSelectedList=${FastFoodModel.foodSelectedList}")
 
                 Log.d("세트 메뉴 선택완료 CALLED","세트 메뉴 선택완료 CALLED")
-                applySetPay()
 
 
 

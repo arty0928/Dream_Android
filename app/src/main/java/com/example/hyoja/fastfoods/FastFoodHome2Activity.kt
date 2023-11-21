@@ -196,9 +196,36 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
     }
 
     private fun addOnlyFood(){
-        FastFoodModel.foodSelectedList.add(orderingFood)
-        Log.d(Tag,FastFoodModel.foodSelectedList.toString())
+        var isSame = false
+
+        Log.d("addOnlyBurger",FastFoodModel.foodSelectedList.toString())
         onlyFoodApplyPay()
+
+        for (i in 0..FastFoodModel.foodSelectedList.size-1){
+            Log.d("addOnlyBurger food name",FastFoodModel.foodSelectedList[i].food.name.toString())
+            Log.d("addOnlyBurger ordering food name",orderingFood.food.name.toString())
+
+            Log.d("addOnlyBurger food totalPrice",FastFoodModel.foodSelectedList[i].totalPrice.toString())
+            Log.d("addOnlyBurger ordering food totalPrice",orderingFood.totalPrice.toString())
+
+            Log.d("addOnlyBurger ordering food totalPrice",orderingFood.toString())
+
+
+            if(FastFoodModel.foodSelectedList[i].food.name == orderingFood.food.name && FastFoodModel.foodSelectedList[i].totalPrice == orderingFood.totalPrice){
+                isSame = true
+                FastFoodModel.foodSelectedList[i].foodCount++
+            }
+        }
+
+        if (!isSame){
+            FastFoodModel.foodSelectedList.add(orderingFood)
+        }
+
+        Log.d(Tag,FastFoodModel.foodSelectedList.toString())
+
+        viewModel.orderListChanged()
+        Log.d(Tag,FastFoodModel.foodSelectedList.toString())
+
     }
     private fun onlyFoodApplyPay(){
         var payment : Int = (FastFoodModel.foodSelected.price)

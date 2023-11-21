@@ -29,6 +29,7 @@ class FoodOrderedListAdapter(private val binding: ActivityFastfoodHome2Binding) 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
+
         holder.binding.selectedItemName.text = FastFoodModel.foodSelectedList[position].food.name.toString()
         holder.binding.selectedItemPrice.text = FastFoodModel.foodSelectedList[position].totalPrice.toString()
         holder.binding.selectedItemCount.text = FastFoodModel.foodSelectedList[position].foodCount.toString()
