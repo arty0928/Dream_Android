@@ -8,15 +8,15 @@
         android:bottom="2dp">
         <shape android:shape="rectangle">
             <corners
-                android:topLeftRadius="10dp"
-                android:topRightRadius="10dp"
-                android:bottomLeftRadius="10dp"
-                android:bottomRightRadius="10dp"
+                android:topLeftRadius="4dp"
+                android:topRightRadius="4dp"
+                android:bottomLeftRadius="4dp"
+                android:bottomRightRadius="4dp"
                 />
 
             <stroke android:width="2dp"
-                android:color="#D9D9D9" />
-            <solid android:color="#D9D9D9" />
+                android:color="#EEEEEE" />
+            <solid android:color="#EEEEEE" />
         </shape>
     </item>
 </layer-list>
