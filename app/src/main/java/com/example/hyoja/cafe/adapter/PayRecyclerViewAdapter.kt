@@ -14,7 +14,7 @@ class PayRecyclerViewAdapter: RecyclerView.Adapter<PayRecyclerViewAdapter.ViewHo
 
     override fun getItemCount(): Int = CafeModel.drinkSelectedList.size
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
+        holder.itemView
     }
     class ViewHolder(itemView: PayOrderedDrinksBinding): RecyclerView.ViewHolder(itemView.root){
 

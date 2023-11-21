@@ -8,7 +8,7 @@ import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityCafeHomeBinding
 
 class CafeHomeActivity : AppCompatActivity() {
-    var backPressedTime: Long = 0
+    private var backPressedTime: Long = 0
     private lateinit var binding: ActivityCafeHomeBinding
     val common = CommonUi()
 

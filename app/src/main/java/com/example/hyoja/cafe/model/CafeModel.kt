@@ -1,6 +1,7 @@
 package com.example.hyoja.cafe.model
 
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.hyoja.cafe.model.OrderingDrink
 import com.example.hyoja.cafe.util.DrinkAddListner
 
@@ -13,6 +14,8 @@ object CafeModel{
     var optionTemp:ArrayList<String> = ArrayList()
 
     lateinit var currentActivity: DrinkAddListner
+    lateinit var ActivityStatus: AppCompatActivity
+    lateinit var FragmentStatus: Fragment
 
     fun getTotalPrice(): Int{
         var price = 0

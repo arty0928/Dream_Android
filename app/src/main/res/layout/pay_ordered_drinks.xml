@@ -35,14 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <ImageButton
-                        android:id="@+id/itemMinus"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/border_line"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/minus_button" />
+
 
                     <TextView
                         android:id="@+id/itemNum"
@@ -55,25 +48,10 @@
                         android:textColor="@color/black"
                         android:textSize="20dp" />
 
-                    <ImageButton
-                        android:id="@+id/itemPlus"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/border_line"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/plus_button" />
                 </LinearLayout>
 
             </LinearLayout>
-            <ImageButton
-                android:layout_margin="10dp"
-                android:layout_gravity="right"
-                android:scaleType="centerInside"
-                android:background="@android:color/transparent"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/x_button"/>
+
         </FrameLayout>
         <LinearLayout
             android:orientation="vertical"
@@ -84,6 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="70dp">
                 <TextView
+                    android:id="@+id/drinkName"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
                     android:textStyle="bold"
@@ -99,6 +78,7 @@
                     android:layout_height="30dp"
                     android:src="@drawable/mdi_won"/>
                 <TextView
+                    android:id="@+id/price"
                     android:layout_gravity="right|center"
                     android:layout_marginTop="20dp"
                     android:textStyle="bold"
@@ -108,7 +88,6 @@
                     android:layout_height="wrap_content"/>
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="187dp"
                 android:layout_height="wrap_content"
@@ -133,6 +112,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/drinkPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|center"
@@ -145,6 +125,7 @@
                     android:text="X"
                     android:textSize="15dp" />
                 <TextView
+                    android:id="@+id/drinkCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|center"
@@ -152,6 +133,13 @@
                     android:textSize="15dp" />
 
             </LinearLayout>
+            <TextView
+                android:layout_marginBottom="14dp"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Extra 샷추가 얼음추가 시럽추가"/>
 
 
 

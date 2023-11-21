@@ -12,7 +12,7 @@
         android:orientation="vertical">
         <LinearLayout
             android:layout_weight="2"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <androidx.recyclerview.widget.RecyclerView
@@ -20,136 +20,174 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
+
         </LinearLayout>
         <LinearLayout
-            android:weightSum="10"
+            android:background="@drawable/dashed_line"
             android:layout_weight="3"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
-                android:gravity="center|right"
+                android:weightSum="10"
                 android:layout_weight="3"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <TextView
-                    android:gravity="center"
-                    tools:ignore="RtlCompat"
-                    android:textStyle="bold"
-                    android:textAlignment="textEnd"
-                    android:text="주문금액"
-                    android:textSize="20dp"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp" />
-                <TextView
-                    android:gravity="center"
-                    tools:ignore="RtlCompat"
-                    android:textStyle="bold"
-                    android:textAlignment="textEnd"
-                    android:text="할인금액"
-                    android:textSize="20dp"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"/>
-                <TextView
-                    android:gravity="center"
-                    tools:ignore="RtlCompat"
-                    android:textStyle="bold"
-                    android:textAlignment="textEnd"
-                    android:text="결제금액"
-                    android:textSize="20dp"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"/>
-                <TextView
-                    android:gravity="center"
-                    tools:ignore="RtlCompat"
-                    android:textStyle="bold"
-                    android:textAlignment="textEnd"
-                    android:text="잔여금액"
-                    android:textSize="20dp"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"/>
+                <LinearLayout
+                    android:gravity="center|right"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:gravity="center"
+                        tools:ignore="RtlCompat"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"
+                        android:text="주문금액"
+                        android:textSize="20dp"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp" />
+                    <TextView
+                        android:gravity="center"
+                        tools:ignore="RtlCompat"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"
+                        android:text="할인금액"
+                        android:textSize="20dp"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"/>
+
+                    <TextView
+                        android:gravity="center"
+                        tools:ignore="RtlCompat"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"
+                        android:text="잔여금액"
+                        android:textSize="20dp"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="right|center"
+                    android:layout_weight="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_marginVertical="8dp"
+                        android:scaleType="centerInside"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/mdi_won"/>
+                    <ImageView
+                        android:layout_marginVertical="7dp"
+                        android:scaleType="centerInside"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/mdi_won"/>
+                    <ImageView
+                        android:layout_marginVertical="8dp"
+                        android:scaleType="centerInside"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/mdi_won"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center|left"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/price"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="textStart"
+                        android:text="20000"
+                        android:textSize="20dp"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        tools:ignore="RtlCompat" />
+                    <TextView
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="textStart"
+                        android:text="0"
+                        android:textSize="20dp"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        tools:ignore="RtlCompat" />
+                    <TextView
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="textStart"
+                        android:text="20000"
+                        android:textSize="20dp"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
 
             </LinearLayout>
             <LinearLayout
-                android:orientation="vertical"
-                android:gravity="right|center"
-                android:layout_weight="4"
+                android:gravity="center"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:layout_marginVertical="8dp"
-                    android:scaleType="centerInside"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/mdi_won"/>
-                <ImageView
-                    android:layout_marginVertical="7dp"
-                    android:scaleType="centerInside"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/mdi_won"/>
-                <ImageView
-                    android:layout_marginVertical="7dp"
-                    android:scaleType="centerInside"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/mdi_won"/>
-                <ImageView
-                    android:layout_marginVertical="8dp"
-                    android:scaleType="centerInside"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/mdi_won"/>
-
-
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/allCancel"
+                    android:layout_weight="1"
+                    android:textColor="@color/cafe_darkRed"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="19dp"
+                    android:text="전체취소"
+                    android:textAlignment="center"
+                    android:background="@drawable/hot_button_unclicked"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+                <TextView
+                    android:id="@+id/back"
+                    android:layout_weight="1"
+                    android:textColor="@color/cafe_darkRed"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="19dp"
+                    android:text="뒤로"
+                    android:textAlignment="center"
+                    android:background="@drawable/hot_button_unclicked"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+                <TextView
+                    android:id="@+id/next"
+                    android:layout_weight="1"
+                    android:textColor="@color/cafe_white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="19dp"
+                    android:text="다음"
+                    android:textAlignment="center"
+                    android:background="@drawable/hot_button_clicked"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
             </LinearLayout>
-            <LinearLayout
-                android:gravity="center|left"
-                android:layout_weight="3"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:textAlignment="textStart"
-                    android:text="20000"
-                    android:textSize="20dp"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    tools:ignore="RtlCompat" />
-                <TextView
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:textAlignment="textStart"
-                    android:text="0"
-                    android:textSize="20dp"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    tools:ignore="RtlCompat" />
-                <TextView
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:textAlignment="textStart"
-                    android:text="0"
-                    android:textSize="20dp"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    tools:ignore="RtlCompat" />
-                <TextView
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:textAlignment="textStart"
-                    android:text="20000"
-                    android:textSize="20dp"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    tools:ignore="RtlCompat" />
-
-            </LinearLayout>
-
         </LinearLayout>
+
 
     </LinearLayout>
 
