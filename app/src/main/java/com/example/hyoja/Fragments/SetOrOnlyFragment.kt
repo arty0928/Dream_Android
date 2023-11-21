@@ -26,13 +26,15 @@ class SetOrOnlyFragment : DialogFragment() {
     private val option :ArrayList<String> =ArrayList()
 
     private val setOption :ArrayList<String> =ArrayList()
+    private val category : String = "newMenu"
 
     val orderingFood : OrderingFood = OrderingFood(
         food = FastFoodModel.foodSelected,
         option = option,
         setOption = setOption,
         setDessert = null,
-        setDrink = null
+        setDrink = null,
+        category = category
     )
 
     override fun onCreateView(
@@ -62,7 +64,7 @@ class SetOrOnlyFragment : DialogFragment() {
             requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
             requireActivity().supportFragmentManager.popBackStack()
 
-            ApplyFoodOrderList(FastFoodModel.currentActivity)
+            ApplyFoodOrderList(FastFoodModel.currentActivity).foodAdded()
 
         }
 
@@ -78,10 +80,33 @@ class SetOrOnlyFragment : DialogFragment() {
 
     private fun addOnlyBurger(){
         Log.d(Tag,"addOnlyBurger called")
-        FastFoodModel.foodSelectedList.add(orderingFood)
+        var isSame = false
+
+        Log.d("addOnlyBurger",FastFoodModel.foodSelectedList.toString())
+        applyPay()
+
+        for (i in 0..FastFoodModel.foodSelectedList.size-1){
+            Log.d("addOnlyBurger food name",FastFoodModel.foodSelectedList[i].food.name.toString())
+            Log.d("addOnlyBurger ordering food name",orderingFood.food.name.toString())
+
+            Log.d("addOnlyBurger food totalPrice",FastFoodModel.foodSelectedList[i].totalPrice.toString())
+            Log.d("addOnlyBurger ordering food totalPrice",orderingFood.totalPrice.toString())
+
+            Log.d("addOnlyBurger ordering food totalPrice",orderingFood.toString())
+
+
+            if(FastFoodModel.foodSelectedList[i].food.name == orderingFood.food.name && FastFoodModel.foodSelectedList[i].totalPrice == orderingFood.totalPrice){
+                isSame = true
+                FastFoodModel.foodSelectedList[i].foodCount++
+            }
+        }
+
+        if (!isSame){
+            FastFoodModel.foodSelectedList.add(orderingFood)
+        }
+
         Log.d(Tag,FastFoodModel.foodSelectedList.toString())
 
-        applyPay()
         viewModel.orderListChanged()
     }
 

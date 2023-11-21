@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.hyoja.Fragments.SetOrOnlyFragment
+import com.example.hyoja.Fragments.checkCancelFragment
 import com.example.hyoja.R
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityFastfoodHome2Binding
@@ -100,7 +101,10 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
 
         //취소하기 하면 담은 거 전체 삭제
         binding.cancelButton.setOnClickListener {
-            common.goToFastFoodHome1(view)
+            Log.d("cancelButton called","cancelButton called")
+            checkCancelFragment().show(
+                supportFragmentManager, "checkCancelFragment"
+            )
         }
 
         //메뉴 리스트 왼쪽 버튼
@@ -135,11 +139,12 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
                         option = option,
                         setOption = setOption,
                         setDessert = null,
-                        setDrink = null
+                        setDrink = null,
+                        category = FastFoodModel.foodSelected.category
                     )
                     Log.d(Tag,orderingFood.toString())
                     addOnlyFood()
-                    ApplyFoodOrderList(FastFoodModel.currentActivity)
+                    ApplyFoodOrderList(FastFoodModel.currentActivity).foodAdded()
 
                 }
 
@@ -191,9 +196,36 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
     }
 
     private fun addOnlyFood(){
-        FastFoodModel.foodSelectedList.add(orderingFood)
-        Log.d(Tag,FastFoodModel.foodSelectedList.toString())
+        var isSame = false
+
+        Log.d("addOnlyBurger",FastFoodModel.foodSelectedList.toString())
         onlyFoodApplyPay()
+
+        for (i in 0..FastFoodModel.foodSelectedList.size-1){
+            Log.d("addOnlyBurger food name",FastFoodModel.foodSelectedList[i].food.name.toString())
+            Log.d("addOnlyBurger ordering food name",orderingFood.food.name.toString())
+
+            Log.d("addOnlyBurger food totalPrice",FastFoodModel.foodSelectedList[i].totalPrice.toString())
+            Log.d("addOnlyBurger ordering food totalPrice",orderingFood.totalPrice.toString())
+
+            Log.d("addOnlyBurger ordering food totalPrice",orderingFood.toString())
+
+
+            if(FastFoodModel.foodSelectedList[i].food.name == orderingFood.food.name && FastFoodModel.foodSelectedList[i].totalPrice == orderingFood.totalPrice){
+                isSame = true
+                FastFoodModel.foodSelectedList[i].foodCount++
+            }
+        }
+
+        if (!isSame){
+            FastFoodModel.foodSelectedList.add(orderingFood)
+        }
+
+        Log.d(Tag,FastFoodModel.foodSelectedList.toString())
+
+        viewModel.orderListChanged()
+        Log.d(Tag,FastFoodModel.foodSelectedList.toString())
+
     }
     private fun onlyFoodApplyPay(){
         var payment : Int = (FastFoodModel.foodSelected.price)
@@ -251,7 +283,7 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
 
     }
 
-    private fun getToTalPrice(): Int{
+    fun getToTalPrice(): Int{
         var account:Int = 0
 
         for (i in 0..FastFoodModel.foodSelectedList.size - 1){
@@ -260,6 +292,7 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
             Log.d("FastFoodModel.foodSelectedList[i].price",FastFoodModel.foodSelectedList[i].totalPrice.toString())
 
         }
+        FastFoodModel.priceToPay = account
         Log.d("totalAccount",account.toString())
         return account
     }
@@ -272,21 +305,20 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
 
         Log.d(Tag,"foodAdded 함수 called")
 
-//        binding.FoodSelectedList.adapter = FoodOrderedListAdapter(ActivityFastfoodHome2Binding)
-//        binding.FoodSelectedList.adapter = FoodOrderedListAdapter(binding)
         binding.FoodSelectedList.adapter = FoodOrderedListAdapter(binding)
 
         //총 결제 금액 세팅
         updateTotalFoodInfo()
     }
 
+    override fun foodSet() {
+        ApplyFoodOrderList(FastFoodModel.currentActivity).foodAdded()
+    }
+
     fun updateTotalFoodInfo(){
         binding.TotalOrderPrice.text = getToTalPrice().toString()
         binding.TotalOrderCount.text = "${FastFoodModel.foodSelectedList.size.toString()}개"
     }
-
-    // ItemClickListener에서 정의한 메서드 구현
-
 }
 
 

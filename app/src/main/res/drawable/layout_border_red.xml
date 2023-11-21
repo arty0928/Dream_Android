@@ -11,6 +11,7 @@
 
             <stroke android:width="2dp"
                 android:color="@color/cafe_darkRed" />
+                        <solid android:color="@color/white" />
         </shape>
     </item>
 </layer-list>

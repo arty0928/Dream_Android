@@ -1,5 +1,6 @@
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hyoja.cafe.model.CafeModel
@@ -7,6 +8,7 @@ import com.example.hyoja.databinding.ActivityFastfoodHome2Binding
 import com.example.hyoja.databinding.FragmentFoodAddedBinding
 import com.example.hyoja.fastfoods.model.FastFoodModel
 import com.example.hyoja.fastfoods.model.OrderingFood
+import com.example.hyoja.fastfoods.util.ApplyFoodOrderList
 
 class FoodOrderedListAdapter(private val binding: ActivityFastfoodHome2Binding) :
     RecyclerView.Adapter<FoodOrderedListAdapter.ViewHolder>() {
@@ -27,9 +29,14 @@ class FoodOrderedListAdapter(private val binding: ActivityFastfoodHome2Binding) 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
+
         holder.binding.selectedItemName.text = FastFoodModel.foodSelectedList[position].food.name.toString()
         holder.binding.selectedItemPrice.text = FastFoodModel.foodSelectedList[position].totalPrice.toString()
         holder.binding.selectedItemCount.text = FastFoodModel.foodSelectedList[position].foodCount.toString()
+
+        if(FastFoodModel.foodSelectedList[position].category == "Dessert" ||FastFoodModel.foodSelectedList[position].category == "Drink"){
+            holder.binding.selectedItemAddToping.visibility = View.INVISIBLE
+        }
 
         // itemPlus 버튼 클릭 시
         holder.binding.plusItem.setOnClickListener {
@@ -55,9 +62,20 @@ class FoodOrderedListAdapter(private val binding: ActivityFastfoodHome2Binding) 
             }
 
         }
+        holder.binding.selectItemDelete.setOnClickListener {
+
+            FastFoodModel.foodSelectedList.removeAt(position)
+            Log.d("deleteItem",FastFoodModel.foodSelectedList.toString())
+            val (count, price) = updateTotalOrderCount()
+
+            binding.TotalOrderCount.text = count.toString()
+            binding.TotalOrderPrice.text = price.toString()
+
+            holder.deleteItem(position)
+        }
     }
 
-    private fun updateTotalOrderCount() {
+    private fun updateTotalOrderCount() : Pair<Int,Int>{
 
         var sumCount = 0
         var sumPrice = 0
@@ -66,8 +84,10 @@ class FoodOrderedListAdapter(private val binding: ActivityFastfoodHome2Binding) 
             sumCount += FastFoodModel.foodSelectedList[i].foodCount
             sumPrice += FastFoodModel.foodSelectedList[i].foodCount * FastFoodModel.foodSelectedList[i].totalPrice
         }
-        binding.TotalOrderCount.text = sumCount.toString()
-        binding.TotalOrderPrice.text = sumPrice.toString()
+//        binding.TotalOrderCount.text = sumCount.toString()
+//        binding.TotalOrderPrice.text = sumPrice.toString()
+
+        return Pair(sumCount,sumPrice)
 
     }
 
@@ -84,6 +104,10 @@ class FoodOrderedListAdapter(private val binding: ActivityFastfoodHome2Binding) 
         fun setFoodPrice(position: Int , account : Int){
             selectedItemPrice.text = account.toString()
         }
-    }
+
+        fun deleteItem(position: Int) {
+            ApplyFoodOrderList(FastFoodModel.currentActivity).foodSet()
+        }
+        }
 
 }

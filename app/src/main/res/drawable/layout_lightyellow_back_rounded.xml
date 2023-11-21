@@ -15,8 +15,8 @@
                 />
 
             <stroke android:width="2dp"
-                android:color="#F6D492" />
-            <solid android:color="#F6D492  " />
+                android:color="#F1A91C" />
+            <solid android:color="#F1A91C  " />
         </shape>
     </item>
 </layer-list>

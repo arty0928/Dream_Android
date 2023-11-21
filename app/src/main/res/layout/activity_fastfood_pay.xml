@@ -98,7 +98,7 @@
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:gravity="center"
                                 android:textColor="@color/black"
-                                android:layout_weight="1">
+                                android:layout_weight="1.4">
 
                             </TextView>
 
@@ -109,7 +109,7 @@
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:gravity="center"
-                                android:layout_weight="1">
+                                android:layout_weight="1.2">
 
                             </TextView>
 
@@ -272,6 +272,7 @@
                             android:background="@drawable/layout_border_lightgray"
                             >
                             <LinearLayout
+                                android:layout_margin="2dp"
                                 android:layout_weight="4.5"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -371,9 +372,20 @@
                                 android:layout_weight="3"
                                 android:background="@color/cafe_darkRed">
 
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="STEP 1    포장을 선택하세요"
+                                    android:fontFamily="@font/poppins_extrabold"
+                                    android:textColor="@color/white"
+                                    android:gravity="center|left"
+                                    android:textSize="13dp"
+                                    android:layout_marginLeft="5dp"/>
+
                             </LinearLayout>
 
                             <LinearLayout
+
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -486,12 +498,22 @@
                             >
 
                             <LinearLayout
-                                android:layout_margin="3dp"
+                                android:layout_margin="2dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="5.5"
-                                android:background="#D9D9D9"
+                                android:background="#979797"
                                 >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="STEP2    할인/적립을 선택하세요"
+                                    android:fontFamily="@font/poppins_extrabold"
+                                    android:textColor="@color/white"
+                                    android:gravity="center|left"
+                                    android:textSize="12dp"
+                                    android:layout_marginLeft="5dp"/>
 
                             </LinearLayout>
 
@@ -533,6 +555,13 @@
 
 
                                     </LinearLayout>
+                                    <ImageView
+                                        android:layout_marginTop="10dp"
+
+                                        android:layout_weight="1.99"
+                                        android:background="#AAAAAA"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
                                     <LinearLayout
                                         android:layout_margin="10dp"
                                         android:layout_width="match_parent"
@@ -561,6 +590,14 @@
                                     </LinearLayout>
 
                                 </LinearLayout>
+
+                                <ImageView
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="#AAAAAA"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"/>
+
                                 <LinearLayout
                                     android:layout_weight="1"
                                     android:layout_width="match_parent"
@@ -594,6 +631,13 @@
 
 
                                     </LinearLayout>
+                                    <ImageView
+                                        android:layout_marginBottom="10dp"
+
+                                        android:layout_weight="1.99"
+                                        android:background="#AAAAAA"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
                                     <LinearLayout
                                         android:layout_margin="10dp"
                                         android:layout_width="match_parent"
@@ -640,13 +684,21 @@
                             >
 
                             <LinearLayout
-                                android:layout_margin="3dp"
+                                android:layout_margin="2dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="5.5"
-                                android:background="#D9D9D9"
+                                android:background="#979797"
                                 >
-
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="STEP 3      결제를 선택하세요"
+                                    android:fontFamily="@font/poppins_extrabold"
+                                    android:textColor="@color/white"
+                                    android:gravity="center|left"
+                                    android:textSize="13dp"
+                                    android:layout_marginLeft="5dp"/>
                             </LinearLayout>
 
                             <LinearLayout
@@ -687,6 +739,12 @@
 
 
                                     </LinearLayout>
+                                    <ImageView
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1.99"
+                                        android:background="#AAAAAA"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
                                     <LinearLayout
                                         android:layout_margin="10dp"
                                         android:layout_width="match_parent"
@@ -715,6 +773,12 @@
                                     </LinearLayout>
 
                                 </LinearLayout>
+                                <ImageView
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="#AAAAAA"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"/>
                                 <LinearLayout
                                     android:layout_weight="1"
                                     android:layout_width="match_parent"
@@ -748,6 +812,13 @@
 
 
                                     </LinearLayout>
+                                    <ImageView
+                                        android:layout_marginBottom="10dp"
+
+                                        android:layout_weight="1.99"
+                                        android:background="#AAAAAA"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
                                     <LinearLayout
                                         android:layout_margin="10dp"
                                         android:layout_width="match_parent"
