@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.hyoja.Fragments.SetOrOnlyFragment
+import com.example.hyoja.Fragments.checkCancelFragment
 import com.example.hyoja.R
 import com.example.hyoja.common.util.CommonUi
 import com.example.hyoja.databinding.ActivityFastfoodHome2Binding
@@ -100,7 +101,10 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
 
         //취소하기 하면 담은 거 전체 삭제
         binding.cancelButton.setOnClickListener {
-            common.goToFastFoodHome1(view)
+            Log.d("cancelButton called","cancelButton called")
+            checkCancelFragment().show(
+                supportFragmentManager, "checkCancelFragment"
+            )
         }
 
         //메뉴 리스트 왼쪽 버튼
