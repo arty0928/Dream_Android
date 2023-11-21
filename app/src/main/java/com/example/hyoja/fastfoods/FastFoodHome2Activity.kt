@@ -139,11 +139,12 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
                         option = option,
                         setOption = setOption,
                         setDessert = null,
-                        setDrink = null
+                        setDrink = null,
+                        category = FastFoodModel.foodSelected.category
                     )
                     Log.d(Tag,orderingFood.toString())
                     addOnlyFood()
-                    ApplyFoodOrderList(FastFoodModel.currentActivity)
+                    ApplyFoodOrderList(FastFoodModel.currentActivity).foodAdded()
 
                 }
 
@@ -277,21 +278,20 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
 
         Log.d(Tag,"foodAdded 함수 called")
 
-//        binding.FoodSelectedList.adapter = FoodOrderedListAdapter(ActivityFastfoodHome2Binding)
-//        binding.FoodSelectedList.adapter = FoodOrderedListAdapter(binding)
         binding.FoodSelectedList.adapter = FoodOrderedListAdapter(binding)
 
         //총 결제 금액 세팅
         updateTotalFoodInfo()
     }
 
+    override fun foodSet() {
+        ApplyFoodOrderList(FastFoodModel.currentActivity).foodAdded()
+    }
+
     fun updateTotalFoodInfo(){
         binding.TotalOrderPrice.text = getToTalPrice().toString()
         binding.TotalOrderCount.text = "${FastFoodModel.foodSelectedList.size.toString()}개"
     }
-
-    // ItemClickListener에서 정의한 메서드 구현
-
 }
 
 

@@ -26,13 +26,15 @@ class SetOrOnlyFragment : DialogFragment() {
     private val option :ArrayList<String> =ArrayList()
 
     private val setOption :ArrayList<String> =ArrayList()
+    private val category : String = "newMenu"
 
     val orderingFood : OrderingFood = OrderingFood(
         food = FastFoodModel.foodSelected,
         option = option,
         setOption = setOption,
         setDessert = null,
-        setDrink = null
+        setDrink = null,
+        category = category
     )
 
     override fun onCreateView(
@@ -62,7 +64,7 @@ class SetOrOnlyFragment : DialogFragment() {
             requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
             requireActivity().supportFragmentManager.popBackStack()
 
-            ApplyFoodOrderList(FastFoodModel.currentActivity)
+            ApplyFoodOrderList(FastFoodModel.currentActivity).foodAdded()
 
         }
 

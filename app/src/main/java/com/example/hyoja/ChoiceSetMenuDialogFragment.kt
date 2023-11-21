@@ -31,6 +31,7 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
     private val option :ArrayList<String> =ArrayList()
     private val setOption :ArrayList<String> =ArrayList()
     private val price : Int = 0
+    private val category : String = "newMenu"
 
     val orderingFood : OrderingFood = OrderingFood(
         totalPrice = price,
@@ -38,7 +39,8 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
         option = option,
         setOption = setOption,
         setDessert = null,
-        setDrink = null
+        setDrink = null,
+        category = category
     )
 
     fun setSetDessert(dessert: setMenuDataInterface) {
@@ -149,7 +151,7 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
                 requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
                 requireActivity().supportFragmentManager.popBackStack()
 
-                ApplyFoodOrderList(FastFoodModel.currentActivity)
+                ApplyFoodOrderList(FastFoodModel.currentActivity).foodAdded()
 
             }
         }

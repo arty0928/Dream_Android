@@ -12,6 +12,6 @@ data class OrderingFood(
 
     var setDessert: setMenuDataInterface?,
     var setDrink: setMenuDataInterface?,
+    var category : String
 
-    )
-
+)

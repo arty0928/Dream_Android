@@ -98,7 +98,7 @@
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:gravity="center"
                                 android:textColor="@color/black"
-                                android:layout_weight="1">
+                                android:layout_weight="1.4">
 
                             </TextView>
 
@@ -109,7 +109,7 @@
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:gravity="center"
-                                android:layout_weight="1">
+                                android:layout_weight="1.2">
 
                             </TextView>
 
