@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.hyoja.R
 import com.example.hyoja.cafe.adapter.PayRecyclerViewAdapter
 import com.example.hyoja.cafe.model.CafeModel
@@ -17,17 +18,12 @@ import com.example.hyoja.databinding.FragmentPayBinding
 
 class PayFragment : Fragment() {
     lateinit var binding: FragmentPayBinding
+    lateinit var adapter: FragmentStateAdapter
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         CafeModel.FragmentStatus = this
 
-        binding.allCancel.setOnClickListener {
-            CafeModel.drinkSelectedList.clear()
-            CommonUi().goToCafeHome1(requireContext())
-        }
-        binding.back.setOnClickListener {
 
-        }
     }
 
     override fun onCreateView(
@@ -40,5 +36,9 @@ class PayFragment : Fragment() {
         binding.list.adapter = PayRecyclerViewAdapter()
 
         return binding.root
+    }
+
+    interface NextListener{
+        fun setNextItem()
     }
 }

@@ -14,7 +14,13 @@
         android:theme="@style/Theme.HyoJa"
         tools:targetApi="31">
         <activity
-            android:name=".cafe.PayActivity"
+            android:name=".cafe.activity.CompletePayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cafe.activity.CardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cafe.activity.PayActivity"
             android:exported="false"
             android:label="@string/title_activity_pay"
             android:theme="@style/Theme.HyoJa" />
@@ -39,9 +45,6 @@
         <activity
             android:name=".fastfoods.FastFoodPayActivity"
             android:exported="false" />
-
-
-
         <activity
             android:name=".cafe.CafeHomeActivity"
             android:exported="false" /> <!-- from MainHome to Cafe Main Home -->

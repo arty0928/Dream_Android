@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hyoja.R
+import com.example.hyoja.cafe.activity.PayActivity
 import com.example.hyoja.cafe.adapter.DrinkListNewMenuAdapter
 import com.example.hyoja.cafe.adapter.MenuCategoryAdapter
 import com.example.hyoja.cafe.adapter.OrderedListAdapter

@@ -1,5 +1,6 @@
-package com.example.hyoja.cafe
+package com.example.hyoja.cafe.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -38,7 +39,12 @@ class PayActivity : AppCompatActivity(), PayFragment.NextListener {
 
         }
         binding.next.setOnClickListener {
-            binding.viewPager.currentItem = ++currentItem
+            if (currentItem == 1){
+                startActivity(Intent(this,CardActivity::class.java))
+            }else{
+                binding.viewPager.currentItem = ++currentItem
+            }
+
         }
     }
 
