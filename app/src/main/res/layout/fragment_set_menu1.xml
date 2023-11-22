@@ -403,7 +403,7 @@
                                 android:layout_weight="2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="페스츄리꽈베기"
+                                android:text="꽈배기"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
