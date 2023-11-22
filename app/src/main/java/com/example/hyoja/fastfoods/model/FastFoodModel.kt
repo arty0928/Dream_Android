@@ -14,6 +14,7 @@ object FastFoodModel {
     var setMenuCategory : String = "setDessert"
     lateinit var setMenuFoodSelected : setMenuDataInterface
     var setMenuSelectedList = ArrayList<setMenuDataInterface>()
+    var payStepList = ArrayList<PayStep>()
 
     lateinit var currentActivity: FoodAddListner
 }

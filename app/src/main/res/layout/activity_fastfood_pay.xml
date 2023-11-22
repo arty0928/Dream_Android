@@ -356,502 +356,616 @@
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:layout_weight="1.2"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginLeft="10dp"
+                            android:id="@+id/step1Available"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/layout_border_red"
-                            android:orientation="vertical"
-                            >
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1.2">
+
+
                             <LinearLayout
-                                android:layout_margin="3dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:background="@color/cafe_darkRed">
-
-                                <TextView
+                                android:background="@drawable/layout_border_red"
+                                android:orientation="vertical"
+                                >
+                                <LinearLayout
+                                    android:layout_margin="3dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="STEP 1    포장을 선택하세요"
-                                    android:fontFamily="@font/poppins_extrabold"
-                                    android:textColor="@color/white"
-                                    android:gravity="center|left"
-                                    android:textSize="13dp"
-                                    android:layout_marginLeft="5dp"/>
+                                    android:layout_weight="3"
+                                    android:background="@color/cafe_darkRed">
 
-                            </LinearLayout>
+                                    <TextView
+                                        android:layout_marginBottom="2dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="STEP 1    포장을 선택하세요"
+                                        android:fontFamily="@font/poppins_extrabold"
+                                        android:textColor="@color/white"
+                                        android:gravity="center|left"
+                                        android:textSize="13dp"
+                                        android:layout_marginLeft="5dp"/>
 
-                            <LinearLayout
-
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal"
-                                >
+                                </LinearLayout>
 
                                 <LinearLayout
-                                    android:layout_margin="10dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:orientation="vertical"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/step1PackageBtn"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:background="@drawable/ready_white">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_margin="10dp"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:src="@drawable/shop" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1.4"
+                                                android:fontFamily="@font/poppins_extrabold"
+                                                android:gravity="center"
+                                                android:text="포장"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1.4"
+                                                android:fontFamily="@font/poppins_extrabold"
+                                                android:gravity="center"
+                                                android:text="(1회용기 제공)"
+                                                android:textColor="@color/black"
+                                                android:textSize="10dp" />
+
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_weight="1.99"
+                                        android:background="#AAAAAA" />
+
+                                    <LinearLayout
+                                        android:id="@+id/step1ShopBtn"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:background="@drawable/ready_white"
+                                        >
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_margin="10dp"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:src="@drawable/bag" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1.4"
+                                                android:fontFamily="@font/poppins_extrabold"
+                                                android:gravity="center"
+                                                android:text="매장"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1.4"
+                                                android:fontFamily="@font/poppins_extrabold"
+                                                android:gravity="center"
+                                                android:text="(다회용기제공)"
+                                                android:textColor="@color/black"
+                                                android:textSize="10dp" />
+
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/step2Available"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            >
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/layout_darkgray_5dp"
+                                android:orientation="vertical"
+                                >
+                                <LinearLayout
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_marginTop="2dp"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="5.5"
+                                    android:background="#979797"
                                     >
 
-                                    <ImageView
-                                        android:layout_weight="1"
+                                    <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:src="@drawable/shop"
+                                        android:text="STEP2    할인/적립을 선택하세요"
+                                        android:fontFamily="@font/poppins_extrabold"
+                                        android:textColor="@color/white"
+                                        android:gravity="center|left"
+                                        android:textSize="12dp"
+                                        android:layout_marginLeft="5dp"
+                                        
                                         />
-                                    <TextView
-                                        android:layout_weight="1.4"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:text="포장"
-                                        android:fontFamily="@font/poppins_extrabold"
-                                        android:textColor="@color/black"
-                                        android:gravity="center"/>
-
-                                    <TextView
-                                        android:layout_weight="1.4"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:text="(1회용기 제공)"
-                                        android:textSize="10dp"
-                                        android:fontFamily="@font/poppins_extrabold"
-                                        android:textColor="@color/black"
-                                        android:gravity="center"/>
-
 
                                 </LinearLayout>
-
-                                <ImageView
-                                    android:layout_marginTop="10dp"
-                                    android:layout_marginBottom="10dp"
-
-                                    android:layout_weight="1.99"
-                                    android:background="#AAAAAA"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="1">
-
+                                    android:layout_marginRight="3dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
                                     <LinearLayout
-                                        android:layout_margin="10dp"
+                                        android:layout_weight="1"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:orientation="vertical"
-                                        >
+                                        android:orientation="horizontal">
 
+                                        <LinearLayout
+                                            android:id="@+id/step2OneBarcodeBtn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_margin="2dp"
+                                            android:background="@drawable/ready_white"
+                                            android:layout_weight="1">
+                                            <LinearLayout
+                                                android:layout_margin="10dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical"
+                                                >
+
+                                                <ImageView
+                                                    android:layout_weight="1"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:src="@drawable/barcode"
+                                                    />
+
+                                                <TextView
+                                                    android:layout_weight="1.4"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:text="롯데잇츠APP\nONE바코드"
+                                                    android:textSize="10dp"
+                                                    android:fontFamily="@font/poppins_extrabold"
+                                                    android:textColor="@color/black"
+                                                    android:gravity="center"/>
+
+
+                                            </LinearLayout>
+                                        </LinearLayout>
                                         <ImageView
+                                            android:layout_marginTop="10dp"
+
+                                            android:layout_weight="1.99"
+                                            android:background="#AAAAAA"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"/>
+                                        <LinearLayout
+                                            android:id="@+id/step2JoinDiscountBtn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
                                             android:layout_weight="1"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:src="@drawable/bag"
-                                            />
-                                        <TextView
-                                            android:layout_weight="1.4"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:text="매장"
-                                            android:fontFamily="@font/poppins_extrabold"
-                                            android:textColor="@color/black"
-                                            android:gravity="center"/>
+                                            android:background="@drawable/ready_white"
+                                            android:layout_margin="2dp"
+                                            >
+                                            <LinearLayout
+                                                android:layout_margin="10dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical"
+                                                >
 
-                                        <TextView
-                                            android:layout_weight="1.4"
+                                                <ImageView
+                                                    android:layout_weight="1"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:src="@drawable/join"
+                                                    />
+                                                <TextView
+                                                    android:layout_weight="1.4"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:text="제휴사\n할인"
+                                                    android:textSize="10dp"
+                                                    android:fontFamily="@font/poppins_extrabold"
+                                                    android:textColor="@color/black"
+                                                    android:gravity="center"/>
+
+
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="#AAAAAA"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"/>
+
+                                    <LinearLayout
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:id="@+id/step2Accumulate"
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
-                                            android:text="(다회용기 제공)"
-                                            android:textSize="10dp"
-                                            android:fontFamily="@font/poppins_extrabold"
-                                            android:textColor="@color/black"
-                                            android:gravity="center"/>
+                                            android:layout_weight="1"
+                                            android:background="@drawable/ready_white"
+                                            android:layout_margin="2dp">
+                                            <LinearLayout
+                                                android:layout_margin="10dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical"
+                                                >
 
+                                                <ImageView
+                                                    android:layout_weight="1"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:src="@drawable/point"
+                                                    />
+
+                                                <TextView
+                                                    android:layout_weight="1.4"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:text="L.POINT\n적립/사용"
+                                                    android:textSize="10dp"
+                                                    android:fontFamily="@font/poppins_extrabold"
+                                                    android:textColor="@color/black"
+                                                    android:gravity="center"/>
+
+
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                        <ImageView
+                                            android:layout_marginBottom="10dp"
+
+                                            android:layout_weight="1.99"
+                                            android:background="#AAAAAA"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"/>
+
+                                        <LinearLayout
+                                            android:id="@+id/step2NoSelectBtn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/ready_white"
+                                            android:layout_margin="2dp"
+                                            >
+                                            <LinearLayout
+                                                android:layout_margin="10dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical"
+                                                >
+
+                                                <ImageView
+                                                    android:layout_weight="1"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:src="@drawable/no"
+                                                    />
+
+                                                <TextView
+                                                    android:layout_weight="1.4"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:text="선택없음\n/결제하기"
+                                                    android:textSize="10dp"
+                                                    android:fontFamily="@font/poppins_extrabold"
+                                                    android:textColor="@color/black"
+                                                    android:gravity="center"/>
+
+
+                                            </LinearLayout>
+                                        </LinearLayout>
 
                                     </LinearLayout>
 
                                 </LinearLayout>
 
+
                             </LinearLayout>
-
-
                         </LinearLayout>
 
-
                         <LinearLayout
+                            android:id="@+id/step3Available"
                             android:layout_weight="1"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginLeft="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/layout_darkgray_5dp"
-                            android:orientation="vertical"
-                            >
-
-                            <LinearLayout
-                                android:layout_margin="2dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="5.5"
-                                android:background="#979797"
-                                >
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="STEP2    할인/적립을 선택하세요"
-                                    android:fontFamily="@font/poppins_extrabold"
-                                    android:textColor="@color/white"
-                                    android:gravity="center|left"
-                                    android:textSize="12dp"
-                                    android:layout_marginLeft="5dp"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-                                <LinearLayout
-                                    android:layout_weight="1"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="horizontal">
-
-                                    <LinearLayout
-                                        android:layout_margin="10dp"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:orientation="vertical"
-                                        >
-
-                                        <ImageView
-                                            android:layout_weight="1"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:src="@drawable/barcode"
-                                            />
-
-                                        <TextView
-                                            android:layout_weight="1.4"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:text="롯데잇츠APP\nONE바코드"
-                                            android:textSize="10dp"
-                                            android:fontFamily="@font/poppins_extrabold"
-                                            android:textColor="@color/black"
-                                            android:gravity="center"/>
-
-
-                                    </LinearLayout>
-                                    <ImageView
-                                        android:layout_marginTop="10dp"
-
-                                        android:layout_weight="1.99"
-                                        android:background="#AAAAAA"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"/>
-                                    <LinearLayout
-                                        android:layout_margin="10dp"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:orientation="vertical"
-                                        >
-
-                                        <ImageView
-                                            android:layout_weight="1"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:src="@drawable/join"
-                                            />
-                                        <TextView
-                                            android:layout_weight="1.4"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:text="제휴사\n할인"
-                                            android:textSize="10dp"
-                                            android:fontFamily="@font/poppins_extrabold"
-                                            android:textColor="@color/black"
-                                            android:gravity="center"/>
-
-
-                                    </LinearLayout>
-
-                                </LinearLayout>
-
-                                <ImageView
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp"
-                                    android:background="#AAAAAA"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0.5dp"/>
-
-                                <LinearLayout
-                                    android:layout_weight="1"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="horizontal">
-
-                                    <LinearLayout
-                                        android:layout_margin="10dp"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:orientation="vertical"
-                                        >
-
-                                        <ImageView
-                                            android:layout_weight="1"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:src="@drawable/point"
-                                            />
-
-                                        <TextView
-                                            android:layout_weight="1.4"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:text="L.POINT\n적립/사용"
-                                            android:textSize="10dp"
-                                            android:fontFamily="@font/poppins_extrabold"
-                                            android:textColor="@color/black"
-                                            android:gravity="center"/>
-
-
-                                    </LinearLayout>
-                                    <ImageView
-                                        android:layout_marginBottom="10dp"
-
-                                        android:layout_weight="1.99"
-                                        android:background="#AAAAAA"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"/>
-                                    <LinearLayout
-                                        android:layout_margin="10dp"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:orientation="vertical"
-                                        >
-
-                                        <ImageView
-                                            android:layout_weight="1"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:src="@drawable/no"
-                                            />
-
-                                        <TextView
-                                            android:layout_weight="1.4"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:text="선택없음\n/결제하기"
-                                            android:textSize="10dp"
-                                            android:fontFamily="@font/poppins_extrabold"
-                                            android:textColor="@color/black"
-                                            android:gravity="center"/>
-
-
-                                    </LinearLayout>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_weight="1"
                             android:layout_margin="10dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/layout_darkgray_5dp"
-                            android:orientation="vertical"
                             >
 
                             <LinearLayout
-                                android:layout_margin="2dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="5.5"
-                                android:background="#979797"
-                                >
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="STEP 3      결제를 선택하세요"
-                                    android:fontFamily="@font/poppins_extrabold"
-                                    android:textColor="@color/white"
-                                    android:gravity="center|left"
-                                    android:textSize="13dp"
-                                    android:layout_marginLeft="5dp"/>
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:orientation="vertical">
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/layout_darkgray_5dp"
+                                android:orientation="vertical"
+                                >
+
                                 <LinearLayout
-                                    android:layout_weight="1"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:orientation="horizontal">
-
-                                    <LinearLayout
-                                        android:layout_margin="10dp"
+                                    android:layout_weight="5.5"
+                                    android:background="#979797"
+                                    >
+                                    <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:orientation="vertical"
-                                        >
-
-                                        <ImageView
-                                            android:layout_weight="1"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:src="@drawable/card"
-                                            />
-
-                                        <TextView
-                                            android:layout_weight="1.4"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:text="신용/체크카드"
-                                            android:textSize="10dp"
-                                            android:fontFamily="@font/poppins_extrabold"
-                                            android:textColor="@color/black"
-                                            android:gravity="center"/>
-
-
-                                    </LinearLayout>
-                                    <ImageView
-                                        android:layout_marginTop="10dp"
-                                        android:layout_weight="1.99"
-                                        android:background="#AAAAAA"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"/>
-                                    <LinearLayout
-                                        android:layout_margin="10dp"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:orientation="vertical"
-                                        >
-
-                                        <ImageView
-                                            android:layout_weight="1"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:src="@drawable/barcode_line"
-                                            />
-                                        <TextView
-                                            android:layout_weight="1.4"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:text="모바일/바코드\n페이류(PAY)"
-                                            android:textSize="10dp"
-                                            android:fontFamily="@font/poppins_extrabold"
-                                            android:textColor="@color/black"
-                                            android:gravity="center"/>
-
-
-                                    </LinearLayout>
-
+                                        android:text="STEP 3      결제를 선택하세요"
+                                        android:fontFamily="@font/poppins_extrabold"
+                                        android:textColor="@color/white"
+                                        android:gravity="center|left"
+                                        android:textSize="13dp"
+                                        android:layout_marginLeft="5dp"/>
                                 </LinearLayout>
-                                <ImageView
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp"
-                                    android:background="#AAAAAA"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="0.5dp"/>
+
                                 <LinearLayout
-                                    android:layout_weight="1"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:orientation="horizontal">
-
+                                    android:layout_marginRight="3dp"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
                                     <LinearLayout
-                                        android:layout_margin="10dp"
+                                        android:layout_weight="1"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:orientation="vertical"
-                                        >
+                                        android:orientation="horizontal">
+
+                                       <LinearLayout
+                                           android:id="@+id/step3CardBtn"
+                                           android:layout_margin="2dp"
+                                           android:background="@drawable/ready_white"
+                                           android:layout_width="match_parent"
+                                           android:layout_height="match_parent"
+                                           android:layout_weight="1">
+                                           <LinearLayout
+                                               android:layout_margin="10dp"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="match_parent"
+                                               android:layout_weight="1"
+                                               android:orientation="vertical"
+                                               >
+
+                                               <ImageView
+                                                   android:layout_weight="1"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:src="@drawable/card"
+                                                   />
+
+                                               <TextView
+                                                   android:layout_weight="1.4"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:text="신용/체크카드"
+                                                   android:textSize="10dp"
+                                                   android:fontFamily="@font/poppins_extrabold"
+                                                   android:textColor="@color/black"
+                                                   android:gravity="center"/>
+
+
+                                           </LinearLayout>
+                                       </LinearLayout>
 
                                         <ImageView
+                                            android:layout_marginTop="10dp"
+                                            android:layout_weight="1.99"
+                                            android:background="#AAAAAA"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"/>
+
+                                        <LinearLayout
+                                            android:id="@+id/step3MobileBarcodeBtn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
                                             android:layout_weight="1"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:src="@drawable/lpay"
-                                            />
+                                            android:layout_margin="2dp"
+                                            android:background="@drawable/ready_white">
+                                            <LinearLayout
+                                                android:layout_margin="10dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical"
+                                                >
 
-                                        <TextView
-                                            android:layout_weight="1.4"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:text="LPAY"
-                                            android:textSize="10dp"
-                                            android:fontFamily="@font/poppins_extrabold"
-                                            android:textColor="@color/black"
-                                            android:gravity="center"/>
+                                                <ImageView
+                                                    android:layout_weight="1"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:src="@drawable/barcode_line"
+                                                    />
+                                                <TextView
+                                                    android:layout_weight="1.4"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:text="모바일/바코드\n페이류(PAY)"
+                                                    android:textSize="10dp"
+                                                    android:fontFamily="@font/poppins_extrabold"
+                                                    android:textColor="@color/black"
+                                                    android:gravity="center"/>
 
+
+                                            </LinearLayout>
+                                        </LinearLayout>
 
                                     </LinearLayout>
                                     <ImageView
-                                        android:layout_marginBottom="10dp"
-
-                                        android:layout_weight="1.99"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
                                         android:background="#AAAAAA"
                                         android:layout_width="match_parent"
-                                        android:layout_height="match_parent"/>
+                                        android:layout_height="0.5dp"/>
                                     <LinearLayout
-                                        android:layout_margin="10dp"
+                                        android:layout_weight="1"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:layout_weight="1"
-                                        android:orientation="vertical"
-                                        >
+                                        android:orientation="horizontal">
 
-                                        <ImageView
+                                        <LinearLayout
+                                            android:id="@+id/step3LPadyBtn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
                                             android:layout_weight="1"
+                                            android:background="@drawable/ready_white"
+                                            android:layout_margin="2dp">
+                                            <LinearLayout
+                                                android:layout_margin="10dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical"
+                                                >
+
+                                                <ImageView
+                                                    android:layout_weight="1"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:src="@drawable/lpay"
+                                                    />
+
+                                                <TextView
+                                                    android:layout_weight="1.4"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:text="LPAY"
+                                                    android:textSize="10dp"
+                                                    android:fontFamily="@font/poppins_extrabold"
+                                                    android:textColor="@color/black"
+                                                    android:gravity="center"/>
+
+
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                        <ImageView
+                                            android:layout_marginBottom="10dp"
+
+                                            android:layout_weight="1.99"
+                                            android:background="#AAAAAA"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"/>
+
+                                        <LinearLayout
+                                            android:id="@+id/step3NoSelectBtn"
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
-                                            android:src="@drawable/tmoney"
-                                            />
+                                            android:layout_margin="2dp"
+                                            android:background="@drawable/ready_white"
+                                            android:layout_weight="1">
+                                            <LinearLayout
+                                                android:layout_margin="10dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical"
+                                                >
 
-                                        <TextView
-                                            android:layout_weight="1.4"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:text="선택없음\n/결제하기"
-                                            android:textSize="10dp"
-                                            android:fontFamily="@font/poppins_extrabold"
-                                            android:textColor="@color/black"
-                                            android:gravity="center"/>
+                                                <ImageView
+                                                    android:layout_weight="1"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:src="@drawable/tmoney"
+                                                    />
 
+                                                <TextView
+                                                    android:layout_weight="1.4"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:text="선택없음\n/결제하기"
+                                                    android:textSize="10dp"
+                                                    android:fontFamily="@font/poppins_extrabold"
+                                                    android:textColor="@color/black"
+                                                    android:gravity="center"/>
+
+
+                                            </LinearLayout>
+                                        </LinearLayout>
 
                                     </LinearLayout>
 
                                 </LinearLayout>
 
                             </LinearLayout>
-
                         </LinearLayout>
+
 
                     </LinearLayout>
 
@@ -969,12 +1083,12 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/PayBtn"
+                    android:id="@+id/MoreOrderBtn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/poppins_extrabold"
                     android:textColor="@color/black"
-                    android:text="결제하기"
+                    android:text="추가 주문"
                     android:textAlignment="center"
                     android:textSize="20dp"
                     android:gravity="center"
