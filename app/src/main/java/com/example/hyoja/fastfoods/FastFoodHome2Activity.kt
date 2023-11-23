@@ -44,11 +44,17 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
 
     lateinit var orderingFood : OrderingFood
 
+    var i = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFastfoodHome2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        if (i == 0){
+            FastFoodModel.foodSelectedList.clear()
+            i++
+        }
         FastFoodModel.currentActivity = this
 
         val view = this
@@ -81,6 +87,10 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
             }
         }
 
+        //이전 버튼
+        binding.beforeButton.setOnClickListener {
+            common.goToFastFoodHome1Button1(view)
+        }
 
         //뷰모델 프로바이더 생성
         viewModel = ViewModelProvider(this)[FoodListViewModel::class.java]

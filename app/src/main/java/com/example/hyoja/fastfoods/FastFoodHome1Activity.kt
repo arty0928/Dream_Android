@@ -22,6 +22,11 @@ class FastFoodHome1Activity : AppCompatActivity() {
 
         FastFoodModel.foodSelectedList.clear()
 
+        //이전버튼
+        binding.beforeButton.setOnClickListener {
+            common.goToFastFoodHome1Button1(view)
+        }
+
         binding.button1.setOnClickListener {
             common.goToFastFoodHome1Button1(view)
         }

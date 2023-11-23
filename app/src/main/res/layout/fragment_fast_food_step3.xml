@@ -156,6 +156,7 @@
                     android:layout_weight="1">
 
                     <LinearLayout
+                        android:id="@+id/samsungPay"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
                         android:layout_width="match_parent"
@@ -165,6 +166,7 @@
                         >
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/lgPay"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
                         android:background="@drawable/lgpay"
@@ -173,6 +175,7 @@
                         android:layout_weight="1">
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/applePay"
                         android:layout_marginTop="35dp"
                         android:layout_marginBottom="35dp"
                         android:layout_marginRight="5dp"
@@ -191,6 +194,7 @@
                     android:layout_weight="1">
 
                     <LinearLayout
+                        android:id="@+id/lPay"
                         android:layout_marginTop="30dp"
                         android:layout_marginBottom="30dp"
                         android:background="@drawable/lpaylogo"
@@ -199,6 +203,7 @@
                         android:layout_weight="1">
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/mobilePay"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.9">
@@ -224,6 +229,7 @@
                     android:layout_weight="1">
 
                     <LinearLayout
+                        android:id="@+id/paycoPay"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -235,6 +241,7 @@
                         >
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/alliPay"
                         android:layout_marginTop="40dp"
                         android:layout_marginLeft="4dp"
                         android:layout_marginBottom="40dp"
@@ -244,6 +251,7 @@
                         android:layout_weight="1">
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/kakaoPay"
                         android:layout_marginTop="35dp"
                         android:layout_marginRight="4dp"
                         android:layout_marginBottom="35dp"
@@ -261,6 +269,7 @@
                     android:layout_weight="1">
 
                     <LinearLayout
+                        android:id="@+id/naverPay_paybookPay"
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
@@ -281,6 +290,7 @@
                             android:background="@drawable/paybooklogo"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/wechatPay"
                         android:layout_marginTop="30dp"
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"

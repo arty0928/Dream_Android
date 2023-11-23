@@ -11,7 +11,6 @@ import android.view.Window
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.hyoja.common.util.CommonUi
-import com.example.hyoja.databinding.FragmentCheckCancelBinding
 import com.example.hyoja.databinding.FragmentFastFoodStep3Binding
 import com.example.hyoja.fastfoods.viewmodel.FoodListViewModel
 
@@ -41,10 +40,76 @@ class FastFoodStep3Fragment : DialogFragment() {
 
         viewModel = ViewModelProvider(this)[FoodListViewModel::class.java]
 
+        //취소
         binding.payCancelBtn.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
             requireActivity().supportFragmentManager.popBackStack()
         }
+
+        binding.samsungPay.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+            PayFragment().show(requireActivity().supportFragmentManager, "PayFragment")
+
+        }
+
+        binding.lgPay.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+            PayFragment().show(requireActivity().supportFragmentManager, "PayFragment")
+
+        }
+        binding.applePay.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+            PayFragment().show(requireActivity().supportFragmentManager, "PayFragment")
+
+        }
+        binding.lPay.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+            PayFragment().show(requireActivity().supportFragmentManager, "PayFragment")
+
+        }
+
+        binding.mobilePay.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+            PayFragment().show(requireActivity().supportFragmentManager, "PayFragment")
+
+        }
+
+        binding.paycoPay.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+            PayFragment().show(requireActivity().supportFragmentManager, "PayFragment")
+
+        }
+        binding.alliPay.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+            PayFragment().show(requireActivity().supportFragmentManager, "PayFragment")
+
+        }
+        binding.kakaoPay.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+            PayFragment().show(requireActivity().supportFragmentManager, "PayFragment")
+
+        }
+        binding.naverPayPaybookPay.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+            PayFragment().show(requireActivity().supportFragmentManager, "PayFragment")
+
+        }
+        binding.wechatPay.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+            PayFragment().show(requireActivity().supportFragmentManager, "PayFragment")
+
+        }
+
     }
 
     override fun onResume() {
@@ -63,4 +128,5 @@ class FastFoodStep3Fragment : DialogFragment() {
         super.onDestroyView()
 
     }
+
 }
