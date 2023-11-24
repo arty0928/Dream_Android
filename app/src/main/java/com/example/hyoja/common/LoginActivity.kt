@@ -2,6 +2,7 @@ package com.example.hyoja.common
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hyoja.common.model.UserResponse
 import com.example.hyoja.common.util.CommonUi
@@ -37,5 +38,21 @@ class LoginActivity : AppCompatActivity() {
         }
 
         RetrofitUtil().userList()
+    }
+
+    private var backPressedTime:Long = 0
+    override fun onBackPressed() {
+        // 뒤로가기 막기
+        val currentTime = System.currentTimeMillis()
+        val commonUi:CommonUi = CommonUi()
+        val view = this
+
+        if (currentTime - backPressedTime < 2000) {
+            commonUi.goToHome(view)
+            finish()
+        } else {
+            Toast.makeText(this, "한 번 더 누르면 메인화면으로 전환합니다", Toast.LENGTH_SHORT).show()
+            backPressedTime = currentTime
+        }
     }
 }

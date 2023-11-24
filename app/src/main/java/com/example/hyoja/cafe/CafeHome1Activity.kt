@@ -105,6 +105,7 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
             }
         }
 
+        // 전체 취소
         binding.allClear.setOnClickListener {
             CafeModel.drinkSelectedList.clear()
             drinkAdded()
