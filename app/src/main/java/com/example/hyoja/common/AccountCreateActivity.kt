@@ -11,21 +11,19 @@ import com.example.hyoja.databinding.ActivityAccountCreateBinding
 class AccountCreateActivity : AppCompatActivity() {
     lateinit var binding: ActivityAccountCreateBinding
     val commonUi = CommonUi()
+    lateinit var id: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAccountCreateBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val view = this
-        val sharedPreferences = getSharedPreferences("HyoJaPreference", Context.MODE_PRIVATE)
 
-        RetrofitUtil().createUser("","","")
 
         binding.accountStartButton.setOnClickListener{
             //회원가입 성공해야 넘어갈 수 있음
             if(createUser()){
-                val editor = sharedPreferences.edit()
-                editor.putBoolean("isLoggedIn", true)
-                editor.apply()
+
                 commonUi.goToHome(view)
                 finish() // 뒤로 다시 들어오지 못하게 종료해주세요
             }
@@ -40,9 +38,16 @@ class AccountCreateActivity : AppCompatActivity() {
         val confirm = binding.confirm.text.toString()
 
         return if (password == confirm){
-            RetrofitUtil().createUser(id, password, name )
+            this.id = RetrofitUtil().createUser(id, password, name)
+
+            val sharedPreferences = getSharedPreferences("HyoJaPreference", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putString("ID", id)
+            editor.putString("PassWord", password)
+            editor.apply()
             true
         } else{
+            this.id = "fail"
             Toast.makeText(this@AccountCreateActivity,"비밀번호를 다시 확인해주세요",Toast.LENGTH_SHORT).show()
             false
         }
