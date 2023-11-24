@@ -41,10 +41,11 @@ class RetrofitUtil {
         })
     }
 
-    fun createUser(id: String, password:String, name: String){
+    fun createUser(id: String, password:String, name: String): String{
         val user = User(id, password, name)
 
         val call = service.createUser(user)
+        var result: String = "fail"
 
         call.enqueue(object : Callback<CreateUserResponse> {
             override fun onResponse(call: Call<CreateUserResponse>, response: Response<CreateUserResponse>) {
@@ -52,6 +53,7 @@ class RetrofitUtil {
                 if (response.isSuccessful) {
                     Log.d("response", "User created successfully")
                     Log.d("id",createUserResponse!!.msg)
+                    result = createUserResponse!!.msg
                 } else {
                     Log.d("response", "Failed to create user")
                 }
@@ -62,6 +64,33 @@ class RetrofitUtil {
                 Log.d("reason", t.message.toString())
             }
         })
+
+        return result
+    }
+
+    fun login(id: String, password: String): Boolean{
+        val idPw = IdPw(id,password)
+        val call = service.login(idPw)
+
+        var result = false
+
+        call.enqueue(object : Callback<User>{
+            override fun onResponse(call: Call<User>, response: Response<User>) {
+                if (response.isSuccessful) {
+                    Log.d("response","Login is successful")
+                    result = true
+                } else {
+                    Log.d("response", "Failed to login")
+                }
+            }
+
+            override fun onFailure(call: Call<User>, t: Throwable) {
+                Log.d("response", "Failed to create user")
+                Log.d("reason", t.message.toString())
+            }
+        })
+
+        return result
     }
 
 

@@ -14,7 +14,15 @@ interface ApiService {
 
     @POST("test/createUser")
     fun createUser(@Body user: User): Call<CreateUserResponse>
+
+    @POST("test/login")
+    fun login(@Body idPw: IdPw): Call<User>
+
 }
+data class IdPw(
+    var id: String,
+    var password: String
+)
 
 data class CreateUserResponse(
     var success: String,

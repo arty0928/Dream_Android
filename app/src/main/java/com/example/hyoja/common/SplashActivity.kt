@@ -4,8 +4,10 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import com.example.hyoja.R
 import com.example.hyoja.common.util.CommonUi
+import com.example.hyoja.common.util.api.RetrofitUtil
 
 class SplashActivity : AppCompatActivity() {
     val commonUi = CommonUi()
@@ -14,17 +16,14 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // 임시
         val sharedPreferences = getSharedPreferences("HyoJaPreference", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.putBoolean("isLoggedIn", false)
-        editor.apply()
-        commonUi.goToHome(this)
+        val id: String = sharedPreferences.getString("ID","fail").toString()
+        val password: String = sharedPreferences.getString("Password","fail").toString()
+        Log.d("id and pw", id +"\n"+ password)
 
         val view = this
         Handler().postDelayed({
-            val sharedPreferences = getSharedPreferences("HyoJaPreference", Context.MODE_PRIVATE)
-            if (sharedPreferences.getBoolean("isLoggedIn",false)){
+            if (RetrofitUtil().login(id,password)){
                 // 스플래시 1초 후 바로 홈 화면으로
                 commonUi.goToHome(view)
             }
