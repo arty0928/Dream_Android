@@ -17,8 +17,8 @@ class CompletePayActivity : AppCompatActivity() {
         binding.image.setOnClickListener{
             CommonUi().goToCafe(this)
         }
-
     }
+
     private var backPressedTime:Long = 0
     override fun onBackPressed() {
         // 뒤로가기 막기
