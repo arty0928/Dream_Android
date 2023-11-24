@@ -19,6 +19,13 @@ class AccountCreateActivity : AppCompatActivity() {
         setContentView(binding.root)
         val view = this
 
+        //로고 누르면 처음으로
+        binding.hyojaLogo.setOnClickListener {
+            commonUi.goToLogin(view)
+        }
+        binding.hyojaText.setOnClickListener {
+            commonUi.goToLogin(view)
+        }
 
         binding.accountStartButton.setOnClickListener{
             //회원가입 성공해야 넘어갈 수 있음
