@@ -46,16 +46,18 @@ class RetrofitUtil {
 
         val call = service.createUser(user)
 
-        call.enqueue(object : Callback<User> {
-            override fun onResponse(call: Call<User>, response: Response<User>) {
+        call.enqueue(object : Callback<CreateUserResponse> {
+            override fun onResponse(call: Call<CreateUserResponse>, response: Response<CreateUserResponse>) {
+                val createUserResponse = response.body() as? CreateUserResponse
                 if (response.isSuccessful) {
                     Log.d("response", "User created successfully")
+                    Log.d("id",createUserResponse!!.msg)
                 } else {
                     Log.d("response", "Failed to create user")
                 }
             }
 
-            override fun onFailure(call: Call<User>, t: Throwable) {
+            override fun onFailure(call: Call<CreateUserResponse>, t: Throwable) {
                 Log.d("response", "Failed to create user")
                 Log.d("reason", t.message.toString())
             }

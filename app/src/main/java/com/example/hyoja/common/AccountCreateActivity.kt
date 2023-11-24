@@ -1,5 +1,6 @@
 package com.example.hyoja.common
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,12 +16,16 @@ class AccountCreateActivity : AppCompatActivity() {
         binding = ActivityAccountCreateBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val view = this
+        val sharedPreferences = getSharedPreferences("HyoJaPreference", Context.MODE_PRIVATE)
 
         RetrofitUtil().createUser("","","")
 
         binding.accountStartButton.setOnClickListener{
             //회원가입 성공해야 넘어갈 수 있음
             if(createUser()){
+                val editor = sharedPreferences.edit()
+                editor.putBoolean("isLoggedIn", true)
+                editor.apply()
                 commonUi.goToHome(view)
                 finish() // 뒤로 다시 들어오지 못하게 종료해주세요
             }

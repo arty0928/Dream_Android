@@ -205,6 +205,7 @@
                                 android:layout_height="match_parent" />
                         </LinearLayout>
                         <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/allClear"
                             android:text="전체취소"
                             android:textColor="@color/white"
                             android:layout_weight="1"
