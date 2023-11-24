@@ -4,9 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".common.LoginActivity">
+    tools:context=".common.LoginActivity"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/olderlogo"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="효자손"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ibm_plex_sans_kr_bold"
+            android:textSize="25dp"
+            />
+        <ImageView
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/person"/>
+    </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
