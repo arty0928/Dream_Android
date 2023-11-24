@@ -38,13 +38,14 @@ class PayActivity : AppCompatActivity(), PayFragment.NextListener {
             }
 
         }
+
+
         binding.next.setOnClickListener {
             if (currentItem == 1){
                 startActivity(Intent(this,CardActivity::class.java))
             }else{
                 binding.viewPager.currentItem = ++currentItem
             }
-
         }
     }
 

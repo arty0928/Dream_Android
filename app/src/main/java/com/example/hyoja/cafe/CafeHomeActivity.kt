@@ -23,7 +23,8 @@ class CafeHomeActivity : AppCompatActivity() {
             CafeModel.pickOrMarket = true
         }
         binding.toGo.setOnClickListener{
-
+            common.goToCafeHome1(view)
+            CafeModel.pickOrMarket = false
         }
     }
     override fun onBackPressed() {

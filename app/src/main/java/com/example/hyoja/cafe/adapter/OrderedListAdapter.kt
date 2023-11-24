@@ -1,5 +1,6 @@
 package com.example.hyoja.cafe.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,7 +40,9 @@ class OrderedListAdapter: RecyclerView.Adapter<OrderedListAdapter.ViewHolder>() 
         }
 
         holder.cancelButton.setOnClickListener {
-            CafeModel.drinkSelectedList.removeAt(position)
+            this.notifyDataSetChanged()
+            holder.deleteItem()
+            Log.d("  ",CafeModel.drinkSelectedList.toString())
             holder.setPrice()
         }
     }
@@ -50,6 +53,17 @@ class OrderedListAdapter: RecyclerView.Adapter<OrderedListAdapter.ViewHolder>() 
         val itemMinus = binding.itemMinus
         val count = binding.itemNum
         val cancelButton = binding.cancelButton
+
+        fun deleteItem(){
+            Log.d("selectedPosition = ", position.toString())
+            Log.d("selectedItem = ", CafeModel.drinkSelectedList[position].drink.name)
+            CafeModel.drinkSelectedList.removeAt(position)
+        }
+
+        fun setUi(){
+            drinkImage.setImageResource(CafeModel.drinkSelectedList[position].drink.drinkImage)
+            count.text = CafeModel.drinkSelectedList[position].drinkCount.toString()
+        }
 
         fun setDrinkCount(position: Int){
             var orderingDrink = CafeModel.drinkSelectedList[position]

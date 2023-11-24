@@ -17,6 +17,7 @@ object CafeModel{
     lateinit var ActivityStatus: AppCompatActivity
     lateinit var FragmentStatus: Fragment
 
+    var payMethod = false
     fun getTotalPrice(): Int{
         var price = 0
         for (i in 0 until CafeModel.drinkSelectedList.size){

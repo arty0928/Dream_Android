@@ -105,6 +105,11 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
             }
         }
 
+        binding.allClear.setOnClickListener {
+            CafeModel.drinkSelectedList.clear()
+            drinkAdded()
+        }
+
         //선택한 카테고리에 따라서 바뀌는 음료리스트
         viewModel.categoryLiveData.observe(this, Observer {
             when(it){
@@ -246,9 +251,10 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
 
     // 음료주문 선택 완료하면 콜백되는 콜백 함수
     override fun drinkAdded() {
+        var orderedListAdapter = OrderedListAdapter()
         // 장바구니 리사이클러뷰
         binding.drinkSelectedList.layoutManager = LinearLayoutManager(this).also { it.orientation = LinearLayoutManager.HORIZONTAL }
-        binding.drinkSelectedList.adapter = OrderedListAdapter()
+        binding.drinkSelectedList.adapter = orderedListAdapter
 
         // 총 결제 금액 세팅
         binding.account.text = getTotalPrice().toString()
