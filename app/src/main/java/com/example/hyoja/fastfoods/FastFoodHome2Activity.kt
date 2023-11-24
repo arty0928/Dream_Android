@@ -34,7 +34,7 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
     var backPressedTime: Long = 0 // 뒤로가기 2번 클릭을 위한 변수선언
     lateinit var binding: ActivityFastfoodHome2Binding
 
-    val common = CommonUi()
+    var common = CommonUi()
     private lateinit var viewModel: FoodListViewModel
     lateinit var viewPager: ViewPager2
 
@@ -50,6 +50,7 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
         super.onCreate(savedInstanceState)
         binding = ActivityFastfoodHome2Binding.inflate(layoutInflater)
         setContentView(binding.root)
+        common = CommonUi()
 
         if (i == 0){
             FastFoodModel.foodSelectedList.clear()
@@ -75,6 +76,11 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
             val scrollAmount = 300
             horizontalScrollView.smoothScrollBy(-scrollAmount,0)
             Log.d("tabTitleRightBtn","TabTitleRightBtn")
+        }
+
+        //홈으로
+        binding.FastFoodHome.setOnClickListener{
+            common.goToHome(view)
         }
 
         //선택완료

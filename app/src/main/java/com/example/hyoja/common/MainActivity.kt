@@ -18,10 +18,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         val view = this
 
-        binding.cinemaButton.setOnClickListener {
-            common.goToCinema(view)
-        }
-
         binding.cafeButton.setOnClickListener {
             common.goToCafe(view)
         }

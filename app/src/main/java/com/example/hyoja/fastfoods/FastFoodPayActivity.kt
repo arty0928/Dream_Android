@@ -49,6 +49,10 @@ class FastFoodPayActivity : AppCompatActivity() {
             common.goToFastFoodHome1Button1(view)
         }
 
+        binding.FastFoodHome.setOnClickListener {
+            common.goToHome(view)
+        }
+
         binding.payTotalPrice.text = FastFoodModel.priceToPay.toString()
         binding.haveToPayPrice.text = FastFoodModel.priceToPay.toString()
 
