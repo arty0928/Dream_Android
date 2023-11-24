@@ -239,7 +239,7 @@ data class Dessert8(
 
 data class Dessert9(
     override val category: String = "Dessert",
-    override val name : String = "페스츄리꽈배기",
+    override val name : String = "꽈배기",
     override val price : Int = 2000,
     override val foodImage: Int = R.drawable.dessert9,
     override val set: Boolean = false,
@@ -374,7 +374,7 @@ data class setDessert8(
 
 data class setDessert9(
     override val category: String = "setDessert",
-    override val name : String = "페스츄리꽈배기",
+    override val name : String = "꽈배기",
     override val price : Int = 2000,
     override val foodImage: Int = R.drawable.dessert9,
     override val set: Boolean = false,

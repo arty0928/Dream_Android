@@ -12,14 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageView
-            android:layout_margin="20dp"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/real_hyojason"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="스플래시 화면입니다"/>
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:src="@drawable/olderlogo"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

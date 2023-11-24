@@ -46,6 +46,10 @@
             android:name=".fastfoods.FastFoodPayActivity"
             android:exported="false" />
         <activity
+            android:name=".fastfoods.FastFoodPayWait"
+            android:exported="false" />
+
+        <activity
             android:name=".cafe.CafeHomeActivity"
             android:exported="false" /> <!-- from MainHome to Cafe Main Home -->
         <activity
