@@ -21,6 +21,8 @@
             android:layout_marginRight="50dp"
             android:textSize="20dp"
             android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+
             android:text="시럽 추가"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -29,6 +31,8 @@
             android:id="@+id/syrupAdd"
             android:textColor="@color/cafe_darkRed"
             android:textAlignment="center"
+            android:fontFamily="@font/poppins_bold"
+
             android:background="@drawable/hot_button_unclicked"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -48,6 +52,8 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:text="얼음 추가"
+            android:fontFamily="@font/poppins_bold"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
@@ -55,6 +61,8 @@
             android:id="@+id/iceAdd"
             android:textColor="@color/cafe_darkRed"
             android:textAlignment="center"
+            android:fontFamily="@font/poppins_bold"
+
             android:background="@drawable/hot_button_unclicked"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -76,6 +84,8 @@
             android:id="@+id/cancel"
             android:textColor="@color/cafe_skyblue"
             android:textAlignment="center"
+            android:fontFamily="@font/poppins_bold"
+
             android:background="@drawable/iced_button_unclicked"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -91,6 +101,8 @@
             android:background="@drawable/hot_button_clicked"
             android:textSize="20dp"
             android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+
             android:text="완료"
             android:layout_width="70dp"
             android:layout_height="40dp"/>

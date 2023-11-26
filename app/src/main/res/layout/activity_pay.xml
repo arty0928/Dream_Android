@@ -69,16 +69,19 @@
                         <TextView
                             android:gravity="center"
                             tools:ignore="RtlCompat"
-                            android:textStyle="bold"
+
                             android:textAlignment="textEnd"
                             android:text="주문금액"
+                            android:fontFamily="@font/poppins_bold"
                             android:textSize="20dp"
                             android:layout_width="150dp"
                             android:layout_height="40dp" />
                         <TextView
                             android:gravity="center"
                             tools:ignore="RtlCompat"
-                            android:textStyle="bold"
+
+                            android:fontFamily="@font/poppins_bold"
+
                             android:textAlignment="textEnd"
                             android:text="할인금액"
                             android:textSize="20dp"
@@ -88,7 +91,9 @@
                         <TextView
                             android:gravity="center"
                             tools:ignore="RtlCompat"
-                            android:textStyle="bold"
+
+                            android:fontFamily="@font/poppins_bold"
+
                             android:textAlignment="textEnd"
                             android:text="잔여금액"
                             android:textSize="20dp"
@@ -132,16 +137,20 @@
                         <TextView
                             android:id="@+id/price"
                             android:gravity="center"
-                            android:textStyle="bold"
+
                             android:textAlignment="textStart"
                             android:text="20000"
+                            android:fontFamily="@font/poppins_bold"
+
                             android:textSize="20dp"
                             android:layout_width="150dp"
                             android:layout_height="40dp"
                             tools:ignore="RtlCompat" />
                         <TextView
                             android:gravity="center"
-                            android:textStyle="bold"
+
+                            android:fontFamily="@font/poppins_bold"
+
                             android:textAlignment="textStart"
                             android:text="0"
                             android:textSize="20dp"
@@ -151,7 +160,9 @@
                         <TextView
                             android:id="@+id/remainPrice"
                             android:gravity="center"
-                            android:textStyle="bold"
+
+                            android:fontFamily="@font/poppins_bold"
+
                             android:textAlignment="textStart"
                             android:text="20000"
                             android:textSize="20dp"
@@ -175,6 +186,7 @@
                         android:gravity="center"
                         android:textSize="19dp"
                         android:text="전체취소"
+                        android:fontFamily="@font/poppins_bold"
                         android:textAlignment="center"
                         android:background="@drawable/hot_button_unclicked"
                         android:layout_marginTop="15dp"
@@ -189,6 +201,7 @@
                         android:textStyle="bold"
                         android:gravity="center"
                         android:textSize="19dp"
+                        android:fontFamily="@font/poppins_bold"
                         android:text="뒤로"
                         android:textAlignment="center"
                         android:background="@drawable/hot_button_unclicked"
@@ -205,6 +218,8 @@
                         android:gravity="center"
                         android:textSize="19dp"
                         android:text="다음"
+                        android:fontFamily="@font/poppins_bold"
+
                         android:textAlignment="center"
                         android:background="@drawable/hot_button_clicked"
                         android:layout_marginTop="15dp"
