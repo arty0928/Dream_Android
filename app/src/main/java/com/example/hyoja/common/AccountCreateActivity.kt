@@ -45,6 +45,7 @@ class AccountCreateActivity : AppCompatActivity() {
             editor.putString("ID", id)
             editor.putString("PassWord", password)
             editor.apply()
+            editor.commit()
             true
         } else{
             this.id = "fail"

@@ -36,8 +36,6 @@ class LoginActivity : AppCompatActivity() {
             commonUi.goToAccountCreate(view)
             finish() // 다시 돌아오지 못하게 종료해주세요
         }
-
-        RetrofitUtil().userList()
     }
 
     private var backPressedTime:Long = 0

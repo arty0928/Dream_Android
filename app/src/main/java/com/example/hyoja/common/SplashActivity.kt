@@ -19,11 +19,13 @@ class SplashActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("HyoJaPreference", Context.MODE_PRIVATE)
         val id: String = sharedPreferences.getString("ID","fail").toString()
         val password: String = sharedPreferences.getString("Password","fail").toString()
-        Log.d("id and pw", id +"\n"+ password)
+        Log.d("id and pw", "$id---$password")
 
         val view = this
         Handler().postDelayed({
-            if (RetrofitUtil().login(id,password)){
+            var login = RetrofitUtil().login(id,password)
+
+            if (login){
                 // 스플래시 1초 후 바로 홈 화면으로
                 commonUi.goToHome(view)
             }
