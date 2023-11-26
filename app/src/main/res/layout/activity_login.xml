@@ -14,23 +14,25 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:id="@+id/hyojaLogo"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:src="@drawable/olderlogo"/>
 
 
         <TextView
+            android:id="@+id/hyojaText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="효자손"
             android:gravity="center"
             android:textColor="@color/black"
-            android:fontFamily="@font/ibm_plex_sans_kr_bold"
+            android:fontFamily="@font/poppins_bold"
             android:textSize="25dp"
             />
         <ImageView
-            android:layout_margin="5dp"
+            android:layout_margin="7dp"
             android:layout_gravity="center"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -75,19 +77,21 @@
                 android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"/>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:fontFamily="@font/poppins_extrabold"
                 android:textColor="@color/white"
                 android:id="@+id/login_button"
+                android:background="@drawable/hyoja_theme_button"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:textSize="20dp"
                 android:text ="시작"/>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:fontFamily="@font/poppins_extrabold"
                 android:textColor="@color/white"
                 android:id="@+id/account_create_button"
                 android:textSize="20dp"
+                android:background="@drawable/hyoja_theme_button"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:text ="회원가입"/>

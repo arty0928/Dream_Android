@@ -21,6 +21,7 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:text="    샷 추가"
+            android:fontFamily="@font/poppins_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
@@ -29,6 +30,7 @@
             android:textColor="@color/cafe_darkRed"
             android:textAlignment="center"
             android:background="@drawable/hot_button_unclicked"
+            android:fontFamily="@font/poppins_bold"
             android:textSize="20dp"
             android:textStyle="bold"
             android:text="추가"
@@ -50,6 +52,7 @@
             android:textColor="@color/cafe_skyblue"
             android:textAlignment="center"
             android:background="@drawable/iced_button_unclicked"
+            android:fontFamily="@font/poppins_bold"
             android:textSize="20dp"
             android:textStyle="bold"
             android:text="취소"
@@ -62,6 +65,7 @@
             android:textColor="@color/cafe_white"
             android:textAlignment="center"
             android:background="@drawable/hot_button_clicked"
+            android:fontFamily="@font/poppins_bold"
             android:textSize="20dp"
             android:textStyle="bold"
             android:text="완료"

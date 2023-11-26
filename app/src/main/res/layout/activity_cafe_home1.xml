@@ -26,13 +26,13 @@
         <TextView
             android:id="@+id/cafeHomeText"
             android:text="처음으로"
-            android:padding="20dp"
+            android:gravity="center"
             android:textSize="16dp"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/poppins_bold"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"/>
 
         <ImageView
             android:layout_marginLeft="180dp"
@@ -179,6 +179,7 @@
                             android:gravity="center"
                             android:textAlignment="center"
                             android:text="총 결제금액"
+                            android:fontFamily="@font/poppins_bold"
                             android:textColor="@color/cafe_black"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
@@ -194,6 +195,8 @@
                                 android:layout_width="17dp"
                                 android:layout_height="match_parent"/>
                             <TextView
+                                android:fontFamily="@font/poppins_bold"
+
                                 android:id="@+id/account"
                                 android:textColor="@color/cafe_darkRed"
                                 android:textSize="20dp"
@@ -207,6 +210,7 @@
                         <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/allClear"
                             android:text="전체취소"
+                            android:fontFamily="@font/poppins_bold"
                             android:textColor="@color/white"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
@@ -232,9 +236,10 @@
                     <TextView
                         android:textSize="18dp"
                         android:textColor="@color/cafe_white"
-                        android:textStyle="bold"
+
                         android:textAlignment="center"
                         android:text="결제하기"
+                        android:fontFamily="@font/poppins_bold"
                         android:layout_weight="3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"/>
