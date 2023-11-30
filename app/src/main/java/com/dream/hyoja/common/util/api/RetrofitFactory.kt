@@ -15,7 +15,7 @@ interface ApiService {
     fun createUser(@Body user: User): Call<CreateUserResponse>
 
     @POST("test/login")
-    fun login(@Body idPw: IdPw): Call<User>
+    fun login(@Body idPw: IdPw): Call<LoginResponse>
 
 }
 data class IdPw(
@@ -24,7 +24,13 @@ data class IdPw(
 )
 
 data class CreateUserResponse(
-    var success: String,
+    var success: Boolean,
+    var status: Int,
+    var msg: String
+)
+
+data class LoginResponse(
+    var success: Boolean,
     var status: Int,
     var msg: String
 )

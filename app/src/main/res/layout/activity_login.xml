@@ -60,33 +60,14 @@
 
         <LinearLayout
             android:padding="30dp"
-            android:gravity="top"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:orientation="vertical">
-            <EditText
-                android:hint="이름"
-                android:fontFamily="@font/poppins_bold"
-                android:textColor="@color/black"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"/>
-            <EditText
-                android:hint="비밀번호"
-                android:fontFamily="@font/poppins_bold"
-                android:textColor="@color/black"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"/>
+
             <androidx.appcompat.widget.AppCompatButton
-                android:fontFamily="@font/poppins_extrabold"
-                android:textColor="@color/white"
-                android:id="@+id/login_button"
-                android:background="@drawable/hyoja_theme_button"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:textSize="20dp"
-                android:text ="시작"/>
-            <androidx.appcompat.widget.AppCompatButton
+                android:layout_gravity="center"
                 android:fontFamily="@font/poppins_extrabold"
                 android:textColor="@color/white"
                 android:id="@+id/account_create_button"

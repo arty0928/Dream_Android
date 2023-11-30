@@ -3,6 +3,7 @@ package com.dream.hyoja.common
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
 import com.dream.hyoja.common.util.CommonUi
 import com.dream.hyoja.databinding.ActivityMainBinding
 
@@ -38,7 +39,8 @@ class MainActivity : AppCompatActivity() {
         val currentTime = System.currentTimeMillis()
 
         if (currentTime - backPressedTime < 2000) {
-            finish()
+            ActivityCompat.finishAffinity(this)
+            System.exit(0)
         } else {
             Toast.makeText(this, "한 번 더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show()
             backPressedTime = currentTime

@@ -3,10 +3,16 @@ package com.dream.hyoja.common.util.api
 import android.util.Log
 import com.dream.hyoja.common.model.User
 import com.dream.hyoja.common.model.UserResponse
+import com.google.gson.Gson
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
+import retrofit2.await
 import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitUtil {
@@ -41,58 +47,47 @@ class RetrofitUtil {
         })
     }
 
-    fun createUser(id: String, password:String, name: String): String{
-        val user = User(id, password, name)
+    var ID =""
+    fun createUser(id: String, password:String, name: String) = CoroutineScope(Dispatchers.Main).launch {
+        val user = User(id,password,name)
+        try {
+            val response = service.createUser(user).await()
+            ID = response.msg
+            Log.d("messageID", ID)
 
-        val call = service.createUser(user)
-        var result: String = "fail"
-
-        call.enqueue(object : Callback<CreateUserResponse> {
-            override fun onResponse(call: Call<CreateUserResponse>, response: Response<CreateUserResponse>) {
-                val createUserResponse = response.body()
-                if (response.isSuccessful) {
-                    Log.d("response", "User created successfully")
-                    Log.d("id",createUserResponse!!.msg)
-                    result = createUserResponse.msg
-                } else {
-                    Log.d("response", "Failed to create user")
-                }
-            }
-
-            override fun onFailure(call: Call<CreateUserResponse>, t: Throwable) {
-                Log.d("response", "Failed to create user")
-                Log.d("reason", t.message.toString())
-            }
-        })
-
-        return result
+        } catch (exception: Exception){
+            Log.d("createUser", "fail\n$exception")
+        }
     }
 
-    fun login(id: String, password: String): Boolean{
-        val idPw = IdPw(id,password)
-        val call = service.login(idPw)
+    var loginResult: Boolean = false
+    fun login(id: String, password: String) = CoroutineScope(Dispatchers.Main).launch {
+        val idPw = IdPw(id, password)
+        try {
+            val response = service.login(idPw).await()
+            Log.d("serverID",response.msg)
+            val jsonString = response.msg
+            val userString = jsonString.substring(jsonString.indexOf("(") + 1, jsonString.indexOf(")"))
+            val userFields = userString.split(", ")
+            val id = userFields[0].substring(userFields[0].indexOf("=") + 1)
+            val password = userFields[1].substring(userFields[1].indexOf("=") + 1)
+            val name = userFields[2].substring(userFields[2].indexOf("=") + 1)
+            val user = User(id, password, name)
 
-        var result: Boolean = false
-
-        call.enqueue(object : Callback<User>{
-            override fun onResponse(call: Call<User>, response: Response<User>) {
-                if (response.isSuccessful) {
-                    Log.d("response","Login is successful")
-                    Log.d("response",response.message().toString())
-                    result = true
-                } else {
-                    Log.d("response", "Failed to login")
-                    result = false
-                }
+            if (user.id == id) {
+                Log.d("onResponse", response.msg.toString())
+                loginResult = true
+            } else {
+                Log.d("response", "Failed to login")
+                Log.d("onResponse", response.msg.toString())
+                loginResult = false
             }
+        } catch (e: Exception) {
+            Log.d("catch", "error")
+            Log.d("reason", e.message.toString())
+            loginResult = false
+        }
 
-            override fun onFailure(call: Call<User>, t: Throwable) {
-                Log.d("response", "Failed to create user")
-                Log.d("reason", t.message.toString())
-            }
-        })
-
-        return result
     }
 
 
