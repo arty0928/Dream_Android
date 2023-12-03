@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".setMenu2Fragment">
+    tools:context=".setMenu1Fragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -14,9 +14,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.4"
+            android:layout_weight="1"
             android:background="@color/white"
-            android:padding="10dp"
+            android:padding="3dp"
             >
 
             <LinearLayout
@@ -28,7 +28,8 @@
                 <TextView
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
+                    android:autoSizeTextType="uniform"
                     android:text="선택하신 버거와 가장 잘 어울리는 Best 드링크!"
                     android:gravity="center"
                     android:textColor="@color/black"
@@ -37,107 +38,113 @@
                 </TextView>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:id="@+id/setMenuDrink1"
                         android:layout_weight="1"
-                        android:padding="10dp"
-                        android:layout_width="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/ready_white"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/setMenuDrink1_image"
-                            android:layout_weight="1"
+                            android:id="@+id/setMenuDeseert1_image"
+                            android:layout_weight="4"
+                            android:layout_margin="4dp"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/drink1"/>
+                            android:layout_height="0dp"
+                            android:background="@drawable/ready_white"/>
                         <TextView
-                            android:id="@+id/setMenuDrink1_name"
-                            android:layout_weight="3"
+                            android:id="@+id/setMenuDeseert1_name"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="콜라"
+                            android:layout_height="0dp"
+                            android:text="포테이토"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"/>
                         <TextView
-                            android:id="@+id/setMenuDrink1_price"
-                            android:layout_weight="3"
+                            android:id="@+id/setMenuDeseert1_price"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
                             android:text="0"
+
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/cafe_darkRed"/>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/setMenuDrink2"
+                        android:id="@+id/setMenuDeseert2"
                         android:layout_weight="1"
-                        android:padding="10dp"
-                        android:layout_width="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/setMenuDrink2_image"
-                            android:layout_weight="1"
+                            android:id="@+id/setMenuDeseert2_image"
+                            android:layout_weight="4"
+                            android:layout_margin="5dp"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/drink2"/>
+                            android:layout_height="0dp"
+                            android:background="@drawable/ready_white"/>
                         <TextView
-                            android:id="@+id/setMenuDrink2_name"
-                            android:layout_weight="3"
+                            android:id="@+id/setMenuDeseert2_name"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="사이다"
+                            android:layout_height="0dp"
+                            android:text="양념감자"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"/>
                         <TextView
-                            android:id="@+id/setMenuDrink2_price"
-                            android:layout_weight="3"
+                            android:id="@+id/setMenuDeseert2_price"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="0"
+                            android:layout_height="0dp"
+                            android:text="2300"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/cafe_darkRed"/>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/setMenuDrink3"
+                        android:id="@+id/setMenuDeseert3"
                         android:layout_weight="1"
-                        android:padding="10dp"
-                        android:layout_width="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/setMenuDrink3_image"
-                            android:layout_weight="1"
+                            android:id="@+id/setMenuDeseert3_image"
+                            android:layout_weight="4"
+                            android:layout_margin="5dp"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/drink3"/>
+                            android:layout_height="0dp"
+                            android:background="@drawable/ready_white"/>
                         <TextView
-                            android:id="@+id/setMenuDrink3_name"
-                            android:layout_weight="3"
+                            android:id="@+id/setMenuDeseert3_name"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="제로콜라"
+                            android:layout_height="0dp"
+                            android:text="웨지포테이토"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"/>
                         <TextView
-                            android:id="@+id/setMenuDrink3_price"
-                            android:layout_weight="3"
+                            android:id="@+id/setMenuDeseert3_price"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="0"
+                            android:layout_height="0dp"
+                            android:text="2100"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/cafe_darkRed"/>
                     </LinearLayout>
@@ -151,7 +158,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1.7"
             android:background="@color/white"
             >
 
@@ -162,219 +169,255 @@
                 >
 
                 <LinearLayout
-                    android:padding="10dp"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="0dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:padding="3dp"
                         android:id="@+id/setMenuDrink4"
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
-                        <ImageView
-                            android:id="@+id/setMenuDrink4_image"
-                            android:layout_weight="1"
+                        <LinearLayout
+                            android:layout_margin="3dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/drink4"/>
-                        <TextView
-                            android:id="@+id/setMenuDrink4_name"
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="아메리카노"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"
-                            android:gravity="center"/>
-                        <TextView
-                            android:id="@+id/setMenuDrink4_price"
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="2500"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"
-                            android:gravity="center"/>
+                            android:orientation="vertical">
+                            <ImageView
+                                android:id="@+id/setMenuDrink4_image"
+                                android:layout_weight="4"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="@drawable/ready_white"/>
+                            <TextView
+                                android:id="@+id/setMenuDrink4_name"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:text="치즈스틱"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+                            <TextView
+                                android:id="@+id/setMenuDrink4_price"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:text="2400"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
                         android:padding="3dp"
-
                         android:id="@+id/setMenuDrink5"
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
-                        <ImageView
-                            android:id="@+id/setMenuDrink5_image"
-                            android:layout_weight="1"
+                        <LinearLayout
+                            android:layout_margin="3dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/drink5"/>
-                        <TextView
-                            android:id="@+id/setMenuDrink5_name"
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="아이스 아메리카노"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"
-                            android:gravity="center"/>
-                        <TextView
-                            android:id="@+id/setMenuDrink5_price"
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="2600"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"
-                            android:gravity="center"/>
+                            android:orientation="vertical">
+                            <ImageView
+                                android:id="@+id/setMenuDrink5_image"
+                                android:layout_weight="4"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="@drawable/ready_white"/>
+                            <TextView
+                                android:id="@+id/setMenuDrink5_name"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:text="통오징어링"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+                            <TextView
+                                android:id="@+id/setMenuDrink5_price"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:text="2600"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+                        </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
                         android:padding="3dp"
                         android:id="@+id/setMenuDrink6"
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
-                        <ImageView
-                            android:id="@+id/setMenuDrink6_image"
-                            android:layout_weight="1"
+                        <LinearLayout
+                            android:layout_margin="3dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/drink6"/>
-                        <TextView
-                            android:id="@+id/setMenuDrink6_name"
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="아이스티"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"
-                            android:gravity="center"/>
-                        <TextView
-                            android:id="@+id/setMenuDrink6_price"
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="2300"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"
-                            android:gravity="center"/>
+                            android:orientation="vertical">
+                            <ImageView
+                                android:id="@+id/setMenuDrink6_image"
+                                android:layout_weight="4"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="@drawable/ready_white"/>
+                            <TextView
+                                android:id="@+id/setMenuDrink6_name"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:text="모짜크림치즈볼"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+                            <TextView
+                                android:id="@+id/setMenuDrink6_price"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:text="2300"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:padding="10dp"
+                    android:padding="3dp"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="0dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:padding="3dp"
                         android:id="@+id/setMenuDrink7"
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
-                        <ImageView
-                            android:id="@+id/setMenuDrink7_image"
-                            android:layout_weight="1"
+                        <LinearLayout
+                            android:layout_margin="3dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/drink7"/>
-                        <TextView
-                            android:id="@+id/setMenuDrink7_name"
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="레몬에이드"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"
-                            android:gravity="center"/>
-                        <TextView
-                            android:id="@+id/setMenuDrink7_price"
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="2500"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"
-                            android:gravity="center"/>
+                            android:orientation="vertical"
+                            >
+                            <ImageView
+                                android:id="@+id/setMenuDrink7_image"
+                                android:layout_weight="4"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="@drawable/ready_white"/>
+                            <TextView
+                                android:id="@+id/setMenuDrink7_name"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:text="치킨너겟"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+                            <TextView
+                                android:id="@+id/setMenuDrink7_price"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:text="2700"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+                        </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
                         android:padding="3dp"
                         android:id="@+id/setMenuDrink8"
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
-                        <ImageView
-                            android:id="@+id/setMenuDrink8_image"
-                            android:layout_weight="1"
+                        <LinearLayout
+                            android:layout_margin="3dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/drink8"/>
-                        <TextView
-                            android:id="@+id/setMenuDrink8_name"
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="자몽에이드"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"
-                            android:gravity="center"/>
-                        <TextView
-                            android:id="@+id/setMenuDrink8_price"
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="2500"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"
-                            android:gravity="center"/>
+                            android:orientation="vertical">
+                            <ImageView
+                                android:id="@+id/setMenuDrink8_image"
+                                android:layout_weight="4"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="@drawable/ready_white"/>
+                            <TextView
+                                android:id="@+id/setMenuDrink8_name"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:text="롱치즈스틱"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+                            <TextView
+                                android:id="@+id/setMenuDrink8_price"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:text="2000"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+                        </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
                         android:padding="3dp"
                         android:id="@+id/setMenuDrink9"
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
-                        <ImageView
-                            android:id="@+id/setMenuDrink9_image"
-                            android:layout_weight="1"
+                        <LinearLayout
+                            android:layout_margin="3dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/drink9"/>
-                        <TextView
-                            android:id="@+id/setMenuDrink9_name"
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="카페라떼"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"
-                            android:gravity="center"/>
-                        <TextView
-                            android:id="@+id/setMenuDrink9_price"
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="2500"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"
-                            android:gravity="center"/>
+                            android:orientation="vertical">
+                            <ImageView
+                                android:id="@+id/setMenuDrink9_image"
+                                android:layout_weight="4"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="@drawable/ready_white"/>
+                            <TextView
+                                android:id="@+id/setMenuDrink9_name"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:text="꽈배기"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+                            <TextView
+                                android:id="@+id/setMenuDrink9_price"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:text="2000"
+                                android:fontFamily="@font/poppins_extrabold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
 

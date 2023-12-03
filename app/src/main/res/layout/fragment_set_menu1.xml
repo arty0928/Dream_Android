@@ -14,7 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.4"
+            android:layout_weight="1"
             android:background="@color/white"
             android:padding="3dp"
             >
@@ -28,7 +28,8 @@
                 <TextView
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
+                    android:autoSizeTextType="uniform"
                     android:text="선택하신 버거와 가장 잘 어울리는 Best 디저트!"
                     android:gravity="center"
                     android:textColor="@color/black"
@@ -37,7 +38,8 @@
                 </TextView>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -45,33 +47,34 @@
                         android:layout_weight="1"
                         android:layout_margin="5dp"
                         android:background="@drawable/ready_white"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
                         <ImageView
                             android:id="@+id/setMenuDeseert1_image"
-                            android:layout_weight="1"
+                            android:layout_weight="4"
                             android:layout_margin="4dp"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
                             android:background="@drawable/ready_white"/>
                         <TextView
                             android:id="@+id/setMenuDeseert1_name"
-                            android:layout_weight="3"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
                             android:text="포테이토"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"/>
                         <TextView
                             android:id="@+id/setMenuDeseert1_price"
-                            android:layout_weight="3"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
                             android:text="0"
+
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/cafe_darkRed"/>
                     </LinearLayout>
@@ -80,33 +83,32 @@
                         android:id="@+id/setMenuDeseert2"
                         android:layout_weight="1"
                         android:layout_margin="4dp"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
                         <ImageView
                             android:id="@+id/setMenuDeseert2_image"
-                            android:layout_weight="1"
+                            android:layout_weight="4"
                             android:layout_margin="5dp"
-
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
                             android:background="@drawable/ready_white"/>
                         <TextView
                             android:id="@+id/setMenuDeseert2_name"
-                            android:layout_weight="3"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
                             android:text="양념감자"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"/>
                         <TextView
                             android:id="@+id/setMenuDeseert2_price"
-                            android:layout_weight="3"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
                             android:text="2300"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/cafe_darkRed"/>
@@ -116,33 +118,32 @@
                         android:id="@+id/setMenuDeseert3"
                         android:layout_weight="1"
                         android:layout_margin="4dp"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
                         <ImageView
                             android:id="@+id/setMenuDeseert3_image"
-                            android:layout_weight="1"
+                            android:layout_weight="4"
                             android:layout_margin="5dp"
-
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
                             android:background="@drawable/ready_white"/>
                         <TextView
                             android:id="@+id/setMenuDeseert3_name"
-                            android:layout_weight="3"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
                             android:text="웨지포테이토"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"/>
                         <TextView
                             android:id="@+id/setMenuDeseert3_price"
-                            android:layout_weight="3"
+                            android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
                             android:text="2100"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/cafe_darkRed"/>
@@ -157,7 +158,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1.7"
             android:background="@color/white"
             >
 
@@ -170,14 +171,14 @@
                 <LinearLayout
                     android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="0dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:padding="3dp"
                         android:id="@+id/setMenuDessert4"
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
@@ -188,24 +189,24 @@
                             android:orientation="vertical">
                             <ImageView
                                 android:id="@+id/setMenuDessert4_image"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:background="@drawable/ready_white"/>
                             <TextView
                                 android:id="@+id/setMenuDessert4_name"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:text="치즈스틱"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
                             <TextView
                                 android:id="@+id/setMenuDessert4_price"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:text="2400"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
@@ -217,7 +218,7 @@
                         android:padding="3dp"
                         android:id="@+id/setMenuDessert5"
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
@@ -228,24 +229,24 @@
                             android:orientation="vertical">
                             <ImageView
                                 android:id="@+id/setMenuDessert5_image"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:background="@drawable/ready_white"/>
                             <TextView
                                 android:id="@+id/setMenuDessert5_name"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:text="통오징어링"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
                             <TextView
                                 android:id="@+id/setMenuDessert5_price"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:text="2600"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
@@ -256,7 +257,7 @@
                         android:padding="3dp"
                         android:id="@+id/setMenuDessert6"
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
@@ -267,24 +268,24 @@
                             android:orientation="vertical">
                             <ImageView
                                 android:id="@+id/setMenuDessert6_image"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:background="@drawable/ready_white"/>
                             <TextView
                                 android:id="@+id/setMenuDessert6_name"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:text="모짜크림치즈볼"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
                             <TextView
                                 android:id="@+id/setMenuDessert6_price"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:text="2300"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
@@ -297,14 +298,14 @@
                     android:padding="3dp"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="0dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:padding="3dp"
                         android:id="@+id/setMenuDessert7"
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
@@ -316,24 +317,24 @@
                             >
                             <ImageView
                                 android:id="@+id/setMenuDessert7_image"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:background="@drawable/ready_white"/>
                             <TextView
                                 android:id="@+id/setMenuDessert7_name"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:text="치킨너겟"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
                             <TextView
                                 android:id="@+id/setMenuDessert7_price"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:text="2700"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
@@ -344,7 +345,7 @@
                         android:padding="3dp"
                         android:id="@+id/setMenuDessert8"
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
@@ -355,24 +356,24 @@
                             android:orientation="vertical">
                             <ImageView
                                 android:id="@+id/setMenuDessert8_image"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:background="@drawable/ready_white"/>
                             <TextView
                                 android:id="@+id/setMenuDessert8_name"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:text="롱치즈스틱"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
                             <TextView
                                 android:id="@+id/setMenuDessert8_price"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:text="2000"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
@@ -383,7 +384,7 @@
                         android:padding="3dp"
                         android:id="@+id/setMenuDessert9"
                         android:layout_weight="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
@@ -394,24 +395,24 @@
                             android:orientation="vertical">
                             <ImageView
                                 android:id="@+id/setMenuDessert9_image"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:background="@drawable/ready_white"/>
                             <TextView
                                 android:id="@+id/setMenuDessert9_name"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:text="꽈배기"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
                             <TextView
                                 android:id="@+id/setMenuDessert9_price"
-                                android:layout_weight="2"
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="0dp"
                                 android:text="2000"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"

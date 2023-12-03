@@ -15,7 +15,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/SetMenuChoiceCategory_dessert"
             android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_setmenu_default"
             android:fontFamily="@font/poppins_extrabold"
@@ -26,7 +26,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/SetMenuChoiceCategory_drink"
             android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_setmenu_default"
             android:fontFamily="@font/poppins_extrabold"
