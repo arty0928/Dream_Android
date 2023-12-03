@@ -22,6 +22,7 @@ class CafeHomeActivity : AppCompatActivity() {
             common.goToCafeHome1(view)
             CafeModel.pickOrMarket = true
         }
+
         binding.toGo.setOnClickListener{
             common.goToCafeHome1(view)
             CafeModel.pickOrMarket = false

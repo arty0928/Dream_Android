@@ -38,7 +38,7 @@ class SplashActivity : AppCompatActivity() {
             }
             else{
                 // 스플래시 1초 후 로그인 화면으로
-                commonUi.goToLogin(view)
+                commonUi.goToHome(view)
             }
 
             finish() // 스플래시는 꼭 종료시켜 주세요
