@@ -58,8 +58,6 @@
             android:paddingRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="20dp"
-
             android:layout_weight="1.4"
             android:orientation="vertical">
             <ImageView
@@ -76,10 +74,19 @@
                 android:text="키오스크 카테고리를 선택해주세요"
                 android:gravity="center"
                 android:textSize="20dp"
-                android:fontFamily="@font/poppins_extrabold"
-                />
+                android:fontFamily="@font/poppins_extrabold" />
 
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textColor="@color/cafe_darkRed"
+            android:text="연습용\n실제로 결제되지 않아요!"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/poppins_extrabold"/>
+
 
         <LinearLayout
             android:gravity="top"
