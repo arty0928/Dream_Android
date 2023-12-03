@@ -4,6 +4,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dream.hyoja.Fragments.FastFoodStep3Fragment
 import com.dream.hyoja.Fragments.checkCancelFragment
@@ -77,6 +78,20 @@ class FastFoodPayActivity : AppCompatActivity() {
             enableStep2Buttons() // payStep.step1이 선택되면 step2 버튼 활성화
         }
         totalFoodListAdded()
+    }
+    override fun onBackPressed() {
+        // 뒤로가기 막기
+        val currentTime = System.currentTimeMillis()
+        val commonUi:CommonUi = CommonUi()
+        val view = this
+
+        if (currentTime - backPressedTime < 2000) {
+            commonUi.goToHome(view)
+            finish()
+        } else {
+            Toast.makeText(this, "한 번 더 누르면 메인화면으로 전환합니다", Toast.LENGTH_SHORT).show()
+            backPressedTime = currentTime
+        }
     }
 
     fun enableStep2Buttons() {
