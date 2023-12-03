@@ -58,6 +58,8 @@ class FastFoodPayActivity : AppCompatActivity() {
             binding.step1PackageBtn.setBackgroundResource(R.drawable.layout_border_red)
             binding.step1PackageText2.setTextColor(Color.parseColor("#000000"))
             binding.step1PackageText1.setTextColor(Color.parseColor("#000000"))
+            
+            binding.payWay.text = "포장"
 
             binding.step1PackageBtnImage.setImageResource(R.drawable.bag)
             payStep.step1 = "포장"
@@ -69,6 +71,8 @@ class FastFoodPayActivity : AppCompatActivity() {
             resetStep1Buttons()
             binding.step1ShopBtn.setBackgroundResource(R.drawable.layout_border_red)
 
+            binding.payWay.text = "매장"
+            
             binding.step1shBtnImage.setImageResource(R.drawable.shop)
             binding.step1ShopText2.setTextColor(Color.parseColor("#000000"))
             binding.step1ShopText1.setTextColor(Color.parseColor("#000000"))
