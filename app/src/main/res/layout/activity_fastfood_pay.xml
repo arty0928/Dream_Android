@@ -92,7 +92,7 @@
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:gravity="center"
                                 android:textColor="@color/black"
-                                android:layout_weight="1">
+                                android:layout_weight="2">
 
                             </TextView>
 
@@ -322,7 +322,7 @@
                                         android:id="@+id/payWay"
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
-                                        android:text="ㄹㄹ"
+                                        android:text=""
                                         android:fontFamily="@font/poppins_medium"
                                         android:textColor="@color/black"
                                         android:gravity="center|top"
@@ -394,7 +394,7 @@
                                         android:fontFamily="@font/poppins_extrabold"
                                         android:textColor="@color/white"
                                         android:gravity="center|left"
-                                        android:autoSizeTextType="uniform"
+                                        android:textSize="12dp"
                                         android:layout_marginLeft="5dp"/>
 
                                 </LinearLayout>
@@ -447,8 +447,9 @@
                                                 android:fontFamily="@font/poppins_extrabold"
                                                 android:gravity="center"
                                                 android:text="1회용기 제공"
-                                                android:autoSizeTextType="uniform"
                                                 android:textColor="@color/black"
+                                                android:textSize="12dp"
+
                                                 />
 
 
@@ -506,7 +507,7 @@
                                                 android:fontFamily="@font/poppins_extrabold"
                                                 android:gravity="center"
                                                 android:text="다회용기 제공"
-                                                android:autoSizeTextType="uniform"
+                                                android:textSize="12dp"
                                                 android:textColor="@color/black"
 
                                                 />
@@ -558,8 +559,8 @@
                                         android:fontFamily="@font/poppins_extrabold"
                                         android:textColor="@color/white"
                                         android:gravity="center|left"
-                                        android:autoSizeTextType="uniform"
                                         android:layout_marginLeft="5dp"
+                                        android:textSize="12dp"
 
                                         />
 
@@ -606,7 +607,7 @@
                                                     android:layout_width="match_parent"
                                                     android:layout_height="0dp"
                                                     android:text="롯데잇츠APP\nONE바코드"
-                                                    android:autoSizeTextType="uniform"
+                                                    android:textSize="10dp"
                                                     android:fontFamily="@font/poppins_extrabold"
                                                     android:textColor="#969696"
                                                     android:gravity="center"/>
@@ -646,7 +647,7 @@
                                                     android:layout_width="match_parent"
                                                     android:layout_height="0dp"
                                                     android:text="제휴사\n할인"
-                                                    android:autoSizeTextType="uniform"
+                                                    android:textSize="10dp"
                                                     android:fontFamily="@font/poppins_extrabold"
                                                     android:textColor="#969696"
                                                     android:gravity="center"/>
@@ -699,7 +700,7 @@
                                                     android:layout_width="match_parent"
                                                     android:layout_height="0dp"
                                                     android:text="L.POINT\n적립/사용"
-                                                    android:autoSizeTextType="uniform"
+                                                    android:textSize="10dp"
                                                     android:fontFamily="@font/poppins_extrabold"
                                                     android:textColor="#969696"
                                                     android:gravity="center"/>
@@ -742,7 +743,7 @@
                                                     android:layout_width="match_parent"
                                                     android:layout_height="0dp"
                                                     android:text="선택없음\n/결제하기"
-                                                    android:autoSizeTextType="uniform"
+                                                    android:textSize="10dp"
                                                     android:fontFamily="@font/poppins_extrabold"
                                                     android:textColor="#969696"
                                                     android:gravity="center"/>
@@ -792,8 +793,9 @@
                                         android:fontFamily="@font/poppins_extrabold"
                                         android:textColor="@color/white"
                                         android:gravity="center|left"
-                                        android:autoSizeTextType="uniform"
-                                        android:layout_marginLeft="5dp"/>
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="12dp"
+                                        />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -832,7 +834,7 @@
                                                 android:layout_width="match_parent"
                                                 android:layout_height="0dp"
                                                 android:text="신용/체크카드"
-                                                android:autoSizeTextType="uniform"
+                                                android:textSize="10dp"
                                                 android:fontFamily="@font/poppins_extrabold"
                                                 android:textColor="#969696"
                                                 android:gravity="center"/>
@@ -874,7 +876,8 @@
                                                     android:layout_width="match_parent"
                                                     android:layout_height="0dp"
                                                     android:text="모바일/바코드\n페이류(PAY)"
-                                                    android:autoSizeTextType="uniform"
+                                                    android:textSize="10dp"
+
                                                     android:fontFamily="@font/poppins_extrabold"
                                                     android:textColor="#969696"
                                                     android:gravity="center"/>
@@ -926,7 +929,7 @@
                                                     android:layout_width="match_parent"
                                                     android:layout_height="0dp"
                                                     android:text="LPAY"
-                                                    android:autoSizeTextType="uniform"
+                                                    android:textSize="12dp"
                                                     android:fontFamily="@font/poppins_extrabold"
                                                     android:textColor="#969696"
                                                     android:gravity="center"/>
@@ -972,9 +975,8 @@
                                                     android:text="선택없음\n/결제하기"
                                                     android:fontFamily="@font/poppins_extrabold"
                                                     android:textColor="#969696"
-                                                    android:autoSizeTextType="uniform"
                                                     android:gravity="center"
-
+                                                    android:textSize="10dp"
                                                     />
 
 
@@ -1011,71 +1013,6 @@
 
             >
 
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                >
-                <!--직원 호출-->
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:textAlignment="center"
-                    >
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:src="@drawable/speaker" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:fontFamily="@font/poppins_bold"
-                        android:text="직원호출"
-                        android:autoSizeTextType="uniform"
-                        android:gravity="center"
-                        android:textColor="@color/black"
-                        >
-
-                    </TextView>
-
-                </LinearLayout>
-                <!--이전-->
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:id="@+id/beforeButton"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:textAlignment="center">
-
-                    <ImageView
-                        android:layout_weight="2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:src="@drawable/left_round" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:fontFamily="@font/poppins_extrabold"
-                        android:text="이전"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        >
-
-                    </TextView>
-
-                </LinearLayout>
-            </LinearLayout>
-            <!--취소하기-->
             <LinearLayout
                 android:layout_weight="1"
                 android:id="@+id/cancel_button"

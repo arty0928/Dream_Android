@@ -52,14 +52,14 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/setMenuDeseert1_image"
+                            android:id="@+id/setMenuDrink1_image"
                             android:layout_weight="4"
                             android:layout_margin="4dp"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:background="@drawable/ready_white"/>
                         <TextView
-                            android:id="@+id/setMenuDeseert1_name"
+                            android:id="@+id/setMenuDrink1_name"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
@@ -68,7 +68,7 @@
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"/>
                         <TextView
-                            android:id="@+id/setMenuDeseert1_price"
+                            android:id="@+id/setMenuDrink1_price"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/setMenuDeseert2"
+                        android:id="@+id/setMenuDrink2"
                         android:layout_weight="1"
                         android:layout_margin="4dp"
                         android:layout_width="0dp"
@@ -88,14 +88,14 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/setMenuDeseert2_image"
+                            android:id="@+id/setMenuDrink2_image"
                             android:layout_weight="4"
                             android:layout_margin="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:background="@drawable/ready_white"/>
                         <TextView
-                            android:id="@+id/setMenuDeseert2_name"
+                            android:id="@+id/setMenuDrink2_name"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
@@ -104,7 +104,7 @@
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"/>
                         <TextView
-                            android:id="@+id/setMenuDeseert2_price"
+                            android:id="@+id/setMenuDrink2_price"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
@@ -115,7 +115,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/setMenuDeseert3"
+                        android:id="@+id/setMenuDrink3"
                         android:layout_weight="1"
                         android:layout_margin="4dp"
                         android:layout_width="0dp"
@@ -123,14 +123,14 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/setMenuDeseert3_image"
+                            android:id="@+id/setMenuDrink3_image"
                             android:layout_weight="4"
                             android:layout_margin="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:background="@drawable/ready_white"/>
                         <TextView
-                            android:id="@+id/setMenuDeseert3_name"
+                            android:id="@+id/setMenuDrink3_name"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"
@@ -139,7 +139,7 @@
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"/>
                         <TextView
-                            android:id="@+id/setMenuDeseert3_price"
+                            android:id="@+id/setMenuDrink3_price"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:layout_width="match_parent"

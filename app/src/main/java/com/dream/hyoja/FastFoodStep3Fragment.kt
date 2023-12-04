@@ -46,6 +46,20 @@ class FastFoodStep3Fragment : DialogFragment() {
             requireActivity().supportFragmentManager.popBackStack()
         }
 
+        binding.payMobileCardBtn.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+            PayFragment().show(requireActivity().supportFragmentManager, "PayFragment")
+
+        }
+        binding.payBarcodeBtn.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            requireActivity().supportFragmentManager.popBackStack()
+            PayFragment().show(requireActivity().supportFragmentManager, "PayFragment")
+
+        }
+
+
         binding.samsungPay.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
             requireActivity().supportFragmentManager.popBackStack()

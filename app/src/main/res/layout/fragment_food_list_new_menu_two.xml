@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
         >
         <LinearLayout
@@ -30,20 +30,20 @@
                 <ImageView
                     android:id="@+id/newMenu1_image"
                     android:background="@drawable/ready_white"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.2"
+                    android:layout_weight="1"
                     />
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     >
                     <TextView
                         android:id="@+id/newMenu1_name"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:textColor="@color/black"
                         android:text="1번"
                         android:layout_weight="1"
@@ -53,7 +53,7 @@
                     <TextView
                         android:id="@+id/newmenu1_price"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -80,20 +80,20 @@
                 <ImageView
                     android:id="@+id/newMenu2_image"
                     android:background="@drawable/ready_white"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.2"
+                    android:layout_weight="1"
                     />
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     >
                     <TextView
                         android:id="@+id/newMenu2_name"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:text="1번"
                         android:textColor="@color/black"
                         android:layout_weight="1"
@@ -103,7 +103,7 @@
                     <TextView
                         android:id="@+id/newMenu2_price"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -119,7 +119,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
         >
         <LinearLayout
@@ -137,20 +137,20 @@
                 <ImageView
                     android:id="@+id/newMenu3_image"
                     android:background="@drawable/ready_white"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.2"
+                    android:layout_weight="1"
                     />
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     >
                     <TextView
                         android:id="@+id/newMenu3_name"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:text="1번"
                         android:layout_weight="1"
                         android:textColor="@color/black"
@@ -160,7 +160,7 @@
                     <TextView
                         android:id="@+id/newMenu3_price"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -187,20 +187,20 @@
                 <ImageView
                     android:id="@+id/newMenu4_image"
                     android:background="@drawable/ready_white"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.2"
+                    android:layout_weight="1"
                     />
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     >
                     <TextView
                         android:id="@+id/newMenu4_name"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -210,7 +210,7 @@
                     <TextView
                         android:id="@+id/newMenu4_price"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -226,7 +226,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
         >
         <LinearLayout
@@ -244,20 +244,20 @@
                 <ImageView
                     android:id="@+id/newMenu5_image"
                     android:background="@drawable/ready_white"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.2"
+                    android:layout_weight="1"
                     />
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     >
                     <TextView
                         android:id="@+id/newMenu5_name"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -267,7 +267,7 @@
                     <TextView
                         android:id="@+id/newMenu5_price"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -294,12 +294,12 @@
                 <ImageView
                     android:id="@+id/newMenu6_image"
                     android:background="@drawable/ready_white"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.2"
                     />
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1"
@@ -307,7 +307,7 @@
                     <TextView
                         android:id="@+id/newMenu6_name"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -317,7 +317,7 @@
                     <TextView
                         android:id="@+id/newMenu6_price"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
