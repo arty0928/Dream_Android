@@ -28,6 +28,9 @@ class setMenu1Fragment : Fragment() {
         Log.d(Tag,"onViewCreated called")
 
         super.onViewCreated(view, savedInstanceState)
+
+
+
         //뷰모델 프로바이더 생성
         viewModel = ViewModelProvider(requireActivity())[FoodListViewModel::class.java]
 
@@ -161,8 +164,11 @@ class setMenu1Fragment : Fragment() {
         when(category) {
             "setDessert" -> {
                 setMenuArrayList = setMenu.getsetDessertArrayList()
+                binding.setMenuTitile.text = "선택하신 버거와 가장 잘 어울리는 Best 디저트!"
             }"setDrink" -> {
             setMenuArrayList = setMenu.getsetDrinkArrayList()
+            binding.setMenuTitile.text = "선택하신 버거와 가장 잘 어울리는 Best 드링크!"
+
         }
         }
 

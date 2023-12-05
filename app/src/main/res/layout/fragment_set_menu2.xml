@@ -189,7 +189,7 @@
                             android:orientation="vertical">
                             <ImageView
                                 android:id="@+id/setMenuDrink4_image"
-                                android:layout_weight="4"
+                                android:layout_weight="3.5"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:background="@drawable/ready_white"/>
@@ -204,7 +204,7 @@
                                 android:gravity="center"/>
                             <TextView
                                 android:id="@+id/setMenuDrink4_price"
-                                android:layout_weight="1"
+                                android:layout_weight="0.8"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="2400"
@@ -229,7 +229,7 @@
                             android:orientation="vertical">
                             <ImageView
                                 android:id="@+id/setMenuDrink5_image"
-                                android:layout_weight="4"
+                                android:layout_weight="3.5"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:background="@drawable/ready_white"/>
@@ -238,13 +238,14 @@
                                 android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:text="통오징어링"
+                                android:textSize="10dp"
+                                android:text="아이스 아메리카노"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
                             <TextView
                                 android:id="@+id/setMenuDrink5_price"
-                                android:layout_weight="1"
+                                android:layout_weight="0.8"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="2600"
@@ -268,7 +269,7 @@
                             android:orientation="vertical">
                             <ImageView
                                 android:id="@+id/setMenuDrink6_image"
-                                android:layout_weight="4"
+                                android:layout_weight="3.5"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:background="@drawable/ready_white"/>
@@ -283,7 +284,7 @@
                                 android:gravity="center"/>
                             <TextView
                                 android:id="@+id/setMenuDrink6_price"
-                                android:layout_weight="1"
+                                android:layout_weight="0.8"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="2300"
