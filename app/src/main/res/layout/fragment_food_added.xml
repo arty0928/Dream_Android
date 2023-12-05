@@ -21,14 +21,14 @@
             <LinearLayout
                 android:id="@+id/selectedOrderItemBar"
                 android:layout_width="match_parent"
-                android:layout_height="37dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal"
                 >
 
                 <!--                        선택 메뉴 이름    -->
                 <LinearLayout
-                    android:layout_weight="1.2"
-                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent">
                     <TextView
                         android:id="@+id/selectedItemName"
@@ -46,16 +46,16 @@
 
                 <!--                        선택 메뉴 개수    -->
                 <LinearLayout
-                    android:layout_weight="1.5"
-                    android:layout_width="match_parent"
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <TextView
 
-                        android:layout_weight="1"
+                        android:layout_weight="1.2"
                         android:id="@+id/selectedItemCount"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:text="1"
                         android:gravity="center"
@@ -66,8 +66,8 @@
                     </TextView>
 
                     <LinearLayout
-                        android:layout_weight="1.2"
-                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
@@ -76,7 +76,7 @@
                             android:id="@+id/plusItem"
                             android:layout_gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
                             android:layout_weight="1"
                             android:padding="5dp"
                             android:background="@drawable/layout_border6"
@@ -93,7 +93,7 @@
                             android:id="@+id/miusItem"
                             android:layout_gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
                             android:layout_weight="1"
                             android:padding="5dp"
                             android:background="@drawable/layout_border6"
@@ -112,9 +112,9 @@
 
                 <!--                        선택 메뉴 가격-->
                 <TextView
-                    android:layout_weight="1.4"
+                    android:layout_weight="1"
                     android:id="@+id/selectedItemPrice"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:text="3300"
                     android:gravity="center"
@@ -126,9 +126,9 @@
 
                 <!--                        토핑추가-->
                 <LinearLayout
-                    android:layout_weight="1.4"
+                    android:layout_weight="1.2"
                     android:id="@+id/selectedItemAddToping"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_margin="2dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/layout_rounded_darkred"
@@ -149,10 +149,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:layout_weight="1.4"
+                    android:layout_weight="1.1"
                     >
 
                     <!--            변경    -->
@@ -161,7 +161,7 @@
                         android:layout_marginTop="2dp"
                         android:layout_marginBottom="2dp"
                         android:id="@+id/selectedItemEdit"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/layout_border5_gray"
                         >
@@ -187,7 +187,7 @@
                         android:layout_marginTop="2dp"
                         android:layout_marginBottom="2dp"
                         android:id="@+id/selectItemDelete"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/layout_border5_gray"
                         >

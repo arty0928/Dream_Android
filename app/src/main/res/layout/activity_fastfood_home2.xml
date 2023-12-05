@@ -287,70 +287,7 @@
 
             >
 
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                >
-                <!--직원 호출-->
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:textAlignment="center"
-                    >
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:src="@drawable/speaker" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:fontFamily="@font/poppins_bold"
-                        android:text="직원호출"
-                        android:autoSizeTextType="uniform"
-                        android:gravity="center"
-                        android:textColor="@color/black"
-                        >
-
-                    </TextView>
-
-                </LinearLayout>
-                <!--이전-->
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:id="@+id/beforeButton"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:textAlignment="center">
-
-                    <ImageView
-                        android:layout_weight="2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:src="@drawable/left_round" />
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:fontFamily="@font/poppins_extrabold"
-                        android:text="이전"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        >
-
-                    </TextView>
-
-                </LinearLayout>
-            </LinearLayout>
             <!--취소하기-->
             <LinearLayout
                 android:layout_weight="1"

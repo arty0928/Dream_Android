@@ -29,13 +29,13 @@
 
                 <TextView
                     android:layout_marginLeft="33dp"
-                    android:textAlignment="center"
+                    android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:text="세트로 드시겠어요?"
                     android:fontFamily="@font/poppins_extrabold"
-                    android:textSize="20dp"
+                    android:autoSizeTextType="uniform"
                     android:textColor="@color/black"
 
                     >
@@ -67,27 +67,28 @@
                 <LinearLayout
                     android:id="@+id/optionOnlyBurger"
                     android:paddingTop="5dp"
-                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
                     <LinearLayout
-                        android:layout_weight="1"
+                        android:layout_weight="4"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:orientation="vertical"
                         android:background="@drawable/layout_transparent_back_yellow_border"
                         android:padding="5dp"
                         >
                         <ImageView
                             android:id="@+id/optionOnlyBurger_image"
-                            android:layout_weight="1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/burger1"/>
-                        <TextView
                             android:layout_weight="2.5"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@drawable/burger1"/>
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
                             android:text="버거만"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"
@@ -97,9 +98,9 @@
                     <TextView
                         android:id="@+id/optionOnlyBurger_price"
                         android:layout_marginTop="4dp"
-                        android:layout_weight="4"
+                        android:layout_weight="1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:text="3300"
                         android:gravity="center"
                         android:textColor="@color/cafe_darkRed"
@@ -110,27 +111,28 @@
 
                     android:id="@+id/optionSetBurger"
                     android:paddingTop="5dp"
-                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
                     <LinearLayout
-                        android:layout_weight="1"
+                        android:layout_weight="4"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:orientation="vertical"
                         android:background="@drawable/layout_transparent_back_yellow_border"
                         android:padding="5dp"
                         >
                         <ImageView
                             android:id="@+id/optionSetBurger_image"
-                            android:layout_weight="1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/burger1"/>
-                        <TextView
                             android:layout_weight="2.5"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@drawable/burger1"/>
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
                             android:text="세트"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"
@@ -140,9 +142,9 @@
                     <TextView
                         android:id="@+id/optionSetBurger_price"
                         android:layout_marginTop="4dp"
-                        android:layout_weight="4"
+                        android:layout_weight="1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:text="3300"
                         android:gravity="center"
                         android:textColor="@color/cafe_darkRed"

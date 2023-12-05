@@ -43,10 +43,6 @@ class FastFoodPayActivity : AppCompatActivity() {
             )
         }
 
-        binding.beforeButton.setOnClickListener {
-            common.goToFastFoodHome1Button1(view)
-        }
-
         binding.FastFoodHome.setOnClickListener {
             common.goToHome(view)
         }
@@ -177,7 +173,7 @@ class FastFoodPayActivity : AppCompatActivity() {
                 binding.step3LPadyBtn.setBackgroundResource(R.drawable.layout_border_red)
                 binding.step3LPadyBtnText.setTextColor(Color.parseColor("#000000"))
 
-                binding.step3LPadyBtnImage.setImageResource(R.drawable.barcode_line)
+                binding.step3LPadyBtnImage.setImageResource(R.drawable.lpay)
 
                 payStep.step3 = "LPAY"
                 payDialog()
@@ -244,7 +240,7 @@ class FastFoodPayActivity : AppCompatActivity() {
 
 
         binding.step3CardBtnImage.setImageResource(R.drawable.card_gray)
-        binding.step3LPadyBtnImage.setImageResource(R.drawable.card_gray)
+        binding.step3LPadyBtnImage.setImageResource(R.drawable.lpay)
         binding.step3MobileBarcodeBtnImage.setImageResource(R.drawable.barcode_gray)
         binding.step3NoSelectBtnImage.setImageResource(R.drawable.tmoney_gray)
 

@@ -93,10 +93,7 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
             }
         }
 
-        //이전 버튼
-        binding.beforeButton.setOnClickListener {
-            common.goToFastFoodHome1Button1(view)
-        }
+
 
         //뷰모델 프로바이더 생성
         viewModel = ViewModelProvider(this)[FoodListViewModel::class.java]

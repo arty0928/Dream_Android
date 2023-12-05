@@ -16,9 +16,9 @@
         >
 
         <LinearLayout
-            android:layout_weight="1"
+            android:layout_weight="11"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:orientation="vertical"
             >
 
@@ -45,9 +45,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 android:background="#EDA518"
                 android:orientation="horizontal"
                 >
@@ -62,19 +59,18 @@
                 <HorizontalScrollView
                     android:id="@+id/TabBarTitleHorizontalScroll_setmenu"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_height="match_parent"
                     android:layout_weight="1">
 
                     <LinearLayout
                         android:id="@+id/TabBarTitle_setmenu"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:layout_gravity="center_vertical">
+                        >
 
                         <FrameLayout
-                            android:layout_width="120dp"
+                            android:layout_width="100dp"
                             android:layout_height="match_parent">
 
                             <!-- Background View (your tab indicator) -->
@@ -89,17 +85,19 @@
                             <!-- TextView -->
                             <TextView
                                 android:id="@+id/set_dessert_title"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
                                 android:text="세트_디저트"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
-                                android:textSize="20dp" />
+                                android:autoSizeTextType="uniform"
+
+                                />
                         </FrameLayout>
 
                         <FrameLayout
-                            android:layout_width="120dp"
+                            android:layout_width="100dp"
                             android:layout_height="match_parent">
 
                             <!-- Background View (your tab indicator) -->
@@ -116,14 +114,15 @@
                             <TextView
 
                                 android:id="@+id/set_drink_title"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
                                 android:text="세트_드링크"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
-                                android:textSize="20dp" />
+                                android:autoSizeTextType="uniform"
+
+                                />
                         </FrameLayout>
 
 
@@ -156,47 +155,14 @@
                     android:layout_height="match_parent"
                     />
             </androidx.constraintlayout.widget.ConstraintLayout>
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_width="match_parent"-->
-<!--                tools:context=".fastfoods.NewTabActivity"-->
-<!--                >-->
-
-<!--                <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--                    android:id="@+id/bottomNavigationView"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    app:menu="@menu/bottom_nav"-->
-<!--                    >-->
-<!--                </com.google.android.material.bottomnavigation.BottomNavigationView>-->
-
-<!--                <FrameLayout-->
-<!--                    android:id="@+id/frame_layout"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="0dp"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/bottomNavigationView"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    >-->
-
-<!--                </FrameLayout>-->
-
-
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-            <!--     bottom bar -->
         </LinearLayout>
 
 
         <LinearLayout
-            android:layout_weight="11"
+            android:layout_weight="1"
             android:id="@+id/setMenuBottomBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:background="@color/white"
             android:orientation="horizontal">
 
@@ -217,10 +183,10 @@
 
                 <!--                선택 수량-->
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:orientation="horizontal"
-                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:layout_weight="1"
                     >
 
@@ -258,8 +224,8 @@
                 </LinearLayout>
                 <!--                잔여 수량-->
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:orientation="horizontal"
                     android:layout_gravity="center"
                     android:layout_weight="1"
