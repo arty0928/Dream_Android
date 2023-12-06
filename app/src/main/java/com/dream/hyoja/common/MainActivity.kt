@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         //카페 설명서 버튼
         binding.cafePrcBtn.setOnClickListener {
-
+            common.goToCafeStartEx(view)
         }
 
         binding.fastfoodPrcBtn.setOnClickListener {

@@ -3,6 +3,7 @@ package com.dream.hyoja.common.util
 import android.content.Context
 import android.content.Intent
 import android.util.Log
+import com.dream.hyoja.activity.CafeStartExplain
 import com.dream.hyoja.cafe.CafeHome1Activity
 import com.dream.hyoja.cafe.CafeHomeActivity
 import com.dream.hyoja.cinema.CinemaHomeActivity
@@ -84,6 +85,12 @@ class CommonUi {
         val charset = ('0'..'9')+('a'..'z')+('A'..'Z')
         var string:String = List(length){charset.random()}.joinToString("")
         return string
+    }
+
+    fun goToCafeStartEx(v: Context) {
+        val intent = Intent(v, CafeStartExplain::class.java)
+        v.startActivity(intent)
+        Log.d("goToAccountCreate", "회원가입 화면으로 전환")
     }
 
 }

@@ -2,7 +2,9 @@ package com.dream.hyoja.cafe
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.animation.AnimationUtils
 import android.widget.Toast
+import com.dream.hyoja.R
 import com.dream.hyoja.cafe.model.CafeModel
 import com.dream.hyoja.common.util.CommonUi
 import com.dream.hyoja.databinding.ActivityCafeHomeBinding
@@ -17,6 +19,9 @@ class CafeHomeActivity : AppCompatActivity() {
         binding = ActivityCafeHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val view = this
+
+        val anim = AnimationUtils.loadAnimation(this, R.anim.blink)
+        binding.forHere.startAnimation(anim)
 
         binding.forHere.setOnClickListener{
             common.goToCafeHome1(view)
