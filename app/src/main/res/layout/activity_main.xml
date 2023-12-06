@@ -48,35 +48,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
-
-
-
-        <LinearLayout
-            android:gravity="top"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1.4"
-            android:orientation="vertical">
-            <ImageView
-                android:padding="20dp"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/olderlogo"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="6"
-                android:textColor="@color/black"
-                android:text="키오스크 카테고리를 선택해주세요"
-                android:gravity="center"
-                android:textSize="20dp"
-                android:fontFamily="@font/poppins_extrabold" />
-
-        </LinearLayout>
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:layout_width="match_parent"
@@ -87,13 +60,21 @@
             android:textSize="20dp"
             android:fontFamily="@font/poppins_extrabold"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:textColor="@color/black"
+            android:text="키오스크 카테고리를 선택해주세요"
+            android:gravity="center"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/poppins_extrabold" />
 
         <LinearLayout
             android:gravity="top"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="0dp">
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cafe_button"
                 android:textSize="30dp"
@@ -109,6 +90,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cafe_prcBtn"
+                android:textSize="30dp"
+                android:text="카페 설명서"
+                android:background="@drawable/layout_border2_gray"
+                android:fontFamily="@font/poppins_extrabold"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                />
+
             <androidx.appcompat.widget.AppCompatButton
                 android:fontFamily="@font/poppins_extrabold"
                 android:textColor="@color/white"
@@ -119,6 +117,27 @@
                 android:layout_marginHorizontal="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fastfood_prcBtn"
+                android:textSize="30dp"
+                android:text="패스트푸드 설명서"
+                android:background="@drawable/layout_border2_gray"
+                android:fontFamily="@font/poppins_extrabold"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                />
         </LinearLayout>
     </LinearLayout>
 
