@@ -86,6 +86,12 @@ class CommonUi {
         return string
     }
 
+    // 패스트푸드 설명서1
+    fun goToFastFoodPrc1(v: Context) {
+        val intent = Intent(v, FastFoodPrc1Activity::class.java)
+        v.startActivity(intent)
+        Log.d("goToFastFoodPrc", "패스트푸드 설명서1로 전환")
+    }
 }
 //    이전 화면으로 이동
 

@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.fastfoodPrcBtn.setOnClickListener {
-
+            common.goToFastFoodPrc1(view)
         }
 
         //로고 누르면 홈으로
