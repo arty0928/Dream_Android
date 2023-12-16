@@ -24,16 +24,6 @@ class MainActivity : AppCompatActivity() {
         binding.fastfoodButton.setOnClickListener {
             common.goToFastFood(view)
         }
-
-        //카페 설명서 버튼
-        binding.cafePrcBtn.setOnClickListener {
-
-        }
-
-        binding.fastfoodPrcBtn.setOnClickListener {
-            common.goToFastFoodPrc1(view)
-        }
-
         //로고 누르면 홈으로
         binding.hyojaLogo.setOnClickListener {
             common.goToLogin(view)

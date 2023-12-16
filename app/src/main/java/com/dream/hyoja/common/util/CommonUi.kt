@@ -3,6 +3,7 @@ package com.dream.hyoja.common.util
 import android.content.Context
 import android.content.Intent
 import android.util.Log
+import com.dream.hyoja.activity.CafeStartExplain
 import com.dream.hyoja.cafe.CafeHome1Activity
 import com.dream.hyoja.cafe.CafeHomeActivity
 import com.dream.hyoja.cinema.CinemaHomeActivity
@@ -86,12 +87,12 @@ class CommonUi {
         return string
     }
 
-    // 패스트푸드 설명서1
-    fun goToFastFoodPrc1(v: Context) {
-        val intent = Intent(v, FastFoodPrc1Activity::class.java)
+    fun goToCafeStartEx(v: Context) {
+        val intent = Intent(v, CafeStartExplain::class.java)
         v.startActivity(intent)
-        Log.d("goToFastFoodPrc", "패스트푸드 설명서1로 전환")
+        Log.d("goToAccountCreate", "회원가입 화면으로 전환")
     }
+
 }
 //    이전 화면으로 이동
 

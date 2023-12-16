@@ -1,8 +1,10 @@
 package com.dream.hyoja.fastfoods
 
 import android.os.Bundle
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.dream.hyoja.R
 import com.dream.hyoja.common.MainActivity
 import com.dream.hyoja.common.util.CommonUi
 import com.dream.hyoja.databinding.ActivityFastfoodHome1Binding
@@ -21,6 +23,9 @@ class FastFoodHome1Activity : AppCompatActivity() {
         val view = this
 
         FastFoodModel.foodSelectedList.clear()
+
+        val anim = AnimationUtils.loadAnimation(this, R.anim.blink)
+        binding.button1.startAnimation(anim)
 
         binding.button1.setOnClickListener {
             common.goToFastFoodHome1Button1(view)
