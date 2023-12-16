@@ -14,7 +14,6 @@ import com.dream.hyoja.fastfoods.model.Dessert5
 import com.dream.hyoja.fastfoods.model.Dessert6
 import com.dream.hyoja.fastfoods.model.Dessert7
 import com.dream.hyoja.fastfoods.model.Dessert8
-import com.dream.hyoja.fastfoods.model.Dessert9
 import com.dream.hyoja.fastfoods.model.Drink1
 import com.dream.hyoja.fastfoods.model.Drink2
 import com.dream.hyoja.fastfoods.model.Drink3
@@ -23,16 +22,12 @@ import com.dream.hyoja.fastfoods.model.Drink5
 import com.dream.hyoja.fastfoods.model.Drink6
 import com.dream.hyoja.fastfoods.model.FoodDataInterface
 import com.dream.hyoja.fastfoods.model.Hamburger1
-import com.dream.hyoja.fastfoods.model.Hamburger10
-import com.dream.hyoja.fastfoods.model.Hamburger11
 import com.dream.hyoja.fastfoods.model.Hamburger2
 import com.dream.hyoja.fastfoods.model.Hamburger3
 import com.dream.hyoja.fastfoods.model.Hamburger4
 import com.dream.hyoja.fastfoods.model.Hamburger5
 import com.dream.hyoja.fastfoods.model.Hamburger6
 import com.dream.hyoja.fastfoods.model.Hamburger7
-import com.dream.hyoja.fastfoods.model.Hamburger8
-import com.dream.hyoja.fastfoods.model.Hamburger9
 import com.dream.hyoja.fastfoods.model.Ready
 import com.dream.hyoja.fastfoods.model.setDessert1
 import com.dream.hyoja.fastfoods.model.setDessert2
@@ -177,10 +172,6 @@ class FoodDataFactory {
         foodArrayList.add(Hamburger5())
         foodArrayList.add(Hamburger6())
         foodArrayList.add(Hamburger7())
-        foodArrayList.add(Hamburger8())
-        foodArrayList.add(Hamburger9())
-        foodArrayList.add(Hamburger10())
-        foodArrayList.add(Hamburger11())
 
 
         foodArrayList.add(Dessert1())
@@ -191,7 +182,6 @@ class FoodDataFactory {
         foodArrayList.add(Dessert6())
         foodArrayList.add(Dessert7())
         foodArrayList.add(Dessert8())
-        foodArrayList.add(Dessert9())
 
 
         foodArrayList.add(Drink1())

@@ -31,9 +31,9 @@ data class Ready(
 
 data class NewMenu1(
     override val category: String = "NewMenu",
-    override val name : String = "더블불고기버거",
-    override val price : Int = 4400,
-    override val foodImage: Int = R.drawable.burger1,
+    override val name : String = "데리버거",
+    override val price : Int = 3300,
+    override val foodImage: Int = R.drawable.burger6,
     override val set: Boolean = true,
     override val setMenu: String = "selectable"
 
@@ -68,7 +68,7 @@ data class NewMenu4(
 
 data class Hamburger1(
     override val category: String = "Hamburger",
-    override val name : String = "더블불고기버거",
+    override val name : String = "불고기버거",
     override val price : Int = 4400,
     override val foodImage: Int = R.drawable.burger1,
     override val set: Boolean = true,
@@ -104,32 +104,14 @@ data class Hamburger4(
 
 data class Hamburger5(
     override val category: String = "Hamburger",
-    override val name : String = "더블치킨버거",
-    override val price : Int = 5500,
-    override val foodImage: Int = R.drawable.burger5,
-    override val set: Boolean = true,
-    override val setMenu: String = "selectable"
-): FoodDataInterface
-
-data class Hamburger6(
-    override val category: String = "Hamburger",
-    override val name : String = "한우불고기버거",
+    override val name : String = "한우버거",
     override val price : Int = 4400,
     override val foodImage: Int = R.drawable.burger6,
     override val set: Boolean = true,
     override val setMenu: String = "selectable"
 ): FoodDataInterface
 
-data class Hamburger7(
-    override val category: String = "Hamburger",
-    override val name : String = "불고기버거",
-    override val price : Int = 4700,
-    override val foodImage: Int = R.drawable.burger7,
-    override val set: Boolean = true,
-    override val setMenu: String = "selectable"
-): FoodDataInterface
-
-data class Hamburger8(
+data class Hamburger6(
     override val category: String = "Hamburger",
     override val name : String = "데리버거",
     override val price : Int = 3300,
@@ -138,32 +120,50 @@ data class Hamburger8(
     override val setMenu: String = "selectable"
 ): FoodDataInterface
 
-data class Hamburger9(
+data class Hamburger7(
     override val category: String = "Hamburger",
-    override val name : String = "T-REX",
-    override val price : Int = 4700,
-    override val foodImage: Int = R.drawable.burger9,
-    override val set: Boolean = true,
-    override val setMenu: String = "selectable"
-): FoodDataInterface
-
-data class Hamburger10(
-    override val category: String = "Hamburger",
-    override val name : String = "DoubleX2",
-    override val price : Int = 6800,
-    override val foodImage: Int = R.drawable.burger10,
-    override val set: Boolean = true,
-    override val setMenu: String = "selectable"
-): FoodDataInterface
-
-data class Hamburger11(
-    override val category: String = "Hamburger",
-    override val name : String = "새우베이컨버거",
+    override val name : String = "새우버거",
     override val price : Int = 5800,
     override val foodImage: Int = R.drawable.burger11,
     override val set: Boolean = true,
     override val setMenu: String = "selectable"
 ): FoodDataInterface
+
+//data class Hamburger8(
+//    override val category: String = "Hamburger",
+//    override val name : String = "데리버거",
+//    override val price : Int = 3300,
+//    override val foodImage: Int = R.drawable.burger8,
+//    override val set: Boolean = true,
+//    override val setMenu: String = "selectable"
+//): FoodDataInterface
+//
+//data class Hamburger9(
+//    override val category: String = "Hamburger",
+//    override val name : String = "T-REX",
+//    override val price : Int = 4700,
+//    override val foodImage: Int = R.drawable.burger9,
+//    override val set: Boolean = true,
+//    override val setMenu: String = "selectable"
+//): FoodDataInterface
+//
+//data class Hamburger10(
+//    override val category: String = "Hamburger",
+//    override val name : String = "DoubleX2",
+//    override val price : Int = 6800,
+//    override val foodImage: Int = R.drawable.burger10,
+//    override val set: Boolean = true,
+//    override val setMenu: String = "selectable"
+//): FoodDataInterface
+//
+//data class Hamburger11(
+//    override val category: String = "Hamburger",
+//    override val name : String = "새우베이컨버거",
+//    override val price : Int = 5800,
+//    override val foodImage: Int = R.drawable.burger11,
+//    override val set: Boolean = true,
+//    override val setMenu: String = "selectable"
+//): FoodDataInterface
 
 data class Dessert1(
     override val category: String = "Dessert",
@@ -185,7 +185,7 @@ data class Dessert2(
 
 data class Dessert3(
     override val category: String = "Dessert",
-    override val name : String = "웨지포테이토",
+    override val name : String = "포테이토",
     override val price : Int = 2100,
     override val foodImage: Int = R.drawable.dessert3,
     override val set: Boolean = false,
@@ -212,7 +212,7 @@ data class Dessert5(
 
 data class Dessert6(
     override val category: String = "Dessert",
-    override val name : String = "모짜크림치즈볼",
+    override val name : String = "크림치즈볼",
     override val price : Int = 2300,
     override val foodImage: Int = R.drawable.dessert6,
     override val set: Boolean = false,
@@ -237,14 +237,14 @@ data class Dessert8(
     override val setMenu: String = "selectable"
 ): FoodDataInterface
 
-data class Dessert9(
-    override val category: String = "Dessert",
-    override val name : String = "꽈배기",
-    override val price : Int = 2000,
-    override val foodImage: Int = R.drawable.dessert9,
-    override val set: Boolean = false,
-    override val setMenu: String = "selectable"
-): FoodDataInterface
+//data class Dessert9(
+//    override val category: String = "Dessert",
+//    override val name : String = "꽈배기",
+//    override val price : Int = 2000,
+//    override val foodImage: Int = R.drawable.dessert9,
+//    override val set: Boolean = false,
+//    override val setMenu: String = "selectable"
+//): FoodDataInterface
 
 data class Drink1(
     override val category: String = "Drink",
@@ -320,7 +320,7 @@ data class setDessert2(
 
 data class setDessert3(
     override val category: String = "setDessert",
-    override val name : String = "웨지포테이토",
+    override val name : String = "포테이토",
     override val price : Int = 2100,
     override val foodImage: Int = R.drawable.dessert3,
     override val set: Boolean = false,
@@ -347,7 +347,7 @@ data class setDessert5(
 
 data class setDessert6(
     override val category: String = "setDessert",
-    override val name : String = "모짜크림치즈볼",
+    override val name : String = "크림치즈볼",
     override val price : Int = 2300,
     override val foodImage: Int = R.drawable.dessert6,
     override val set: Boolean = false,
