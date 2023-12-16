@@ -33,7 +33,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="세트디저트 2개를 선택해주세요"
-                    android:autoSizeTextType="uniform"
+                    android:textSize="20dp"
                     android:fontFamily="@font/poppins_extrabold"
                     android:textColor="@color/black"
                     >

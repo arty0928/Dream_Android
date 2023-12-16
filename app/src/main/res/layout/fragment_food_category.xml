@@ -18,8 +18,10 @@
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
-            android:textSize="20dp"
-
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"
             android:text="든든점심"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -27,7 +29,10 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:textSize="20dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"
 
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
@@ -40,8 +45,12 @@
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
-            android:textSize="20dp"
-            android:text="디저트/치킨"/>
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"
+            android:text="디저트/치킨"
+        />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/categoryBtn4_drink"
@@ -50,7 +59,10 @@
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
-            android:textSize="20dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"
             android:text="드링크"/>
 
     </LinearLayout>
