@@ -20,6 +20,7 @@
             android:background="@drawable/tab_indicator_setmenu_default"
             android:fontFamily="@font/poppins_extrabold"
             android:text="세트_디저트"
+            android:autoSizeTextType="uniform"
             android:textColor="@color/black"
             />
 
@@ -31,6 +32,7 @@
             android:background="@drawable/tab_indicator_setmenu_default"
             android:fontFamily="@font/poppins_extrabold"
             android:text="세트_드링크"
+            android:autoSizeTextType="uniform"
             android:textColor="@color/black"
             />
 

@@ -29,11 +29,11 @@
                     android:id="@+id/setMenuTitile"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:autoSizeTextType="uniform"
+                    android:layout_height="30dp"
                     android:text="선택하신 버거와 가장 잘 어울리는 Best 디저트!"
                     android:gravity="center"
                     android:textColor="@color/black"
+                    android:autoSizeTextType="uniform"
                     android:fontFamily="@font/poppins_extrabold">
 
                 </TextView>

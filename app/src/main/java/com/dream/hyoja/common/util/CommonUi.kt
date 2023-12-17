@@ -6,7 +6,6 @@ import android.util.Log
 import com.dream.hyoja.activity.CafeStartExplain
 import com.dream.hyoja.cafe.CafeHome1Activity
 import com.dream.hyoja.cafe.CafeHomeActivity
-import com.dream.hyoja.cinema.CinemaHomeActivity
 import com.dream.hyoja.common.AccountCreateActivity
 import com.dream.hyoja.common.LoginActivity
 import com.dream.hyoja.common.MainActivity
@@ -26,11 +25,6 @@ class CommonUi {
         Log.d("goToHome", "홈 화면으로 전환")
     }
 
-    fun goToCinema(v: Context) {
-        val intent = Intent(v, CinemaHomeActivity::class.java)
-        v.startActivity(intent)
-        Log.d("goToCinema", "영화관 홈으로 전환")
-    }
 
     fun goToFastFood(v: Context){
         val intent = Intent(v, FastFoodHomeActivity::class.java)

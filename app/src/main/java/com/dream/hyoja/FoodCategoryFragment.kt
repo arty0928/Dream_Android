@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.dream.hyoja.databinding.FragmentFoodCategoryBinding
@@ -31,6 +32,7 @@ class FoodCategoryFragment : Fragment() {
             when(it){
                 "newMenu" -> {
                     binding.categoryBtn1Lunch.setBackgroundResource(R.drawable.tab_indicator)
+
                 }
                 "hamburger" -> {
                     binding.categoryBtn2Hamburger.setBackgroundResource(R.drawable.tab_indicator)
@@ -55,6 +57,7 @@ class FoodCategoryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentFoodCategoryBinding.inflate(inflater,container,false)
+
 
         binding.categoryBtn1Lunch.setOnClickListener{
             FastFoodModel.menuCategory = "newMenu"

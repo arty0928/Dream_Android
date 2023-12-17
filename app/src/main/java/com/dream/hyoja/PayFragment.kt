@@ -18,7 +18,8 @@ import com.dream.hyoja.databinding.FragmentPay2Binding
 import com.dream.hyoja.fastfoods.FastFoodPayWait
 import com.dream.hyoja.fastfoods.viewmodel.FoodListViewModel
 
-class PayFragment : DialogFragment() {
+class
+PayFragment : DialogFragment() {
     private val Tag: String = "checkCancelFragment"
 
     // ViewBinding을 초기화합니다.

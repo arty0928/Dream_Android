@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
+import com.dream.hyoja.R
 import com.dream.hyoja.databinding.FragmentSetOrOnlyBinding
 import com.dream.hyoja.fastfoods.model.FastFoodModel
 import com.dream.hyoja.fastfoods.model.OrderingFood
@@ -67,6 +68,12 @@ class SetOrOnlyFragment : DialogFragment() {
             ApplyFoodOrderList(FastFoodModel.currentActivity).foodAdded()
 
         }
+
+        binding.optionOnlyBurgerPrice.text = orderingFood.food.price.toString()
+        binding.optionSetBurgerPrice.text = orderingFood.food.price.toString()
+
+        binding.optionOnlyBurgerImage.setBackgroundResource(orderingFood.food.foodImage)
+        binding.optionSetBurgerImage.setBackgroundResource(orderingFood.food.foodImage)
 
         binding.optionSetBurger.setOnClickListener {
             // 현재 Fragment를 닫기
@@ -127,7 +134,7 @@ class SetOrOnlyFragment : DialogFragment() {
         display?.getSize(size)
         val width = size.x
         val height = size.y
-        window?.setLayout((width * 0.85).toInt(), (height * 0.25).toInt())
+        window?.setLayout((width * 0.85).toInt(), (height * 0.35).toInt())
         window?.setGravity(Gravity.CENTER)
     }
     override fun onDestroyView() {

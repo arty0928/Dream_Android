@@ -48,6 +48,10 @@
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="20sp"
+                        android:autoSizeMaxTextSize="30sp"
+                        android:autoSizeStepGranularity="2sp"
                         android:fontFamily="@font/poppins_extrabold"
                         />
                     <TextView
@@ -57,6 +61,7 @@
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:autoSizeTextType="uniform"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="#CC0000"
                         />
@@ -98,6 +103,10 @@
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="20sp"
+                        android:autoSizeMaxTextSize="30sp"
+                        android:autoSizeStepGranularity="2sp"
                         android:fontFamily="@font/poppins_extrabold"
                         />
                     <TextView
@@ -107,6 +116,7 @@
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:autoSizeTextType="uniform"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="#CC0000"
                         />
@@ -155,6 +165,10 @@
                         android:layout_weight="1"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="20sp"
+                        android:autoSizeMaxTextSize="30sp"
+                        android:autoSizeStepGranularity="2sp"
                         android:fontFamily="@font/poppins_extrabold"
                         />
                     <TextView
@@ -164,6 +178,7 @@
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:autoSizeTextType="uniform"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="#CC0000"
                         />
@@ -205,6 +220,10 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textColor="@color/black"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="20sp"
+                        android:autoSizeMaxTextSize="30sp"
+                        android:autoSizeStepGranularity="2sp"
                         android:fontFamily="@font/poppins_extrabold"
                         />
                     <TextView
@@ -214,6 +233,7 @@
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:autoSizeTextType="uniform"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="#CC0000"
                         />
@@ -261,6 +281,10 @@
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="20sp"
+                        android:autoSizeMaxTextSize="30sp"
+                        android:autoSizeStepGranularity="2sp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/poppins_extrabold"
                         />
@@ -271,6 +295,7 @@
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:autoSizeTextType="uniform"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="#CC0000"
                         />
@@ -296,13 +321,13 @@
                     android:background="@drawable/ready_white"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.2"
+                    android:layout_weight="1"
                     />
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_weight="1"
+                    android:layout_weight="1.2"
                     >
                     <TextView
                         android:id="@+id/newMenu6_name"
@@ -312,6 +337,10 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textColor="@color/black"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="20sp"
+                        android:autoSizeMaxTextSize="30sp"
+                        android:autoSizeStepGranularity="2sp"
                         android:fontFamily="@font/poppins_extrabold"
                         />
                     <TextView
@@ -321,6 +350,7 @@
                         android:text="1번"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:autoSizeTextType="uniform"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="#CC0000"
                         />

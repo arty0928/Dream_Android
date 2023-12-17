@@ -219,7 +219,7 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
         display?.getSize(size)
         val width = size.x
         val height = size.y
-        window?.setLayout((width * 0.9).toInt(), (height * 0.9).toInt())
+        window?.setLayout((width * 0.9).toInt(), (height * 0.95).toInt())
         window?.setGravity(Gravity.CENTER)
     }
     override fun onDestroyView() {

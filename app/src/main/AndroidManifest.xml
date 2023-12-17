@@ -35,9 +35,6 @@
             android:name=".common.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".cinema.CinemaHomeActivity"
-            android:exported="false" /> <!-- from MainHome to FastFood Main Home -->
-        <activity
             android:name=".fastfoods.FastFoodHomeActivity"
             android:exported="false" /> <!-- from Home to payment way -->
         <activity

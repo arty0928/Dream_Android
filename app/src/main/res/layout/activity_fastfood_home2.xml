@@ -75,7 +75,7 @@
                     android:background="@null"
                     android:id="@+id/TabBarTitleHorizontalScroll"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1">
                     <FrameLayout
@@ -86,7 +86,7 @@
                         <androidx.viewpager2.widget.ViewPager2
                             android:background="@null"
                             android:id="@+id/FastFoodCategoryList"
-                            android:layout_width="match_parent"
+                            android:layout_width="500dp"
                             android:layout_height="match_parent"/>
 
                     </FrameLayout>
