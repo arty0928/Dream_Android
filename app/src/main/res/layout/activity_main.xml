@@ -92,6 +92,7 @@
                 />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:visibility="gone"
                 android:id="@+id/cafe_prcBtn"
                 android:textSize="30dp"
                 android:text="카페 설명서"
@@ -124,6 +125,7 @@
                 />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:visibility="gone"
                 android:id="@+id/fastfood_prcBtn"
                 android:textSize="30dp"
                 android:text="패스트푸드 설명서"

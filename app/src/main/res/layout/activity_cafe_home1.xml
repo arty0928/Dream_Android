@@ -27,7 +27,7 @@
             android:id="@+id/cafeHomeText"
             android:text="처음으로"
             android:gravity="center"
-            android:textSize="16dp"
+            android:textSize="20dp"
             android:textColor="@color/white"
             android:paddingLeft="10dp"
             android:fontFamily="@font/poppins_bold"
@@ -174,11 +174,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <TextView
-                            android:textSize="15dp"
+                            android:textSize="20dp"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textAlignment="center"
-                            android:text="총 결제금액"
+                            android:text="결제금액"
                             android:fontFamily="@font/poppins_bold"
                             android:textColor="@color/cafe_black"
                             android:layout_weight="1"
@@ -209,6 +209,7 @@
                         </LinearLayout>
                         <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/allClear"
+                            android:textSize="15dp"
                             android:text="전체취소"
                             android:fontFamily="@font/poppins_bold"
                             android:textColor="@color/white"
@@ -236,7 +237,6 @@
                     <TextView
                         android:textSize="18dp"
                         android:textColor="@color/cafe_white"
-
                         android:textAlignment="center"
                         android:text="결제하기"
                         android:fontFamily="@font/poppins_bold"

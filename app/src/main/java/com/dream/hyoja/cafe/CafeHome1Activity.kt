@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,7 +22,10 @@ import com.dream.hyoja.cafe.model.CafeModel
 import com.dream.hyoja.cafe.util.DrinkAddListner
 import com.dream.hyoja.cafe.util.UtilValue
 import com.dream.hyoja.cafe.viewmodel.MenuListViewModel
+import com.dream.hyoja.common.ManualDialog
+import com.dream.hyoja.common.SplashActivity
 import com.dream.hyoja.common.util.CommonUi
+import com.dream.hyoja.common.util.ManualStepChecker
 import com.dream.hyoja.databinding.ActivityCafeHome1Binding
 
 class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
@@ -31,6 +36,13 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
     private var coffeePopup: PopupWindow? = null
     private lateinit var viewModel: MenuListViewModel
 
+    private lateinit var rightButtonManual: Animation
+    private lateinit var leftButtonManual: Animation
+    private lateinit var rightDrinkButtonManual: Animation
+    private lateinit var leftDrinkManual: Animation
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCafeHome1Binding.inflate(layoutInflater)
@@ -39,12 +51,19 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
         CafeModel.currentActivity = this
         CafeModel.ActivityStatus = this
 
+        // 초반 매뉴얼 키
+        SplashActivity.sharedPreferences = getSharedPreferences("HyoJaPreference", Context.MODE_PRIVATE)
+        val first = SplashActivity.sharedPreferences.getBoolean("First",true)
+
         //goTo쓰려고 Common 객체 생성
         val view = this
         val commonUi = CommonUi()
 
         //이곳으로 오면 선택했던 리스트는 모두 초기화됨
         clearSelectedDrinkList()
+
+        // 처음 시작할 때 매뉴얼
+        rightButtonManual(first)
 
         //뷰모델 프로바이더 생성
         viewModel = ViewModelProvider(this)[MenuListViewModel::class.java]
@@ -72,6 +91,8 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
         //기본적으로 왼쪽 오른쪽 버튼은 해당 Item이 2개라고 가정하고 그냥 작성해놓음... 호오오옥시 나중에 발전시키려면 이거 수정해야함
         //카테고리 리스트 왼쪽 버튼
         binding.leftButton.setOnClickListener{
+            leftButtonCancel(first)
+            rightDrinkManual(first)
             if(currentItem == 1){
                 currentItem = 0
                 binding.menuList.setCurrentItem(0,true)
@@ -81,6 +102,9 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
         }
         //카테고리 리스트 오른쪽 버튼
         binding.rightButton.setOnClickListener{
+            rightButtonCancel(first)
+            leftButtonManual(first)
+
             if(currentItem == 0){
                 currentItem = 1
                 binding.menuList.setCurrentItem(1,true)
@@ -90,6 +114,8 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
         }
         //음료 리스트 왼쪽 버튼
         binding.drinkListLeftButton.setOnClickListener{
+            leftDrinkCancel(first)
+            cafeDrinkSelectManual(first)
             if(checkDrinkListViewPagerSize(CafeModel.menuCategory)>1){
                 binding.drinkList.setCurrentItem(0,true)
                 binding.drinkListLeftButton.setImageResource(R.drawable.icon_left_un)
@@ -98,6 +124,8 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
         }
         //음료 리스트 오른쪽 버튼
         binding.drinkListRightButton.setOnClickListener{
+            rightDrinkCancel(first)
+            leftDrinkManual(first)
             if(checkDrinkListViewPagerSize(CafeModel.menuCategory)>1){
                 binding.drinkList.setCurrentItem(1,true)
                 binding.drinkListLeftButton.setImageResource(R.drawable.icon_left)
@@ -152,10 +180,10 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
             if(i>0){
                 Log.d(Tag,"drinkSelectedLiveData observed")
                 drinkOptionFragmentMange()
+                cafeDrinkSelectCancel(first)
             }
             i++
         })
-
         //처음으로 버튼
         binding.cafeHome.setOnClickListener{
             commonUi.goToCafe(view)
@@ -260,7 +288,6 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
         // 총 결제 금액 세팅
         binding.account.text = getTotalPrice().toString()
     }
-
     override fun drinkPriceSet() {
         var account = 0
         for (i in 0 until CafeModel.drinkSelectedList.size){
@@ -274,4 +301,116 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
         val intent = Intent(context, PayActivity::class.java)
         context.startActivity(intent)
     }
+
+
+    //카테고리 오른쪽 버튼
+    private fun rightButtonManual(first: Boolean){
+        if (first && ManualStepChecker.checkStep(1)){
+            val rightButtonAnim: Animation = AnimationUtils.loadAnimation(this, R.anim.blink)
+            val manualDialog = ManualDialog()
+            val msg = """여기서 음료를 선택할 수 있어요"""
+            manualDialog.setText(msg)
+            manualDialog.setButton("계속하기")
+            manualDialog.show(
+                supportFragmentManager, "ManualDialog"
+            )
+            binding.rightButton.startAnimation(rightButtonAnim)
+        }
+    }
+
+    private fun rightButtonCancel(first: Boolean){
+        if (first && !ManualStepChecker.cafeRightStep){
+            Log.d("rightButton","cancel")
+            binding.rightButton.clearAnimation()
+            ManualStepChecker.cafeRightStep = true
+        }
+    }
+
+    //카테고리 왼쪽 버튼
+    private fun leftButtonManual(first: Boolean) {
+        if (first&& !ManualStepChecker.cafeLeftStep){
+            val buttonAnim: Animation = AnimationUtils.loadAnimation(this, R.anim.blink)
+            binding.leftButton.startAnimation(buttonAnim)
+        }
+    }
+
+    private fun leftButtonCancel(first: Boolean) {
+        if (first && !ManualStepChecker.cafeLeftStep){
+            binding.leftButton.clearAnimation()
+            ManualStepChecker.cafeLeftStep = true
+            val manualDialog = ManualDialog()
+            val msg = """여러 가지 음료수 종류를 볼 수 있어요!"""
+            manualDialog.setText(msg)
+            manualDialog.setButton("계속하기")
+
+            manualDialog.show(
+                supportFragmentManager, "ManualDialog"
+            )
+        }
+    }
+
+    //음료 리스트
+    private fun rightDrinkManual(first: Boolean){
+        if (first&& !ManualStepChecker.cafeRightDrinkStep){
+            val buttonAnim: Animation = AnimationUtils.loadAnimation(this, R.anim.blink)
+            binding.drinkListRightButton.startAnimation(buttonAnim)
+        }
+    }
+
+    private fun rightDrinkCancel(first: Boolean){
+        if (first && !ManualStepChecker.cafeRightDrinkStep){
+            Log.d("rightButton","cancel")
+            binding.drinkListRightButton.clearAnimation()
+            ManualStepChecker.cafeRightDrinkStep = true
+        }
+    }
+
+    private fun leftDrinkManual(first: Boolean){
+        if (first && !ManualStepChecker.cafeLeftDrinkStep){
+            val buttonAnim: Animation = AnimationUtils.loadAnimation(this, R.anim.blink)
+            binding.drinkListLeftButton.startAnimation(buttonAnim)
+        }
+    }
+
+    private fun leftDrinkCancel(first: Boolean){
+        if (first && !ManualStepChecker.cafeLeftDrinkStep){
+            Log.d("rightButton","cancel")
+            val manualDialog = ManualDialog()
+            val msg = """여러 가지 음료수 종류를 볼 수 있어요!"""
+            manualDialog.setText(msg)
+            manualDialog.setButton("계속하기")
+
+            manualDialog.show(
+                supportFragmentManager, "ManualDialog"
+            )
+
+            binding.drinkListLeftButton.clearAnimation()
+            ManualStepChecker.cafeLeftDrinkStep = true
+        }
+    }
+
+    private fun cafeDrinkSelectManual(first: Boolean){
+        if (first && !ManualStepChecker.cafeDrinkSelectStep){
+            val buttonAnim: Animation = AnimationUtils.loadAnimation(this, R.anim.blink)
+            binding.drinkList.startAnimation(buttonAnim)
+        }
+    }
+
+    private fun cafeDrinkSelectCancel(first: Boolean){
+        if (first && !ManualStepChecker.cafeDrinkSelectStep){
+            Log.d("rightButton","cancel")
+            val manualDialog = ManualDialog()
+            val msg = """이렇게 음료수를 주문할 수 있어요!"""
+            manualDialog.setText(msg)
+            manualDialog.setButton("계속하기")
+
+            manualDialog.show(
+                supportFragmentManager, "ManualDialog"
+            )
+
+            binding.drinkList.clearAnimation()
+            ManualStepChecker.cafeDrinkSelectStep= true
+        }
+    }
+
 }

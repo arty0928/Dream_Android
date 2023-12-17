@@ -15,6 +15,7 @@ class SplashActivity : AppCompatActivity() {
 
     companion object{
         lateinit var sharedPreferences: SharedPreferences
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +23,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         sharedPreferences = getSharedPreferences("HyoJaPreference", Context.MODE_PRIVATE)
+
         val id: String = sharedPreferences.getString("ID","fail").toString()
         val password: String = sharedPreferences.getString("PassWord","fail").toString()
         Log.d("id and pw", "$id---$password")
