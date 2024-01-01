@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,7 +22,10 @@ import com.dream.hyoja.cafe.model.CafeModel
 import com.dream.hyoja.cafe.util.DrinkAddListner
 import com.dream.hyoja.cafe.util.UtilValue
 import com.dream.hyoja.cafe.viewmodel.MenuListViewModel
+import com.dream.hyoja.common.ManualDialog
+import com.dream.hyoja.common.SplashActivity
 import com.dream.hyoja.common.util.CommonUi
+import com.dream.hyoja.common.util.ManualStepChecker
 import com.dream.hyoja.databinding.ActivityCafeHome1Binding
 
 class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
@@ -31,6 +36,13 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
     private var coffeePopup: PopupWindow? = null
     private lateinit var viewModel: MenuListViewModel
 
+    private lateinit var rightButtonManual: Animation
+    private lateinit var leftButtonManual: Animation
+    private lateinit var rightDrinkButtonManual: Animation
+    private lateinit var leftDrinkManual: Animation
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCafeHome1Binding.inflate(layoutInflater)
@@ -38,6 +50,7 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
 
         CafeModel.currentActivity = this
         CafeModel.ActivityStatus = this
+
 
         //goTo쓰려고 Common 객체 생성
         val view = this
@@ -155,13 +168,12 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
             }
             i++
         })
-
         //처음으로 버튼
         binding.cafeHome.setOnClickListener{
-            commonUi.goToCafe(view)
+            commonUi.goToHome(view)
         }
         binding.cafeHomeText.setOnClickListener{
-            commonUi.goToCafe(view)
+            commonUi.goToHome(view)
         }
 
     }
@@ -260,7 +272,6 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
         // 총 결제 금액 세팅
         binding.account.text = getTotalPrice().toString()
     }
-
     override fun drinkPriceSet() {
         var account = 0
         for (i in 0 until CafeModel.drinkSelectedList.size){
@@ -274,4 +285,8 @@ class CafeHome1Activity : AppCompatActivity(), DrinkAddListner {
         val intent = Intent(context, PayActivity::class.java)
         context.startActivity(intent)
     }
+
+
+
+
 }

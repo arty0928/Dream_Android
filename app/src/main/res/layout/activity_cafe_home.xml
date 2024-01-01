@@ -71,6 +71,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
+
+    <FrameLayout
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintEnd_toStartOf="@+id/to_go"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp">
+
+    </FrameLayout>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/for_here"
         android:layout_width="wrap_content"

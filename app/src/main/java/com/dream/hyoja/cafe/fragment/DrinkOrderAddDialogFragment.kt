@@ -1,5 +1,6 @@
 package com.dream.hyoja.cafe.fragment
 
+import android.content.Context
 import android.graphics.Color
 import android.graphics.Point
 import android.graphics.drawable.ColorDrawable
@@ -10,6 +11,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
 import com.dream.hyoja.R
@@ -17,6 +20,8 @@ import com.dream.hyoja.cafe.model.CafeModel
 import com.dream.hyoja.cafe.model.OrderingDrink
 import com.dream.hyoja.cafe.util.ApplyOrderList
 import com.dream.hyoja.cafe.viewmodel.MenuListViewModel
+import com.dream.hyoja.common.SplashActivity
+import com.dream.hyoja.common.util.ManualStepChecker
 import com.dream.hyoja.databinding.FragmentDrinkOrderAddBinding
 
 class DrinkOrderAddDialogFragment: DialogFragment() {
@@ -134,7 +139,7 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
         display?.getSize(size)
         val width = size.x
         val height = size.y
-        window?.setLayout((width * 0.85).toInt(), (height * 0.75).toInt())
+        window?.setLayout((width * 0.85).toInt(), (height * 0.85).toInt())
         window?.setGravity(Gravity.CENTER)
     }
     override fun onDestroyView() {

@@ -3,6 +3,7 @@ package com.dream.hyoja.cafe.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.dream.hyoja.common.SplashActivity
 import com.dream.hyoja.common.util.CommonUi
 import com.dream.hyoja.databinding.ActivityCompletePayBinding
 
@@ -11,6 +12,9 @@ class CompletePayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityCompletePayBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val editor = SplashActivity.sharedPreferences.edit()
+        editor.putBoolean("First", false)
 
         binding.image.setOnClickListener{
             CommonUi().goToCafe(this)
