@@ -49,9 +49,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:autoSizeTextType="uniform"
-                        android:autoSizeMinTextSize="20sp"
-                        android:autoSizeMaxTextSize="30sp"
-                        android:autoSizeStepGranularity="2sp"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
                         android:fontFamily="@font/poppins_extrabold"
                         />
                     <TextView
@@ -62,6 +61,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="#CC0000"
                         />
@@ -104,9 +105,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:autoSizeTextType="uniform"
-                        android:autoSizeMinTextSize="20sp"
-                        android:autoSizeMaxTextSize="30sp"
-                        android:autoSizeStepGranularity="2sp"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
                         android:fontFamily="@font/poppins_extrabold"
                         />
                     <TextView
@@ -117,6 +117,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="#CC0000"
                         />
@@ -166,9 +168,8 @@
                         android:textColor="@color/black"
                         android:gravity="center"
                         android:autoSizeTextType="uniform"
-                        android:autoSizeMinTextSize="20sp"
-                        android:autoSizeMaxTextSize="30sp"
-                        android:autoSizeStepGranularity="2sp"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
                         android:fontFamily="@font/poppins_extrabold"
                         />
                     <TextView
@@ -179,6 +180,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="#CC0000"
                         />
@@ -221,9 +224,8 @@
                         android:gravity="center"
                         android:textColor="@color/black"
                         android:autoSizeTextType="uniform"
-                        android:autoSizeMinTextSize="20sp"
-                        android:autoSizeMaxTextSize="30sp"
-                        android:autoSizeStepGranularity="2sp"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
                         android:fontFamily="@font/poppins_extrabold"
                         />
                     <TextView
@@ -234,6 +236,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="#CC0000"
                         />
@@ -282,9 +286,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:autoSizeTextType="uniform"
-                        android:autoSizeMinTextSize="20sp"
-                        android:autoSizeMaxTextSize="30sp"
-                        android:autoSizeStepGranularity="2sp"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/poppins_extrabold"
                         />
@@ -296,6 +299,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="#CC0000"
                         />
@@ -338,9 +343,8 @@
                         android:gravity="center"
                         android:textColor="@color/black"
                         android:autoSizeTextType="uniform"
-                        android:autoSizeMinTextSize="20sp"
-                        android:autoSizeMaxTextSize="30sp"
-                        android:autoSizeStepGranularity="2sp"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
                         android:fontFamily="@font/poppins_extrabold"
                         />
                     <TextView
@@ -351,6 +355,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="#CC0000"
                         />

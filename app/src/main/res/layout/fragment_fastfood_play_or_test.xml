@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/square_border_black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+        <!--전체-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#5F009C"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="게임 방식을 선택해주세요."
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:autoSizeTextType="uniform"
+                    android:textColor="@color/white"
+                    >
+
+                </TextView>
+
+            </LinearLayout>
+
+            <!--        세트, 버거 선택 칸-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <LinearLayout
+                    android:id="@+id/FastfoodPrcMode"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button_press_effect"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="설명서 있는"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:textColor="@color/black"
+                        android:autoSizeTextType="uniform">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:text="연습"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:textColor="@color/cafe_darkRed"
+                        android:autoSizeTextType="uniform">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/FastfoodGameMode"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button_press_effect"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="설명서 없는"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:textColor="@color/black"
+                        android:autoSizeTextType="uniform">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:text="실전"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:textColor="@color/cafe_darkRed"
+                        android:autoSizeTextType="uniform">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <!-- "X" 버튼 -->
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/layout_before_btn"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

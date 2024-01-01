@@ -4,12 +4,15 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dream.hyoja.Fragments.FastFoodStep3Fragment
+import com.dream.hyoja.Fragments.PayFragment
 import com.dream.hyoja.Fragments.checkCancelFragment
 import com.dream.hyoja.R
 import com.dream.hyoja.cafe.adapter.TotalFoodListAdapter
+import com.dream.hyoja.cafe.fragment.DrinkOrderAddDialogFragment
 import com.dream.hyoja.common.util.CommonUi
 import com.dream.hyoja.databinding.ActivityFastfoodPayBinding
 import com.dream.hyoja.fastfoods.model.FastFoodModel
@@ -50,7 +53,11 @@ class FastFoodPayActivity : AppCompatActivity() {
         binding.payTotalPrice.text = FastFoodModel.priceToPay.toString()
         binding.haveToPayPrice.text = FastFoodModel.priceToPay.toString()
 
+        val anim = AnimationUtils.loadAnimation(this, R.anim.blink)
+        binding.step1Box.startAnimation(anim)
+
         binding.step1PackageBtn.setOnClickListener {
+            binding.step1Box.clearAnimation()
             resetStep1Buttons()
             binding.step1PackageBtn.setBackgroundResource(R.drawable.layout_border_red)
             binding.step1PackageText2.setTextColor(Color.parseColor("#000000"))
@@ -65,6 +72,7 @@ class FastFoodPayActivity : AppCompatActivity() {
         }
 
         binding.step1ShopBtn.setOnClickListener {
+            binding.step1Box.clearAnimation()
             resetStep1Buttons()
             binding.step1ShopBtn.setBackgroundResource(R.drawable.layout_border_red)
 
@@ -154,7 +162,11 @@ class FastFoodPayActivity : AppCompatActivity() {
                 binding.step3CardBtnImage.setImageResource(R.drawable.card)
 
                 payStep.step3 = "신용카드"
-                payDialog()
+
+                PayFragment().show(
+                    supportFragmentManager, "PayFragment"
+                )
+
             }
 
             binding.step3MobileBarcodeBtn.setOnClickListener {
@@ -216,8 +228,17 @@ class FastFoodPayActivity : AppCompatActivity() {
         binding.step1PackageText2.setTextColor(Color.parseColor("#979797"));
         binding.step1ShopText1.setTextColor(Color.parseColor("#979797"));
         binding.step1ShopText2.setTextColor(Color.parseColor("#979797"));
+
+        val anim = AnimationUtils.loadAnimation(this, R.anim.blink)
+        binding.step2Box.startAnimation(anim)
+
     }
     fun resetStep2Buttons(){
+        binding.step2Box.clearAnimation()
+
+        val anim = AnimationUtils.loadAnimation(this, R.anim.blink)
+        binding.step3Box.startAnimation(anim)
+
         Log.d("reset2",payStep.toString())
         binding.step2Accumulate.setBackgroundResource(R.drawable.ready_white)
         binding.step2NoSelectBtn.setBackgroundResource(R.drawable.ready_white)
@@ -232,6 +253,8 @@ class FastFoodPayActivity : AppCompatActivity() {
 
     }
     fun resetStep3Buttons(){
+
+
         Log.d("reset3",payStep.toString())
         binding.step3CardBtn.setBackgroundResource(R.drawable.ready_white)
         binding.step3NoSelectBtn.setBackgroundResource(R.drawable.ready_white)

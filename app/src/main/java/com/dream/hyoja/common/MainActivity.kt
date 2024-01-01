@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import com.dream.hyoja.fastfoods.testguideline.FastFoodPlayorPrcFragment
 import com.dream.hyoja.common.util.CommonUi
 import com.dream.hyoja.databinding.ActivityMainBinding
 
@@ -22,6 +23,9 @@ class MainActivity : AppCompatActivity() {
             common.goToCafe(view)
         }
         binding.fastfoodButton.setOnClickListener {
+//            FastFoodPlayorPrcFragment().show(
+//                supportFragmentManager, "DrinkOrderAddDialogFragment"
+//            )
             common.goToFastFood(view)
         }
         //로고 누르면 홈으로

@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FastFoodStep3Fragment"
 
     >
 
@@ -37,8 +36,8 @@
             >
 
             <LinearLayout
-                android:layout_weight="3"
-                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
@@ -49,9 +48,7 @@
                     android:layout_weight="0.6"
                     android:background="#D9D9D9"
                     android:layout_marginLeft="4dp"
-                    >
-
-                </LinearLayout>
+                    />
 
                 <LinearLayout
                     android:id="@+id/payMobileCardBtn"
@@ -59,38 +56,25 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:orientation="vertical"
+                    android:background="#D9D9D9"
+                    android:layout_marginLeft="4dp"
                     >
 
-                    <LinearLayout
-                        android:layout_marginLeft="4dp"
-                        android:layout_weight="2"
+                    <ImageView
+                        android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:src="@drawable/mobilecard"/>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:text="모바일 카드"
                         android:background="#D9D9D9"
-                        >
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/mobilecard"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginLeft="4dp"
-                        android:layout_weight="1">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="모바일 카드"
-                            android:background="#D9D9D9"
-                            android:gravity="center"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"/>
-
-
-                    </LinearLayout>
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -99,38 +83,25 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:orientation="vertical"
+                    android:background="#D9D9D9"
+                    android:layout_marginLeft="4dp"
                     >
-
-                    <LinearLayout
-                        android:layout_marginLeft="4dp"
-                        android:layout_weight="2"
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/mobilebarcode"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="바코드 스캔"
                         android:background="#D9D9D9"
-                        >
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/mobilebarcode"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginLeft="4dp"
-                        android:layout_weight="1">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="바코드 스캔"
-                            android:background="#D9D9D9"
-                            android:gravity="center"
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"/>
-
-
-                    </LinearLayout>
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -147,10 +118,10 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="3">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -160,34 +131,45 @@
 
                     <LinearLayout
                         android:id="@+id/samsungPay"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="4dp"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:background="@drawable/samsungpay"
                         android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/samsungpay"/>
                     </LinearLayout>
                     <LinearLayout
                         android:id="@+id/lgPay"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="@drawable/lgpay"
+                        android:layout_marginTop="4dp"
+
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/lgpay"/>
+
                     </LinearLayout>
                     <LinearLayout
                         android:id="@+id/applePay"
-                        android:layout_marginTop="35dp"
-                        android:layout_marginBottom="35dp"
+                        android:layout_marginTop="4dp"
                         android:layout_marginRight="5dp"
-                        android:background="@drawable/applepay"
+
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/applepay"/>
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -199,28 +181,28 @@
 
                     <LinearLayout
                         android:id="@+id/lPay"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginBottom="30dp"
-                        android:background="@drawable/lpaylogo"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1.1"
                         android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/lpaylogo"/>
                     </LinearLayout>
-                    <LinearLayout
+                    <TextView
                         android:id="@+id/mobilePay"
                         android:layout_width="0dp"
+                        android:layout_weight="1.1"
                         android:layout_height="match_parent"
-                        android:layout_weight="1.1">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="모바일금액권"
+                        android:gravity="center"
+                        android:text="모바일금액권"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
 
-                            android:fontFamily="@font/poppins_extrabold"
-                            android:textColor="@color/black"/>
-                    </LinearLayout>
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:textColor="@color/black"/>
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -237,36 +219,36 @@
                     <LinearLayout
                         android:id="@+id/paycoPay"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_marginTop="45dp"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginBottom="45dp"
-                        android:background="@drawable/payco"
                         android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/payco"/>
                     </LinearLayout>
                     <LinearLayout
                         android:id="@+id/alliPay"
-                        android:layout_marginTop="45dp"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginBottom="45dp"
-                        android:background="@drawable/allipaylogo"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/allipaylogo"/>
                     </LinearLayout>
                     <LinearLayout
                         android:id="@+id/kakaoPay"
-                        android:layout_marginTop="45dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginBottom="45dp"
-                        android:background="@drawable/kakaopay"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/kakaopay"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -278,33 +260,45 @@
 
                     <LinearLayout
                         android:id="@+id/naverPay_paybookPay"
-                        android:layout_marginTop="10dp"
                         android:layout_marginLeft="4dp"
-                        android:layout_marginBottom="20dp"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:orientation="vertical">
                         <LinearLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:background="@drawable/naverpay"/>
+                            >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/naverpay"/>
+                        </LinearLayout>
+
                         <LinearLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:background="@drawable/paybooklogo"/>
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/paybooklogo"/>
+                        </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
+                        android:layout_marginBottom="4dp"
                         android:id="@+id/wechatPay"
-                        android:layout_marginTop="45dp"
-                        android:layout_marginBottom="45dp"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/wechatpay"
+                        android:layout_height="wrap_content"                       android:layout_weight="1"
                         android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/wechatpay"/>
+
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
@@ -343,7 +337,10 @@
                     android:gravity="center"
                     android:fontFamily="@font/poppins_extrabold"
                     android:textColor="@color/black"
-                    android:textSize="20dp"/>
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="20sp"
+                    />
             </LinearLayout>
 
         </LinearLayout>
