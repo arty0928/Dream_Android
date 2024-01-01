@@ -120,7 +120,7 @@
         android:fontFamily="@font/poppins_bold"
         android:text="맛있는 음료와 베이커리\n정성껏 준비해드리겠습니다."
         android:textColor="@color/cafe_white"
-        android:textSize="12sp"
+        android:textSize="12dp"
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="@+id/view2"
         app:layout_constraintBottom_toTopOf="@+id/for_here"

@@ -236,7 +236,6 @@
                         android:textColor="@color/cafe_darkRed"
                         android:gravity="center"
                         android:fontFamily="@font/poppins_bold"
-
                         android:textStyle="bold"
                         android:textSize="20dp"
                         android:textAlignment="center"
