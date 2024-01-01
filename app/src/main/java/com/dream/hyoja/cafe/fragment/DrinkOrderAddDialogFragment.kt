@@ -53,8 +53,6 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val first = SplashActivity.sharedPreferences.getBoolean("First",true)
-        selectCompleteManual(first)
 
         //뷰모델 프로바이더
         viewModel = ViewModelProvider(this)[MenuListViewModel::class.java]
@@ -235,13 +233,6 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
             freeOptionAddFragment.show(
                 childFragmentManager,"FreeOptionAddFragment"
             )
-        }
-    }
-
-    private fun selectCompleteManual(first: Boolean){
-        if (first && !ManualStepChecker.selectCompleteStep){
-            val buttonAnim: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.blink)
-            binding.selectCompleteButton.startAnimation(buttonAnim)
         }
     }
 }

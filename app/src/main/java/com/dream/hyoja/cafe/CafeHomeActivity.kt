@@ -25,33 +25,18 @@ class CafeHomeActivity : AppCompatActivity() {
         setContentView(binding.root)
         val view = this
 
+        // 초반 매뉴얼 키
         SplashActivity.sharedPreferences = getSharedPreferences("HyoJaPreference", Context.MODE_PRIVATE)
-        val first = SplashActivity.sharedPreferences.getBoolean("First",true)
-
-        if (first){
-            ManualDialog().show(
-                    supportFragmentManager, "ManualDialog"
-            )
-            val anim = AnimationUtils.loadAnimation(this, R.anim.blink)
-            binding.forHere.startAnimation(anim)
-        }
-
-
+        ManualStepChecker.first = SplashActivity.sharedPreferences.getBoolean("First",true)
 
         binding.forHere.setOnClickListener{
             common.goToCafeHome1(view)
             CafeModel.pickOrMarket = true
-
-            ManualStepChecker.cafeForHereStep = true
-            binding.forHere.clearAnimation()
         }
 
         binding.toGo.setOnClickListener{
             common.goToCafeHome1(view)
             CafeModel.pickOrMarket = false
-
-            ManualStepChecker.cafeForHereStep = true
-            binding.forHere.clearAnimation()
         }
     }
     override fun onBackPressed() {
