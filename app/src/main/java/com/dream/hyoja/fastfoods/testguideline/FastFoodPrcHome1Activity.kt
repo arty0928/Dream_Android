@@ -1,31 +1,35 @@
-package com.dream.hyoja.fastfoods
+package com.dream.hyoja.fastfoods.testguideline
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.dream.hyoja.R
+import com.dream.hyoja.common.MainActivity
 import com.dream.hyoja.common.util.CommonUi
-import com.dream.hyoja.databinding.ActivityFastfoodHomeBinding
+import com.dream.hyoja.databinding.ActivityFastfoodHome1Binding
+import com.dream.hyoja.databinding.ActivityFastfoodPrcHome1Binding
+import com.dream.hyoja.fastfoods.model.FastFoodModel
 
-class FastFoodHomeActivity : AppCompatActivity() {
+class FastFoodPrcHome1Activity : AppCompatActivity() {
     var backPressedTime: Long = 0 // 뒤로가기 2번 클릭을 위한 변수선언
-    private lateinit var binding: ActivityFastfoodHomeBinding
+    private lateinit var binding: ActivityFastfoodPrcHome1Binding
     val common = CommonUi()
-
-
+    val main = MainActivity()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityFastfoodHomeBinding.inflate(layoutInflater)
+        binding = ActivityFastfoodPrcHome1Binding.inflate(layoutInflater)
         setContentView(binding.root)
         val view = this
 
-        val anim = AnimationUtils.loadAnimation(this, R.anim.blink)
-        binding.HomeImage.startAnimation(anim)
+        FastFoodModel.foodSelectedList.clear()
 
-        binding.fastfoodToHome1Button.setOnClickListener{
-            common.goToFastFoodHome1(view)
+        val anim = AnimationUtils.loadAnimation(this, R.anim.blink)
+        binding.startOrderWithCard.startAnimation(anim)
+
+        binding.startOrderWithCard.setOnClickListener {
+//            common.goToFastFoodHome1Button1(view)
         }
     }
     override fun onBackPressed() {
@@ -43,3 +47,4 @@ class FastFoodHomeActivity : AppCompatActivity() {
         }
     }
 }
+

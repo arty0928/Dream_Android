@@ -1,5 +1,6 @@
 package com.dream.hyoja.common.util
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.util.Log
@@ -14,6 +15,9 @@ import com.dream.hyoja.fastfoods.FastFoodHome2Activity
 import com.dream.hyoja.fastfoods.FastFoodHomeActivity
 import com.dream.hyoja.fastfoods.FastFoodPayActivity
 import com.dream.hyoja.fastfoods.model.FastFoodModel
+import com.dream.hyoja.fastfoods.testguideline.FastFoodPlayorPrcFragment
+import com.dream.hyoja.fastfoods.testguideline.FastFoodPrcHome1Activity
+import com.dream.hyoja.fastfoods.testguideline.FastFoodPrcHomeActivity
 
 
 // 앱 전반적으로 사용하는 함수 모음 클래스
@@ -79,6 +83,19 @@ class CommonUi {
         val charset = ('0'..'9')+('a'..'z')+('A'..'Z')
         var string:String = List(length){charset.random()}.joinToString("")
         return string
+    }
+
+//    FastFoodPrc 모드
+    fun goToPrcFastFood(activity: Activity) {
+        val intent = Intent(activity, FastFoodPrcHomeActivity::class.java)
+        activity.startActivity(intent)
+        Log.d("goToFastFood", "패스트푸드 홈으로 전환")
+    }
+
+    fun goToPrcFastFood1(activity: Activity) {
+        val intent = Intent(activity, FastFoodPrcHome1Activity::class.java)
+        activity.startActivity(intent)
+        Log.d("goToFastFood", "패스트푸드 홈1으로 전환")
     }
 
     fun goToCafeStartEx(v: Context) {

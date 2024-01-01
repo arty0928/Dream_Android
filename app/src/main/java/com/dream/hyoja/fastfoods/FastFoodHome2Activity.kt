@@ -65,7 +65,7 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
         val horizontalScrollView = findViewById<HorizontalScrollView>(R.id.TabBarTitleHorizontalScroll)
 
         tabTitleRightBtn.setOnClickListener{
-            val scrollAmount = 300
+            val scrollAmount = 500
             horizontalScrollView.smoothScrollBy(scrollAmount,0)
             Log.d("tabTitleRightBtn","TabTitleRightBtn")
         }
@@ -73,7 +73,7 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
 //        HorizontalScrollView 왼쪽 버튼 눌렀을때
         val tabTitleLeftBtn = findViewById<ImageView>(R.id.TabTitleLeftBtn)
         tabTitleLeftBtn.setOnClickListener{
-            val scrollAmount = 300
+            val scrollAmount = 500
             horizontalScrollView.smoothScrollBy(-scrollAmount,0)
             Log.d("tabTitleRightBtn","TabTitleRightBtn")
         }

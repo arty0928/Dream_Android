@@ -20,8 +20,8 @@
             android:fontFamily="@font/poppins_extrabold"
             android:autoSizeTextType="uniform"
             android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:gravity="center"
             android:text="든든점심"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -31,12 +31,12 @@
             android:layout_height="match_parent"
             android:autoSizeTextType="uniform"
             android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"
-
+            android:autoSizeMaxTextSize="20sp"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
-            android:text="햄버거"/>
+            android:text="햄버거"
+            android:gravity="center"
+            />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/categoryBtn3_dessert"
@@ -47,9 +47,10 @@
             android:fontFamily="@font/poppins_extrabold"
             android:autoSizeTextType="uniform"
             android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"
+            android:autoSizeMaxTextSize="20sp"
             android:text="디저트/치킨"
+            android:gravity="center"
+
         />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -61,8 +62,8 @@
             android:fontFamily="@font/poppins_extrabold"
             android:autoSizeTextType="uniform"
             android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="40sp"
-            android:autoSizeStepGranularity="2sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:gravity="center"
             android:text="드링크"/>
 
     </LinearLayout>

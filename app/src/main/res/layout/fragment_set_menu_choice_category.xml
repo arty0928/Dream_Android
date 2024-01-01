@@ -21,6 +21,9 @@
             android:fontFamily="@font/poppins_extrabold"
             android:text="세트_디저트"
             android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:gravity="center"
             android:textColor="@color/black"
             />
 
@@ -33,6 +36,9 @@
             android:fontFamily="@font/poppins_extrabold"
             android:text="세트_드링크"
             android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:gravity="center"
             android:textColor="@color/black"
             />
 

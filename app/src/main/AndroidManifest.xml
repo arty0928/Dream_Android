@@ -49,6 +49,17 @@
         <activity
             android:name=".fastfoods.FastFoodPayWait"
             android:exported="false" />
+
+        <!--        FastFood Prc-->
+        <activity
+            android:name=".fastfoods.testguideline.FastFoodPrcHomeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".fastfoods.testguideline.FastFoodPrcHome1Activity"
+            android:exported="false" />
+
+
         <activity
             android:name=".cafe.CafeHomeActivity"
             android:exported="false" /> <!-- from MainHome to Cafe Main Home -->
@@ -58,6 +69,10 @@
         <activity
             android:name=".common.MainActivity"
             android:exported="false" />
+
+
+
+
         <activity
             android:name=".common.SplashActivity"
             android:exported="true">

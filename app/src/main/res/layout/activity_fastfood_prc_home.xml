@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fastfoods.FastFoodHomeActivity">
+    tools:context=".fastfoods.testguideline.FastFoodPrcHomeActivity">
 
     <ImageView
-        android:id="@+id/HomeImage"
+        android:id="@+id/FastFoodImageHome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"

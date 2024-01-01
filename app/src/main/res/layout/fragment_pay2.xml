@@ -12,7 +12,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:background="#F9E0AE"
             android:orientation="horizontal"
 
@@ -25,7 +26,9 @@
                 android:layout_height="match_parent"
                 android:text="알림"
                 android:fontFamily="@font/poppins_extrabold"
-                android:textSize="20dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeMaxTextSize="20sp"
                 android:textColor="@color/black"
 
                 >
@@ -35,21 +38,23 @@
         </LinearLayout>
 
         <TextView
-            android:layout_weight="7"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:text="처리 중입니다.\n 잠시만 기다려 주세요."
             android:fontFamily="@font/poppins_bold"
             android:textColor="@color/black"
-            android:textSize="17dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="20sp"
             android:gravity="center"
             />
 
         <LinearLayout
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_weight="9"
             android:background="@drawable/layout_border5_gray"
             >
 
