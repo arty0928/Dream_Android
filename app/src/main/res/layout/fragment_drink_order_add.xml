@@ -32,7 +32,6 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent">
                     <TextView
-                        android:autoSizeTextType="uniform"
                         android:id="@+id/drinkName"
                         android:paddingVertical="1dp"
                         android:textStyle="bold"

@@ -30,7 +30,6 @@ class setMenu1Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-
         //뷰모델 프로바이더 생성
         viewModel = ViewModelProvider(requireActivity())[FoodListViewModel::class.java]
 
@@ -41,18 +40,18 @@ class setMenu1Fragment : Fragment() {
         })
 
         binding.setMenuDessert1.setOnClickListener {
-//            resetButtons()
+            resetButtons()
 
-//            binding.setMenuDessert1.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
+            binding.setMenuDessert1.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
 
             callOrderFood(setMenuArrayList[0])
             (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[0])
         }
 
         binding.setMenuDeseert2.setOnClickListener {
-//            resetButtons()
+            resetButtons()
 //
-//            binding.setMenuDeseert2.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
+            binding.setMenuDeseert2.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
 
             callOrderFood(setMenuArrayList[1])
             (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[1])
@@ -60,9 +59,9 @@ class setMenu1Fragment : Fragment() {
         }
 
         binding.setMenuDeseert3.setOnClickListener {
-//            resetButtons()
+            resetButtons()
 //
-//            binding.setMenuDeseert3.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
+            binding.setMenuDeseert3.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
 
             callOrderFood(setMenuArrayList[2])
             (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[2])
@@ -80,9 +79,9 @@ class setMenu1Fragment : Fragment() {
         }
 
         binding.setMenuDessert5.setOnClickListener {
-//            resetButtons()
+            resetButtons()
 //
-//            binding.setMenuDessert5.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
+            binding.setMenuDessert5.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
 
             callOrderFood(setMenuArrayList[4])
             (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[4])
@@ -90,36 +89,36 @@ class setMenu1Fragment : Fragment() {
         }
 
         binding.setMenuDessert6.setOnClickListener {
-//            resetButtons()
-//
-//            binding.setMenuDessert6.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
+            resetButtons()
+
+            binding.setMenuDessert6.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
 
             callOrderFood(setMenuArrayList[5])
             (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[5])
 
         }
         binding.setMenuDessert7.setOnClickListener {
-//            resetButtons()
-//
-//            binding.setMenuDessert7.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
+            resetButtons()
+
+            binding.setMenuDessert7.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
 
             callOrderFood(setMenuArrayList[6])
             (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[6])
 
         }
         binding.setMenuDessert8.setOnClickListener {
-//            resetButtons()
-//
-//            binding.setMenuDessert8.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
+            resetButtons()
+
+            binding.setMenuDessert8.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
 
             callOrderFood(setMenuArrayList[7])
             (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[7])
 
         }
         binding.setMenuDessert9.setOnClickListener {
-//            resetButtons()
-//
-//            binding.setMenuDessert9.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
+            resetButtons()
+
+            binding.setMenuDessert9.setBackgroundResource(R.drawable.layout_transparent_back_yellow_border)
 
             callOrderFood(setMenuArrayList[8])
             (parentFragment as ChoiceSetMenuDialogFragment).setSetDessert(setMenuArrayList[8])

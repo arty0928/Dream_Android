@@ -172,9 +172,9 @@
                             android:layout_height="match_parent"
                             android:gravity="center"
                             android:fontFamily="@font/poppins_extrabold"
-                            android:text="선택 수량   : "
+                            android:text="선택 수량   :"
+                            android:textSize="15dp"
                             android:textColor="@color/black"
-                            android:autoSizeTextType="uniform"
                             android:layout_weight="1"
 
                             >
@@ -188,8 +188,9 @@
                             android:text="0"
                             android:gravity="center"
                             android:layout_weight="3"
+                            android:textSize="15dp"
+
                             android:fontFamily="@font/poppins_extrabold"
-                            android:autoSizeTextType="uniform"
                             android:textColor="@color/black">
 
                         </TextView>
@@ -218,10 +219,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:fontFamily="@font/poppins_extrabold"
-                            android:text="잔여 수량   : "
+                            android:text="잔여 수량   :"
+                            android:textSize="15dp"
                             android:textColor="@color/black"
                             android:gravity="center"
-                            android:autoSizeTextType="uniform"
                             >
 
                         </TextView>
@@ -232,9 +233,9 @@
                             android:layout_height="match_parent"
                             android:layout_weight="3"
                             android:text="2"
+                            android:textSize="15dp"
                             android:gravity="center"
                             android:fontFamily="@font/poppins_extrabold"
-                            android:autoSizeTextType="uniform"
                             android:textColor="@color/black">
 
                         </TextView>
@@ -271,8 +272,7 @@
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="@color/black"
                         android:text="취소하기"
-                        android:autoSizeTextType="uniform"
-                        android:padding="5dp"
+                        android:textSize="20dp"
                         android:gravity="center"
                         >
 
@@ -297,9 +297,7 @@
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="@color/black"
                         android:text="선택완료"
-                        android:textAlignment="center"
-                        android:autoSizeTextType="uniform"
-                        android:padding="5dp"
+                        android:textSize="20dp"
                         ></TextView>
                 </LinearLayout>
 

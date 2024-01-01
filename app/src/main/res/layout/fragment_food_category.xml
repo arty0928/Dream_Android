@@ -18,9 +18,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="20sp"
+            android:textSize="17dp"
             android:gravity="center"
             android:text="든든점심"/>
 
@@ -29,9 +27,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="20sp"
+            android:textSize="17dp"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
             android:text="햄버거"
@@ -45,9 +41,8 @@
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="20sp"
+            android:textSize="17dp"
+
             android:text="디저트/치킨"
             android:gravity="center"
 
@@ -60,9 +55,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="20sp"
+            android:textSize="17dp"
             android:gravity="center"
             android:text="드링크"/>
 

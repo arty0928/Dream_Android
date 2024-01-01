@@ -33,7 +33,6 @@
                     android:layout_height="match_parent"
                     android:text="게임 방식을 선택해주세요."
                     android:fontFamily="@font/poppins_extrabold"
-                    android:autoSizeTextType="uniform"
                     android:textColor="@color/white"
                     >
 
@@ -69,7 +68,7 @@
                         android:gravity="center"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="@color/black"
-                        android:autoSizeTextType="uniform">
+                        >
 
                     </TextView>
 
@@ -81,7 +80,7 @@
                         android:gravity="center"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="@color/cafe_darkRed"
-                        android:autoSizeTextType="uniform">
+                        >
 
                     </TextView>
 
@@ -108,7 +107,7 @@
                         android:gravity="center"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="@color/black"
-                        android:autoSizeTextType="uniform">
+                        >
 
                     </TextView>
 
@@ -120,7 +119,7 @@
                         android:gravity="center"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="@color/cafe_darkRed"
-                        android:autoSizeTextType="uniform">
+                        >
 
                     </TextView>
 

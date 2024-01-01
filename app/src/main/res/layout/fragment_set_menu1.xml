@@ -30,10 +30,10 @@
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
+                    android:textSize="15dp"
                     android:text="선택하신 버거와 가장 잘 어울리는 Best 디저트!"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    android:autoSizeTextType="uniform"
                     android:fontFamily="@font/poppins_extrabold">
 
                 </TextView>
@@ -66,6 +66,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:text="포테이토"
+                            android:textSize="15dp"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"/>
                         <TextView
@@ -75,7 +76,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:text="0"
-
+                            android:textSize="15dp"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/cafe_darkRed"/>
                     </LinearLayout>
@@ -102,6 +103,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:text="양념감자"
+                            android:textSize="15dp"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"/>
                         <TextView
@@ -111,6 +113,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:text="2300"
+                            android:textSize="15dp"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/cafe_darkRed"/>
                     </LinearLayout>
@@ -137,6 +140,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:text="웨지포테이토"
+                            android:textSize="15dp"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/black"/>
                         <TextView
@@ -146,6 +150,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:text="2100"
+                            android:textSize="15dp"
                             android:fontFamily="@font/poppins_extrabold"
                             android:textColor="@color/cafe_darkRed"/>
                     </LinearLayout>
@@ -200,6 +205,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="치즈스틱"
+                                android:textSize="15dp"
+
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
@@ -209,6 +216,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="2400"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
@@ -240,6 +248,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="아이스 아메리카노"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
@@ -249,6 +258,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="2600"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
@@ -279,6 +289,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="모짜크림치즈볼"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
@@ -288,6 +299,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="2300"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
@@ -328,6 +340,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="치킨너겟"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
@@ -337,6 +350,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="2700"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
@@ -367,6 +381,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="롱치즈스틱"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
@@ -376,6 +391,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="2000"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
@@ -406,6 +422,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="꽈배기"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>
@@ -415,6 +432,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="2000"
+                                android:textSize="15dp"
                                 android:fontFamily="@font/poppins_extrabold"
                                 android:textColor="@color/black"
                                 android:gravity="center"/>

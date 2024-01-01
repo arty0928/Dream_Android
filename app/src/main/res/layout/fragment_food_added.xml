@@ -8,7 +8,6 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="MissingConstraints"
         android:background="@drawable/layout_shadow"
         >
 
@@ -27,7 +26,7 @@
 
                 <!--                        선택 메뉴 이름    -->
                 <LinearLayout
-                    android:layout_weight="2"
+                    android:layout_weight="1.8"
                     android:layout_width="0dp"
                     android:layout_height="match_parent">
                     <TextView
@@ -35,8 +34,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="데리버거"
+                        android:textSize="20dp"
                         android:layout_marginLeft="15dp"
-                        android:gravity="center_vertical"
+                        android:gravity="center|left"
                         android:fontFamily="@font/poppins_extrabold"
                         android:textColor="@color/black"
                         >
@@ -61,7 +61,8 @@
                         android:gravity="center"
                         android:fontFamily="@font/poppins_bold"
                         android:textColor="@color/black"
-                        android:padding="5dp"
+                        android:textSize="20dp"
+
                         >
                     </TextView>
 
@@ -120,7 +121,8 @@
                     android:gravity="center"
                     android:fontFamily="@font/poppins_bold"
                     android:textColor="@color/black"
-                    android:textAlignment="center"
+                    android:textSize="15dp"
+
                     >
                 </TextView>
 
@@ -136,10 +138,10 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:text="토핑추가"
-                        android:layout_gravity="center"
-                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textSize="15dp"
                         android:textColor="@color/white"
                         android:fontFamily="@font/poppins_semibold"
                         >
@@ -171,7 +173,7 @@
                             android:layout_height="match_parent"
                             android:text="변경"
                             android:gravity="center"
-                            android:textAlignment="center"
+                            android:textSize="15dp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/poppins_semibold"
                             >
@@ -197,7 +199,7 @@
                             android:layout_height="match_parent"
                             android:text="삭제"
                             android:gravity="center"
-                            android:textAlignment="center"
+                            android:textSize="15dp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/poppins_semibold"
                             >

@@ -34,8 +34,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="세트로 드시겠어요?"
+                    android:textSize="20dp"
                     android:fontFamily="@font/poppins_extrabold"
-                    android:autoSizeTextType="uniform"
                     android:textColor="@color/black"
                     >
 

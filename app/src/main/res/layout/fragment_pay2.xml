@@ -27,8 +27,8 @@
                 android:text="알림"
                 android:fontFamily="@font/poppins_extrabold"
                 android:autoSizeTextType="uniform"
-                android:autoSizeMinTextSize="12sp"
-                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="12dp"
+                android:autoSizeMaxTextSize="20dp"
                 android:textColor="@color/black"
 
                 >
@@ -45,8 +45,8 @@
             android:fontFamily="@font/poppins_bold"
             android:textColor="@color/black"
             android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="12dp"
+            android:autoSizeMaxTextSize="20dp"
             android:gravity="center"
             />
 
