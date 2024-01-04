@@ -208,7 +208,9 @@
                                 android:layout_height="match_parent" />
                         </LinearLayout>
                         <androidx.appcompat.widget.AppCompatButton
+                            android:maxLines="1"
                             android:id="@+id/allClear"
+                            android:autoSizeTextType="uniform"
                             android:textSize="15dp"
                             android:text="전체취소"
                             android:fontFamily="@font/poppins_bold"
@@ -227,14 +229,17 @@
                     android:layout_weight="6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
                     <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="125dp"
+                        android:layout_gravity="top"
                         android:layout_weight="1"
                         android:scaleType="centerInside"
-                        android:layout_gravity="top"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/pay_card"/>
+                        android:src="@drawable/pay_card" />
                     <TextView
+                        android:maxLines="1"
+                        android:autoSizeTextType="uniform"
                         android:textSize="18dp"
                         android:textColor="@color/cafe_white"
                         android:textAlignment="center"
