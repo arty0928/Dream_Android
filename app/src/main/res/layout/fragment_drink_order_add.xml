@@ -136,8 +136,8 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:gravity="center"
                     android:id="@+id/icedButton"
-                    android:background="@drawable/iced_button_unclicked"
-                    android:textColor="@color/cafe_skyblue"
+                    android:background="@drawable/button_can_not_click"
+                    android:textColor="@color/cafe_gray"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginVertical="10dp"
                     android:text="ICED"

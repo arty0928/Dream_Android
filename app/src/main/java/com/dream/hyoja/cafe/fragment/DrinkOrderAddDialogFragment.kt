@@ -170,8 +170,8 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
         if(orderingDrink.drink.degree){
             binding.hotButton.setBackgroundResource(R.drawable.hot_button_clicked)
             binding.hotButton.setTextColor(resources.getColor(R.color.cafe_white))
-            binding.icedButton.setBackgroundResource(R.drawable.iced_button_unclicked)
-            binding.icedButton.setTextColor(resources.getColor(R.color.cafe_skyblue))
+            binding.icedButton.setBackgroundResource(R.drawable.button_can_not_click)
+            binding.icedButton.setTextColor(resources.getColor(R.color.cafe_gray))
 
             orderingDrink.degree = "Hot"
         }
@@ -179,8 +179,8 @@ class DrinkOrderAddDialogFragment: DialogFragment() {
 
     private fun icedButtonClicked(){
         if(orderingDrink.drink.degree) {
-            binding.hotButton.setBackgroundResource(R.drawable.hot_button_unclicked)
-            binding.hotButton.setTextColor(resources.getColor(R.color.cafe_darkRed))
+            binding.hotButton.setBackgroundResource(R.drawable.button_can_not_click)
+            binding.hotButton.setTextColor(resources.getColor(R.color.cafe_gray))
             binding.icedButton.setBackgroundResource(R.drawable.iced_button_clicked)
             binding.icedButton.setTextColor(resources.getColor(R.color.cafe_white))
 

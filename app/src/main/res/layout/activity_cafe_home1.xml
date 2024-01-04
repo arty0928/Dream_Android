@@ -195,11 +195,13 @@
                                 android:layout_width="17dp"
                                 android:layout_height="match_parent"/>
                             <TextView
+                                android:maxLines="1"
                                 android:fontFamily="@font/poppins_bold"
-
                                 android:id="@+id/account"
                                 android:textColor="@color/cafe_darkRed"
+                                android:autoSizeMaxTextSize="20dp"
                                 android:textSize="20dp"
+                                android:autoSizeTextType="uniform"
                                 android:layout_gravity="right"
                                 android:gravity="center"
                                 android:textAlignment="center"
