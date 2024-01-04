@@ -324,6 +324,15 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
         return account
     }
 
+    fun getToTalCount(): Int{
+        var count:Int = 0
+
+        for (i in 0..FastFoodModel.foodSelectedList.size - 1){
+            count += FastFoodModel.foodSelectedList[i].foodCount
+        }
+        return count
+    }
+
     override fun foodAdded() {
         //장바구니 리사이클리뷰
         binding.FoodSelectedList.layoutManager = LinearLayoutManager(this).also{
@@ -344,7 +353,7 @@ class FastFoodHome2Activity : AppCompatActivity(), FoodAddListner{
 
     fun updateTotalFoodInfo(){
         binding.TotalOrderPrice.text = getToTalPrice().toString()
-        binding.TotalOrderCount.text = "${FastFoodModel.foodSelectedList.size.toString()}개"
+        binding.TotalOrderCount.text = "${getToTalCount().toString()}개"
     }
 }
 

@@ -42,7 +42,9 @@
                     android:layout_weight="1"
                     android:layout_margin="3dp"
                     android:gravity="center"
-                    android:textSize="13dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10dp"
+                    android:autoSizeMaxTextSize="13dp"
                     android:text="고객님들의\n안전과 질병 예방을 위해\n무인포스는 매시간 살균, 소독을\n실시하고 있습니다."
                     android:fontFamily="@font/poppins_extrabold"
                     android:textColor="@color/black"
@@ -158,6 +160,7 @@
                         android:textSize="20dp"
                         android:textColor="@color/black"
                         android:gravity="center|left"
+                        android:maxLines="1"
                         >
 
                     </TextView>
@@ -172,7 +175,7 @@
                         android:textSize="20dp"
                         android:gravity="center"
                         android:textColor="@color/black"
-
+                        android:maxLines="1"
                         >
 
                     </TextView>
@@ -188,6 +191,7 @@
                         android:textColor="#D00000"
                         android:gravity="center|end"
                         android:paddingRight="16dp"
+                        android:maxLines="1"
                         >
 
                     </TextView>
@@ -302,6 +306,7 @@
                     android:text="취소하기"
                     android:gravity="center"
                     android:textSize="20dp"
+                    android:textColor="@color/black"
                     >
 
                 </TextView>

@@ -20,7 +20,9 @@
             android:background="@drawable/tab_indicator_setmenu_default"
             android:fontFamily="@font/poppins_extrabold"
             android:text="세트_디저트"
-            android:textSize="20dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="18dp"
+            android:autoSizeMaxTextSize="20dp"
             android:gravity="center"
             android:textColor="@color/black"
             />
@@ -33,7 +35,9 @@
             android:background="@drawable/tab_indicator_setmenu_default"
             android:fontFamily="@font/poppins_extrabold"
             android:text="세트_드링크"
-            android:textSize="20dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="18dp"
+            android:autoSizeMaxTextSize="20dp"
             android:gravity="center"
             android:textColor="@color/black"
             />

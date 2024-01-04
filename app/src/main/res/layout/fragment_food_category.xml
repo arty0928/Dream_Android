@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".FoodCategoryFragment">
 
     <LinearLayout
@@ -18,8 +19,12 @@
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
-            android:textSize="17dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="16dp"
+            android:autoSizeMaxTextSize="17dp"
+            android:textColor="@color/black"
             android:gravity="center"
+
             android:text="든든점심"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -27,11 +32,15 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:textSize="17dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="16dp"
+            android:autoSizeMaxTextSize="17dp"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
             android:text="햄버거"
             android:gravity="center"
+            android:textColor="@color/black"
+
             />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -41,7 +50,10 @@
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
-            android:textSize="17dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="16dp"
+            android:autoSizeMaxTextSize="17dp"
+            android:textColor="@color/black"
 
             android:text="디저트/치킨"
             android:gravity="center"
@@ -55,8 +67,12 @@
             android:layout_height="match_parent"
             android:background="@drawable/tab_indicator_default"
             android:fontFamily="@font/poppins_extrabold"
-            android:textSize="17dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="16dp"
+            android:autoSizeMaxTextSize="17dp"
             android:gravity="center"
+            android:textColor="@color/black"
+
             android:text="드링크"/>
 
     </LinearLayout>

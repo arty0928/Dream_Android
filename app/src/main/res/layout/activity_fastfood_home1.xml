@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".fastfoods.FastFoodHome1Activity"
     >
 
@@ -37,6 +38,7 @@
             android:gravity="center"
             android:text="원하시는 결제방식을 선택해주세요"
             android:textSize="25dp"
+            android:maxLines="1"
             android:textColor="@color/black"
             />
 
@@ -80,6 +82,7 @@
                             android:textColor="@color/black"
                             android:gravity="center"
                             android:textSize="25dp"
+                            android:maxLines="1"
                             android:layout_weight="1"/>
                         <TextView
                             android:layout_width="match_parent"
@@ -89,6 +92,9 @@
                             android:textColor="@color/black"
                             android:gravity="center"
                             android:textSize="15dp"
+                            android:maxLines="1"
+                            android:autoSizeMaxTextSize="15dp"
+                            android:autoSizeMinTextSize="15dp"
                             android:layout_weight="1"/>
                     </LinearLayout>
 
@@ -135,7 +141,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:layout_weight="0.8"
+                                    android:layout_weight="0.6"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:text="쿠폰/교환권"
@@ -143,6 +149,7 @@
                                     android:fontFamily="@font/poppins_bold"
                                     android:textColor="@color/black"
                                     android:gravity="center"
+                                    android:maxLines="1"
                                     />
                                 <TextView
                                     android:layout_weight="1.5"
@@ -152,6 +159,8 @@
                                     android:fontFamily="@font/poppins_medium"
                                     android:textColor="@color/black"
                                     android:textSize="15dp"
+                                    android:autoSizeMaxTextSize="15dp"
+                                    android:autoSizeMinTextSize="15dp"
                                     android:gravity="center"
                                     />
 
@@ -189,7 +198,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:layout_weight="0.8"
+                                android:layout_weight="0.6"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:text="현금 (후결제)"
@@ -206,6 +215,8 @@
                                 android:text="본 매장은 현금없는 매장으로 다른 결제방법을 선택해주세요."
                                 android:fontFamily="@font/poppins_medium"
                                 android:gravity="center"
+                                android:autoSizeMaxTextSize="15dp"
+                                android:autoSizeMinTextSize="15dp"
                                 android:textColor="#6B6B6B"
                                 />
 
