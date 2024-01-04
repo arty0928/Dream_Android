@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
+    android:background="@color/cafe_white"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -65,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <LinearLayout
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
             android:gravity="center"
             android:layout_gravity="center|bottom"
             android:orientation="horizontal"
@@ -78,8 +79,10 @@
                 android:text="매장에서 먹어요"
                 android:textAlignment="center"
                 android:textSize="13dp"
+                android:layout_marginRight="20dp"
                 android:fontFamily="@font/poppins_bold"
                 android:background="@drawable/button_round"
+                android:textColor="@color/cafe_white"
                 app:backgroundTint="@null"/>
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/to_go"
@@ -89,6 +92,7 @@
                 android:background="@drawable/button_round"
                 app:backgroundTint="@null"
                 android:text="포장해서 갈래요"
+                android:textColor="@color/cafe_white"
                 android:textSize="13dp"
                 android:fontFamily="@font/poppins_bold"
                 app:layout_constraintStart_toEndOf="@+id/for_here"
@@ -97,7 +101,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/for_here" />
         </LinearLayout>
         <TextView
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center|top"
             android:textAlignment="center"
             android:id="@+id/textView4"

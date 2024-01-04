@@ -3,6 +3,7 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/cafe_white"
     tools:context=".cafe.CafeHome1Activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -174,7 +175,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <TextView
-                            android:textSize="20dp"
+                            android:autoSizeMaxTextSize="20dp"
+                            android:autoSizeMinTextSize="18dp"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textAlignment="center"
@@ -200,7 +202,7 @@
                                 android:id="@+id/account"
                                 android:textColor="@color/cafe_darkRed"
                                 android:autoSizeMaxTextSize="20dp"
-                                android:textSize="20dp"
+                                android:autoSizeMinTextSize="19dp"
                                 android:autoSizeTextType="uniform"
                                 android:layout_gravity="right"
                                 android:gravity="center"
@@ -213,7 +215,8 @@
                             android:maxLines="1"
                             android:id="@+id/allClear"
                             android:autoSizeTextType="uniform"
-                            android:textSize="15dp"
+                            android:autoSizeMaxTextSize="15dp"
+                            android:autoSizeMinTextSize="14dp"
                             android:text="전체취소"
                             android:fontFamily="@font/poppins_bold"
                             android:textColor="@color/white"
@@ -242,12 +245,13 @@
                     <TextView
                         android:maxLines="1"
                         android:autoSizeTextType="uniform"
-                        android:textSize="18dp"
+                        android:autoSizeMaxTextSize="18dp"
+                        android:autoSizeMinTextSize="16dp"
                         android:textColor="@color/cafe_white"
                         android:textAlignment="center"
                         android:text="결제하기"
                         android:fontFamily="@font/poppins_bold"
-                        android:layout_weight="3"
+                        android:layout_weight="2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"/>
                 </LinearLayout>

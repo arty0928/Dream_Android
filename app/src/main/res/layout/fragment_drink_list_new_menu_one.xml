@@ -12,41 +12,43 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp">
         <LinearLayout
             android:id="@+id/newMenu1"
             android:layout_marginRight="2dp"
             android:background="@drawable/border_f5f5f5"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent">
             <ImageView
                 android:background="#f5f5f5"
                 android:id="@+id/menu1Image"
                 android:layout_gravity="center"
                 android:src="@drawable/ready_sorry"
-                android:layout_weight="1"
+                android:layout_weight="4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="0dp"/>
             <TextView
                 android:background="#f5f5f5"
                 android:id="@+id/menu1Name"
                 android:gravity="center"
-                android:textSize="20dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="15dp"
+                android:autoSizeMaxTextSize="18dp"
                 android:text="1번"
                 android:textColor="@color/black"
                 android:fontFamily="@font/poppins_bold"
-                android:layout_weight="4"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="0dp"/>
             <LinearLayout
                 android:background="#f5f5f5"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_weight="4"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp">
                 <ImageView
                     android:background="#f5f5f5"
                     android:id="@+id/wonImage1"
@@ -58,7 +60,9 @@
                     android:background="#f5f5f5"
                     android:id="@+id/menu1Price"
                     android:gravity="center"
-                    android:textSize="17dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="15dp"
+                    android:autoSizeMaxTextSize="17dp"
                     android:textColor="@color/purple_500"
                     android:text="0"
 
@@ -74,34 +78,35 @@
             android:background="@drawable/border_f5f5f5"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent">
             <ImageView
                 android:background="#f5f5f5"
                 android:id="@+id/menu2Image"
                 android:src="@drawable/ready_sorry"
-                android:layout_weight="1"
+                android:layout_weight="4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="0dp"/>
             <TextView
                 android:background="#f5f5f5"
                 android:id="@+id/menu2Name"
                 android:gravity="center"
-                android:textSize="20dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="15dp"
+                android:autoSizeMaxTextSize="18dp"
                 android:text="2번"
                 android:textColor="@color/black"
                 android:fontFamily="@font/poppins_bold"
-
-                android:layout_weight="4"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="0dp"/>
             <LinearLayout
                 android:background="#f5f5f5"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_weight="4"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp">
                 <ImageView
                     android:background="#f5f5f5"
                     android:id="@+id/wonImage2"
@@ -113,7 +118,9 @@
                     android:background="#f5f5f5"
                     android:id="@+id/menu2Price"
                     android:gravity="center"
-                    android:textSize="17dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="15dp"
+                    android:autoSizeMaxTextSize="17dp"
                     android:textColor="@color/purple_500"
                     android:text="0"
 
@@ -130,41 +137,42 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp">
         <LinearLayout
             android:id="@+id/newMenu3"
             android:layout_marginRight="2dp"
             android:background="@drawable/border_f5f5f5"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent">
             <ImageView
                 android:background="#f5f5f5"
                 android:id="@+id/menu3Image"
                 android:src="@drawable/ready_sorry"
-                android:layout_weight="1"
+                android:layout_weight="4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="0dp"/>
             <TextView
                 android:background="#f5f5f5"
                 android:id="@+id/menu3Name"
                 android:gravity="center"
-                android:textSize="20dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="15dp"
+                android:autoSizeMaxTextSize="18dp"
                 android:textColor="@color/black"
                 android:text="3번"
-
                 android:fontFamily="@font/poppins_bold"
-                android:layout_weight="4"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="0dp"/>
             <LinearLayout
                 android:background="#f5f5f5"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_weight="4"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp">
                 <ImageView
                     android:background="#f5f5f5"
                     android:id="@+id/wonImage3"
@@ -176,7 +184,9 @@
                     android:background="#f5f5f5"
                     android:id="@+id/menu3Price"
                     android:gravity="center"
-                    android:textSize="17dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="15dp"
+                    android:autoSizeMaxTextSize="17dp"
                     android:textColor="@color/purple_500"
                     android:text="0"
                     android:fontFamily="@font/poppins_bold"
@@ -191,33 +201,35 @@
             android:background="@drawable/border_f5f5f5"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent">
             <ImageView
                 android:background="#f5f5f5"
                 android:id="@+id/menu4Image"
                 android:src="@drawable/ready_sorry"
-                android:layout_weight="1"
+                android:layout_weight="4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="0dp"/>
             <TextView
                 android:background="#f5f5f5"
                 android:id="@+id/menu4Name"
                 android:gravity="center"
-                android:textSize="20dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="15dp"
+                android:autoSizeMaxTextSize="18dp"
                 android:textColor="@color/black"
                 android:text="4번"
-                android:layout_weight="4"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_bold"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="0dp"/>
             <LinearLayout
                 android:background="#f5f5f5"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_weight="4"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp">
                 <ImageView
                     android:background="#f5f5f5"
                     android:id="@+id/wonImage4"
@@ -229,7 +241,9 @@
                     android:background="#f5f5f5"
                     android:id="@+id/menu4Price"
                     android:gravity="center"
-                    android:textSize="17dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="15dp"
+                    android:autoSizeMaxTextSize="17dp"
                     android:textColor="@color/purple_500"
                     android:text="0"
                     android:fontFamily="@font/poppins_bold"

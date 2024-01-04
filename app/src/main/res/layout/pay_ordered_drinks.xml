@@ -4,6 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/cafe_white"
     android:layout_height="wrap_content">
     <LinearLayout
         android:orientation="horizontal"
@@ -155,7 +156,7 @@
                 android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Extra 샷추가 얼음추가 시럽추가"/>
+                android:text="Extra   샷추가  얼음추가 시럽추가"/>
 
         </LinearLayout>
 

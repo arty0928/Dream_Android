@@ -8,6 +8,7 @@
     android:layout_gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cafe_white"
     tools:context=".cafe.fragment.OptionAddFragment">
 
 
@@ -22,7 +23,7 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:fontFamily="@font/poppins_bold"
-
+            android:textColor="@color/black"
             android:text="시럽 추가"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -53,7 +54,7 @@
             android:textStyle="bold"
             android:text="얼음 추가"
             android:fontFamily="@font/poppins_bold"
-
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
