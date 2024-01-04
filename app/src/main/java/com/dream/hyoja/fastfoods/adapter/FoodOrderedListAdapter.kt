@@ -32,9 +32,10 @@ class FoodOrderedListAdapter(private val binding: ActivityFastfoodHome2Binding) 
         holder.binding.selectedItemPrice.text = FastFoodModel.foodSelectedList[position].totalPrice.toString()
         holder.binding.selectedItemCount.text = FastFoodModel.foodSelectedList[position].foodCount.toString()
 
-        if(FastFoodModel.foodSelectedList[position].category == "Dessert" ||FastFoodModel.foodSelectedList[position].category == "Drink"){
-            holder.binding.selectedItemAddToping.visibility = View.INVISIBLE
-        }
+//        토핑 추가
+//        if(FastFoodModel.foodSelectedList[position].category == "Dessert" ||FastFoodModel.foodSelectedList[position].category == "Drink"){
+//            holder.binding.selectedItemAddToping.visibility = View.INVISIBLE
+//        }
 
         // itemPlus 버튼 클릭 시
         holder.binding.plusItem.setOnClickListener {

@@ -121,34 +121,34 @@
                     android:gravity="center"
                     android:fontFamily="@font/poppins_bold"
                     android:textColor="@color/black"
-                    android:textSize="15dp"
+                    android:textSize="20dp"
 
                     >
                 </TextView>
 
                 <!--                        토핑추가-->
-                <LinearLayout
-                    android:layout_weight="1.2"
-                    android:id="@+id/selectedItemAddToping"
-                    android:layout_width="0dp"
-                    android:layout_margin="2dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/layout_rounded_darkred"
-                    >
+<!--                <LinearLayout-->
+<!--                    android:layout_weight="1.2"-->
+<!--                    android:id="@+id/selectedItemAddToping"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_margin="2dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/layout_rounded_darkred"-->
+<!--                    >-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="토핑추가"
-                        android:gravity="center"
-                        android:textSize="15dp"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/poppins_semibold"
-                        >
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="토핑추가"-->
+<!--                        android:gravity="center"-->
+<!--                        android:textSize="15dp"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:fontFamily="@font/poppins_semibold"-->
+<!--                        >-->
 
-                    </TextView>
+<!--                    </TextView>-->
 
-                </LinearLayout>
+<!--                </LinearLayout>-->
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -173,7 +173,7 @@
                             android:layout_height="match_parent"
                             android:text="변경"
                             android:gravity="center"
-                            android:textSize="15dp"
+                            android:textSize="18dp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/poppins_semibold"
                             >
@@ -199,7 +199,7 @@
                             android:layout_height="match_parent"
                             android:text="삭제"
                             android:gravity="center"
-                            android:textSize="15dp"
+                            android:textSize="18dp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/poppins_semibold"
                             >
