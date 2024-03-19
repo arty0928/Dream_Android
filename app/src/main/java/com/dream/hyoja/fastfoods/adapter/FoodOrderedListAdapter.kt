@@ -84,7 +84,7 @@ class FoodOrderedListAdapter(private val binding: ActivityFastfoodHome2Binding) 
             sumPrice += FastFoodModel.foodSelectedList[i].foodCount * FastFoodModel.foodSelectedList[i].totalPrice
         }
         binding.TotalOrderCount.text = sumCount.toString()+'개'
-        binding.TotalOrderPrice.text = sumPrice.toString()+'개'
+        binding.TotalOrderPrice.text = sumPrice.toString()
 
         return Pair(sumCount,sumPrice)
 

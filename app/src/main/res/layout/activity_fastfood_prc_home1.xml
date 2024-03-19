@@ -210,7 +210,7 @@
                                     android:layout_weight="1.5"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
-                                    android:text="본 매장은 현금없는 매장으로 다른 결제방법을 선택해주세요."
+                                    android:text="본 매장은 현금 없는 매장으로 다른 결제 방법을 선택해주세요."
                                     android:fontFamily="@font/poppins_medium"
                                     android:textColor="#6B6B6B"
                                     />
