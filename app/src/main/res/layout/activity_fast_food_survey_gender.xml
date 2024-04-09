@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fastfoods.FastfoodSurveyGenderActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"/>
+
+        <TextView
+            android:layout_weight="0.3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="성별을 입력해주세요."
+            android:textSize="35dp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_extrabold"
+            android:textColor="@color/black"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1.5"
+            >
+
+            <FrameLayout
+                android:id="@+id/surveyGender_maleBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="남성"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:background="@android:color/transparent"/>
+
+                <ImageButton
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:textColor="@color/white"
+                    android:id="@+id/male_button"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/male"
+                    android:background="@drawable/survey_button"
+                    android:scaleType="fitCenter"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:elevation="8dp"
+                    />
+
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/surveyGender_femaleBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="여성"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:background="@android:color/transparent"/>
+
+                <ImageButton
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:textColor="@color/white"
+                    android:id="@+id/female_button"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/female"
+                    android:background="@drawable/survey_button"
+                    android:scaleType="fitCenter"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:elevation="8dp" />
+                
+            </FrameLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

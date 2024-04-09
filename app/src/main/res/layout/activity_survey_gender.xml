@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             >
 
             <androidx.appcompat.widget.AppCompatButton
@@ -51,7 +51,7 @@
                 android:id="@+id/male_button"
                 android:textSize="30dp"
                 android:text="여성"
-                android:background="@drawable/survey_femal_button"
+                android:background="@drawable/survey_button"
                 android:layout_marginHorizontal="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

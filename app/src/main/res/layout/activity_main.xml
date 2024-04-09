@@ -33,6 +33,7 @@
             android:textSize="25dp"
             />
         <ImageView
+            android:id="@+id/myPageIcon"
             android:layout_margin="7dp"
             android:layout_gravity="center"
             android:layout_width="50dp"

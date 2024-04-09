@@ -14,6 +14,7 @@ import com.dream.hyoja.fastfoods.FastFoodHome1Activity
 import com.dream.hyoja.fastfoods.FastFoodHome2Activity
 import com.dream.hyoja.fastfoods.FastFoodHomeActivity
 import com.dream.hyoja.fastfoods.FastFoodPayActivity
+import com.dream.hyoja.fastfoods.FastfoodSurveyGenderActivity
 import com.dream.hyoja.fastfoods.model.FastFoodModel
 import com.dream.hyoja.fastfoods.testguideline.FastFoodPlayorPrcFragment
 import com.dream.hyoja.fastfoods.testguideline.FastFoodPrcHome1Activity
@@ -104,6 +105,18 @@ class CommonUi {
         Log.d("goToAccountCreate", "회원가입 화면으로 전환")
     }
 
+//    fun goToCafe(v: Context) {
+//        val intent = Intent(v, CafeHomeActivity::class.java)
+//        v.startActivity(intent)
+//        Log.d("goToCafe", "카페 홈으로 전환")
+//    }
+
+    //설문조사
+    fun goToSurvey(v: Context) {
+        val intent = Intent(v, FastfoodSurveyGenderActivity::class.java)
+        v.startActivity(intent)
+        Log.d("goToSurveyGender", "설문조사_성별로 전환")
+    }
 }
 //    이전 화면으로 이동
 
