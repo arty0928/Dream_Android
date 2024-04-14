@@ -15,4 +15,6 @@
     <color name="cafe_black">#FF000000</color>
     <color name="cafe_darkRed">#C80000</color>
     <color name="cafe_skyblue">#03A9F4</color>
+    <!-- fastfood    -->
+    <color name="fastfood_yellow">#F1A91C</color>
 </resources>

@@ -19,11 +19,7 @@
             android:exported="false"
             android:label="@string/title_activity_fastfood_survey_age"
             android:theme="@style/Theme.HyoJa" />
-        <activity
-            android:name=".FastfoodSurveyAgeActivity"
-            android:exported="false"
-            android:label="@string/title_activity_fastfood_survey_age"
-            android:theme="@style/Theme.HyoJa" />
+
         <activity
             android:name=".fastfoods.FastfoodSurveyGenderActivity"
             android:exported="false" />

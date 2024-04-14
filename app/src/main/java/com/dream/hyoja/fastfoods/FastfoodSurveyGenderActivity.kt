@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dream.hyoja.R
 import com.dream.hyoja.databinding.ActivityFastFoodSurveyGenderBinding
-import com.dream.hyoja.databinding.ActivitySurveyGenderBinding
+//import com.dream.hyoja.databinding.ActivitySurveyGenderBinding
 
 class FastfoodSurveyGenderActivity : AppCompatActivity() {
 
