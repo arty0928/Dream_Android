@@ -110,11 +110,11 @@ class CommonUi {
 //    }
 
     //설문조사
-    fun goToSurvey(v: Context) {
-        val intent = Intent(v, FastfoodSurveyGenderActivity::class.java)
-        v.startActivity(intent)
-        Log.d("goToSurveyGender", "설문조사_성별로 전환")
-    }
+//    fun goToSurvey(v: Context) {
+//        val intent = Intent(v, FastfoodSurveyGenderActivity::class.java)
+//        v.startActivity(intent)
+//        Log.d("goToSurveyGender", "설문조사_성별로 전환")
+//    }
 }
 //    이전 화면으로 이동
 
