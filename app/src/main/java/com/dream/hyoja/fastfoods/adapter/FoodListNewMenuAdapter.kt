@@ -1,16 +1,16 @@
 package com.dream.hyoja.fastfoods.adapter
 
-import FoodListMenuTwoFragment
+import com.dream.hyoja.Fragments.FoodList.FoodListMenuTwoFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.dream.hyoja.Fragments.FoodListMenuOneFrament
+import com.dream.hyoja.Fragments.FoodList.FoodListMenuOneFrament
 
 class FoodListNewMenuAdapter(fragmentActivity: FragmentActivity): FragmentStateAdapter(fragmentActivity) {
 
     // 1. ViewPager2에 연결할 Fragment 들을 생성
     private val fragmentList = listOf<Fragment>(
-        FoodListMenuOneFrament(),FoodListMenuTwoFragment()
+        FoodListMenuOneFrament(), FoodListMenuTwoFragment()
 //        FoodListMenuOneFrament(), drink()
 //        DrinkListMenuOneFragment(), DrinkListMenuTwoFragment()
     )

@@ -3,14 +3,14 @@ package com.dream.hyoja.fastfoods.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.dream.hyoja.FoodCategoryFragment
+import com.dream.hyoja.Fragments.FoodList.FoodCategoryFragment
 
 class FoodMenuCategoryAdapter(fragmentActivity: FragmentActivity ): FragmentStateAdapter(fragmentActivity) {
 
     // 1. ViewPager2에 연결할 Fragment 들을 생성
 
     private val fragmentList = listOf<Fragment>(
-        com.dream.hyoja.FoodCategoryFragment()
+        FoodCategoryFragment()
     )
 
     // 2. ViesPager2에서 노출시킬 Fragment 의 갯수 설정

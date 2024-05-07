@@ -2,8 +2,8 @@ package com.dream.hyoja.fastfoods.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.dream.hyoja.Fragments.ChoiceSetMenuDialogFragment
-import com.dream.hyoja.SetMenuChoiceCategoryFragment
+import com.dream.hyoja.Fragments.SetMenu.ChoiceSetMenuDialogFragment
+import com.dream.hyoja.Fragments.SetMenu.SetMenuChoiceCategoryFragment
 
 class SetMenuChoiceCategoryAdapter(fragmentActivity: ChoiceSetMenuDialogFragment): FragmentStateAdapter(fragmentActivity) {
 

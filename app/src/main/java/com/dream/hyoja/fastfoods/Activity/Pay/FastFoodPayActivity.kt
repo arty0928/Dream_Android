@@ -1,18 +1,16 @@
-package com.dream.hyoja.fastfoods
+package com.dream.hyoja.fastfoods.Activity.Pay
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.animation.AnimationUtils
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dream.hyoja.Fragments.FastFoodStep3Fragment
-import com.dream.hyoja.Fragments.PayFragment
-import com.dream.hyoja.Fragments.checkCancelFragment
+import com.dream.hyoja.Fragments.Pay.FastFoodStep3Fragment
+import com.dream.hyoja.Fragments.Pay.PayFragment
+import com.dream.hyoja.Fragments.CommonUI.checkCancelFragment
 import com.dream.hyoja.R
 import com.dream.hyoja.cafe.adapter.TotalFoodListAdapter
-import com.dream.hyoja.cafe.fragment.DrinkOrderAddDialogFragment
 import com.dream.hyoja.common.util.CommonUi
 import com.dream.hyoja.databinding.ActivityFastfoodPayBinding
 import com.dream.hyoja.fastfoods.model.FastFoodModel

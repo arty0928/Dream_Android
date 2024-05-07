@@ -1,4 +1,4 @@
-package com.dream.hyoja.Fragments
+package com.dream.hyoja.Fragments.FoodList
 
 import android.graphics.Point
 import android.os.Bundle
@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
-import com.dream.hyoja.R
+import com.dream.hyoja.Fragments.SetMenu.ChoiceSetMenuDialogFragment
 import com.dream.hyoja.databinding.FragmentSetOrOnlyBinding
 import com.dream.hyoja.fastfoods.model.FastFoodModel
 import com.dream.hyoja.fastfoods.model.OrderingFood

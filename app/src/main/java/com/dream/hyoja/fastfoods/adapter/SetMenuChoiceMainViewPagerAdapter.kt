@@ -2,15 +2,15 @@ package com.dream.hyoja.fastfoods.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.dream.hyoja.Fragments.ChoiceSetMenuDialogFragment
-import com.dream.hyoja.setMenu1Fragment
-import com.dream.hyoja.setMenu2Fragment
+import com.dream.hyoja.Fragments.SetMenu.ChoiceSetMenuDialogFragment
+import com.dream.hyoja.Fragments.SetMenu.setMenu1Fragment
+import com.dream.hyoja.Fragments.SetMenu.setMenu2Fragment
 
 class SetMenuChoiceMainViewPagerAdapter(fragmentActivity: ChoiceSetMenuDialogFragment): FragmentStateAdapter(fragmentActivity) {
 
     // 1. ViewPager2에 연결할 Fragment 들을 생성
     private val fragmentList = listOf<Fragment>(
-//        FoodListMenuOneFrament(),FoodListMenuTwoFragment()
+//        FoodListMenuOneFrament(),com.dream.hyoja.Fragments.FoodList.FoodListMenuTwoFragment()
         setMenu1Fragment(), setMenu2Fragment()
     )
 

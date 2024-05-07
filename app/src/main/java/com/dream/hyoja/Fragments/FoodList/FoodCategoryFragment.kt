@@ -1,4 +1,4 @@
-package com.dream.hyoja
+package com.dream.hyoja.Fragments.FoodList
 
 import android.os.Bundle
 import android.util.Log
@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationUtils
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.dream.hyoja.R
 import com.dream.hyoja.databinding.FragmentFoodCategoryBinding
 import com.dream.hyoja.fastfoods.model.FastFoodModel
 import com.dream.hyoja.fastfoods.viewmodel.FoodListViewModel

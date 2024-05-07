@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fastfoods.FastfoodSurveyAgeActivity">
+    tools:context=".fastfoods.Activity.Survey.FastfoodSurveyAgeActivity">
 
     <LinearLayout
         android:gravity="center"
@@ -97,6 +97,7 @@
                 android:layout_height="match_parent">
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:layout_margin="15dp"
                     android:layout_marginHorizontal="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -118,6 +119,7 @@
                 android:layout_height="match_parent">
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:layout_margin="15dp"
                     android:layout_marginHorizontal="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -137,7 +139,23 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="제출"
+                android:fontFamily="@font/poppins_extrabold"
+                android:textColor="@color/black"
+                android:id="@+id/surveyNextButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_survey_next"
+                android:layout_weight="1"
+                >
+
+            </androidx.appcompat.widget.AppCompatButton>
+        </LinearLayout>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

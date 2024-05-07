@@ -1,4 +1,4 @@
-package com.dream.hyoja.Fragments
+package com.dream.hyoja.Fragments.Pay
 
 import android.content.Intent
 import android.graphics.Point
@@ -15,7 +15,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
 import com.dream.hyoja.common.util.CommonUi
 import com.dream.hyoja.databinding.FragmentPay2Binding
-import com.dream.hyoja.fastfoods.FastFoodPayWait
+import com.dream.hyoja.fastfoods.Activity.Pay.FastFoodPayWait
 import com.dream.hyoja.fastfoods.viewmodel.FoodListViewModel
 
 class
