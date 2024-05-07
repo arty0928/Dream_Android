@@ -26,25 +26,56 @@
 
                 <!--                        선택 메뉴 이름    -->
                 <LinearLayout
-                    android:layout_weight="1.8"
+                    android:layout_weight="1.5"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
                     <TextView
+                        android:layout_weight="1"
                         android:id="@+id/selectedItemName"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:text="데리버거"
+                        android:text="불고기버거"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="3dp"
                         android:autoSizeTextType="uniform"
                         android:autoSizeMinTextSize="17dp"
                         android:autoSizeMaxTextSize="20dp"
-                        android:layout_marginLeft="15dp"
-                        android:gravity="center|left"
-                        android:fontFamily="@font/poppins_extrabold"
-                        android:textColor="@color/black"
-                        >
+                        android:gravity="center|left">
                     </TextView>
 
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:id="@+id/paySetIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/fastfood_yellow_round_button"
+                        >
+
+                        <TextView
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text=" S "
+                            android:gravity="center"
+                            android:textSize="15dp"
+                            android:textColor="@color/cafe_darkRed"
+                            android:fontFamily="@font/poppins_bold"
+                            >
+
+                        </TextView>
+
+                    </LinearLayout>
+
+
                 </LinearLayout>
+
 
                 <!--                        선택 메뉴 개수    -->
                 <LinearLayout
