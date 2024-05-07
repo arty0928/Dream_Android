@@ -10,11 +10,10 @@ import com.dream.hyoja.cafe.CafeHomeActivity
 import com.dream.hyoja.common.AccountCreateActivity
 import com.dream.hyoja.common.LoginActivity
 import com.dream.hyoja.common.MainActivity
-import com.dream.hyoja.fastfoods.FastFoodHome1Activity
-import com.dream.hyoja.fastfoods.FastFoodHome2Activity
-import com.dream.hyoja.fastfoods.FastFoodHomeActivity
-import com.dream.hyoja.fastfoods.FastFoodPayActivity
-import com.dream.hyoja.fastfoods.FastfoodSurveyGenderActivity
+import com.dream.hyoja.fastfoods.Activity.Home.FastFoodHome1Activity
+import com.dream.hyoja.fastfoods.Activity.Home.FastFoodHome2Activity
+import com.dream.hyoja.fastfoods.Activity.Home.FastFoodHomeActivity
+import com.dream.hyoja.fastfoods.Activity.Pay.FastFoodPayActivity
 import com.dream.hyoja.fastfoods.model.FastFoodModel
 import com.dream.hyoja.fastfoods.testguideline.FastFoodPrcHome1Activity
 import com.dream.hyoja.fastfoods.testguideline.FastFoodPrcHomeActivity
@@ -111,11 +110,11 @@ class CommonUi {
 //    }
 
     //설문조사
-    fun goToSurvey(v: Context) {
-        val intent = Intent(v, FastfoodSurveyGenderActivity::class.java)
-        v.startActivity(intent)
-        Log.d("goToSurveyGender", "설문조사_성별로 전환")
-    }
+//    fun goToSurvey(v: Context) {
+//        val intent = Intent(v, FastfoodSurveyGenderActivity::class.java)
+//        v.startActivity(intent)
+//        Log.d("goToSurveyGender", "설문조사_성별로 전환")
+//    }
 }
 //    이전 화면으로 이동
 

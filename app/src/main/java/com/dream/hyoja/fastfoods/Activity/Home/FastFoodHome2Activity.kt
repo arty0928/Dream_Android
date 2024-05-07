@@ -1,4 +1,4 @@
-package com.dream.hyoja.fastfoods
+package com.dream.hyoja.fastfoods.Activity.Home
 
 //import com.dream.hyoja.Adapter.MyAdapter
 import FoodOrderedListAdapter
@@ -13,8 +13,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
-import com.dream.hyoja.Fragments.SetOrOnlyFragment
-import com.dream.hyoja.Fragments.checkCancelFragment
+import com.dream.hyoja.Fragments.FoodList.SetOrOnlyFragment
+import com.dream.hyoja.Fragments.CommonUI.checkCancelFragment
 import com.dream.hyoja.R
 import com.dream.hyoja.common.util.CommonUi
 import com.dream.hyoja.databinding.ActivityFastfoodHome2Binding

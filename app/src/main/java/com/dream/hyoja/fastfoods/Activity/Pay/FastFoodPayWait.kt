@@ -1,4 +1,4 @@
-package com.dream.hyoja.fastfoods
+package com.dream.hyoja.fastfoods.Activity.Pay
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -39,6 +39,7 @@ class FastFoodPayWait : AppCompatActivity() {
 
     }
     override fun onBackPressed() {
+        super.onBackPressed()
         // 뒤로가기 막기
         val currentTime = System.currentTimeMillis()
         val commonUi:CommonUi = CommonUi()

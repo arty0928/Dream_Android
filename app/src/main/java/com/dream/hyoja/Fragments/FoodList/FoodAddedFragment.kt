@@ -1,4 +1,4 @@
-package com.dream.hyoja.Fragments
+package com.dream.hyoja.Fragments.FoodList
 
 import android.os.Bundle
 import android.view.LayoutInflater

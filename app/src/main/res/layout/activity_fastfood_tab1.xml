@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context=".fastfoods.FastFoodHome2Activity">
+    tools:context=".fastfoods.Activity.Home.FastFoodHome2Activity">
 
 <!--    <com.google.android.material.tabs.TabLayout-->
 <!--        android:id="@+id/tabLayout"-->

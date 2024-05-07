@@ -1,4 +1,4 @@
-package com.dream.hyoja.fastfoods
+package com.dream.hyoja.fastfoods.Activity.Home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

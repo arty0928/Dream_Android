@@ -1,4 +1,4 @@
-package com.dream.hyoja.fastfoods
+package com.dream.hyoja.fastfoods.Activity.Home
 
 import android.os.Bundle
 import android.view.animation.AnimationUtils

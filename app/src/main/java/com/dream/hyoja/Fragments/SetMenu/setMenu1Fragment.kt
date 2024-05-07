@@ -1,4 +1,4 @@
-package com.dream.hyoja
+package com.dream.hyoja.Fragments.SetMenu
 
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.dream.hyoja.Fragments.ChoiceSetMenuDialogFragment
+import com.dream.hyoja.R
 import com.dream.hyoja.databinding.FragmentSetMenu1Binding
 import com.dream.hyoja.fastfoods.model.FastFoodModel
 import com.dream.hyoja.fastfoods.model.setMenuDataInterface

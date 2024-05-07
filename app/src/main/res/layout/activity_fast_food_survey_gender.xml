@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".fastfoods.FastfoodSurveyGenderActivity">
+    tools:context=".fastfoods.Activity.Survey.FastfoodSurveyGenderActivity">
 
     <LinearLayout
         android:gravity="center"
@@ -22,7 +22,7 @@
             android:layout_weight="0.3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="성별을 입력해주세요."
+            android:text="성별을 선택해주세요."
             android:textSize="35dp"
             android:gravity="center"
             android:fontFamily="@font/poppins_extrabold"
@@ -114,21 +114,22 @@
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/nextButtonBackground"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            >
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
             <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="0dp"
+                android:text="다음"
+                android:fontFamily="@font/poppins_extrabold"
+                android:textColor="@color/black"
+                android:id="@+id/surveyNextButton"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:background="@drawable/button_survey_next"
+                android:layout_weight="1"
+                >
 
             </androidx.appcompat.widget.AppCompatButton>
 

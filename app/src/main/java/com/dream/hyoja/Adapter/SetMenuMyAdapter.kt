@@ -2,7 +2,7 @@ package com.dream.hyoja.Adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.dream.hyoja.Fragments.FoodListMenuOneFrament
+import com.dream.hyoja.Fragments.FoodList.FoodListMenuOneFrament
 
 class SetMenuMyAdapter(
 

@@ -15,13 +15,13 @@
         android:theme="@style/Theme.HyoJa"
         tools:targetApi="31">
         <activity
-            android:name=".fastfoods.FastfoodSurveyAgeActivity"
+            android:name=".fastfoods.Activity.Survey.FastfoodSurveyAgeActivity"
             android:exported="false"
             android:label="@string/title_activity_fastfood_survey_age"
             android:theme="@style/Theme.HyoJa" />
 
         <activity
-            android:name=".fastfoods.FastfoodSurveyGenderActivity"
+            android:name=".fastfoods.Activity.Survey.FastfoodSurveyGenderActivity"
             android:exported="false" />
         <activity
             android:name=".cafe.activity.CafeStartExplain"
@@ -44,19 +44,19 @@
             android:name=".common.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".fastfoods.FastFoodHomeActivity"
+            android:name=".fastfoods.Activity.Home.FastFoodHomeActivity"
             android:exported="false" /> <!-- from Home to payment way -->
         <activity
-            android:name=".fastfoods.FastFoodHome1Activity"
+            android:name=".fastfoods.Activity.Home.FastFoodHome1Activity"
             android:exported="false" />
         <activity
-            android:name=".fastfoods.FastFoodHome2Activity"
+            android:name=".fastfoods.Activity.Home.FastFoodHome2Activity"
             android:exported="false" />
         <activity
-            android:name=".fastfoods.FastFoodPayActivity"
+            android:name=".fastfoods.Activity.Pay.FastFoodPayActivity"
             android:exported="false" />
         <activity
-            android:name=".fastfoods.FastFoodPayWait"
+            android:name=".fastfoods.Activity.Pay.FastFoodPayWait"
             android:exported="false" /> <!-- FastFood Prc -->
         <activity
             android:name=".fastfoods.testguideline.FastFoodPrcHomeActivity"

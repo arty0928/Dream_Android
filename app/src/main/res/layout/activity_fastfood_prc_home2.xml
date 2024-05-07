@@ -2,7 +2,7 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".fastfoods.FastFoodHome2Activity"
+    tools:context=".fastfoods.Activity.Home.FastFoodHome2Activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 

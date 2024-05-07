@@ -1,4 +1,4 @@
-package com.dream.hyoja.Fragments
+package com.dream.hyoja.Fragments.Pay
 
 import android.graphics.Point
 import android.os.Bundle
