@@ -1,4 +1,4 @@
-package com.dream.hyoja.activity
+package com.dream.hyoja.cafe.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -408,7 +408,7 @@
                                         android:autoSizeMaxTextSize="13dp"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:text="STEP 1    포장을 선택하세요"
+                                        android:text="STEP 1    포장 선택"
                                         android:fontFamily="@font/poppins_extrabold"
                                         android:textColor="@color/white"
                                         android:gravity="center|left"
@@ -524,7 +524,7 @@
                                                 android:fontFamily="@font/poppins_extrabold"
                                                 android:gravity="center"
                                                 android:text="다회용기 제공"
-                                                android:textSize="12dp"
+                                                android:textSize="11dp"
                                                 android:textColor="@color/black"
 
                                                 />
@@ -571,14 +571,11 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:text="STEP2  할인/적립을 선택하세요"
+                                        android:text="STEP2  할인/적립"
                                         android:fontFamily="@font/poppins_extrabold"
                                         android:textColor="@color/white"
                                         android:gravity="center|left"
-                                        android:layout_marginLeft="5dp"
-                                        android:textSize="12dp"
-                                        />
-
+                                        android:layout_marginLeft="5dp"/>
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -812,7 +809,7 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:text="STEP 3      결제를 선택하세요"
+                                        android:text="STEP 3      결제 선택"
                                         android:fontFamily="@font/poppins_extrabold"
                                         android:textColor="@color/white"
                                         android:gravity="center|left"

@@ -151,7 +151,10 @@ class ChoiceSetMenuDialogFragment : DialogFragment() {
                     Log.d("addOnlyBurger ordering food totalPrice",orderingFood.toString())
 
 
-                    if(FastFoodModel.foodSelectedList[i].food.name == orderingFood.food.name && FastFoodModel.foodSelectedList[i].totalPrice == orderingFood.totalPrice){
+                    if(FastFoodModel.foodSelectedList[i].food.name == orderingFood.food.name
+                        && FastFoodModel.foodSelectedList[i].totalPrice == orderingFood.totalPrice
+                        && FastFoodModel.foodSelectedList[i].food.set == orderingFood.food.set
+                        ){
                         isSame = true
                         FastFoodModel.foodSelectedList[i].foodCount++
                     }

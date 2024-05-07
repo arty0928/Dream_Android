@@ -30,12 +30,17 @@ class MainActivity : AppCompatActivity() {
         }
         //로고 누르면 홈으로
         binding.hyojaLogo.setOnClickListener {
-            common.goToLogin(view)
+//            common.goToLogin(view)
         }
 
         binding.hyojaText.setOnClickListener {
-            common.goToLogin(view)
+//            common.goToLogin(view)
         }
+
+        binding.myPageIcon.setOnClickListener {
+            common.goToSurvey(view)
+        }
+
     }
     // 뒤로가기 버튼을 눌렀을 때 로직
     override fun onBackPressed() {

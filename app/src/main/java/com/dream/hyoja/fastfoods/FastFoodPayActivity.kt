@@ -87,20 +87,6 @@ class FastFoodPayActivity : AppCompatActivity() {
         }
         totalFoodListAdded()
     }
-    override fun onBackPressed() {
-        // 뒤로가기 막기
-        val currentTime = System.currentTimeMillis()
-        val commonUi:CommonUi = CommonUi()
-        val view = this
-
-        if (currentTime - backPressedTime < 2000) {
-            commonUi.goToHome(view)
-            finish()
-        } else {
-            Toast.makeText(this, "한 번 더 누르면 메인화면으로 전환합니다", Toast.LENGTH_SHORT).show()
-            backPressedTime = currentTime
-        }
-    }
 
     fun enableStep2Buttons() {
         binding.step1Box.setBackgroundResource(R.drawable.layout_darkgray_5dp)
