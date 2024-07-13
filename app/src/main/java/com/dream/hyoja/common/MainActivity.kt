@@ -37,13 +37,10 @@ class MainActivity : AppCompatActivity() {
 //            common.goToLogin(view)
         }
 
-        binding.myPageIcon.setOnClickListener {
-            common.goToSurvey(view)
-        }
-
     }
     // 뒤로가기 버튼을 눌렀을 때 로직
     override fun onBackPressed() {
+        super.onBackPressed()
         val currentTime = System.currentTimeMillis()
 
         if (currentTime - backPressedTime < 2000) {

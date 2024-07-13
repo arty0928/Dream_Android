@@ -132,51 +132,48 @@
                 android:layout_height="match_parent">
                 <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_weight="3"
-                    android:layout_width="match_parent"
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent">
                     <ImageButton
-                        android:layout_weight="4"
+                        android:layout_weight="1"
                         android:id="@+id/selectDrinkLeftButton"
                         android:background="@null"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:scaleType="centerCrop"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
                         android:src="@drawable/left_arrow_white"
-                        android:layout_margin="3dp"
-                        android:layout_gravity="left|center"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"/>
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
                     <androidx.recyclerview.widget.RecyclerView
-                        android:layout_weight="1"
+                        android:layout_weight="5"
                         android:id="@+id/drinkSelectedList"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent" />
 
                     <ImageButton
                         android:id="@+id/selectDrinkRightButton"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
                         android:layout_gravity="right|center"
-                        android:layout_margin="3dp"
-                        android:layout_weight="4"
+                        android:layout_weight="1"
                         android:background="@null"
-                        android:scaleType="centerCrop"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
                         android:src="@drawable/right_arrow_red" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_weight="6"
-                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent">
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <TextView
-                            android:autoSizeMaxTextSize="20dp"
-                            android:autoSizeMinTextSize="18dp"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textAlignment="center"
@@ -202,7 +199,7 @@
                                 android:id="@+id/account"
                                 android:textColor="@color/cafe_darkRed"
                                 android:autoSizeMaxTextSize="20dp"
-                                android:autoSizeMinTextSize="19dp"
+                                android:autoSizeMinTextSize="17dp"
                                 android:autoSizeTextType="uniform"
                                 android:layout_gravity="right"
                                 android:gravity="center"
@@ -231,8 +228,8 @@
                     android:orientation="vertical"
                     android:layout_margin="5dp"
                     android:id="@+id/pay_button"
-                    android:layout_weight="6"
-                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent">
 
                     <ImageView
@@ -249,7 +246,7 @@
                         android:autoSizeMinTextSize="16dp"
                         android:textColor="@color/cafe_white"
                         android:textAlignment="center"
-                        android:text="결제하기"
+                        android:text="결제"
                         android:fontFamily="@font/poppins_bold"
                         android:layout_weight="2"
                         android:layout_width="match_parent"

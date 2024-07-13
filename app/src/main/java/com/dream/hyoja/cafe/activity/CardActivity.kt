@@ -21,6 +21,7 @@ class CardActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+        super.onBackPressed()
         val currentTime = System.currentTimeMillis()
         val commonUi: CommonUi = CommonUi()
         val view = this

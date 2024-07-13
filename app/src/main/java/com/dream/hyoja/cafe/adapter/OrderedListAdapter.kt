@@ -30,7 +30,7 @@ class OrderedListAdapter: RecyclerView.Adapter<OrderedListAdapter.ViewHolder>() 
             holder.setPrice()
         }
         holder.itemMinus.setOnClickListener{
-            if (CafeModel.drinkSelectedList[position].drinkCount > 0) {
+            if (CafeModel.drinkSelectedList[position].drinkCount > 1) {
                 CafeModel.drinkSelectedList[position].drinkCount--
                 holder.setDrinkCount(position)
                 holder.setPrice()
