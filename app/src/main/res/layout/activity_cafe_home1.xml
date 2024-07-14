@@ -198,13 +198,11 @@
                                 android:fontFamily="@font/poppins_bold"
                                 android:id="@+id/account"
                                 android:textColor="@color/cafe_darkRed"
-                                android:autoSizeMaxTextSize="20dp"
-                                android:autoSizeMinTextSize="17dp"
-                                android:autoSizeTextType="uniform"
                                 android:layout_gravity="right"
                                 android:gravity="center"
                                 android:textAlignment="center"
                                 android:text="0"
+                                android:textSize="15dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent" />
                         </LinearLayout>

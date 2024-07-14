@@ -68,6 +68,12 @@ class DrinkListMenuTwoFragment : Fragment() {
         return binding.root
     }
 
+    override fun onStart() {
+        super.onStart()
+        // 뷰를 리프레시
+        refreshViews()
+    }
+
     private fun getDrinkArrayList(categroy:String){
         val drinkData = DrinkDataFactory()
 
@@ -176,6 +182,20 @@ class DrinkListMenuTwoFragment : Fragment() {
             CafeModel.drinkSelected = drinkData
             viewModel.drinkSelectChanged()
             Log.d(Tag,"drinkSelected= "+CafeModel.drinkSelected)
+        }
+    }
+
+    private fun refreshViews() {
+        val textViews = listOf(
+            binding.menu1Price,
+            binding.menu2Price,
+            binding.menu3Price,
+            binding.menu4Price
+        )
+
+        textViews.forEach { textView ->
+            textView.setSingleLine(true)
+            textView.ellipsize = null
         }
     }
 
