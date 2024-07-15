@@ -42,21 +42,23 @@ class FoodOrderedListAdapter(private val binding: ActivityFastfoodHome2Binding) 
             FastFoodModel.foodSelectedList[position].foodCount++
             holder.setFoodCount(position)
 
+            updateTotalOrderCount()
+
             val setPrice = (FastFoodModel.foodSelectedList[position].totalPrice) * FastFoodModel.foodSelectedList[position].foodCount
 
             holder.setFoodPrice(position,setPrice)
-            updateTotalOrderCount()
+//            updateTotalOrderCount()
 
         }
         holder.binding.miusItem.setOnClickListener {
             if(FastFoodModel.foodSelectedList[position].foodCount>1){
                 FastFoodModel.foodSelectedList[position].foodCount--
-                holder.setFoodCount(position)
 
+                updateTotalOrderCount()
+                holder.setFoodCount(position)
                 val setPrice = (FastFoodModel.foodSelectedList[position].totalPrice) * FastFoodModel.foodSelectedList[position].foodCount
 
                 holder.setFoodPrice(position,setPrice)
-                updateTotalOrderCount()
 
             }
 
