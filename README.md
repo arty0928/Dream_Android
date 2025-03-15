@@ -62,14 +62,14 @@
 - 성동구민대학 ‘스마트폰 기초 · 중급’ 2회
 
 <br>
-<div align="center">
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
   <img src="./images/class1.png" alt="Project" height="300px" />
   <img src="./images/class2.jpg" alt="Project" height="300px" />
-
 </div>
+
 
 ### 2️⃣실제 다운로드 수  <span style="color:red;">4000 +</span>
 <br>
-<div align="center">
   <img src="./images/score.jpg" alt="Project" height="500px" />
-</div>
+
