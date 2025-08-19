@@ -69,7 +69,8 @@
 </div>
 
 
-### 2️⃣실제 다운로드 수  <span style="color:red;">4000 +</span>
+### 2️⃣실제 다운로드 수  <span style="color:red;">6000 +</span>
 <br>
-  <img src="./images/score.jpg" alt="Project" height="500px" />
+<img height="500" alt="image" src="https://github.com/user-attachments/assets/8fc80d8b-4876-4f68-a3c1-8b976cdf5b1c" />
+
 
