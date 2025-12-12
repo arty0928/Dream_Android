@@ -2,47 +2,19 @@
   <h1><span style="color: red;">🧓 효자손</span> : 노인 키오스크 교육 플랫폼</h1>
   <h3>2024 2학기 건국대학교 자기전공설계 3위
   </h3>
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9ab89db9-5898-4689-8ef4-13461b02338c" />
 
-  <img src="./images/001.png" alt="Project" height="400px" />
-  <br />
-</div>
-
-<div style="text-align: center;">
-  <h2><a href="https://play.google.com/store/apps/details?id=com.dream.hyoja">[🔗 구글 플레이 스토어 Click !]</a> 👈</h2>
-</div>
-
-<div style="text-align: center;">
-  <a href="https://admitted-seat-34f.notion.site/6f12fa6e848d467d8347e4384b5b3040?pvs=4">Notion 바로 가기</a>
-</div>
-<br>
-<br />
-
-
-# 🛠 기술 스택
-
-<div align="center">
-  <img src="https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" />
-  <br />
-  <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-</div>
-
-<br />
-
-# 💡 프로젝트 소개
-
-<div align="center">
-  <img src="./images/004.png" alt="Project" height="400px" />
 </div>
 
 # 💡 주요 기능
 `Android Jetpack` `ViewModel` `LiveData` `Lifecycle` `RecylcerView` `AppCompat` `Data Binding` 
 <div align="center">
-  <img src="./images/005.png" alt="Project" height="400px" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/604e20bd-43dd-4b34-9fd2-40e75fd5f4ae" />
+
   <br>
     </br>
-  <img src="./images/006.png" alt="Project" height="400px" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/54beeb5f-0895-4da4-a7e3-e34518c9f6aa" />
+
 </div>
 
 
@@ -64,8 +36,9 @@
 <br>
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-  <img src="./images/class1.png" alt="Project" height="300px" />
-  <img src="./images/class2.jpg" alt="Project" height="300px" />
+<img height="330" alt="image" src="https://github.com/user-attachments/assets/c069fc0f-53ee-4d87-b88c-e1a2501fd1fc" />
+<img height="330" alt="image" src="https://github.com/user-attachments/assets/fafe1f4c-1f76-4ce9-9144-57dbc1e803a6" />
+
 </div>
 
 
