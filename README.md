@@ -2,36 +2,6 @@
   <h1><span style="color: red;">🧓 효자손</span> : 노인 키오스크 교육 플랫폼</h1>
   <h3>2024 2학기 건국대학교 자기전공설계 3위
   </h3>
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4f0e8011-1783-432b-85ce-8e94304e9f50" />
-  <br />
-</div>
-
-<div style="text-align: center;">
-  <h2><a href="https://play.google.com/store/apps/details?id=com.dream.hyoja">[🔗 구글 플레이 스토어 Click !]</a> 👈</h2>
-</div>
-
-<div style="text-align: center;">
-  <a href="https://admitted-seat-34f.notion.site/6f12fa6e848d467d8347e4384b5b3040?pvs=4">Notion 바로 가기</a>
-</div>
-<br>
-<br />
-
-
-# 🛠 기술 스택
-
-<div align="center">
-  <img src="https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" />
-  <br />
-  <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-</div>
-
-<br />
-
-# 💡 프로젝트 소개
-
-<div align="center">
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9ab89db9-5898-4689-8ef4-13461b02338c" />
 
 </div>
